@@ -153,10 +153,12 @@ abrt_action_generate_core_backtrace_CPPFLAGS = \
     -DLOCALSTATEDIR='"$(localstatedir)"' \
     $(GLIB_CFLAGS) \
     $(LIBREPORT_CFLAGS) \
+    $(SATYR_CFLAGS) \
     -D_GNU_SOURCE \
     -Wall -Wwrite-strings -Werror
 abrt_action_generate_core_backtrace_LDADD = \
     $(LIBREPORT_LIBS) \
+    $(SATYR_LIBS) \
     ../lib/libabrt.la
 
 if ENABLE_DISASSEMBLY
@@ -180,7 +182,7 @@ abrt_action_analyze_backtrace_CPPFLAGS = \
     -Wall -Wwrite-strings -Werror
 abrt_action_analyze_backtrace_LDADD = \
     $(LIBREPORT_LIBS) \
-    $(BTPARSER_LIBS)
+    $(SATYR_LIBS)
 
 abrt_action_install_debuginfo_to_abrt_cache_SOURCES = \
     abrt-action-install-debuginfo-to-abrt-cache.c
@@ -209,7 +211,7 @@ abrt_dedup_client_SOURCES = \
      -Wall -Wwrite-strings -Werror
  abrt_dedup_client_LDADD = \
      $(LIBREPORT_LIBS) \
-     $(BTPARSER_LIBS) \
+     $(SATYR_LIBS) \
      $(NSS_LIBS)
 
 DEFS = -DLOCALEDIR=\"$(localedir)\" @DEFS@
