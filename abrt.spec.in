@@ -16,7 +16,7 @@
 Summary: Automatic bug detection and reporting tool
 Name: abrt
 Version: @@ABRT_VERSION@@
-Release: 1%{?dist}
+Release: 1.1.jfilak%{?dist}
 License: GPLv2+
 Group: Applications/System
 URL: https://fedorahosted.org/abrt/
@@ -35,22 +35,25 @@ BuildRequires: libtool
 BuildRequires: nss-devel
 BuildRequires: asciidoc
 BuildRequires: xmlto
-BuildRequires: libreport-devel > 2.0.6
-BuildRequires: satyr-devel >= 0.11
+BuildRequires: libreport-devel > 2.0.9.125
+BuildRequires: satyr-devel >= 0.13-1.1.jfilak
 BuildRequires: elfutils-devel
 BuildRequires: elfutils-libelf-devel
 BuildRequires: binutils-devel
 BuildRequires: augeas
 
-Requires: libreport >=  2.0.6
-Requires: satyr >= 0.11
+Requires: libreport >=  2.0.9.125
+Requires: satyr >= 0.13-1.1.jfilak
+Requires: python-argparse
 
 %if %{with systemd}
 Requires: systemd-units
 %endif
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires: %{name}-libs = %{version}-%{release}
+Requires: %{name}-python = %{version}-%{release}
 Requires: libreport-plugin-mailx
+Requires: libreport-plugin-ureport
 Requires(pre): shadow-utils
 Obsoletes: abrt-plugin-sqlite3 > 0.0.1
 # required for transition from 1.1.13, can be removed after some time
@@ -586,6 +589,9 @@ gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 %{_defaultdocdir}/%{name}-python-%{version}/examples/
 
 %changelog
+* Wed May 14 2014 Jakub Filak <jfilak@redhat.com> @@ABRT_VERSION@@-1.1.jfilak
+- The system autoreporting
+
 * Wed Mar 16 2011 Jiri Moskovcak <jmoskovc@redhat.com> 2.0.0-1
 - update to the latest upstream version
 - many improvements
