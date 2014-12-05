@@ -802,6 +802,7 @@ gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 %{_bindir}/abrt-action-list-dsos
 %{_bindir}/abrt-action-perform-ccpp-analysis
 %{_bindir}/abrt-action-analyze-ccpp-local
+%{_bindir}/abrt-dump-journal-core
 %{_sbindir}/abrt-install-ccpp-hook
 %config(noreplace) %{_sysconfdir}/libreport/events.d/ccpp_event.conf
 %{_mandir}/man5/ccpp_event.conf.5.gz
