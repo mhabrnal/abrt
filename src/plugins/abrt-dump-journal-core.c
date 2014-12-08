@@ -17,32 +17,136 @@
 
 #define ABRT_JOURNAL_WATCH_STATE_FILE VAR_STATE"/abrt-dump-journal-core.state"
 
-static int abrt_journal_dump_core(abrt_journal_t *journal, const char *dump_location)
+typedef struct
 {
-    // do not dump too often
-    //   ignore crashes of a single executable appearing in THROTTLE s (keep last 10 executable)
-    //
+    const char *awc_dump_location;
+    int awc_throttle;
+}
+abrt_watch_core_conf_t;
+
+static int
+abrt_journal_get_last_occurrence(const char *executable)
+{
+    return 0;
+}
+
+static void
+abrt_journal_update_occurrence(const char *executable, int ts)
+{
+    return;
+}
+
+static int
+abrt_journal_core_to_problem(abrt_journal_t *journal, problem_data_t **pd)
+{
     // verify journal data
     //   don not dump abrt related executables in order to avoid recursion
     //   skip signals
     //   check required fields (executable, proc_pid_status)
     //
-    // problem_data_add(dd, FILENAME_ANALYZER, "CCpp");
-    // problem_data_add(dd, FILENAME_TYPE, "CCpp");
-    // problem_data_add(dd, FILENAME_ABRT_VERSION, VERSION);
-    //
-    // for each journald message field - problem_data_add
-    //
     // generate reason ...
     //
+    // for each journald message field - problem_data_add
+
+    return 0;
+}
+
+static int
+abrt_journal_problem_add_metadata(problem_data_t *pd)
+{
+    problem_data_add_text_noteditable(pd, FILENAME_ANALYZER, "CCpp");
+    problem_data_add_text_noteditable(pd, FILENAME_TYPE, "CCpp");
+    problem_data_add_text_noteditable(pd, FILENAME_ABRT_VERSION, VERSION);
+
     // parse fsuid from proc_pid_status ...
-    //
+
+    return 0;
+}
+
+static int
+abrt_journal_problem_submit(problem_data_t *pd, const char *dump_location)
+{
     // save problem data with fsuid
 
     return 0;
 }
 
-int main(int argc, char *argv[])
+static int
+abrt_journal_dump_core(abrt_journal_t *journal, const char *dump_location)
+{
+    problem_data_t *pd;
+    if (abrt_journal_core_to_problem(journal, &pd))
+    {
+        return -1;
+    }
+
+    return 0;
+}
+
+static void
+abrt_journal_watch_cores(abrt_journal_watch_t *watch, void *user_data)
+{
+    const abrt_watch_core_conf_t *conf = (const abrt_watch_core_conf_t *)user_data;
+
+    problem_data_t *pd = NULL;
+    if (abrt_journal_core_to_problem(abrt_journal_watch_get_journal(watch), &pd))
+    {
+        error_msg(_("Failed to obtain all required information from journald"));
+        return;
+    }
+
+    const char *exe = problem_data_get_content_or_die(pd, FILENAME_EXECUTABLE);
+    if (exe == NULL)
+    {
+        error_msg("BUG: a valid problem data misses '"FILENAME_EXECUTABLE"'");
+        goto watch_cleanup;
+    }
+
+    // do not dump too often
+    //   ignore crashes of a single executable appearing in THROTTLE s (keep last 10 executable)
+    //const int current = get_current_stamp();
+    const int current = INT_MAX;
+    const int last = abrt_journal_get_last_occurrence(exe);
+    const int sub = current - last;
+    if (sub < conf->awc_throttle)
+    {
+        /* We don't want to update the counter here. */
+        error_msg(_("Not saving repeating crash after %ds (limit is %ds)"), sub, conf->awc_throttle);
+        goto watch_cleanup;
+    }
+
+    if (abrt_journal_problem_add_metadata(pd))
+    {
+        error_msg(_("Failed to obtain information about system required by ABRT"));
+        goto watch_cleanup;
+    }
+
+    if (abrt_journal_problem_submit(pd, conf->awc_dump_location))
+    {
+        error_msg(_("Failed to save detect problem data in abrt database"));
+        goto watch_cleanup;
+    }
+
+    abrt_journal_update_occurrence(exe, current);
+
+watch_cleanup:
+    problem_data_free(pd);
+    return;
+}
+
+static void
+watch_journald(abrt_journal_t *journal, abrt_watch_core_conf_t *conf)
+{
+    abrt_journal_watch_t *watch = NULL;
+    if (abrt_journal_watch_new(&watch, journal, abrt_journal_watch_cores, (void *)conf) < 0)
+        error_msg_and_die(_("Failed to initialize systemd-journal watch"));
+
+    abrt_journal_watch_run_sync(watch);
+    abrt_journal_watch_free(watch);
+}
+
+int
+main(int argc, char *argv[])
 {
     /* I18n */
     setlocale(LC_ALL, "");
@@ -138,7 +242,12 @@ int main(int argc, char *argv[])
         else if(abrt_journal_set_cursor(journal, cursor))
             error_msg_and_die(_("Failed to start watch from cursor '%s'"), cursor);
 
-        //watch_journald(journal, dump_location, oops_utils_flags);
+        abrt_watch_core_conf_t conf = {
+            .awc_dump_location = dump_location,
+            .awc_throttle = throttle,
+        };
+
+        watch_journald(journal, &conf);
 
         abrt_journal_save_current_position(journal, ABRT_JOURNAL_WATCH_STATE_FILE);
     }
