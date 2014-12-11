@@ -17,6 +17,37 @@
 
 #define ABRT_JOURNAL_WATCH_STATE_FILE VAR_STATE"/abrt-dump-journal-core.state"
 
+struct field_mapping {
+    const char *name;
+    const char *file;
+} fields [] = {
+    { .name = "COREDUMP_EXE",         .file = FILENAME_EXECUTABLE, },
+    { .name = "COREDUMP_CMDLINE",     .file = FILENAME_CMDLINE, },
+    { .name = "COREDUMP_PROC_STATUS", .file = FILENAME_PROC_PID_STATUS, },
+    { .name = "COREDUMP_PROC_MAPS",   .file = FILENAME_MAPS, },
+    { .name = "COREDUMP_PROC_LIMITS", .file = FILENAME_LIMITS, },
+    { .name = "COREDUMP_PROC_CGROUP", .file = FILENAME_CGROUP, },
+    { .name = "COREDUMP_ENVIRON",     .file = FILENAME_ENVIRON, },
+    { .name = "COREDUMP_CWD",         .file = FILENAME_PWD, },
+    { .name = "COREDUMP_ROOT",        .file = FILENAME_ROOTDIR, },
+    { .name = "COREDUMP_OPEN_FDS",    .file = FILENAME_OPEN_FDS, },
+    { .name = "COREDUMP_UID",         .file = FILENAME_UID, },
+    //{ .name = "COREDUMP_GID",         .file = FILENAME_GID, },
+    { .name = "COREDUMP_PID",         .file = FILENAME_PID, },
+};
+
+struct crash_info
+{
+    abrt_journal_t *journal;
+    int signal_no;
+    const char *signal_name;
+    char *executable_path;
+    const char *executable_name;
+    uid_t uid;
+    struct field_mapping *mapping;
+    size_t mapping_items;
+};
+
 typedef struct
 {
     const char *awc_dump_location;
@@ -24,63 +55,232 @@ typedef struct
 }
 abrt_watch_core_conf_t;
 
-static int
+
+struct occurrence_queue
+{
+    int head;
+    unsigned size;
+
+    struct last_occurence
+    {
+        unsigned stamp;
+        char *executable;
+    } occurrences[8];
+
+} s_queue = {
+    .head = -1,
+    .size = 8,
+};
+
+static unsigned
 abrt_journal_get_last_occurrence(const char *executable)
 {
+    if (s_queue.head < 0)
+        return 0;
+
+    unsigned index = s_queue.head == 0 ? s_queue.size - 1 : s_queue.head - 1;
+    for (unsigned i = 0; i < s_queue.size; ++i)
+    {
+        if (s_queue.occurrences[index].executable == NULL)
+            break;
+
+        if (strcmp(executable, s_queue.occurrences[index].executable) == 0)
+            return s_queue.occurrences[index].stamp;
+
+        if (index-- == 0)
+            index = s_queue.size - 1;
+    }
+
     return 0;
 }
 
 static void
-abrt_journal_update_occurrence(const char *executable, int ts)
+abrt_journal_update_occurrence(const char *executable, unsigned ts)
 {
+    if (s_queue.head < 0)
+        s_queue.head = 0;
+    else
+    {
+        unsigned index = s_queue.head == 0 ? s_queue.size - 1 : s_queue.head - 1;
+        for (unsigned i = 0; i < s_queue.size; ++i)
+        {
+            if (s_queue.occurrences[index].executable == NULL)
+                break;
+
+            if (strcmp(executable, s_queue.occurrences[index].executable) == 0)
+            {
+                /* Enhancemenet: move this entry right behind head */
+                s_queue.occurrences[index].stamp = ts;
+                return;
+            }
+
+            if (index-- == 0)
+                index = s_queue.size - 1;
+        }
+    }
+
+    s_queue.occurrences[s_queue.head].stamp = ts;
+    free(s_queue.occurrences[s_queue.head].executable);
+    s_queue.occurrences[s_queue.head].executable = xstrdup(executable);
+
+    if (++s_queue.head >= s_queue.size)
+        s_queue.head = 0;
+
     return;
 }
 
 static int
-abrt_journal_core_to_problem(abrt_journal_t *journal, problem_data_t **pd)
+abrt_journal_core_to_problem(abrt_journal_t *journal, struct crash_info *info)
 {
     // verify journal data
     //   don not dump abrt related executables in order to avoid recursion
     //   skip signals
     //   check required fields (executable, proc_pid_status)
     //
-    // generate reason ...
-    //
-    // for each journald message field - problem_data_add
+    if (abrt_journal_get_int_field(journal, "COREDUMP_SIGNAL", &(info->signal_no)) != 0)
+    {
+        log_info("Failed to get signal number from journal message");
+        return -EINVAL;
+    }
+
+    if (!signal_is_fatal(info->signal_no, &(info->signal_name)))
+    {
+        log_info("Signal '%d' is not fatal: ignoring crash", info->signal_no);
+        return 1;
+    }
+
+    info->executable_path = abrt_journal_get_string_field(journal, "COREDUMP_EXE", NULL);
+    if (info->executable_path == NULL)
+    {
+        log_notice("Could not get crashed 'executable'.");
+        return -ENOENT;
+    }
+
+    info->executable_name = strrchr(info->executable_path, '/');
+    if (info->executable_name == NULL)
+    {
+        info->executable_name = info->executable_path;
+    }
+    else if(strncmp(++(info->executable_name), "abrt", 4) == 0)
+    {
+        error_msg("Ignoring crash of ABRT executable '%s'", info->executable_path);
+        return 1;
+    }
+
+    if (abrt_journal_get_unsigned_field(journal, "COREDUMP_UID", &(info->uid)))
+    {
+        log_info("Failed to get UID from journal message");
+        return -EINVAL;
+    }
+
+    char *proc_status = abrt_journal_get_string_field(journal, "COREDUMP_PROC_STATUS", NULL);
+    if (proc_status == NULL)
+    {
+        log_info("Failed to get /proc/[pid]/status from journal message");
+        return -ENOENT;
+    }
+
+    uid_t tmp_fsuid = get_fsuid(proc_status);
+    if (tmp_fsuid < 0)
+        return -EINVAL;
+
+    /* atoi() is unsafe but I refuse to use xatoi() wich exits on errors nor
+     * introduce a new function!!
+     */
+    if (tmp_fsuid != info->uid)
+    {
+        /* use root for suided apps unless it's explicitly set to UNSAFE */
+        info->uid = (dump_suid_policy() != DUMP_SUID_UNSAFE) ? 0 : tmp_fsuid;
+    }
 
     return 0;
 }
 
 static int
-abrt_journal_problem_add_metadata(problem_data_t *pd)
+save_systemd_coredump_in_dump_directory(struct dump_dir *dd, struct crash_info *info)
 {
-    problem_data_add_text_noteditable(pd, FILENAME_ANALYZER, "CCpp");
-    problem_data_add_text_noteditable(pd, FILENAME_TYPE, "CCpp");
-    problem_data_add_text_noteditable(pd, FILENAME_ABRT_VERSION, VERSION);
+    char coredump_path[PATH_MAX + 1];
+    if (coredump_path != abrt_journal_get_string_field(info->journal, "COREDUMP_FILENAME", coredump_path))
+    {
+        log_info("Ignoring coredumpctl entry becuase it misses coredump file");
+        return -1;
+    }
 
-    // parse fsuid from proc_pid_status ...
+    if (dd_copy_file(dd, FILENAME_COREDUMP, coredump_path))
+        return -1;
+
+    dd_save_text(dd, FILENAME_ABRT_VERSION, VERSION);
+    dd_save_text(dd, FILENAME_TYPE, "CCpp");
+    dd_save_text(dd, FILENAME_ANALYZER, "systemd-coredump");
+
+    char *reason;
+    if (info->signal_name != NULL)
+        reason = xasprintf("%s killed by signal %d", info->executable_name, info->signal_no);
+    else
+        reason = xasprintf("%s killed by SIG%s", info->executable_name, info->signal_name);
+
+    dd_save_text(dd, FILENAME_REASON, reason);
+    free(reason);
+
+    char *cursor = NULL;
+    if (abrt_journal_get_cursor(info->journal, &cursor) == 0)
+        dd_save_text(dd, "journald_cursor", cursor);
+    free(cursor);
+
+    for (size_t i = 0; i < info->mapping_items; ++i)
+    {
+        const char *data;
+        size_t data_len;
+        struct field_mapping *f = info->mapping + i;
+
+        if (abrt_journal_get_field(info->journal, f->name, (const void **)&data, &data_len))
+        {
+            log_info("systemd-coredump journald message misses field: '%s'", f->name);
+            continue;
+        }
+
+        dd_save_binary(dd, f->file, data, data_len);
+    }
 
     return 0;
 }
 
 static int
-abrt_journal_problem_submit(problem_data_t *pd, const char *dump_location)
+abrt_journal_problem_submit(struct crash_info *info, const char *dump_location)
 {
-    // save problem data with fsuid
+    struct dump_dir *dd = create_dump_dir(dump_location, "ccpp", info->uid,
+            (save_data_call_back)save_systemd_coredump_in_dump_directory, info);
 
-    return 0;
+    if (dd != NULL)
+    {
+        char *path = xstrdup(dd->dd_dirname);
+        dd_close(dd);
+        notify_new_path(path);
+        free(path);
+    }
+
+    return dd == NULL;
 }
 
 static int
 abrt_journal_dump_core(abrt_journal_t *journal, const char *dump_location)
 {
-    problem_data_t *pd;
-    if (abrt_journal_core_to_problem(journal, &pd))
-    {
-        return -1;
-    }
+    struct crash_info info = { 0 };
+    info.journal = journal;
+    info.mapping = fields;
+    info.mapping_items = sizeof(fields)/sizeof(*fields);
 
-    return 0;
+    int r = abrt_journal_core_to_problem(journal, &info);
+    if (r != 0)
+        goto dump_cleanup;
+
+    r = abrt_journal_problem_submit(&info, dump_location);
+
+dump_cleanup:
+    if (info.executable_path != NULL)
+        free(info.executable_path);
+
+    return r;
 }
 
 static void
@@ -88,26 +288,36 @@ abrt_journal_watch_cores(abrt_journal_watch_t *watch, void *user_data)
 {
     const abrt_watch_core_conf_t *conf = (const abrt_watch_core_conf_t *)user_data;
 
-    problem_data_t *pd = NULL;
-    if (abrt_journal_core_to_problem(abrt_journal_watch_get_journal(watch), &pd))
-    {
-        error_msg(_("Failed to obtain all required information from journald"));
-        return;
-    }
+    struct crash_info info = { 0 };
+    info.journal = abrt_journal_watch_get_journal(watch);
+    info.mapping = fields;
+    info.mapping_items = sizeof(fields)/sizeof(*fields);
 
-    const char *exe = problem_data_get_content_or_die(pd, FILENAME_EXECUTABLE);
-    if (exe == NULL)
+    int r = abrt_journal_core_to_problem(abrt_journal_watch_get_journal(watch), &info);
+    if (r)
     {
-        error_msg("BUG: a valid problem data misses '"FILENAME_EXECUTABLE"'");
+        if (r < 0)
+            error_msg(_("Failed to obtain all required information from journald"));
+
         goto watch_cleanup;
     }
 
     // do not dump too often
     //   ignore crashes of a single executable appearing in THROTTLE s (keep last 10 executable)
-    //const int current = get_current_stamp();
-    const int current = INT_MAX;
-    const int last = abrt_journal_get_last_occurrence(exe);
-    const int sub = current - last;
+    const unsigned current = time(NULL);
+    const unsigned last = abrt_journal_get_last_occurrence(info.executable_path);
+
+    if (current < last)
+    {
+        error_msg("BUG: current time stamp lower than an old one");
+
+        if (g_verbose > 2)
+            abort();
+
+        goto watch_cleanup;
+    }
+
+    const unsigned sub = current - last;
     if (sub < conf->awc_throttle)
     {
         /* We don't want to update the counter here. */
@@ -115,22 +325,20 @@ abrt_journal_watch_cores(abrt_journal_watch_t *watch, void *user_data)
         goto watch_cleanup;
     }
 
-    if (abrt_journal_problem_add_metadata(pd))
-    {
-        error_msg(_("Failed to obtain information about system required by ABRT"));
-        goto watch_cleanup;
-    }
-
-    if (abrt_journal_problem_submit(pd, conf->awc_dump_location))
+    if (abrt_journal_problem_submit(&info, conf->awc_dump_location))
     {
         error_msg(_("Failed to save detect problem data in abrt database"));
         goto watch_cleanup;
     }
 
-    abrt_journal_update_occurrence(exe, current);
+    abrt_journal_update_occurrence(info.executable_path, current);
 
 watch_cleanup:
-    problem_data_free(pd);
+    abrt_journal_save_current_position(info.journal, ABRT_JOURNAL_WATCH_STATE_FILE);
+
+    if (info.executable_path != NULL)
+        free(info.executable_path);
+
     return;
 }
 
@@ -238,7 +446,10 @@ main(int argc, char *argv[])
     if ((opts & OPT_f))
     {
         if (!cursor)
+        {
             abrt_journal_restore_position(journal, ABRT_JOURNAL_WATCH_STATE_FILE);
+            abrt_journal_next(journal);
+        }
         else if(abrt_journal_set_cursor(journal, cursor))
             error_msg_and_die(_("Failed to start watch from cursor '%s'"), cursor);
 
