@@ -68,15 +68,18 @@ enum
 
 
 static GDBusConnection *g_system_bus;
-static GtkStatusIcon *ap_status_icon;
-static GtkWidget *ap_menu;
 static char **s_dirs;
+static GtkApplication *g_application;
+static GIOChannel *g_channel_id_signal;
+static GList *g_notified_problems;
 static GList *g_deferred_crash_queue;
 static guint g_deferred_timeout;
 static int g_signal_pipe[2];
 static ignored_problems_t *g_ignore_set;
 /* Used only for selection of the last notified problem if a user clicks on the systray icon */
 static char *g_last_notified_problem_id;
+static guint g_crash_signal_ret;
+static guint g_nm_signal_ret;
 
 static bool get_configured_bool_or_default(const char *opt_name, bool def)
 {
@@ -271,12 +274,12 @@ static bool is_networking_enabled(void)
     return ret;
 }
 
-static void show_problem_list_notification(GList *problems, int flags);
+static void show_problem_list_notification(GtkApplication* application, GList *problems, int flags);
 
 static gboolean process_deferred_queue_timeout_fn(GList *queue)
 {
     g_deferred_timeout = 0;
-    show_problem_list_notification(queue, /* process these crashes as new crashes */ 0);
+    show_problem_list_notification(g_application, queue, /* process these crashes as new crashes */ 0);
 
     /* Remove this timeout fn from the main loop*/
     return FALSE;
@@ -314,7 +317,6 @@ static void push_to_deferred_queue(problem_info_t *pi)
 {
     g_deferred_crash_queue = g_list_append(g_deferred_crash_queue, pi);
 }
-
 static const char *problem_info_get_dir(problem_info_t *pi)
 {
     return problem_data_get_content_or_NULL(pi->problem_data, CD_DUMPDIR);
@@ -372,7 +374,41 @@ static void problem_info_free(problem_info_t *pi)
     free(pi);
 }
 
-static void run_event_async(problem_info_t *pi, const char *event_name, int flags);
+static void add_to_notified_list(problem_info_t *pi)
+{
+    g_notified_problems = g_list_prepend(g_notified_problems, pi);
+}
+
+static problem_info_t *remove_from_notified_list(const char *problem_dir)
+{
+    problem_info_t *result = NULL;
+    GList *iter = g_notified_problems;
+
+    while (iter != NULL)
+    {
+        problem_info_t *pi = (problem_info_t *)iter->data;
+
+        /* All have '/var/tmp/abr/' prefix ... :( */
+        if (strcmp(problem_dir, problem_info_get_dir(pi)) == 0)
+        {
+            if (result == NULL)
+                result = pi;
+            else
+                problem_info_free(pi);
+
+            GList *removed = iter;
+            iter = g_list_next(iter);
+
+            g_notified_problems = g_list_remove_link(g_notified_problems, removed);
+        }
+        else
+            iter = g_list_next(iter);
+    }
+
+    return result;
+}
+
+static void run_event_async(GtkApplication *application, problem_info_t *pi, const char *event_name, int flags);
 
 enum {
     REPORT_UNKNOWN_PROBLEM_IMMEDIATELY = 1 << 0,
@@ -385,6 +421,7 @@ struct event_processing_state
     struct strbuf *cmd_output;
 
     problem_info_t *pi;
+    GtkApplication *app;
     int flags;
 };
 
@@ -599,14 +636,6 @@ static void fork_exec_gui(const char *problem_id)
     new_dir_exists(/* new dirs list */ NULL);
 }
 
-static void hide_icon(void)
-{
-    if (ap_status_icon == NULL)
-        return;
-
-    gtk_status_icon_set_visible(ap_status_icon, false);
-}
-
 static pid_t spawn_event_handler_child(const char *dump_dir_name, const char *event_name, int *fdp)
 {
     char *args[7];
@@ -666,46 +695,45 @@ static void run_report_from_applet(problem_info_t *pi)
 }
 
 //this action should open the reporter dialog directly, without showing the main window
-static void action_report(NotifyNotification *notification, gchar *action, gpointer user_data)
+static void action_full_report(GSimpleAction *action, GVariant *param, gpointer user_data)
 {
     log_debug("Reporting a problem!");
-    /* must be closed before ask_yes_no dialog run */
-    GError *err = NULL;
-    notify_notification_close(notification, &err);
-    if (err != NULL)
-    {
-        error_msg(_("Can't close notification: %s"), err->message);
-        g_error_free(err);
-    }
-
-    hide_icon();
 
     problem_info_t *pi = (problem_info_t *)user_data;
     if (problem_info_get_dir(pi))
-    {
-        if (strcmp(A_REPORT_REPORT, action) == 0)
-        {
-            run_report_from_applet(pi);
-            problem_info_free(pi);
-        }
-        else
-        {
-            if (pi->foreign == false && strcmp(A_REPORT_AUTOREPORT, action) == 0)
-                ask_start_autoreporting();
+        run_report_from_applet(pi);
 
-            /* if shortened reporting is configured don't start reporting process
-             * when problem is unknown (just show notification) */
-            run_event_async(pi, get_autoreport_event_name(),
-                is_shortened_reporting_enabled() ? 0 : REPORT_UNKNOWN_PROBLEM_IMMEDIATELY);
-        }
+    problem_info_free(pi);
+}
+
+//this action should open the reporter dialog directly, without showing the main window
+static void action_micro_report(GSimpleAction *action, GVariant *param, gpointer user_data)
+{
+    log_debug("Micro-Reporting a problem!");
+
+    const char *dir_name;
+    g_variant_get(param, "&s", &dir_name);
+    problem_info_t *pi = remove_from_notified_list(dir_name);
+
+    if (problem_info_get_dir(pi))
+    {
+        if (pi->foreign == false)
+            ask_start_autoreporting();
+
+        /* if shortened reporting is configured don't start reporting process
+         * when problem is unknown (just show notification) */
+        run_event_async(g_application, pi, get_autoreport_event_name(),
+            is_shortened_reporting_enabled() ? 0 : REPORT_UNKNOWN_PROBLEM_IMMEDIATELY);
     }
     else
         problem_info_free(pi);
 }
 
-static void action_ignore(NotifyNotification *notification, gchar *action, gpointer user_data)
+static void action_ignore(GSimpleAction *action, GVariant *param, gpointer user_data)
 {
-    problem_info_t *pi = (problem_info_t *)user_data;
+    const char *dir_name;
+    g_variant_get(param, "&s", &dir_name);
+    problem_info_t *pi = remove_from_notified_list(dir_name);
 
     const char *const message = _(
             "You are going to mute notifications of a particular problem. " \
@@ -721,56 +749,28 @@ static void action_ignore(NotifyNotification *notification, gchar *action, gpoin
         ignored_problems_add_problem_data(g_ignore_set, pi->problem_data);
     }
 
-    GError *err = NULL;
-    notify_notification_close(notification, &err);
-    if (err != NULL)
-    {
-        error_msg("%s", err->message);
-        g_error_free(err);
-    }
-    hide_icon();
+    problem_info_free(pi);
 }
 
-static void action_known(NotifyNotification *notification, gchar *action, gpointer user_data)
+static void action_open_problem(GSimpleAction *action, GVariant *param, gpointer user_data)
 {
-    log_debug("Handle known action '%s'!", action);
-    problem_info_t *pi = (problem_info_t *)user_data;
+    const char *dir_name;
+    g_variant_get(param, "&s", &dir_name);
+    problem_info_t *pi = remove_from_notified_list(dir_name);
 
-    if (strcmp(A_KNOWN_OPEN_GUI, action) == 0)
-        fork_exec_gui(problem_info_get_dir(pi));
-    else
-        /* This should not happen; otherwise it's a bug */
-        error_msg("%s:%d %s(): BUG Unknown action '%s'", __FILE__, __LINE__, __func__, action);
+    fork_exec_gui(problem_info_get_dir(pi));
 
-    GError *err = NULL;
-    notify_notification_close(notification, &err);
-    if (err != NULL)
-    {
-        error_msg(_("Can't close notification: %s"), err->message);
-        g_error_free(err);
-    }
-
-    hide_icon();
+    problem_info_free(pi);
 }
 
-static void on_menu_popup_cb(GtkStatusIcon *status_icon,
-                        guint          button,
-                        guint          activate_time,
-                        gpointer       user_data)
-{
-    if (ap_menu != NULL)
-    {
-        gtk_menu_popup(GTK_MENU(ap_menu),
-                NULL, NULL,
-                gtk_status_icon_position_menu,
-                status_icon, button, activate_time);
-    }
-}
-
-static void on_notify_close(NotifyNotification *notification, gpointer user_data)
+static void action_close(GSimpleAction *action, GVariant *param, gpointer user_data)
 {
     log_debug("Notify closed!");
-    g_object_unref(notification);
+
+    const char *dir_name;
+    g_variant_get(param, "&s", &dir_name);
+    problem_info_t *pi = remove_from_notified_list(dir_name);
+    problem_info_free(pi);
 
     /* Scan dirs and save new $XDG_CACHE_HOME/abrt/applet_dirlist.
      * (Oterwise, after a crash, next time applet is started,
@@ -780,32 +780,30 @@ static void on_notify_close(NotifyNotification *notification, gpointer user_data
     new_dir_exists(/* new dirs list */ NULL);
 }
 
-static NotifyNotification *new_warn_notification(bool persistence)
+static GNotification *new_warn_notification(problem_info_t *pi)
 {
-    NotifyNotification *notification;
+    GNotification *notification;
+    GIcon *icon;
 
-/* the fourth argument was removed in libnotify 0.7.0 */
-#if !defined(NOTIFY_VERSION_MINOR) || (NOTIFY_VERSION_MAJOR == 0 && NOTIFY_VERSION_MINOR < 7)
-    notification = notify_notification_new(_("Warning"), NULL, NULL, NULL);
-#else
-    notification = notify_notification_new(_("Warning"), NULL, NULL);
-#endif
+    notification = g_notification_new(_("Warning"));
+    icon = g_themed_icon_new_with_default_fallbacks("abrt");
+    g_notification_set_icon(notification, icon);
+    g_object_unref(icon);
 
-    g_signal_connect(notification, "closed", G_CALLBACK(on_notify_close), NULL);
+    g_notification_set_default_action_and_target(notification, "app.close-notification",
+                                                 "s", problem_info_get_dir(pi));
 
-    GdkPixbuf *pixbuf = gtk_icon_theme_load_icon(gtk_icon_theme_get_default(),
-                "abrt", 48, GTK_ICON_LOOKUP_USE_BUILTIN, NULL);
-
-    if (pixbuf)
-        notify_notification_set_icon_from_pixbuf(notification, pixbuf);
-    notify_notification_set_urgency(notification, NOTIFY_URGENCY_NORMAL);
-    notify_notification_set_timeout(notification, persistence ? NOTIFY_EXPIRES_NEVER
-                                                              : NOTIFY_EXPIRES_DEFAULT);
-    notify_notification_set_hint(notification, "desktop-entry", g_variant_new_string("abrt-applet"));
+    // As of now, all notifications are persisntent
+    //notify_notification_set_timeout(notification, persistence ? NOTIFY_EXPIRES_NEVER
+    //                                                          : NOTIFY_EXPIRES_DEFAULT);
+    //
+    // TODO: This should handle GtkApplication ??
+    //notify_notification_set_hint(notification, "desktop-entry", g_variant_new_string("abrt-applet"));
 
     return notification;
 }
 
+#if 0
 static void on_about_cb(GtkMenuItem *menuitem, gpointer dialog)
 {
     if (dialog)
@@ -856,88 +854,10 @@ static GtkWidget *create_about_dialog(void)
     }
     return about_d;
 }
-
-static GtkWidget *create_menu(void)
-{
-    GtkWidget *menu = gtk_menu_new();
-    GtkWidget *b_quit = gtk_menu_item_new_with_mnemonic(_("_Quit"));
-    g_signal_connect(b_quit, "activate", gtk_main_quit, NULL);
-    GtkWidget *b_hide = gtk_menu_item_new_with_label(_("Hide"));
-    g_signal_connect(b_hide, "activate", G_CALLBACK(hide_icon), NULL);
-    GtkWidget *b_about = gtk_menu_item_new_with_mnemonic(_("_About"));
-    GtkWidget *about_dialog = create_about_dialog();
-    g_signal_connect(b_about, "activate", G_CALLBACK(on_about_cb), about_dialog);
-    GtkWidget *separator = gtk_separator_menu_item_new();
-
-    gtk_menu_shell_append(GTK_MENU_SHELL(menu), b_hide);
-    gtk_widget_show(b_hide);
-    gtk_menu_shell_append(GTK_MENU_SHELL(menu), b_about);
-    gtk_widget_show(b_about);
-    gtk_menu_shell_append(GTK_MENU_SHELL(menu), separator);
-    gtk_widget_show(separator);
-    gtk_menu_shell_append(GTK_MENU_SHELL(menu), b_quit);
-    gtk_widget_show(b_quit);
-
-    return menu;
-}
-
-static void on_applet_activate_cb(GtkStatusIcon *status_icon, gpointer user_data)
-{
-    fork_exec_gui(g_last_notified_problem_id);
-    hide_icon();
-}
-
-static GtkStatusIcon *create_status_icon(void)
-{
-     GtkStatusIcon *icn = gtk_status_icon_new_from_icon_name("abrt");
-
-     g_signal_connect(G_OBJECT(icn), "activate", G_CALLBACK(on_applet_activate_cb), NULL);
-     g_signal_connect(G_OBJECT(icn), "popup_menu", G_CALLBACK(on_menu_popup_cb), NULL);
-
-     return icn;
-}
-
-static void show_icon(const char *tooltip)
-{
-    if (ap_status_icon == NULL)
-    {
-        ap_status_icon = create_status_icon();
-        ap_menu = create_menu();
-    }
-
-    gtk_status_icon_set_tooltip_text(ap_status_icon, tooltip);
-    gtk_status_icon_set_visible(ap_status_icon, true);
-}
-
-static gboolean server_has_persistence(void)
-{
-#if !defined(NOTIFY_VERSION_MINOR) || (NOTIFY_VERSION_MAJOR == 0 && NOTIFY_VERSION_MINOR >= 6)
-    GList *caps = notify_get_server_caps();
-    if (caps == NULL)
-    {
-        error_msg("Failed to receive server caps");
-        return FALSE;
-    }
-
-    GList *l = g_list_find_custom(caps, "persistence", (GCompareFunc)strcmp);
-
-    list_free_with_free(caps);
-    log_notice("notify server %s support pesistence", l ? "DOES" : "DOESN'T");
-    return (l != NULL);
-#else
-    return FALSE;
 #endif
-}
 
-static void notify_problem_list(GList *problems, int flags)
+static void notify_problem_list(GtkApplication *application, GList *problems, int flags)
 {
-    bool persistence_supported = false;
-    if (notify_is_initted() || notify_init(_("Problem detected")))
-        persistence_supported = server_has_persistence();
-    else
-        /* show icon and don't try to show notify if initialization of libnotify failed */
-        flags |= SHOW_ICON_ONLY;
-
     GList *last_item = g_list_last(problems);
     if (last_item == NULL)
     {
@@ -949,20 +869,6 @@ static void notify_problem_list(GList *problems, int flags)
     free(g_last_notified_problem_id);
     g_last_notified_problem_id = xstrdup(problem_info_get_dir(last_problem));
 
-    if (!persistence_supported || flags & SHOW_ICON_ONLY)
-    {
-        /* Use a message of the last one */
-        char *message = build_message(last_problem);
-        show_icon(message);
-        free(message);
-    }
-
-    if (flags & SHOW_ICON_ONLY)
-    {
-        g_list_free_full(problems, (GDestroyNotify)problem_info_free);
-        return;
-    }
-
     char *notify_body = NULL;
     for (GList *iter = problems; iter; iter = g_list_next(iter))
     {
@@ -973,33 +879,25 @@ static void notify_problem_list(GList *problems, int flags)
             continue;
         }
 
-        /* Don't show persistent notification (let notification bubble expire
-         * and disappear in few seconds) with ShortenedReporting mode enabled
-         * and already announced problem. And of course show persistent bubble
-         * only if the persistence is supported.
-         */
-        const bool persistent_notification = (persistence_supported
-            && !(is_shortened_reporting_enabled() && pi->was_announced));
-
-        NotifyNotification *notification = new_warn_notification(persistent_notification);
-        notify_notification_add_action(notification, "IGNORE", _("Ignore forever"),
-                NOTIFY_ACTION_CALLBACK(action_ignore),
-                pi, NULL);
+        GNotification *notification = new_warn_notification(pi);
+        g_notification_add_button_with_target(notification,
+                _("Ignore forever"), "app.ignore-problem-forever", "s", problem_info_get_dir(pi));
 
         notify_body = build_message(pi);
+        g_notification_set_body(notification, notify_body);
 
         pi->was_announced = true;
 
         if (pi->known)
         {   /* Problem has been 'autoreported' and is considered as KNOWN
              */
-            notify_notification_add_action(notification, A_KNOWN_OPEN_GUI, _("Open"),
-                    NOTIFY_ACTION_CALLBACK(action_known),
-                    pi, NULL);
+            g_notification_add_button_with_target(notification,
+                    _("Open"), "app.open-problem", "s", problem_info_get_dir(pi));
 
-            notify_notification_update(notification, pi->was_announced ?
-                    _("The Problem has already been Reported") : _("A Known Problem has Occurred"),
-                    notify_body, NULL);
+            if (pi->was_announced)
+                g_notification_set_title(notification, _("The Problem has already been Reported"));
+            else
+                g_notification_set_title(notification, _("A Known Problem has Occurred"));
         }
         else
         {
@@ -1008,21 +906,19 @@ static void notify_problem_list(GList *problems, int flags)
                  */
                 if (pi->incomplete)
                 {
-                    notify_notification_add_action(notification, A_KNOWN_OPEN_GUI, _("Open"),
-                            NOTIFY_ACTION_CALLBACK(action_known),
-                            pi, NULL);
+                    g_notification_add_button_with_target(notification,
+                            _("Open"), "app.open-problem", "s", problem_info_get_dir(pi));
                 }
                 else
                 {
                    /* Problem has not yet been 'autoreported' and can be
                     * 'autoreported' on user request.
                     */
-                    notify_notification_add_action(notification, A_REPORT_AUTOREPORT, _("Report"),
-                            NOTIFY_ACTION_CALLBACK(action_report),
-                            pi, NULL);
+                    g_notification_add_button_with_target(notification,
+                            _("Report"), "app.send-micro-report", "s", problem_info_get_dir(pi));
                 }
 
-                notify_notification_update(notification, _("A Problem has Occurred"), notify_body, NULL);
+                g_notification_set_title(notification, _("A Problem has Occurred"));
             }
             else
             {   /* Problem has been 'autoreported' and is considered as UNKNOWN
@@ -1048,27 +944,23 @@ static void notify_problem_list(GList *problems, int flags)
                         goto next_problem_to_notify;
                     }
 
-                    notify_notification_update(notification, _("A Problem has been Reported"), notify_body, NULL);
+                    g_notification_set_title(notification, _("A Problem has been Reported"));
                 }
                 else
                 {
-                    notify_notification_add_action(notification, A_REPORT_REPORT, _("Report"),
-                            NOTIFY_ACTION_CALLBACK(action_report),
-                            pi, NULL);
+                    g_notification_add_button_with_target(notification,
+                            _("Report"), "app.send-full-report", "s", problem_info_get_dir(pi));
 
-                    notify_notification_update(notification, _("A New Problem has Occurred"), notify_body, NULL);
+                    g_notification_set_title(notification, _("A New Problem has Occurred"));
                 }
             }
         }
 
-        GError *err = NULL;
         log_debug("Showing a notification");
-        notify_notification_show(notification, &err);
-        if (err != NULL)
-        {
-            error_msg(_("Can't show notification: %s"), err->message);
-            g_error_free(err);
-        }
+
+        add_to_notified_list(pi);
+        g_application_send_notification(G_APPLICATION(application),
+                                        problem_info_get_dir(pi), notification);
 
 next_problem_to_notify:
         free(notify_body);
@@ -1078,10 +970,10 @@ next_problem_to_notify:
     g_list_free(problems);
 }
 
-static void notify_problem(problem_info_t *pi)
+static void notify_problem(GtkApplication *application, problem_info_t *pi)
 {
     GList *problems = g_list_append(NULL, pi);
-    notify_problem_list(problems, /* show icon and notify, don't show autoreport and don't use anon report*/ 0);
+    notify_problem_list(application, problems, /* show icon and notify, don't show autoreport and don't use anon report*/ 0);
 }
 
 /* Event-processing child output handler */
@@ -1152,7 +1044,7 @@ static gboolean handle_event_output_cb(GIOChannel *gio, GIOCondition condition, 
 
         log_debug("fast report finished successfully");
         if (pi->known || !(state->flags & REPORT_UNKNOWN_PROBLEM_IMMEDIATELY))
-            notify_problem(pi);
+            notify_problem(state->app, pi);
         else
             run_report_from_applet(pi);
     }
@@ -1160,7 +1052,7 @@ static gboolean handle_event_output_cb(GIOChannel *gio, GIOCondition condition, 
     {
         log_debug("fast report failed");
         if (is_networking_enabled())
-            notify_problem(pi);
+            notify_problem(state->app, pi);
         else
             push_to_deferred_queue(pi);
     }
@@ -1213,7 +1105,7 @@ static void export_event_configuration(const char *event_name)
     g_list_free(ex_env);
 }
 
-static void run_event_async(problem_info_t *pi, const char *event_name, int flags)
+static void run_event_async(GtkApplication *application, problem_info_t *pi, const char *event_name, int flags)
 {
     if (!problem_info_ensure_writable(pi))
     {
@@ -1225,6 +1117,7 @@ static void run_event_async(problem_info_t *pi, const char *event_name, int flag
 
     struct event_processing_state *state = new_event_processing_state();
     state->pi = pi;
+    state->app = application;
     state->flags = flags;
 
     state->child_pid = spawn_event_handler_child(problem_info_get_dir(state->pi), event_name, &state->child_stdout_fd);
@@ -1234,7 +1127,7 @@ static void run_event_async(problem_info_t *pi, const char *event_name, int flag
                    handle_event_output_cb, state);
 }
 
-static void show_problem_list_notification(GList *problems, int flags)
+static void show_problem_list_notification(GtkApplication *application, GList *problems, int flags)
 {
     if (is_autoreporting_enabled())
     {
@@ -1247,7 +1140,7 @@ static void show_problem_list_notification(GList *problems, int flags)
 
             if (!data->foreign && !data->incomplete)
             {
-                run_event_async((problem_info_t *)iter->data, get_autoreport_event_name(), /* don't automatically report */ 0);
+                run_event_async(application, (problem_info_t *)iter->data, get_autoreport_event_name(), /* don't automatically report */ 0);
                 problems = g_list_delete_link(problems, iter);
             }
 
@@ -1261,41 +1154,37 @@ static void show_problem_list_notification(GList *problems, int flags)
      *  - the whole list otherwise
      */
     if (problems)
-        notify_problem_list(problems, flags | JUST_DETECTED_PROBLEM);
+        notify_problem_list(application, problems, flags | JUST_DETECTED_PROBLEM);
 }
 
-static void show_problem_notification(problem_info_t *pi, int flags)
+static void show_problem_notification(GtkApplication *application, problem_info_t *pi, int flags)
 {
     GList *problems = g_list_append(NULL, pi);
-    show_problem_list_notification(problems, flags);
+    show_problem_list_notification(application, problems, flags);
 }
 
-static void Crash(DBusMessage* signal)
+static void Crash(GDBusConnection *connection, const gchar *sender_name,
+                    const gchar *object_path, const gchar *interface_name,
+                    const gchar *signal_name, GVariant *parameters,
+                    gpointer user_data)
 {
     log_debug("Crash recorded");
-    DBusMessageIter in_iter;
-    dbus_message_iter_init(signal, &in_iter);
 
-#define DBUS_ARG_VAR(varname, retval) \
-    const char* varname = NULL; \
-    if (load_charp(&in_iter, &varname) != retval) \
-    { \
-        error_msg("dbus signal %s: parameter '%s' type mismatch", __func__, #varname); \
-        return; \
-    } \
+    if (g_variant_check_format_string(parameters, "(&s&s&s&s&s)", FALSE) == FALSE)
+    {
+        error_msg("dbus signal Crash: parameter type is invalid: %s",
+                    g_variant_get_type_string(parameters));
+        return;
+    }
 
-    /* 1st param: package */
-    DBUS_ARG_VAR(package_name, ABRT_DBUS_MORE_FIELDS);
-    /* 2nd param: dir */
-    DBUS_ARG_VAR(dir, ABRT_DBUS_MORE_FIELDS);
-    /* 3rd param: uid_str */
-    DBUS_ARG_VAR(uid_str, ABRT_DBUS_MORE_FIELDS);
-    /* 4th param: uuid */
-    DBUS_ARG_VAR(uuid, ABRT_DBUS_MORE_FIELDS);
-    /* 5th param: duphash */
-    DBUS_ARG_VAR(duphash, ABRT_DBUS_LAST_FIELD);
+    const char *package_name;
+    const char *dir;
+    const char *uid_str;
+    const char *uuid;
+    const char *duphash;
 
-#undef DBUS_ARG_VAR
+    g_variant_get(parameters, "(&s&s&s&s&s)",
+            &package_name, &dir, &uid_str, &uuid, &duphash);
 
     bool foreign_problem = false;
     if (uid_str[0] != '\0')
@@ -1342,7 +1231,6 @@ static void Crash(DBusMessage* signal)
         last_problem_dir = xstrdup(dir);
     }
 
-
     problem_info_t *pi = problem_info_new(dir);
     if (uuid != NULL && uuid[0] != '\0')
         problem_data_add_text_noteditable(pi->problem_data, FILENAME_UUID, uuid);
@@ -1350,41 +1238,10 @@ static void Crash(DBusMessage* signal)
         problem_data_add_text_noteditable(pi->problem_data, FILENAME_DUPHASH, duphash);
     if (package_name != NULL && package_name[0] != '\0')
         problem_data_add_text_noteditable(pi->problem_data, FILENAME_COMPONENT, package_name);
+
     pi->foreign = foreign_problem;
-    show_problem_notification(pi, flags);
-}
 
-static DBusHandlerResult handle_message(DBusConnection* conn, DBusMessage* msg, void* user_data)
-{
-    const char* member = dbus_message_get_member(msg);
-
-    log_notice("%s(member:'%s')", __func__, member);
-
-    int type = dbus_message_get_type(msg);
-    if (type != DBUS_MESSAGE_TYPE_SIGNAL)
-    {
-        log("The message is not a signal. ignoring");
-        return DBUS_HANDLER_RESULT_HANDLED;
-    }
-
-    if (strcmp(member, "Crash") == 0)
-        Crash(msg);
-
-    return DBUS_HANDLER_RESULT_HANDLED;
-}
-
-//TODO: move to abrt_dbus.cpp
-static void die_if_dbus_error(bool error_flag, DBusError* err, const char* msg)
-{
-    if (dbus_error_is_set(err))
-    {
-        error_msg("dbus error: %s", err->message);
-        /*dbus_error_free(&err); - why bother, we will exit in a microsecond */
-        error_flag = true;
-    }
-    if (!error_flag)
-        return;
-    error_msg_and_die("%s", msg);
+    show_problem_notification(GTK_APPLICATION(user_data), pi, flags);
 }
 
 static void handle_signal(int signo)
@@ -1584,44 +1441,22 @@ xsmp_client_connect(void)
  * XSMP client finito
  */
 
-int main(int argc, char** argv)
+static void startup(GApplication *application, gpointer user_data)
 {
-    /* I18n */
-    setlocale(LC_ALL, "");
-#if ENABLE_NLS
-    bindtextdomain(PACKAGE, LOCALEDIR);
-    textdomain(PACKAGE);
-#endif
+    /* Initialize our (dbus_abrt) machinery: hook _system_ dbus to glib main loop.
+     * (session bus is left to be handled by libnotify, see below) */
+    g_crash_signal_ret = g_dbus_connection_signal_subscribe(g_system_bus,
+                                                        NULL, //"org.freedesktop.problems",
+                                                        NULL, //"org.freedesktop.problems",
+                                                        "Crash",
+                                                        "/org/freedesktop/problems",
+                                                        /* arg0 */ NULL,
+                                                        G_DBUS_SIGNAL_FLAGS_NONE,
+                                                        Crash,
+                                                        /* user_data */ application,
+                                                        /* user_dta_free_func */ NULL);
 
-    abrt_init(argv);
-    /* Glib 2.31:
-     * Major changes to threading and synchronisation
-     * - threading is now always enabled in GLib
-     * - support for custom thread implementations (including our own internal
-     * - support for errorcheck mutexes) has been removed
-     */
-#if (GLIB_MAJOR_VERSION == 2 && GLIB_MINOR_VERSION < 31)
-    //can't use log(), because g_verbose is not set yet
-    /* Need to be thread safe */
-    g_thread_init(NULL);
-    gdk_threads_init();
-    gdk_threads_enter();
-#endif
-
-    glib_init();
-
-    /* Monitor 'StateChanged' signal on 'org.freedesktop.NetworkManager' interface */
-    GError *error = NULL;
-    g_system_bus = g_bus_get_sync(G_BUS_TYPE_SYSTEM, NULL, &error);
-
-    if (g_system_bus == NULL)
-    {
-        error_msg("Error creating D-Bus proxy: %s\n", error->message);
-        g_error_free(error);
-        return -1;
-    }
-
-    const guint signal_ret = g_dbus_connection_signal_subscribe(g_system_bus,
+    g_nm_signal_ret = g_dbus_connection_signal_subscribe(g_system_bus,
                                                         NM_DBUS_SERVICE,
                                                         NM_DBUS_INTERFACE,
                                                         "StateChanged",
@@ -1632,81 +1467,7 @@ int main(int argc, char** argv)
                                                         /* user_data */ NULL,
                                                         /* user_data_free_func */ NULL);
 
-    g_set_prgname("abrt");
-    gtk_init(&argc, &argv);
-
-    /* Can't keep these strings/structs static: _() doesn't support that */
-    const char *program_usage_string = _(
-        "& [-v] [DIR]...\n"
-        "\n"
-        "Applet which notifies user when new problems are detected by ABRT\n"
-    );
-    enum {
-        OPT_v = 1 << 0,
-    };
-    /* Keep enum above and order of options below in sync! */
-    struct options program_options[] = {
-        OPT__VERBOSE(&g_verbose),
-        OPT_END()
-    };
-    /*unsigned opts =*/ parse_opts(argc, argv, program_options, program_usage_string);
-
-    migrate_to_xdg_dirs();
-
-    export_abrt_envvars(0);
-    msg_prefix = g_progname;
-
-    load_abrt_conf();
-    load_event_config_data();
-    load_user_settings("abrt-applet");
-
-    const char *default_dirs[] = {
-        g_settings_dump_location,
-        NULL,
-        NULL,
-    };
-    argv += optind;
-    if (!argv[0])
-    {
-        default_dirs[1] = concat_path_file(g_get_user_cache_dir(), "abrt/spool");
-        argv = (char**)default_dirs;
-    }
-    s_dirs = argv;
-
-    /* Initialize our (dbus_abrt) machinery: hook _system_ dbus to glib main loop.
-     * (session bus is left to be handled by libnotify, see below) */
-    DBusError err;
-    dbus_error_init(&err);
-    DBusConnection* system_conn = dbus_bus_get(DBUS_BUS_SYSTEM, &err);
-    die_if_dbus_error(system_conn == NULL, &err, "Can't connect to system dbus");
-    attach_dbus_conn_to_glib_main_loop(system_conn, NULL, NULL);
-    if (!dbus_connection_add_filter(system_conn, handle_message, NULL, NULL))
-        error_msg_and_die("Can't add dbus filter");
-    //signal sender=:1.73 -> path=/org/freedesktop/problems; interface=org.freedesktop.problems; member=Crash
-    //   string "coreutils-7.2-3.fc11"
-    //   string "0"
-    dbus_bus_add_match(system_conn, "type='signal',path='"ABRT_DBUS_OBJECT"'", &err);
-    die_if_dbus_error(false, &err, "Can't add dbus match");
-
-    /* dbus_abrt cannot handle more than one bus, and we don't really need to.
-     * The only thing we want to do is to announce ourself on session dbus */
-    DBusConnection* session_conn = dbus_bus_get(DBUS_BUS_SESSION, &err);
-    die_if_dbus_error(session_conn == NULL, &err, "Can't connect to session dbus");
-    int r = dbus_bus_request_name(session_conn,
-        ABRT_DBUS_NAME".applet",
-        /* flags */ DBUS_NAME_FLAG_DO_NOT_QUEUE, &err);
-    die_if_dbus_error(r != DBUS_REQUEST_NAME_REPLY_PRIMARY_OWNER, &err,
-        "Problem connecting to dbus, or applet is already running");
-
-    /* dbus_bus_request_name can already read some data. Thus while dbus fd hasn't
-     * any data anymore, dbus library can buffer a message or two.
-     * If we don't do this, the data won't be processed until next dbus data arrives.
-     */
-    int cnt = 10;
-    while (dbus_connection_dispatch(system_conn) != DBUS_DISPATCH_COMPLETE && --cnt)
-        continue;
-
-    /* If some new dirs appeared since our last run, let user know it */
+        /* If some new dirs appeared since our last run, let user know it */
     GList *new_dirs = NULL;
     GList *notify_list = NULL;
     new_dir_exists(&new_dirs);
@@ -1778,7 +1539,7 @@ next:
     g_ignore_set = ignored_problems_new(concat_path_file(g_get_user_cache_dir(), "abrt/ignored_problems"));
 
     if (notify_list)
-        show_problem_list_notification(notify_list, /* show icon and notify */ 0);
+        show_problem_list_notification(GTK_APPLICATION(application), notify_list, /* show icon and notify */ 0);
 
     list_free_with_free(new_dirs);
 
@@ -1800,8 +1561,8 @@ next:
     ndelay_on(g_signal_pipe[0]);
     ndelay_on(g_signal_pipe[1]);
     signal(SIGTERM, handle_signal);
-    GIOChannel *channel_id_signal = my_io_channel_unix_new(g_signal_pipe[0]);
-    g_io_add_watch(channel_id_signal,
+    g_channel_id_signal = my_io_channel_unix_new(g_signal_pipe[0]);
+    g_io_add_watch(g_channel_id_signal,
                 G_IO_IN | G_IO_PRI | G_IO_ERR | G_IO_HUP | G_IO_NVAL,
                 handle_sigterm_pipe,
                 NULL);
@@ -1809,15 +1570,118 @@ next:
     /* Register a handler quiting from gtk main loop on X Session death.
      */
     xsmp_client_connect();
+}
+
+static void activate(GApplication *application, gpointer user_data)
+{
+    g_application_hold(application);
+}
+
+static GActionEntry actions[] = {
+    { "close-notification",     action_close,        "t", NULL, NULL },
+    { "send-full-report",       action_full_report,  "t", NULL, NULL },
+    { "send-micro-report",      action_micro_report, "t", NULL, NULL },
+    { "open-problem",           action_open_problem, "t", NULL, NULL },
+    { "ignore-problem-forever", action_ignore,       "t", NULL, NULL },
+};
+
+int main(int argc, char** argv)
+{
+    /* I18n */
+    setlocale(LC_ALL, "");
+#if ENABLE_NLS
+    bindtextdomain(PACKAGE, LOCALEDIR);
+    textdomain(PACKAGE);
+#endif
+
+    abrt_init(argv);
+    /* Glib 2.31:
+     * Major changes to threading and synchronisation
+     * - threading is now always enabled in GLib
+     * - support for custom thread implementations (including our own internal
+     * - support for errorcheck mutexes) has been removed
+     */
+#if (GLIB_MAJOR_VERSION == 2 && GLIB_MINOR_VERSION < 31)
+    //can't use log(), because g_verbose is not set yet
+    /* Need to be thread safe */
+    g_thread_init(NULL);
+    gdk_threads_init();
+    gdk_threads_enter();
+#endif
+
+    glib_init();
+
+    /* Monitor 'StateChanged' signal on 'org.freedesktop.NetworkManager' interface */
+    GError *error = NULL;
+    g_system_bus = g_bus_get_sync(G_BUS_TYPE_SYSTEM, NULL, &error);
+
+    if (g_system_bus == NULL)
+    {
+        error_msg("Error creating D-Bus proxy: %s\n", error->message);
+        g_error_free(error);
+        return -1;
+    }
+
+    g_set_prgname("abrt");
+
+    /* Can't keep these strings/structs static: _() doesn't support that */
+    const char *program_usage_string = _(
+        "& [-v] [DIR]...\n"
+        "\n"
+        "Applet which notifies user when new problems are detected by ABRT\n"
+    );
+    enum {
+        OPT_v = 1 << 0,
+    };
+    /* Keep enum above and order of options below in sync! */
+    struct options program_options[] = {
+        OPT__VERBOSE(&g_verbose),
+        OPT_END()
+    };
+    /*unsigned opts =*/ parse_opts(argc, argv, program_options, program_usage_string);
+
+    migrate_to_xdg_dirs();
+
+    export_abrt_envvars(0);
+    msg_prefix = g_progname;
+
+    load_abrt_conf();
+    load_event_config_data();
+    load_user_settings("abrt-applet");
+
+    const char *default_dirs[] = {
+        g_settings_dump_location,
+        NULL,
+        NULL,
+    };
+    argv += optind;
+    if (!argv[0])
+    {
+        default_dirs[1] = concat_path_file(g_get_user_cache_dir(), "abrt/spool");
+        argv = (char**)default_dirs;
+    }
+    s_dirs = argv;
+
+    GtkApplication *application = gtk_application_new("org.freedesktop.abrt.applet",
+                                                      G_APPLICATION_FLAGS_NONE);
+
+    g_signal_connect(application, "startup", G_CALLBACK(startup), NULL);
+    g_signal_connect(application, "activate", G_CALLBACK(activate), NULL);
+
+    g_action_map_add_action_entries(G_ACTION_MAP(application),
+                                    actions, G_N_ELEMENTS(actions),
+                                    application);
 
     /* Enter main loop
      *
      * Returns on SIGTERM signal, on menu button Quit click or on X Session
      * death.
      */
-    gtk_main();
+    g_application_run(G_APPLICATION(application), 1, argv);
 
-    g_io_channel_unref(channel_id_signal);
+    g_io_channel_unref(g_channel_id_signal);
+
+    g_object_unref(application);
 
     ignored_problems_free(g_ignore_set);
 
@@ -1844,9 +1708,6 @@ next:
      */
     new_dir_exists(/* new dirs list */ NULL);
 
-    if (notify_is_initted())
-        notify_uninit();
-
     /* It does not make much sense to save settings at exit and after
      * introduction of system-config-abrt it is wrong to do that. abrt-applet
      * is long-running application and user can modify the configuration files
@@ -1858,7 +1719,8 @@ next:
      * save_user_settings();
      */
 
-    g_dbus_connection_signal_unsubscribe(g_system_bus, signal_ret);
+    g_dbus_connection_signal_unsubscribe(g_system_bus, g_crash_signal_ret);
+    g_dbus_connection_signal_unsubscribe(g_system_bus, g_nm_signal_ret);
     g_object_unref(g_system_bus);
 
     free(g_last_notified_problem_id);
