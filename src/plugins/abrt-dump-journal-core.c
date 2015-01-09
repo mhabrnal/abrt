@@ -206,7 +206,14 @@ save_systemd_coredump_in_dump_directory(struct dump_dir *dd, struct crash_info *
         return -1;
     }
 
-    if (dd_copy_file(dd, FILENAME_COREDUMP, coredump_path))
+    const size_t len = strlen(coredump_path);
+    if (   len >= 3
+        && coredump_path[len - 3] == '.' && coredump_path[len - 2] == 'x' && coredump_path[len - 1] == 'z')
+    {
+        if (dd_copy_file_unpack(dd, FILENAME_COREDUMP, coredump_path))
+            return -1;
+    }
+    else if (dd_copy_file(dd, FILENAME_COREDUMP, coredump_path))
         return -1;
 
     dd_save_text(dd, FILENAME_ABRT_VERSION, VERSION);
