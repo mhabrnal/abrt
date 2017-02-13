@@ -161,14 +161,14 @@ static struct dump_dir *dd;
  * %g - gid
  * %t - UNIX time of dump
  * %e - executable filename
- * %I - global crash thread tid
  * %P - global pid
+ * %I - global crash thread tid
+ * %h - hostname
  * %% - output one "%"
  */
 /* Hook must be installed with exactly the same sequence of %c specifiers.
- * Last one, %h, may be omitted (we can find it out).
  */
-static const char percent_specifiers[] = "%scpugtePI";
+static const char percent_specifiers[] = "%scpugtePIh";
 static char *core_basename = (char*) "core";
 
 static char* get_executable(pid_t pid, int *fd_p)
