@@ -356,7 +356,7 @@ next_line:
              * In order to capture all these lines, we treat final line
              * as "backtrace" (which is admittedly a hack):
              */
-            if (strstr(curline, "Kernel panic - not syncing"))
+            if (strstr(curline, "Kernel panic - not syncing:") && strcasestr(curline, "Machine check"))
                 inbacktrace = 1;
             else
             if (strnlen(curline, 9) > 8
