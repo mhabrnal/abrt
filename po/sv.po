@@ -6,8 +6,8 @@
 # denka <dennis@dennis.se>, 2014
 # denka <dennis@dennis.se>, 2014
 # fedoratrans <fedoratrans@gmail.com>, 2009
-# Göran Uddeborg <goeran@uddeborg.se>, 2011,2013
-# Jiří Moskovčák <jmoskovc@redhat.com>, 2011
+# G??ran Uddeborg <goeran@uddeborg.se>, 2011,2013
+# Ji???? Moskov????k <jmoskovc@redhat.com>, 2011
 # fedoratrans <fedoratrans@gmail.com>, 2009
 # Mick Ohrberg <mick.ohrberg@gmail.com>, 2013
 # Ulrika <aurorauddeborg@gmail.com>, 2012
@@ -15,19 +15,19 @@
 # Ulrika <aurorauddeborg@gmail.com>, 2012
 # Mick Ohrberg <mick.ohrberg@gmail.com>, 2013
 # Swedish translation of abrt.
-# Copyright © 2009, 2011, 2012, 2013, 2014 Free Software Foundation, Inc.
+# Copyright ?? 2009, 2011, 2012, 2013, 2014 Free Software Foundation, Inc.
 # This file is distributed under the same license as the abrt package.
 # fedoratrans <fedoratrans@gmail.com>, 2009, 2011.
 # denka <dennis@dennis.se>, 2014.
-# Göran Uddeborg <goeran@uddeborg.se>, 2011, 2013, 2014.
+# G??ran Uddeborg <goeran@uddeborg.se>, 2011, 2013, 2014.
 # $Revision$
 # $Revision: 1.40 $
 # $Revision: 1.41 $
-# Copyright © 2009, 2011, 2012, 2013, 2014, 2015 Free Software Foundation, Inc.
-# Göran Uddeborg <goeran@uddeborg.se>, 2011, 2013, 2014, 2015.
+# Copyright ?? 2009, 2011, 2012, 2013, 2014, 2015 Free Software Foundation, Inc.
+# G??ran Uddeborg <goeran@uddeborg.se>, 2011, 2013, 2014, 2015.
 # $Revision: 1.43 $
-# Göran Uddeborg <goeran@uddeborg.se>, 2015. #zanata
-# Göran Uddeborg <goeran@uddeborg.se>, 2016. #zanata
+# G??ran Uddeborg <goeran@uddeborg.se>, 2015. #zanata
+# G??ran Uddeborg <goeran@uddeborg.se>, 2016. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -37,7 +37,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2016-08-10 04:36-0400\n"
-"Last-Translator: Göran Uddeborg <goeran@uddeborg.se>\n"
+"Last-Translator: G??ran Uddeborg <goeran@uddeborg.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -54,21 +54,21 @@ msgstr "Visa och rapportera programkrascher"
 #: ../src/applet/applet.c:260 ../src/cli/report.c:51
 #, c-format
 msgid "Can't take ownership of '%s'"
-msgstr "Kan inte ta över ägandet av ”%s”"
+msgstr "Kan inte ta ??ver ??gandet av ???%s???"
 
 #: ../src/applet/applet.c:268
 #, c-format
 msgid "Can't open directory for writing '%s'"
-msgstr "Kan inte öppna katalog för att skriva '%s'"
+msgstr "Kan inte ??ppna katalog f??r att skriva '%s'"
 
 #: ../src/applet/applet.c:546 ../src/applet/applet.c:564
 #, c-format
 msgid "Can't close notification: %s"
-msgstr "Kan inte stänga notifikation: %s"
+msgstr "Kan inte st??nga notifikation: %s"
 
 #: ../src/applet/applet.c:598
 msgid "Oops!"
-msgstr "Ojdå!"
+msgstr "Ojd??!"
 
 #: ../src/applet/applet.c:616
 msgid "Report"
@@ -84,17 +84,17 @@ msgid ""
 "We're sorry, it looks like %s crashed. The problem has been automatically "
 "reported."
 msgstr ""
-"Vi är ledsna, men det verkar som att %s kraschade.  Problemet har "
+"Vi ??r ledsna, men det verkar som att %s kraschade.  Problemet har "
 "rapporterats automatiskt."
 
 #: ../src/applet/applet.c:699
 #, c-format
 msgid ""
-"We’re sorry, it looks like %s crashed. The problem will be reported when the "
+"We???re sorry, it looks like %s crashed. The problem will be reported when the "
 "internet is available."
 msgstr ""
-"Vi är ledsna, men det verkar som att %s kraschade.  Problemet kommer "
-"rapporteras när internet kan nås."
+"Vi ??r ledsna, men det verkar som att %s kraschade.  Problemet kommer "
+"rapporteras n??r internet kan n??s."
 
 #: ../src/applet/applet.c:705 ../src/applet/applet.c:719
 #: ../src/applet/applet.c:747
@@ -103,7 +103,7 @@ msgid ""
 "We're sorry, it looks like %s crashed. Please contact the developer if you "
 "want to report the issue."
 msgstr ""
-"Vi är ledsna, men det verkar som att %s kraschade.  Kontakta utvecklaren om "
+"Vi ??r ledsna, men det verkar som att %s kraschade.  Kontakta utvecklaren om "
 "du vill rapportera saken."
 
 #: ../src/applet/applet.c:713
@@ -112,15 +112,15 @@ msgid ""
 "We're sorry, it looks like %s crashed. If you'd like to help resolve the "
 "issue, please send a report."
 msgstr ""
-"Vi är ledsna, men det verkar som att %s kraschade.  Om du vill hjälpa till "
-"att lösa problement, skicka då en rapport."
+"Vi ??r ledsna, men det verkar som att %s kraschade.  Om du vill hj??lpa till "
+"att l??sa problement, skicka d?? en rapport."
 
 #: ../src/applet/applet.c:732
 msgid ""
 "We're sorry, it looks like a problem occurred in a component. The problem "
 "has been automatically reported."
 msgstr ""
-"Vi är ledsna, men det verkar som att ett problem uppstod i en komponent.  "
+"Vi ??r ledsna, men det verkar som att ett problem uppstod i en komponent.  "
 "Problemet har rapporterats automatiskt."
 
 #: ../src/applet/applet.c:736
@@ -128,16 +128,16 @@ msgid ""
 "We're sorry, it looks like a problem occurred in a component. The problem "
 "will be reported when the internet is available."
 msgstr ""
-"Vi är ledsna, men det verkar som att ett problem uppstod i en komponent.  "
-"Problemet kommer rapporteras när internet kan nås."
+"Vi ??r ledsna, men det verkar som att ett problem uppstod i en komponent.  "
+"Problemet kommer rapporteras n??r internet kan n??s."
 
 #: ../src/applet/applet.c:741
 msgid ""
 "We're sorry, it looks like a problem occurred. If you'd like to help resolve "
 "the issue, please send a report."
 msgstr ""
-"Vi är ledsna, men det verkar som att ett problem uppstod.  OM du vill hjälpa "
-"till att lösa problemet, skicka då en rapport."
+"Vi ??r ledsna, men det verkar som att ett problem uppstod.  OM du vill hj??lpa "
+"till att l??sa problemet, skicka d?? en rapport."
 
 #: ../src/applet/applet.c:786
 #, c-format
@@ -148,17 +148,17 @@ msgstr "Kan inte visa notifiering: %s"
 #: ../src/applet/applet.c:818 ../src/daemon/abrt-upload-watch.c:168
 #, c-format
 msgid "Can't read from gio channel: '%s'"
-msgstr "Kan inte läsa från gio-kanal: '%s'"
+msgstr "Kan inte l??sa fr??n gio-kanal: '%s'"
 
 #: ../src/applet/applet.c:896
 #, c-format
 msgid "Can't set encoding on gio channel: %s"
-msgstr "Kan inte sätta kodning på gio-kanal: %s"
+msgstr "Kan inte s??tta kodning p?? gio-kanal: %s"
 
 #: ../src/applet/applet.c:900
 #, c-format
 msgid "Can't turn on nonblocking mode for gio channel: %s"
-msgstr "Kan inte slå på ej blockerande läge för gio-kanal: %s"
+msgstr "Kan inte sl?? p?? ej blockerande l??ge f??r gio-kanal: %s"
 
 #: ../src/applet/applet.c:1186
 msgid ""
@@ -168,7 +168,7 @@ msgid ""
 msgstr ""
 "& [-v] [KAT]...\n"
 "\n"
-"Miniprogram som meddelar användare när nya problem upptäcks av ABRT\n"
+"Miniprogram som meddelar anv??ndare n??r nya problem uppt??cks av ABRT\n"
 
 #: ../src/configuration-gui/abrt-config-widget.c:483
 msgid ""
@@ -176,9 +176,9 @@ msgid ""
 "linked to the value of the setting 'report-technical-problems' from the "
 "schema 'org.gnome.desktop.privacy'."
 msgstr ""
-"Konfigurationsalternativet ovan har flyttats till GSettings och flaggan är "
-"länkad till värdet på inställningen ”report-technical-problems” från schemat "
-"”org.gnome.desktop.privacy”."
+"Konfigurationsalternativet ovan har flyttats till GSettings och flaggan ??r "
+"l??nkad till v??rdet p?? inst??llningen ???report-technical-problems??? fr??n schemat "
+"???org.gnome.desktop.privacy???."
 
 #: ../src/configuration-gui/abrt-config-widget.c:501
 msgid "The configuration option above can be configured in"
@@ -186,7 +186,7 @@ msgstr "Konfigurationsalternativet ovan kan konfigureras i"
 
 #: ../src/configuration-gui/abrt-config-widget.glade.h:1
 msgid "Ask before stealing directory"
-msgstr "Fråga före en katalog stjäls"
+msgstr "Fr??ga f??re en katalog stj??ls"
 
 #: ../src/configuration-gui/abrt-config-widget.glade.h:2
 msgid "Automatically send uReport"
@@ -194,11 +194,11 @@ msgstr "Skicka automatiskt uReport"
 
 #: ../src/configuration-gui/abrt-config-widget.glade.h:3
 msgid "Shortened reporting"
-msgstr "Förkortad rapportering"
+msgstr "F??rkortad rapportering"
 
 #: ../src/configuration-gui/abrt-config-widget.glade.h:4
 msgid "Silent shortened reporting"
-msgstr "Tyst förkortad rapportering"
+msgstr "Tyst f??rkortad rapportering"
 
 #: ../src/configuration-gui/abrt-config-widget.glade.h:5
 msgid ""
@@ -209,13 +209,13 @@ msgid ""
 "With option 'Never' the stack trace will be always generated locally. With "
 "option 'Ask' ABRT will always ask the user."
 msgstr ""
-"Minnesdumpsfilen är nödvändig för att gnerera stackspåret som är en tids- "
-"och utrymmeskrävande åtgärd.  ABRT tillhandahåller en tjänst som genererar "
-"stackspåret från minnesdumpen men du måste skicka upp minnesdumpen till "
-"denna tjänst.  Med alternativet ”Alltid” kommer ABRT alltidk skicka upp "
-"minnesdumpen utan att fråga.  Med alternativet ”Aldrig” kommer stackspåret "
-"alltid genereras lokalt.  Med alternativet ”Fråga” kommer ABRT  alltid fråga "
-"användaren."
+"Minnesdumpsfilen ??r n??dv??ndig f??r att gnerera stacksp??ret som ??r en tids- "
+"och utrymmeskr??vande ??tg??rd.  ABRT tillhandah??ller en tj??nst som genererar "
+"stacksp??ret fr??n minnesdumpen men du m??ste skicka upp minnesdumpen till "
+"denna tj??nst.  Med alternativet ???Alltid??? kommer ABRT alltidk skicka upp "
+"minnesdumpen utan att fr??ga.  Med alternativet ???Aldrig??? kommer stacksp??ret "
+"alltid genereras lokalt.  Med alternativet ???Fr??ga??? kommer ABRT  alltid fr??ga "
+"anv??ndaren."
 
 #: ../src/configuration-gui/abrt-config-widget.glade.h:6
 msgid ""
@@ -224,9 +224,9 @@ msgid ""
 "directory. With this option disabled ABRT will move the problem directory "
 "without asking."
 msgstr ""
-"ABRT lagrar problemdata i kataloger.  När ABRT behöver en skrivbar katalog "
-"flyttas katalogen från systemplatsen till din hemkatalog.  Med detta "
-"alternativ avaktiverat kommer ABRT flytta problemkatalogen utan att fråga."
+"ABRT lagrar problemdata i kataloger.  N??r ABRT beh??ver en skrivbar katalog "
+"flyttas katalogen fr??n systemplatsen till din hemkatalog.  Med detta "
+"alternativ avaktiverat kommer ABRT flytta problemkatalogen utan att fr??ga."
 
 #: ../src/configuration-gui/abrt-config-widget.glade.h:7
 msgid ""
@@ -235,11 +235,11 @@ msgid ""
 "uReport is sent at beginning of reporting process. With this option enabled "
 "uReports are sent automatically immediately after problem detection."
 msgstr ""
-"uReport är en kort och helt anonym beskrivning av problemet.  ABRT använder "
-"uReports för snabb global detektering av dubbletter.  I "
-"standardkonfigurationen skickas uReport i början av rapportprocessen.  Med "
+"uReport ??r en kort och helt anonym beskrivning av problemet.  ABRT anv??nder "
+"uReports f??r snabb global detektering av dubbletter.  I "
+"standardkonfigurationen skickas uReport i b??rjan av rapportprocessen.  Med "
 "detta alternativ aktiverat skickas uReport:er automatiskt omedelbart efter "
-"att problemet upptäcks."
+"att problemet uppt??cks."
 
 #: ../src/configuration-gui/abrt-config-widget.glade.h:8
 msgid ""
@@ -248,9 +248,9 @@ msgid ""
 "You can always use the default problem browser to make complete report."
 msgstr ""
 "Med detta alternativ aktiverat kommer rapporteringsprocessen som startas "
-"genom att klicka på knappen Rapport i problemnotifieringsbubblan att "
-"avbrytas efter att en uReport skickats.  Du kan alltid använda "
-"standardbläddraren för problem för att avsluta rapporten."
+"genom att klicka p?? knappen Rapport i problemnotifieringsbubblan att "
+"avbrytas efter att en uReport skickats.  Du kan alltid anv??nda "
+"standardbl??ddraren f??r problem f??r att avsluta rapporten."
 
 #: ../src/configuration-gui/abrt-config-widget.glade.h:9
 msgid ""
@@ -258,24 +258,24 @@ msgid ""
 "problems. Takes effect only if Shortened reporting is enabled."
 msgstr ""
 " Med detta alternativ aktiverat visar ABRT aldrig notifieringar om "
-"rapporterade problem.  Det har endast någon verkan om förkortad rapportering "
-"är aktiverat."
+"rapporterade problem.  Det har endast n??gon verkan om f??rkortad rapportering "
+"??r aktiverat."
 
 #: ../src/configuration-gui/abrt-config-widget.glade.h:10
 msgid ""
 " With this option enabled ABRT always create bug ticket with restricted "
 "access if possibly sensitive data are detected."
 msgstr ""
-" Med denna flagga aktiverad skapar ABRT alltid felrapporter med begränsad "
-"åtkomst om eventuellt känsliga data detekteras."
+" Med denna flagga aktiverad skapar ABRT alltid felrapporter med begr??nsad "
+"??tkomst om eventuellt k??nsliga data detekteras."
 
 #: ../src/configuration-gui/abrt-config-widget.glade.h:11
 msgid "Request private ticket for sensitive information"
-msgstr "Begär privat rapport för känslig information"
+msgstr "Beg??r privat rapport f??r k??nslig information"
 
 #: ../src/configuration-gui/abrt-config-widget.glade.h:12
 msgid "Notify incomplete problems"
-msgstr "Notifiera om ofullständiga problem"
+msgstr "Notifiera om ofullst??ndiga problem"
 
 #: ../src/configuration-gui/abrt-config-widget.glade.h:13
 msgid ""
@@ -283,9 +283,9 @@ msgid ""
 "logging out. In order to provide valuable problem reports, ABRT will not "
 "allow you to submit these problems."
 msgstr ""
-"Ofullständiga problem upptäcks medan datorn stängs av eller användaren "
-"loggar ut.  För att kunna skapa användbara problemrapporter kommer ABRT inte "
-"tillåta dig att skicka dessa problem."
+"Ofullst??ndiga problem uppt??cks medan datorn st??ngs av eller anv??ndaren "
+"loggar ut.  F??r att kunna skapa anv??ndbara problemrapporter kommer ABRT inte "
+"till??ta dig att skicka dessa problem."
 
 #: ../src/configuration-gui/abrt-config-widget.glade.h:14
 msgid "Always"
@@ -297,15 +297,15 @@ msgstr "Aldrig"
 
 #: ../src/configuration-gui/abrt-config-widget.glade.h:16
 msgid "Ask"
-msgstr "Fråga"
+msgstr "Fr??ga"
 
 #: ../src/configuration-gui/abrt-config-widget.glade.h:17
 msgid "Upload coredump for backtrace generation"
-msgstr "Skicka minnesdump för att generera stackspår"
+msgstr "Skicka minnesdump f??r att generera stacksp??r"
 
 #: ../src/configuration-gui/system-config-abrt.c:79
 msgid "_Close"
-msgstr "_Stäng"
+msgstr "_St??ng"
 
 #: ../src/configuration-gui/system-config-abrt.c:88
 msgid "_Defaults"
@@ -336,7 +336,7 @@ msgid ""
 msgstr ""
 "& [-v] [-c KONFFIL] [-r CHROT] -d KAT\n"
 "\n"
-"Fråga paketdatabasen och spara paket- och komponentnamn"
+"Fr??ga paketdatabasen och spara paket- och komponentnamn"
 
 #: ../src/daemon/abrt-action-save-package-data.c:453
 #: ../src/daemon/abrt-action-save-container-data.c:265
@@ -356,7 +356,7 @@ msgstr "Konfigurationsfil"
 
 #: ../src/daemon/abrt-action-save-package-data.c:455
 msgid "Use this directory as RPM root"
-msgstr "Använd denna katalog som RPM-rot"
+msgstr "Anv??nd denna katalog som RPM-rot"
 
 #: ../src/daemon/abrt-action-save-container-data.c:254
 msgid "& [-v] -d DIR\n"
@@ -364,11 +364,11 @@ msgid "& [-v] -d DIR\n"
 "Save container metadata"
 msgstr "& [-v] -d KAT\n"
 "\n"
-"Spara behållarmetadata"
+"Spara beh??llarmetadata"
 
 #: ../src/daemon/abrt-action-save-container-data.c:266
 msgid "Root directory for running container commands"
-msgstr "Rotkatalogen för att köra behållarkommandon"
+msgstr "Rotkatalogen f??r att k??ra beh??llarkommandon"
 
 #: ../src/daemon/abrt-server.c:847 ../src/dbus/abrt-dbus.c:894
 #: ../src/dbus/abrt-configuration.c:1002 ../src/daemon/abrtd.c:444
@@ -377,7 +377,7 @@ msgstr "& [flaggor]"
 
 #: ../src/daemon/abrt-server.c:858
 msgid "Use NUM as client uid"
-msgstr "Använd NUM som klient-uid"
+msgstr "Anv??nd NUM som klient-uid"
 
 #: ../src/daemon/abrt-server.c:859 ../src/daemon/abrt-upload-watch.c:280
 #: ../src/plugins/abrt-watch-log.c:153 ../src/plugins/abrt-dump-oops.c:97
@@ -390,21 +390,21 @@ msgstr "Logga till syslog"
 
 #: ../src/daemon/abrt-server.c:860 ../src/daemon/abrtd.c:460
 msgid "Add program names to log"
-msgstr "Lägg till programnamn till loggen"
+msgstr "L??gg till programnamn till loggen"
 
 #: ../src/dbus/abrt-dbus.c:132
 msgid "Unknown error"
-msgstr "Okänt fel"
+msgstr "Ok??nt fel"
 
 #: ../src/dbus/abrt-dbus.c:167
 #, c-format
 msgid "'%s' is not a valid element name"
-msgstr "'%s' är inte ett giltigt elementnamn"
+msgstr "'%s' ??r inte ett giltigt elementnamn"
 
 #: ../src/dbus/abrt-dbus.c:219
 #, c-format
 msgid "'%s' is not a valid problem directory"
-msgstr "”%s” är inte en giltig problemkatalog"
+msgstr "???%s??? ??r inte en giltig problemkatalog"
 
 #: ../src/dbus/abrt-dbus.c:272 ../src/dbus/abrt-dbus.c:520
 #: ../src/dbus/abrt-configuration.c:618 ../src/dbus/abrt-configuration.c:683
@@ -414,7 +414,7 @@ msgstr "Inte auktoriserad"
 
 #: ../src/dbus/abrt-dbus.c:285
 msgid "Can't open the problem"
-msgstr "Kan inte öppna problemet"
+msgstr "Kan inte ??ppna problemet"
 
 #: ../src/dbus/abrt-dbus.c:317
 #, c-format
@@ -424,13 +424,13 @@ msgstr "Elementet '%s' kan inte modifieras"
 #: ../src/dbus/abrt-dbus.c:536
 msgid "Chowning directory failed. Check system logs for more details."
 msgstr ""
-"Chownoperationen på katalogen misslyckades. Kolla systemloggarna för fler "
+"Chownoperationen p?? katalogen misslyckades. Kolla systemloggarna f??r fler "
 "detaljer."
 
 #: ../src/dbus/abrt-dbus.c:665
 #, c-format
 msgid "Can't get size of '%s'"
-msgstr "Det går inte att få storleken på '%s'"
+msgstr "Det g??r inte att f?? storleken p?? '%s'"
 
 #: ../src/dbus/abrt-dbus.c:680
 msgid "No problem space left"
@@ -439,7 +439,7 @@ msgstr "Inget utrymme kvar"
 #: ../src/dbus/abrt-dbus.c:715
 #, c-format
 msgid "Can't delete the element '%s' from the problem directory '%s'"
-msgstr "Kan inte radera elementet '%s' från problemkatalogen '%s'"
+msgstr "Kan inte radera elementet '%s' fr??n problemkatalogen '%s'"
 
 #: ../src/dbus/abrt-dbus.c:876 ../src/dbus/abrt-configuration.c:983
 #: ../src/daemon/abrtd.c:426
@@ -448,8 +448,8 @@ msgid ""
 "The name '%s' has been lost, please check if other service owning the name "
 "is not running.\n"
 msgstr ""
-"Namnet ”%s” har förlorats, kontrollera om andra tjänster som äger namnet "
-"inte kör.\n"
+"Namnet ???%s??? har f??rlorats, kontrollera om andra tj??nster som ??ger namnet "
+"inte k??r.\n"
 
 #: ../src/dbus/abrt-dbus.c:903 ../src/dbus/abrt-configuration.c:1011
 #: ../src/daemon/abrtd.c:459
@@ -458,7 +458,7 @@ msgstr "Avsluta efter ANT sekunders inaktivitet"
 
 #: ../src/dbus/abrt-dbus.c:921 ../src/dbus/abrt-configuration.c:1021
 msgid "This program must be run as root."
-msgstr "Detta program måste köra som root."
+msgstr "Detta program m??ste k??ra som root."
 
 #: ../src/daemon/abrtd.c:389
 msgid ""
@@ -468,10 +468,10 @@ msgid ""
 "problem. If you have time and want to help the developers in their effort to "
 "sort out this problem, please contact them directly."
 msgstr ""
-"Probleminformationen är inte komplett.  Detta händer vanligen när ett "
-"problem upptäcks medan datorn stängs ner eller en användare loggar ut.  För "
-"att ge värdefulla problemrapporter kommer ABRT inte att låta dig skicka in "
-"detta problem.  Om du har tid och vill hjälpa utvecklarna med att lösa detta "
+"Probleminformationen ??r inte komplett.  Detta h??nder vanligen n??r ett "
+"problem uppt??cks medan datorn st??ngs ner eller en anv??ndare loggar ut.  F??r "
+"att ge v??rdefulla problemrapporter kommer ABRT inte att l??ta dig skicka in "
+"detta problem.  Om du har tid och vill hj??lpa utvecklarna med att l??sa detta "
 "problem, kontakta dem direkt."
 
 #: ../src/daemon/abrtd.c:457
@@ -480,28 +480,28 @@ msgstr "Bli inte demon"
 
 #: ../src/daemon/abrtd.c:458
 msgid "Log to syslog even with -d"
-msgstr "Logga till syslog även med -d"
+msgstr "Logga till syslog ??ven med -d"
 
 #: ../src/daemon/abrt-handle-event.c:394
 msgid "& [-v -i -n INCREMENT] -e|--event EVENT DIR..."
-msgstr "& [-v -i -n ÖKNING] -e|--event HÄNDELSE KAT…"
+msgstr "& [-v -i -n ??KNING] -e|--event H??NDELSE KAT???"
 
 #: ../src/daemon/abrt-handle-event.c:403
 msgid "Run EVENT on DIR"
-msgstr "Kör HÄNDELSE på KAT"
+msgstr "K??r H??NDELSE p?? KAT"
 
 #: ../src/daemon/abrt-handle-event.c:404
 msgid "Communicate directly to the user"
-msgstr "Kommunicera direkt med användaren"
+msgstr "Kommunicera direkt med anv??ndaren"
 
 #: ../src/daemon/abrt-handle-event.c:405
 msgid "Increment the nice value by INCREMENT"
-msgstr "Öka nice-värdet med ÖKNING"
+msgstr "??ka nice-v??rdet med ??KNING"
 
 #: ../src/daemon/abrt-upload-watch.c:118
 #, c-format
 msgid "No free workers and full buffer. Omitting archive '%s'"
-msgstr "Inga fria arbetare och full buffert.  Utelämnar arkivet ”%s”"
+msgstr "Inga fria arbetare och full buffert.  Utel??mnar arkivet ???%s???"
 
 #: ../src/daemon/abrt-upload-watch.c:258
 msgid ""
@@ -514,14 +514,14 @@ msgid ""
 "If UPLOAD_DIRECTORY is not provided, uses a value of\n"
 "WatchCrashdumpArchiveDir option from abrt.conf"
 msgstr ""
-"& [-vs] [-w ANT] [-c MiB] [SÄNDNINGSKATALOG]\n"
+"& [-vs] [-w ANT] [-c MiB] [S??NDNINGSKATALOG]\n"
 "\n"
 "\n"
-"Bevakar SÄNDNINGSKATALOG och packar upp inkommande arkiv till DumpLocation\n"
+"Bevakar S??NDNINGSKATALOG och packar upp inkommande arkiv till DumpLocation\n"
 "angiven i abrt.conf\n"
 "\n"
-"Om SÄNDNINGSKATALOG inte anges används ett värde på alternativet\n"
-"WatchCrashdumpArchiveDir från abrt.conf"
+"Om S??NDNINGSKATALOG inte anges anv??nds ett v??rde p?? alternativet\n"
+"WatchCrashdumpArchiveDir fr??n abrt.conf"
 
 #: ../src/daemon/abrt-upload-watch.c:281
 msgid "Daemize"
@@ -529,58 +529,58 @@ msgstr "Bli demon"
 
 #: ../src/daemon/abrt-upload-watch.c:282
 msgid "Number of concurrent workers. Default is "
-msgstr "Antal samtidiga arbetare.  Standard är "
+msgstr "Antal samtidiga arbetare.  Standard ??r "
 
 #: ../src/daemon/abrt-upload-watch.c:283
 msgid "Maximal cache size in MiB. Default is "
-msgstr "Maximal cachestorlek i MiB.  Standard är "
+msgstr "Maximal cachestorlek i MiB.  Standard ??r "
 
 #: ../src/daemon/abrt-auto-reporting.c:198
 #: ../src/daemon/abrt-auto-reporting.c:206
 msgid "& [ "
 msgstr "& [ "
 
-# translation auto-copied from project abrt, version rhel7, document abrt, author Göran Uddeborg
+# translation auto-copied from project abrt, version rhel7, document abrt, author G??ran Uddeborg
 #: ../src/daemon/abrt-auto-reporting.c:233
 msgid "Turns the authentication off"
-msgstr "Slår av autenticering"
+msgstr "Sl??r av autenticering"
 
-# translation auto-copied from project abrt, version rhel7, document abrt, author Göran Uddeborg
+# translation auto-copied from project abrt, version rhel7, document abrt, author G??ran Uddeborg
 #: ../src/daemon/abrt-auto-reporting.c:234
 msgid "Red Hat Support user name"
-msgstr "Red Hat Support-användarnamn"
+msgstr "Red Hat Support-anv??ndarnamn"
 
-# translation auto-copied from project abrt, version rhel7, document abrt, author Göran Uddeborg
+# translation auto-copied from project abrt, version rhel7, document abrt, author G??ran Uddeborg
 #: ../src/daemon/abrt-auto-reporting.c:235
 msgid "Red Hat Support password, if not given, a prompt for it will be issued"
 msgstr ""
-"Red Hat Support-lösenord, om det inte ges kommer en fråga efter det att "
-"ställas"
+"Red Hat Support-l??senord, om det inte ges kommer en fr??ga efter det att "
+"st??llas"
 
-# translation auto-copied from project abrt, version rhel7, document abrt, author Göran Uddeborg
+# translation auto-copied from project abrt, version rhel7, document abrt, author G??ran Uddeborg
 #: ../src/daemon/abrt-auto-reporting.c:236
 msgid "uReport SSL certificate paths or certificate type"
-msgstr "uReport SSL-certifikatsökvägar eller certifikattyp"
+msgstr "uReport SSL-certifikats??kv??gar eller certifikattyp"
 
-# translation auto-copied from project abrt, version rhel7, document abrt, author Göran Uddeborg
+# translation auto-copied from project abrt, version rhel7, document abrt, author G??ran Uddeborg
 #: ../src/daemon/abrt-auto-reporting.c:252
 msgid "You also need to specify --username for --password"
-msgstr "Du behöver även ange --username för --password"
+msgstr "Du beh??ver ??ven ange --username f??r --password"
 
-# translation auto-copied from project abrt, version rhel7, document abrt, author Göran Uddeborg
+# translation auto-copied from project abrt, version rhel7, document abrt, author G??ran Uddeborg
 #: ../src/daemon/abrt-auto-reporting.c:258
 msgid "You can use either --username or --certificate"
-msgstr "Du kan använda antingen --username eller --certificate"
+msgstr "Du kan anv??nda antingen --username eller --certificate"
 
-# translation auto-copied from project abrt, version rhel7, document abrt, author Göran Uddeborg
+# translation auto-copied from project abrt, version rhel7, document abrt, author G??ran Uddeborg
 #: ../src/daemon/abrt-auto-reporting.c:264
 msgid "You can use either --username or --anonymous"
-msgstr "Du kan använda antingen --username eller --anonymous"
+msgstr "Du kan anv??nda antingen --username eller --anonymous"
 
-# translation auto-copied from project abrt, version rhel7, document abrt, author Göran Uddeborg
+# translation auto-copied from project abrt, version rhel7, document abrt, author G??ran Uddeborg
 #: ../src/daemon/abrt-auto-reporting.c:270
 msgid "You can use either --anonymous or --certificate"
-msgstr "Du kan använda antingen --anonymous eller --certificate"
+msgstr "Du kan anv??nda antingen --anonymous eller --certificate"
 
 #: ../src/daemon/abrt-auto-reporting.c:277
 msgid "Invalid number of arguments"
@@ -589,30 +589,30 @@ msgstr "Fel antal argument"
 #: ../src/daemon/abrt-auto-reporting.c:296
 #, c-format
 msgid "Unknown option value: '%s'\n"
-msgstr "Okänt parametervärde: '%s'\n"
+msgstr "Ok??nt parameterv??rde: '%s'\n"
 
-# translation auto-copied from project abrt, version rhel7, document abrt, author Göran Uddeborg
+# translation auto-copied from project abrt, version rhel7, document abrt, author G??ran Uddeborg
 #: ../src/daemon/abrt-auto-reporting.c:336
 msgid "Password:"
-msgstr "Lösenord:"
+msgstr "L??senord:"
 
-# translation auto-copied from project abrt, version rhel7, document abrt, author Göran Uddeborg
+# translation auto-copied from project abrt, version rhel7, document abrt, author G??ran Uddeborg
 #: ../src/daemon/abrt-auto-reporting.c:339
 msgid "Cannot continue without password\n"
-msgstr "Kan inte fortsätta utan lösenord\n"
+msgstr "Kan inte forts??tta utan l??senord\n"
 
-# translation auto-copied from project abrt, version rhel7, document abrt, author Göran Uddeborg
+# translation auto-copied from project abrt, version rhel7, document abrt, author G??ran Uddeborg
 #. Print only the part before ':' of a string like "username:password"
 #: ../src/daemon/abrt-auto-reporting.c:380
 msgid "HTTP Authenticated auto reporting"
 msgstr "HTTP-autenticerad automatrapportering"
 
-# translation auto-copied from project abrt, version rhel7, document abrt, author Göran Uddeborg
+# translation auto-copied from project abrt, version rhel7, document abrt, author G??ran Uddeborg
 #: ../src/daemon/abrt-auto-reporting.c:382
 msgid "SSL Client Authenticated auto reporting"
 msgstr "SSL-klientautenticerad automatrapportering"
 
-# translation auto-copied from project abrt, version rhel7, document abrt, author Göran Uddeborg
+# translation auto-copied from project abrt, version rhel7, document abrt, author G??ran Uddeborg
 #: ../src/daemon/abrt-auto-reporting.c:384
 msgid "anonymous auto reporting"
 msgstr "anonym automatrapportering"
@@ -628,83 +628,83 @@ msgid ""
 "   UPLOAD_DIR     - Directory where uploaded archives are stored\n"
 "   FILENAME       - Uploaded archive file name\n"
 msgstr ""
-"Användning: %s [-vd] ABRT_SPOLKAT SKICKA_KAT FILNAMN\n"
+"Anv??ndning: %s [-vd] ABRT_SPOLKAT SKICKA_KAT FILNAMN\n"
 "\n"
-"   -v             - Utförlig\n"
+"   -v             - Utf??rlig\n"
 "   -d             - Ta bort skickat arkiv\n"
-"   ABRT_SPOLKAT   - Katalog där korrekt skickade arkiv packas upp\n"
-"   SKICKA_KAT     - Katalog där skickade arkiv lagras\n"
+"   ABRT_SPOLKAT   - Katalog d??r korrekt skickade arkiv packas upp\n"
+"   SKICKA_KAT     - Katalog d??r skickade arkiv lagras\n"
 "   FILNAMN        - Skickat arkivs filnamn\n"
 
 #: ../src/daemon/abrt-handle-upload.in:171
 #: ../src/daemon/abrt-handle-upload.in:174
 msgid "Not a directory: '{0}'"
-msgstr "Inte en katalog: ”{0}”"
+msgstr "Inte en katalog: ???{0}???"
 
 #: ../src/daemon/abrt-handle-upload.in:177
 msgid "Skipping: '{0}' (starts with slash)"
-msgstr "Hoppar över: ”{0}” (börjar med ett snedstreck)"
+msgstr "Hoppar ??ver: ???{0}??? (b??rjar med ett snedstreck)"
 
 #: ../src/daemon/abrt-handle-upload.in:180
 msgid "Skipping: '{0}' (starts with dot)"
-msgstr "Hoppar över: ”{0}” (börjar med en punkt)"
+msgstr "Hoppar ??ver: ???{0}??? (b??rjar med en punkt)"
 
 #: ../src/daemon/abrt-handle-upload.in:183
 msgid "Skipping: '{0}' (contains ..)"
-msgstr "Hoppar över: ”{0}” (innehåller ..)"
+msgstr "Hoppar ??ver: ???{0}??? (inneh??ller ..)"
 
 #: ../src/daemon/abrt-handle-upload.in:186
 msgid "Skipping: '{0}' (contains space)"
-msgstr "Hoppar över: ”{0}” (innehåller blanktecken)"
+msgstr "Hoppar ??ver: ???{0}??? (inneh??ller blanktecken)"
 
 #: ../src/daemon/abrt-handle-upload.in:189
 msgid "Skipping: '{0}' (contains tab)"
-msgstr "Hoppar över: ”{0}” (innehåller tabulator)"
+msgstr "Hoppar ??ver: ???{0}??? (inneh??ller tabulator)"
 
 #: ../src/daemon/abrt-handle-upload.in:194
 msgid "Can't change directory to '{0}'"
-msgstr "Kan inte byta katalog till ”{0}”"
+msgstr "Kan inte byta katalog till ???{0}???"
 
 #: ../src/daemon/abrt-handle-upload.in:205
 msgid "Unknown file type: '{0}'"
-msgstr "Okänd filtyp: ”{0}”"
+msgstr "Ok??nd filtyp: ???{0}???"
 
 #: ../src/daemon/abrt-handle-upload.in:210
 msgid "Can't create working directory in '{0}'"
-msgstr "Kan inte skapa en arbetskatalog i ”{0}”"
+msgstr "Kan inte skapa en arbetskatalog i ???{0}???"
 
 #: ../src/daemon/abrt-handle-upload.in:221
 msgid "Can't move '{0}' to '{1}'"
-msgstr "Kan inte flytta ”{0}” till ”{1}”"
+msgstr "Kan inte flytta ???{0}??? till ???{1}???"
 
 #: ../src/daemon/abrt-handle-upload.in:226
 msgid "Can't copy '{0}' to '{1}'"
-msgstr "Kan inte kopiera ”{0}” till ”{1}”"
+msgstr "Kan inte kopiera ???{0}??? till ???{1}???"
 
 #: ../src/daemon/abrt-handle-upload.in:230
 msgid "Verification error on '{0}'"
-msgstr "Verifieringsfel på ”{0}”"
+msgstr "Verifieringsfel p?? ???{0}???"
 
 #: ../src/daemon/abrt-handle-upload.in:232
 msgid "Unpacking '{0}'"
-msgstr "Packar upp ”{0}”"
+msgstr "Packar upp ???{0}???"
 
 #: ../src/daemon/abrt-handle-upload.in:236
 msgid "Can't create '{0}' directory"
-msgstr "Kan inte skapa katalogen ”{0}”"
+msgstr "Kan inte skapa katalogen ???{0}???"
 
 #: ../src/daemon/abrt-handle-upload.in:240
 msgid "Can't unpack '{0}'"
-msgstr "Kan inte packa upp ”{0}”"
+msgstr "Kan inte packa upp ???{0}???"
 
 #: ../src/daemon/abrt-handle-upload.in:260
 msgid "'{0}' processed successfully"
-msgstr "”{0}” behandlad"
+msgstr "???{0}??? behandlad"
 
 #. Let user know what's going on
 #: ../src/lib/hooklib.c:253
 msgid "Generating backtrace"
-msgstr "Genererar stackspår"
+msgstr "Genererar stacksp??r"
 
 #: ../src/lib/problem_api_dbus.c:42
 #, c-format
@@ -714,7 +714,7 @@ msgstr "Kan inte ansluta till system-DBus:en: %s"
 #: ../src/lib/problem_api_dbus.c:68
 #, c-format
 msgid "Can't chown '%s': %s"
-msgstr "Kan inte ändra ägare av ”%s”: %s"
+msgstr "Kan inte ??ndra ??gare av ???%s???: %s"
 
 #: ../src/lib/problem_api_dbus.c:97
 #, c-format
@@ -728,17 +728,17 @@ msgstr "D-Bus GetInfo-metodanropet misslyckades: %s"
 
 #: ../src/lib/problem_api_dbus.c:166
 msgid "Can't get problem data from abrt-dbus"
-msgstr "Kan inte hämpta problemdata från abrt-dbus"
+msgstr "Kan inte h??mpta problemdata fr??n abrt-dbus"
 
 #: ../src/lib/problem_api_dbus.c:193
 #, c-format
 msgid "Can't get problem list from abrt-dbus: %s"
-msgstr "Kan inte hämta problemlistan från abrt-dbus: %s"
+msgstr "Kan inte h??mta problemlistan fr??n abrt-dbus: %s"
 
 #: ../src/lib/problem_api_dbus.c:230 ../src/lib/problem_api_dbus.c:315
 #, c-format
 msgid "Can't get problem data from abrt-dbus: %s"
-msgstr "Kan inte hämta problemdata från abrt-dbus: %s"
+msgstr "Kan inte h??mta problemdata fr??n abrt-dbus: %s"
 
 #: ../src/lib/problem_api_dbus.c:274
 #, c-format
@@ -748,7 +748,7 @@ msgstr "Kan inte testa huruvida elementet finns via abrt-dbus: %s"
 #: ../src/lib/ignored_problems.c:233
 #, c-format
 msgid "Can't create temporary file '%s'"
-msgstr "Det går inte att skapa temporärfilen ”%s”"
+msgstr "Det g??r inte att skapa tempor??rfilen ???%s???"
 
 #: ../src/lib/ignored_problems.c:250
 #, c-format
@@ -756,7 +756,7 @@ msgid ""
 "Can't write to '%s'. Problem '%s' will not be removed from the ignored "
 "problems '%s'"
 msgstr ""
-"Det går inte skriva till '%s'. Problem '%s' kommer inte att tas bort från "
+"Det g??r inte skriva till '%s'. Problem '%s' kommer inte att tas bort fr??n "
 "ignorerade problem '%s'"
 
 #. Something nefarious happened
@@ -764,7 +764,7 @@ msgstr ""
 #, c-format
 msgid "Can't rename '%s' to '%s'. Failed to remove problem '%s'"
 msgstr ""
-"Det går inte att döpa om '%s' till '%s'. Borttagning av problem '%s' "
+"Det g??r inte att d??pa om '%s' till '%s'. Borttagning av problem '%s' "
 "misslyckades"
 
 #: ../src/plugins/abrt-action-analyze-backtrace.c:41
@@ -776,8 +776,8 @@ msgid ""
 msgstr ""
 "& [flaggor] -d KAT\n"
 "\n"
-"Analyserar C/C++-stackspår, genererar duplikatkontrollsumma, \n"
-"stackspårsbedömning och identifierar kraschfunktioner i problemkatalogen\n"
+"Analyserar C/C++-stacksp??r, genererar duplikatkontrollsumma, \n"
+"stacksp??rsbed??mning och identifierar kraschfunktioner i problemkatalogen\n"
 "KAT"
 
 #. 
@@ -788,11 +788,11 @@ msgstr ""
 #: ../src/plugins/abrt-action-analyze-backtrace.c:90
 #, c-format
 msgid "Backtrace parsing failed for %s"
-msgstr "Stackspårstolkning misslyckades för %s"
+msgstr "Stacksp??rstolkning misslyckades f??r %s"
 
 #: ../src/plugins/abrt-action-analyze-backtrace.c:150
 msgid "Crash thread not found"
-msgstr "Kraschtråden kan inte finnas"
+msgstr "Kraschtr??den kan inte finnas"
 
 #: ../src/plugins/abrt-action-analyze-c.c:130
 msgid ""
@@ -802,12 +802,12 @@ msgid ""
 msgstr ""
 "& [-v] -d KAT\n"
 "\n"
-"Beräknar och sparar UUID för minnesdumpar i problemkatalogen KAT"
+"Ber??knar och sparar UUID f??r minnesdumpar i problemkatalogen KAT"
 
 #: ../src/plugins/abrt-action-analyze-core.in:72
 #, c-format
 msgid "Analyzing coredump '%s'"
-msgstr "Analyserar minnesdumpen ”%s”"
+msgstr "Analyserar minnesdumpen ???%s???"
 
 #: ../src/plugins/abrt-action-analyze-core.in:110
 #, c-format
@@ -817,11 +817,11 @@ msgstr "Saknat bygg-id: %s"
 #: ../src/plugins/abrt-action-analyze-core.in:142
 #, c-format
 msgid "Usage: %s [-v] [-o OUTFILE] -c COREFILE"
-msgstr "Användning: %s [-v] [-o UTFIL] -c MINNESFIL"
+msgstr "Anv??ndning: %s [-v] [-o UTFIL] -c MINNESFIL"
 
 #: ../src/plugins/abrt-action-analyze-core.in:164
 msgid "COREFILE is not specified"
-msgstr "MINNESFIL är inte angiven"
+msgstr "MINNESFIL ??r inte angiven"
 
 #: ../src/plugins/abrt-action-analyze-oops.c:37
 msgid ""
@@ -831,7 +831,7 @@ msgid ""
 msgstr ""
 "& [-v] -d KAT\n"
 "\n"
-"Beräknar och sparar UUID och DUPHASH för oops-problemkatalogen KAT"
+"Ber??knar och sparar UUID och DUPHASH f??r oops-problemkatalogen KAT"
 
 #: ../src/plugins/abrt-action-analyze-oops.c:79
 msgid ""
@@ -840,10 +840,10 @@ msgid ""
 "your computer. ABRT will not allow you to create a report in a bug tracking "
 "system but you can contact kernel maintainers via e-mail."
 msgstr ""
-"Stackspåret innehåller inte tillräckligt med meningsfulla funktionsramar för "
-"att rapporteras.  Det är irriterande, men det är inte självklart ett tecken "
-"på ett problem med din dator.  ABRT kommer inte låta dig skapa en rapport i "
-"felrapporteringssystemet men du kan kontakta dem som underhåller kärnan via "
+"Stacksp??ret inneh??ller inte tillr??ckligt med meningsfulla funktionsramar f??r "
+"att rapporteras.  Det ??r irriterande, men det ??r inte sj??lvklart ett tecken "
+"p?? ett problem med din dator.  ABRT kommer inte l??ta dig skapa en rapport i "
+"felrapporteringssystemet men du kan kontakta dem som underh??ller k??rnan via "
 "e-post."
 
 #: ../src/plugins/abrt-action-analyze-xorg.c:73
@@ -854,12 +854,12 @@ msgid ""
 msgstr ""
 "& [-v] -d KAT\n"
 "\n"
-"Beräknar och sparar UUID och DUPHASH för xorgproblemkatalogen KAT"
+"Ber??knar och sparar UUID och DUPHASH f??r xorgproblemkatalogen KAT"
 
 #: ../src/plugins/abrt-action-analyze-xorg.c:113
 #, c-format
 msgid "Module '%s' was loaded - won't report this crash"
-msgstr "Modulen ”%s” var laddad — kommer inte att rapportera denna krasch"
+msgstr "Modulen ???%s??? var laddad ??? kommer inte att rapportera denna krasch"
 
 #: ../src/plugins/abrt-action-analyze-python.c:36
 msgid ""
@@ -869,11 +869,11 @@ msgid ""
 msgstr ""
 "& [-v] -d KAT\n"
 "\n"
-"Beräknar och sparar UUID och DUPHASH för python-kraschdumpar"
+"Ber??knar och sparar UUID och DUPHASH f??r python-kraschdumpar"
 
 #: ../src/plugins/abrt-action-analyze-vmcore.in:52
 msgid "Usage: {0} [-v[v]] [--core=VMCORE]"
-msgstr "Användning: {0} [-v[v]] [--core=VMCORE]"
+msgstr "Anv??ndning: {0} [-v[v]] [--core=VMCORE]"
 
 #: ../src/plugins/abrt-action-analyze-vmcore.in:79
 msgid "File {0} doesn't exist"
@@ -881,7 +881,7 @@ msgstr "Filen {0} finns inte"
 
 #: ../src/plugins/abrt-action-analyze-vmcore.in:82
 msgid "Extracting the oops text from core"
-msgstr "Extraherar oops-texten från minnesdumpen"
+msgstr "Extraherar oops-texten fr??n minnesdumpen"
 
 #: ../src/plugins/abrt-action-analyze-vmcore.in:87
 msgid "Can't process {0}:\n"
@@ -891,7 +891,7 @@ msgstr "Kan inte bearbeta {0}:\n"
 
 #: ../src/plugins/abrt-action-analyze-vmcore.in:95
 msgid "Can't extract the oops message: '{0}'"
-msgstr "Kan inte extrahera oops-meddelandet: ”{0}”"
+msgstr "Kan inte extrahera oops-meddelandet: ???{0}???"
 
 #: ../src/plugins/abrt-action-analyze-vmcore.in:98
 msgid "Oops text extracted successfully"
@@ -902,12 +902,12 @@ msgid ""
 "The kernel log indicates that hardware errors were detected.\n"
 "This is most likely not a software problem.\n"
 msgstr ""
-"Kärnloggen indikerar att hårdvarufel inträffat.\n"
-"Detta är troligen inte ett mjukvaruproblem.\n"
+"K??rnloggen indikerar att h??rdvarufel intr??ffat.\n"
+"Detta ??r troligen inte ett mjukvaruproblem.\n"
 
 #: ../src/plugins/abrt-action-find-bodhi-update:88
 msgid "cannot open problem directory '{0}'"
-msgstr "kan inte öppna problemkatalogen ”{0}”"
+msgstr "kan inte ??ppna problemkatalogen ???{0}???"
 
 #: ../src/plugins/abrt-action-find-bodhi-update:102
 msgid "Problem directory error: {0}"
@@ -915,27 +915,27 @@ msgstr "Fel med problemkatalogen: {0}"
 
 #: ../src/plugins/abrt-action-find-bodhi-update:117
 msgid "Using product '{0}' from /etc/os-release."
-msgstr "Använder produkten ”{0}” från /etc/os-release."
+msgstr "Anv??nder produkten ???{0}??? fr??n /etc/os-release."
 
 #: ../src/plugins/abrt-action-find-bodhi-update:119
 msgid "Using product {0}."
-msgstr "Använder produkten {0}."
+msgstr "Anv??nder produkten {0}."
 
 #: ../src/plugins/abrt-action-find-bodhi-update:121
 msgid "Using product version {0}."
-msgstr "Använder produktversion {0}."
+msgstr "Anv??nder produktversion {0}."
 
 #: ../src/plugins/abrt-action-find-bodhi-update:133
 msgid "Duplicate bugzilla bug '#{0}' was found"
-msgstr "Dubblett av bugzilla-fel ”nr {0}” hittades"
+msgstr "Dubblett av bugzilla-fel ???nr {0}??? hittades"
 
 #: ../src/plugins/abrt-action-find-bodhi-update:135
 msgid "There is no bugzilla bug with 'abrt_hash:{0}'"
-msgstr "Det finns inget bugzilla-fel med ”abrt_hash:{0}”"
+msgstr "Det finns inget bugzilla-fel med ???abrt_hash:{0}???"
 
 #: ../src/plugins/abrt-action-find-bodhi-update:140
 msgid "Warning: abrt-bodhi do not support Product version 'Rawhide'"
-msgstr "Varning: abrt-bodhi stödjer inte produktversion ”Rawhide”"
+msgstr "Varning: abrt-bodhi st??djer inte produktversion ???Rawhide???"
 
 #: ../src/plugins/abrt-action-generate-backtrace.c:42
 msgid ""
@@ -946,15 +946,15 @@ msgstr ""
 "& [flaggor] -d KAT\n"
 "\n"
 "Analyserar minnesdumpar i problemkatalogen KAT, genererar och sparar "
-"stackspår"
+"stacksp??r"
 
 #: ../src/plugins/abrt-action-generate-backtrace.c:56
 msgid "Additional debuginfo directories"
-msgstr "Ytterligare kataloger med felsökningsinformation"
+msgstr "Ytterligare kataloger med fels??kningsinformation"
 
 #: ../src/plugins/abrt-action-generate-backtrace.c:57
 msgid "Kill gdb if it runs for more than NUM seconds"
-msgstr "Döda gdb om den kör i mer än ANT sekunder"
+msgstr "D??da gdb om den k??r i mer ??n ANT sekunder"
 
 #. Don't be completely silent. gdb run takes a few seconds,
 #. * it is useful to let user know it (maybe) worked.
@@ -962,7 +962,7 @@ msgstr "Döda gdb om den kör i mer än ANT sekunder"
 #: ../src/plugins/abrt-action-generate-backtrace.c:103
 #, c-format
 msgid "Backtrace is generated and saved, %u bytes"
-msgstr "Stackspår är genererat och sparat, %u byte"
+msgstr "Stacksp??r ??r genererat och sparat, %u byte"
 
 #: ../src/plugins/abrt-action-generate-core-backtrace.c:40
 msgid ""
@@ -972,11 +972,11 @@ msgid ""
 msgstr ""
 "& [-v] [-r] -d KAT\n"
 "\n"
-"Skapar stackspår på minnesdumpsnivå från minnesdump och tillhörande binär"
+"Skapar stacksp??r p?? minnesdumpsniv?? fr??n minnesdump och tillh??rande bin??r"
 
 #: ../src/plugins/abrt-action-generate-core-backtrace.c:53
 msgid "Do not hash fingerprints"
-msgstr "Beräkna inte kontrollsummefingeravtryck"
+msgstr "Ber??kna inte kontrollsummefingeravtryck"
 
 #. Let user know what's going on
 #: ../src/plugins/abrt-action-generate-core-backtrace.c:64
@@ -985,7 +985,7 @@ msgstr "Skapar core_backtrace"
 
 #: ../src/plugins/abrt-action-generate-core-backtrace.c:81
 msgid "Error: GDB did not return any data"
-msgstr "Fel: GDB gav inte tillbaka någon data"
+msgstr "Fel: GDB gav inte tillbaka n??gon data"
 
 #: ../src/plugins/abrt-action-generate-core-backtrace.c:95
 #, c-format
@@ -994,7 +994,7 @@ msgstr "Fel: %s"
 
 #: ../src/plugins/abrt-action-install-debuginfo.in:52
 msgid "Exiting on user command"
-msgstr "Avslutar på användarens kommando"
+msgstr "Avslutar p?? anv??ndarens kommando"
 
 #: ../src/plugins/abrt-action-install-debuginfo.in:89
 #, c-format
@@ -1025,64 +1025,64 @@ msgid ""
 "    --repo      Pattern to use when searching for repos.\n"
 "                Default: *debug*\n"
 msgstr ""
-"Användning: %s [-vy] [--ids=BYGG_ID_FIL] [--pkgmgr=(yum|dnf)]\n"
-"      [--tmpdir=TMPKAT] [--cache=CACHEKAT[:FELSÖKNKAT1:FELSÖKNKAT2…]] [--"
+"Anv??ndning: %s [-vy] [--ids=BYGG_ID_FIL] [--pkgmgr=(yum|dnf)]\n"
+"      [--tmpdir=TMPKAT] [--cache=CACHEKAT[:FELS??KNKAT1:FELS??KNKAT2???]] [--"
 "size_mb=STORLEK]\n"
-"      [-e, --exact=SÖKVÄG[:SÖKVÄG]…]\n"
+"      [-e, --exact=S??KV??G[:S??KV??G]???]\n"
 "\n"
-"Installerar felsökningsinformation för alla bygg-idn uppräknade\n"
-"i BYGG_ID_FIL till CACHEKAT, använder TMPKAT som tillfälligt\n"
-"uppsättningsområde.  Gamla filer i CACHEKAT raderas till den\n"
-"är mindre än STORLEK.\n"
+"Installerar fels??kningsinformation f??r alla bygg-idn uppr??knade\n"
+"i BYGG_ID_FIL till CACHEKAT, anv??nder TMPKAT som tillf??lligt\n"
+"upps??ttningsomr??de.  Gamla filer i CACHEKAT raderas till den\n"
+"??r mindre ??n STORLEK.\n"
 "\n"
-"Läser konfigurationen från /etc/abrt/plugins/CCpp.conf\n"
+"L??ser konfigurationen fr??n /etc/abrt/plugins/CCpp.conf\n"
 "\n"
-"    -v          Var utförlig\n"
-"    -y          Icke interaktiv, anta ”Ja” som svar på alla frågor\n"
+"    -v          Var utf??rlig\n"
+"    -y          Icke interaktiv, anta ???Ja??? som svar p?? alla fr??gor\n"
 "    --ids       Standard: build_ids\n"
 "    --tmpdir    Standard: @LARGE_DATA_TMP_DIR@/abrt-tmp-debuginfo-"
 "SLUMPSUFFIX\n"
-"    --cache     Kolonseparerad lista av kataloger.  Den första används för "
+"    --cache     Kolonseparerad lista av kataloger.  Den f??rsta anv??nds f??r "
 "att\n"
-"                spara installerad felsökningsinformation.\n"
+"                spara installerad fels??kningsinformation.\n"
 "                Standard: /var/cache/abrt-dir\n"
 "    --size_mb   Standard: 4096\n"
-"    --pkgmgr   Standard: PackageManager från CCpp.conf eller ”dnf”\n"
-"    -e,--exact  Hämta endast angivna filer\n"
-"    --repo      Mönster att använda vid sökning efter förråd.\n"
-"                Standard: ”debug”\n"
+"    --pkgmgr   Standard: PackageManager fr??n CCpp.conf eller ???dnf???\n"
+"    -e,--exact  H??mta endast angivna filer\n"
+"    --repo      M??nster att anv??nda vid s??kning efter f??rr??d.\n"
+"                Standard: ???debug???\n"
 
 #: ../src/plugins/abrt-action-install-debuginfo.in:176
 msgid "Can't open {0}: {1}"
-msgstr "Kan inte öppna {0}: {1}"
+msgstr "Kan inte ??ppna {0}: {1}"
 
 #: ../src/plugins/abrt-action-install-debuginfo.in:213
 msgid "Coredump references {0} debuginfo files, {1} of them are not installed"
 msgstr ""
-"Minnesdumpen refererar {0} felsökningsfiler, {1} av dem är inte installerade"
+"Minnesdumpen refererar {0} fels??kningsfiler, {1} av dem ??r inte installerade"
 
 #: ../src/plugins/abrt-action-install-debuginfo.in:216
 msgid "{0} of debuginfo files are not installed"
-msgstr "{0} av debuginfo-filer är inte installerade"
+msgstr "{0} av debuginfo-filer ??r inte installerade"
 
 #: ../src/plugins/abrt-action-install-debuginfo.in:235
 #, c-format
 msgid "Invalid configuration of CCpp addon, unsupported Package manager: '%s'"
 msgstr ""
-"Felaktig konfiguration av tillägget CCpp, pakethanterare som inte stödjs: "
-"”%s”"
+"Felaktig konfiguration av till??gget CCpp, pakethanterare som inte st??djs: "
+"???%s???"
 
 #: ../src/plugins/abrt-action-install-debuginfo.in:253
 msgid "Missing requested file: {0}"
-msgstr "Saknar efterfrågad fil: {0}"
+msgstr "Saknar efterfr??gad fil: {0}"
 
 #: ../src/plugins/abrt-action-install-debuginfo.in:258
 msgid "Missing debuginfo file: {0}"
-msgstr "Saknad felsökningsfil: {0}"
+msgstr "Saknad fels??kningsfil: {0}"
 
 #: ../src/plugins/abrt-action-install-debuginfo.in:261
 msgid "All debuginfo files are available"
-msgstr "Alla felsökningsinformationsfiler är tillgängliga"
+msgstr "Alla fels??kningsinformationsfiler ??r tillg??ngliga"
 
 #: ../src/plugins/abrt-action-install-debuginfo-to-abrt-cache.c:43
 msgid ""
@@ -1092,15 +1092,15 @@ msgid ""
 "Installs debuginfo packages for all build-ids listed in BUILD_IDS_FILE to\n"
 "ABRT system cache."
 msgstr ""
-"& [-y] [-i BYGG_ID_FIL|-i -] [-e SÖKVÄG[:SÖKVÄG]…]\n"
-"\t[-r FÖRRÅD]\n"
+"& [-y] [-i BYGG_ID_FIL|-i -] [-e S??KV??G[:S??KV??G]???]\n"
+"\t[-r F??RR??D]\n"
 "\n"
-"Installerar debuginfo-paket för alla bygg-id:n uppräknade i BYGG_ID_FIL\n"
+"Installerar debuginfo-paket f??r alla bygg-id:n uppr??knade i BYGG_ID_FIL\n"
 "till ABRT:s system-cache."
 
 #: ../src/plugins/abrt-action-install-debuginfo-to-abrt-cache.c:66
 msgid "Noninteractive, assume 'Yes' to all questions"
-msgstr "Inte interaktiv, anta ”Ja” som svar på alla frågor"
+msgstr "Inte interaktiv, anta ???Ja??? som svar p?? alla fr??gor"
 
 #: ../src/plugins/abrt-action-install-debuginfo-to-abrt-cache.c:67
 msgid "- means STDIN, default: build_ids"
@@ -1108,11 +1108,11 @@ msgstr "- betyder STDIN, standard: build_ids"
 
 #: ../src/plugins/abrt-action-install-debuginfo-to-abrt-cache.c:68
 msgid "Download only specified files"
-msgstr "Hämta endast angivna filer"
+msgstr "H??mta endast angivna filer"
 
 #: ../src/plugins/abrt-action-install-debuginfo-to-abrt-cache.c:69
 msgid "Pattern to use when searching for repos, default: *debug*"
-msgstr "Mönster att använda vid sökning efter förråd, standard: *debug*"
+msgstr "M??nster att anv??nda vid s??kning efter f??rr??d, standard: *debug*"
 
 #: ../src/plugins/abrt-action-install-debuginfo-to-abrt-cache.c:70
 msgid "Ignored option"
@@ -1124,17 +1124,17 @@ msgid ""
 "'No', a stack trace will be generated locally. (It may download a huge "
 "amount of data)."
 msgstr ""
-"Ok att ladda upp minnesdumpen? (Den kan innehålla känslig data). Om du "
-"svarar 'Nej' kommer en stackspårning att skapas lokalt. (Det kan komma att "
-"ladda ner en stor mängd data)."
+"Ok att ladda upp minnesdumpen? (Den kan inneh??lla k??nslig data). Om du "
+"svarar 'Nej' kommer en stacksp??rning att skapas lokalt. (Det kan komma att "
+"ladda ner en stor m??ngd data)."
 
 #: ../src/plugins/abrt-action-perform-ccpp-analysis.in:72
 msgid ""
 "Do you want to generate a stack trace locally? (It may download a huge "
 "amount of data but reporting can't continue without stack trace)."
 msgstr ""
-"Vill du skapa en stackspårning lokalt?  (Det kan komma att hämta hem en stor "
-"mängd data men rapportering kan inte fortsätta utan stackspårning)."
+"Vill du skapa en stacksp??rning lokalt?  (Det kan komma att h??mta hem en stor "
+"m??ngd data men rapportering kan inte forts??tta utan stacksp??rning)."
 
 #: ../src/plugins/abrt-action-trim-files.c:222
 msgid ""
@@ -1144,9 +1144,9 @@ msgid ""
 "SIZE.\n"
 "FILEs are preserved (never deleted)."
 msgstr ""
-"& [-v] [-d STORLEK:KAT]… [-f STORLEK:KAT]… [-p KAT] [FIL]…\n"
+"& [-v] [-d STORLEK:KAT]??? [-f STORLEK:KAT]??? [-p KAT] [FIL]???\n"
 "\n"
-"Raderar problemkataloger (-d) eller filer (-f) i KAT tills de är mindre än\n"
+"Raderar problemkataloger (-d) eller filer (-f) i KAT tills de ??r mindre ??n\n"
 "STORLEK.  FILer bevaras (raderas aldrig)."
 
 #: ../src/plugins/abrt-action-trim-files.c:236
@@ -1164,21 +1164,21 @@ msgstr "Bevara denna katalog"
 #: ../src/plugins/abrt-action-ureport:59
 #, c-format
 msgid "Unable to start '%s', error message was: '%s'"
-msgstr "Kan inte starta ”%s”, felmeddelandet var: ”%s”"
+msgstr "Kan inte starta ???%s???, felmeddelandet var: ???%s???"
 
 #: ../src/plugins/abrt-action-ureport:70
 #, c-format
 msgid "Not a number in file '%s'"
-msgstr "Inte ett tal i filen ”%s”"
+msgstr "Inte ett tal i filen ???%s???"
 
 #: ../src/plugins/abrt-action-ureport:99
 #, c-format
 msgid "Usage: %s [-v]"
-msgstr "Användning: %s [-v]"
+msgstr "Anv??ndning: %s [-v]"
 
 #: ../src/plugins/abrt-action-ureport:120
 msgid "Unable to get current working directory as it was probably deleted"
-msgstr "Kan inte få aktuell arbetskatalog eftersom den förmodligen raderats"
+msgstr "Kan inte f?? aktuell arbetskatalog eftersom den f??rmodligen raderats"
 
 #: ../src/plugins/abrt-action-ureport:148
 msgid "A bug was already filed about this problem:"
@@ -1186,11 +1186,11 @@ msgstr "Ett fel var redan rapporterat om detta problem:"
 
 #: ../src/plugins/abrt-action-ureport:158
 msgid "uReport was already sent, not sending it again"
-msgstr "En uReport är redan skickad, skickar den inte igen"
+msgstr "En uReport ??r redan skickad, skickar den inte igen"
 
 #: ../src/plugins/abrt-action-ureport:179
 msgid "Adding you to CC List of the existing bugzilla bug"
-msgstr "Lägger till dig till CC-listan i den befintliga bugzilla-rapporten"
+msgstr "L??gger till dig till CC-listan i den befintliga bugzilla-rapporten"
 
 #: ../src/plugins/abrt-action-ureport:193
 #, c-format
@@ -1199,11 +1199,11 @@ msgstr "reporter-ureport misslyckades med slutkod %d"
 
 #: ../src/plugins/abrt-gdb-exploitable:529
 msgid "Signal sent by userspace code"
-msgstr "Signal sänd av kod från användarutrymmet"
+msgstr "Signal s??nd av kod fr??n anv??ndarutrymmet"
 
 #: ../src/plugins/abrt-gdb-exploitable:533
 msgid "Signal sent by timer/IO/async event"
-msgstr "Signal sänd av händelse från timer/io/async"
+msgstr "Signal s??nd av h??ndelse fr??n timer/io/async"
 
 #: ../src/plugins/abrt-gdb-exploitable:541
 msgid "Signal has siginfo.si_code = SI_USER"
@@ -1211,31 +1211,31 @@ msgstr "Signal har siginfo.si_code = SI_USER"
 
 #: ../src/plugins/abrt-gdb-exploitable:544
 msgid "Signal due to write to closed pipe"
-msgstr "Signal på grund av skrivning till stängd pipe"
+msgstr "Signal p?? grund av skrivning till st??ngd pipe"
 
 #: ../src/plugins/abrt-gdb-exploitable:550
 #: ../src/plugins/abrt-gdb-exploitable:575
 msgid "Signal sent by keyboard"
-msgstr "Signal sänt från tangentbord"
+msgstr "Signal s??nt fr??n tangentbord"
 
 #: ../src/plugins/abrt-gdb-exploitable:554
 #: ../src/plugins/abrt-gdb-exploitable:579
 msgid "Job control signal sent by kernel"
-msgstr "Jobbkontrollsignal sänd från kärnan"
+msgstr "Jobbkontrollsignal s??nd fr??n k??rnan"
 
 #: ../src/plugins/abrt-gdb-exploitable:558
 #: ../src/plugins/abrt-gdb-exploitable:587
 msgid "Signal sent by window resize"
-msgstr "Signal sänd genom storleksändring på fönster"
+msgstr "Signal s??nd genom storleks??ndring p?? f??nster"
 
 #: ../src/plugins/abrt-gdb-exploitable:562
 #: ../src/plugins/abrt-gdb-exploitable:591
 msgid "Signal sent by alarm(N) expiration"
-msgstr "Signal sänt genom utlöpande av alarm(N)"
+msgstr "Signal s??nt genom utl??pande av alarm(N)"
 
 #: ../src/plugins/abrt-gdb-exploitable:583
 msgid "Signal due to write to broken pipe"
-msgstr "Signal genom skrivning till avbrutet rör"
+msgstr "Signal genom skrivning till avbrutet r??r"
 
 #: ../src/plugins/abrt-gdb-exploitable:607
 msgid "ABRT signal (abort() was called?)"
@@ -1243,19 +1243,19 @@ msgstr "ABRTsignal (abort() anropades?)"
 
 #: ../src/plugins/abrt-gdb-exploitable:616
 msgid "XCPU signal (over CPU time limit)"
-msgstr "XCPUsignal (överskred CPUtidsgräns)"
+msgstr "XCPUsignal (??verskred CPUtidsgr??ns)"
 
 #: ../src/plugins/abrt-gdb-exploitable:620
 msgid "XFSZ signal (over file size limit)"
-msgstr "XFSZsignal (överskred filstorleksgräns)"
+msgstr "XFSZsignal (??verskred filstorleksgr??ns)"
 
 #: ../src/plugins/abrt-gdb-exploitable:624
 msgid "TRAP signal (can be a bug in a debugger/tracer)"
-msgstr "Spårningssignal (kan vara en bugg i felsökare/spårare)"
+msgstr "Sp??rningssignal (kan vara en bugg i fels??kare/sp??rare)"
 
 #: ../src/plugins/abrt-gdb-exploitable:628
 msgid "SYS signal (unknown syscall was called?)"
-msgstr "SYSsignal (okänt systemanrop gjordes?)"
+msgstr "SYSsignal (ok??nt systemanrop gjordes?)"
 
 #: ../src/plugins/abrt-gdb-exploitable:633
 msgid "Arithmetic exception"
@@ -1267,7 +1267,7 @@ msgstr "Division med noll"
 
 #: ../src/plugins/abrt-gdb-exploitable:641
 msgid "Illegal instruction (jump to a random address?)"
-msgstr "Ogiltig instruktion (hopp till slumpmässig adress?)"
+msgstr "Ogiltig instruktion (hopp till slumpm??ssig adress?)"
 
 #: ../src/plugins/abrt-gdb-exploitable:647
 msgid "Non-crash related signal"
@@ -1283,7 +1283,7 @@ msgstr "Skrivning till ogiltig adress"
 
 #: ../src/plugins/abrt-gdb-exploitable:660
 msgid "Subroutine return to an invalid address (corrupted stack?)"
-msgstr "Subrutin återvände till en ogiltig adress (stackkorruption?)"
+msgstr "Subrutin ??terv??nde till en ogiltig adress (stackkorruption?)"
 
 #: ../src/plugins/abrt-gdb-exploitable:666
 #: ../src/plugins/abrt-gdb-exploitable:670
@@ -1293,20 +1293,20 @@ msgstr "Hopp till ogiltig adress"
 #: ../src/plugins/abrt-gdb-exploitable:674
 msgid ""
 "Access past the end of mapped file, invalid address, unaligned access, etc"
-msgstr "Åtkomst bortom filslut, ogiltig adress, ojusterad åtkomst, etc."
+msgstr "??tkomst bortom filslut, ogiltig adress, ojusterad ??tkomst, etc."
 
 #: ../src/plugins/abrt-gdb-exploitable:693
 msgid "Can't get signal no and do exploitability analysis\n"
 msgstr ""
-"Det går inte att ta reda på signalnummer och utföra exploaterbarhetsanalys\n"
+"Det g??r inte att ta reda p?? signalnummer och utf??ra exploaterbarhetsanalys\n"
 
 #: ../src/plugins/abrt-gdb-exploitable:706
 msgid "Likely crash reason: "
-msgstr "Sannolikt skäl för krasch:"
+msgstr "Sannolikt sk??l f??r krasch:"
 
 #: ../src/plugins/abrt-gdb-exploitable:707
 msgid "Exploitable rating (0-9 scale): "
-msgstr "Exploaterbarhetsvärdering (skala 0-9):"
+msgstr "Exploaterbarhetsv??rdering (skala 0-9):"
 
 #: ../src/plugins/abrt-gdb-exploitable:709
 msgid "Current instruction: "
@@ -1322,13 +1322,13 @@ msgid ""
 "\n"
 "Watch log file FILE, run PROG when it grows or is replaced"
 msgstr ""
-"& [-vs] [-F STR]… FIL PROG [ARG]\n"
+"& [-vs] [-F STR]??? FIL PROG [ARG]\n"
 "\n"
-"Betrakta loggfilen FIL, kör PROG när den växer eller byts ut"
+"Betrakta loggfilen FIL, k??r PROG n??r den v??xer eller byts ut"
 
 #: ../src/plugins/abrt-watch-log.c:154
 msgid "Don't run PROG if STRs aren't found"
-msgstr "Kör inte PROG om det inte finns några STR"
+msgstr "K??r inte PROG om det inte finns n??gra STR"
 
 #: ../src/plugins/abrt-dump-oops.c:77
 msgid ""
@@ -1338,12 +1338,12 @@ msgid ""
 msgstr ""
 "& [-vusoxm] [-d KAT]/[-D] [FIL]\n"
 "\n"
-"Extrahera en oops från FIL (eller standard in)"
+"Extrahera en oops fr??n FIL (eller standard in)"
 
 #: ../src/plugins/abrt-dump-oops.c:98
 #: ../src/plugins/abrt-dump-journal-oops.c:220
 msgid "Print found oopses on standard output"
-msgstr "Skriv ut hittade oops:ar på standard ut"
+msgstr "Skriv ut hittade oops:ar p?? standard ut"
 
 #. oopses don't contain any sensitive info, and even
 #. * the old koops app was showing the oopses to all users
@@ -1351,7 +1351,7 @@ msgstr "Skriv ut hittade oops:ar på standard ut"
 #: ../src/plugins/abrt-dump-oops.c:102
 #: ../src/plugins/abrt-dump-journal-oops.c:224
 msgid "Create new problem directory in DIR for every oops found"
-msgstr "Skapa ny problemkatalog i KAT för varje oops som hittas"
+msgstr "Skapa ny problemkatalog i KAT f??r varje oops som hittas"
 
 #: ../src/plugins/abrt-dump-oops.c:103
 #: ../src/plugins/abrt-dump-journal-core.c:499
@@ -1370,22 +1370,22 @@ msgstr "Spara den extraherade information i PROBLEM"
 #: ../src/plugins/abrt-dump-journal-xorg.c:192
 #: ../src/plugins/abrt-dump-xorg.c:56
 msgid "Make the problem directory world readable"
-msgstr "Gör problemkatalogen läsbar för alla"
+msgstr "G??r problemkatalogen l??sbar f??r alla"
 
 #: ../src/plugins/abrt-dump-oops.c:106
 #: ../src/plugins/abrt-dump-journal-oops.c:227
 #: ../src/plugins/abrt-dump-journal-xorg.c:193
 msgid "Throttle problem directory creation to 1 per second"
-msgstr "Begränsa skapandet av problemkataloger till 1 per sekund"
+msgstr "Begr??nsa skapandet av problemkataloger till 1 per sekund"
 
 #: ../src/plugins/abrt-dump-oops.c:107 ../src/plugins/abrt-dump-xorg.c:57
 msgid "Print search string(s) to stdout and exit"
-msgstr "Skriv söksträngar till standard ut och avsluta"
+msgstr "Skriv s??kstr??ngar till standard ut och avsluta"
 
 #: ../src/plugins/abrt-dump-oops.c:127
 #: ../src/plugins/abrt-dump-journal-oops.c:128
 msgid "Failed to compile regex"
-msgstr "Misslyckades att kompilera reguljäruttryck"
+msgstr "Misslyckades att kompilera regulj??ruttryck"
 
 #: ../src/plugins/abrt-dump-oops.c:177
 msgid "Can't update the problem: no oops found"
@@ -1393,28 +1393,28 @@ msgstr "Kan inte uppdatera problemet: inga oops:ar hittades"
 
 #: ../src/plugins/abrt-dump-oops.c:183
 msgid "More oopses found: process only the first one"
-msgstr "Flera oops:ar hittade: bearbeta endast den första"
+msgstr "Flera oops:ar hittade: bearbeta endast den f??rsta"
 
 #: ../src/plugins/abrt-dump-journal-core.c:361
 #: ../src/plugins/abrt-dump-journal-core.c:397
 msgid "Failed to obtain all required information from journald"
-msgstr "Misslyckades att få tag i all nödvändig information från journald"
+msgstr "Misslyckades att f?? tag i all n??dv??ndig information fr??n journald"
 
 #. We don't want to update the counter here.
 #: ../src/plugins/abrt-dump-journal-core.c:421
 #, c-format
 msgid "Not saving repeating crash after %ds (limit is %ds)"
-msgstr "Sparar inte krasch so upprepas efter %d s (gränsen är %d s)"
+msgstr "Sparar inte krasch so upprepas efter %d??s (gr??nsen ??r %d??s)"
 
 #: ../src/plugins/abrt-dump-journal-core.c:427
 msgid "Failed to save detect problem data in abrt database"
-msgstr "Misslyckades att spara data för felupptäckt i abrt-databasen"
+msgstr "Misslyckades att spara data f??r feluppt??ckt i abrt-databasen"
 
 #: ../src/plugins/abrt-dump-journal-core.c:447
 #: ../src/plugins/abrt-dump-journal-oops.c:165
 #: ../src/plugins/abrt-dump-journal-xorg.c:121
 msgid "Failed to initialize systemd-journal watch"
-msgstr "Misslyckades att initiera läsning av systemd-journal"
+msgstr "Misslyckades att initiera l??sning av systemd-journal"
 
 #: ../src/plugins/abrt-dump-journal-core.c:467
 msgid ""
@@ -1429,34 +1429,34 @@ msgid ""
 "\n"
 "The last seen position is saved in "
 msgstr ""
-"& [-vsf] [-e]/[-c MARKÖR] [-t INT]/[-T] [-d KAT]/[-D]\n"
+"& [-vsf] [-e]/[-c MARK??R] [-t INT]/[-T] [-d KAT]/[-D]\n"
 "\n"
-"Hämta minnesdumpar från systemd-journal\n"
+"H??mta minnesdumpar fr??n systemd-journal\n"
 "\n"
-"Flaggorna -c och -e står i konflikt eftersom båda anger det första lästa "
+"Flaggorna -c och -e st??r i konflikt eftersom b??da anger det f??rsta l??sta "
 "meddelandet.\n"
 "\n"
-"-e är användbart bara för -f eftersom att följa journalen startar med att "
-"läsa\n"
-"hela journalen om den senast visade positionen inte är tillgänglig.\n"
+"-e ??r anv??ndbart bara f??r -f eftersom att f??lja journalen startar med att "
+"l??sa\n"
+"hela journalen om den senast visade positionen inte ??r tillg??nglig.\n"
 "\n"
 "Den senast visade positionen sparas i"
 
 #: ../src/plugins/abrt-dump-journal-core.c:498
 msgid "Create new problem directory in DIR for every coredump"
-msgstr "Skapa en ny problemkatalog i KAT för varje minnesdump"
+msgstr "Skapa en ny problemkatalog i KAT f??r varje minnesdump"
 
 #: ../src/plugins/abrt-dump-journal-core.c:500
 #: ../src/plugins/abrt-dump-journal-oops.c:228
 #: ../src/plugins/abrt-dump-journal-xorg.c:194
 msgid "Start reading systemd-journal from the CURSOR position"
-msgstr "Börja att läsa systemd-journal från MARKÖR-positionen"
+msgstr "B??rja att l??sa systemd-journal fr??n MARK??R-positionen"
 
 #: ../src/plugins/abrt-dump-journal-core.c:501
 #: ../src/plugins/abrt-dump-journal-oops.c:229
 #: ../src/plugins/abrt-dump-journal-xorg.c:195
 msgid "Start reading systemd-journal from the end"
-msgstr "Börja att läsa systemd-journal från slutet"
+msgstr "B??rja att l??sa systemd-journal fr??n slutet"
 
 #: ../src/plugins/abrt-dump-journal-core.c:502
 msgid "Throttle problem directory creation to 1 per INT second"
@@ -1471,19 +1471,19 @@ msgstr "Samma som -t INT, INT anges i plugins/CCpp.conf"
 #: ../src/plugins/abrt-dump-journal-xorg.c:196
 msgid "Follow systemd-journal from the last seen position (if available)"
 msgstr ""
-"Följ systemd-journal från den senast observerade positionen (om tillgänglig)"
+"F??lj systemd-journal fr??n den senast observerade positionen (om tillg??nglig)"
 
 #: ../src/plugins/abrt-dump-journal-core.c:515
 #: ../src/plugins/abrt-dump-journal-oops.c:246
 #: ../src/plugins/abrt-dump-journal-xorg.c:213
 msgid "You need to specify either -c CURSOR or -e"
-msgstr "De behöver ange antingen -c MARKÖR eller -e"
+msgstr "De beh??ver ange antingen -c MARK??R eller -e"
 
 #: ../src/plugins/abrt-dump-journal-core.c:561
 #: ../src/plugins/abrt-dump-journal-oops.c:284
 #: ../src/plugins/abrt-dump-journal-xorg.c:278
 msgid "Cannot open systemd-journal"
-msgstr "Kan inte öppna systemd-journal"
+msgstr "Kan inte ??ppna systemd-journal"
 
 #: ../src/plugins/abrt-dump-journal-core.c:564
 msgid "Cannot filter systemd-journal to systemd-coredump data only"
@@ -1493,19 +1493,19 @@ msgstr "Kan inte filtrera systemd-journal till endast systemd-coredump-data"
 #: ../src/plugins/abrt-dump-journal-oops.c:293
 #: ../src/plugins/abrt-dump-journal-xorg.c:291
 msgid "Cannot seek to the end of journal"
-msgstr "Kan inte söka till slutet på journalen"
+msgstr "Kan inte s??ka till slutet p?? journalen"
 
 #: ../src/plugins/abrt-dump-journal-core.c:572
 #: ../src/plugins/abrt-dump-journal-oops.c:309
 #: ../src/plugins/abrt-dump-journal-xorg.c:307
 #, c-format
 msgid "Failed to set systemd-journal cursor '%s'"
-msgstr "Misslyckades att sätta markören för systemd-journal ”%s”"
+msgstr "Misslyckades att s??tta mark??ren f??r systemd-journal ???%s???"
 
 #: ../src/plugins/abrt-dump-journal-oops.c:40
 #: ../src/plugins/abrt-dump-journal-xorg.c:52
 msgid "Cannot read journal data."
-msgstr "Kan inte läsa journaldata."
+msgstr "Kan inte l??sa journaldata."
 
 #: ../src/plugins/abrt-dump-journal-oops.c:186
 msgid ""
@@ -1520,17 +1520,17 @@ msgid ""
 "\n"
 "The last seen position is saved in "
 msgstr ""
-"& [-vsoxtf] [-e]/[-c MARKÖR] [-d KAT]/[-D]\n"
+"& [-vsoxtf] [-e]/[-c MARK??R] [-d KAT]/[-D]\n"
 "\n"
-"Extrahera oops från systemd-journal\n"
+"Extrahera oops fr??n systemd-journal\n"
 "\n"
-"Flaggorna -c och -e står i konflikt med varandra eftersom båda anger det "
-"först\n"
-"lästa meddelandet.\n"
+"Flaggorna -c och -e st??r i konflikt med varandra eftersom b??da anger det "
+"f??rst\n"
+"l??sta meddelandet.\n"
 "\n"
-"-e är användbart enbart till -f eftersom följandet av journalen startar med "
+"-e ??r anv??ndbart enbart till -f eftersom f??ljandet av journalen startar med "
 "att\n"
-"läsa hela journalen om den senast observerade positionen inte är tillgänglig."
+"l??sa hela journalen om den senast observerade positionen inte ??r tillg??nglig."
 "\n"
 "\n"
 "Den senast observerade positionen sparas i "
@@ -1538,32 +1538,32 @@ msgstr ""
 #: ../src/plugins/abrt-dump-journal-oops.c:231
 #: ../src/plugins/abrt-dump-journal-xorg.c:197
 msgid "Read journal files from all machines"
-msgstr "Läs journalfiler från alla maskiner"
+msgstr "L??s journalfiler fr??n alla maskiner"
 
 #: ../src/plugins/abrt-dump-journal-oops.c:232
 #: ../src/plugins/abrt-dump-journal-xorg.c:198
 msgid "Read all journal files from directory at PATH"
-msgstr "Läs alla journalfiler från katalogen vid SÖKVÄG"
+msgstr "L??s alla journalfiler fr??n katalogen vid S??KV??G"
 
 #: ../src/plugins/abrt-dump-journal-oops.c:279
 #: ../src/plugins/abrt-dump-journal-xorg.c:273
 #, c-format
 msgid "Cannot initialize systemd-journal in directory '%s'"
-msgstr "Kan inte initiera systemd-journal i katalogen ”%s”"
+msgstr "Kan inte initiera systemd-journal i katalogen ???%s???"
 
 #: ../src/plugins/abrt-dump-journal-oops.c:288
 msgid "Cannot filter systemd-journal to kernel data only"
-msgstr "Kan inte filtrera ut endast kärndata från systemd-journal"
+msgstr "Kan inte filtrera ut endast k??rndata fr??n systemd-journal"
 
 #: ../src/plugins/abrt-dump-journal-oops.c:300
 #: ../src/plugins/abrt-dump-journal-xorg.c:298
 #, c-format
 msgid "Failed to start watch from cursor '%s'"
-msgstr "Misslyckades att starta läsning från markören ”%s”"
+msgstr "Misslyckades att starta l??sning fr??n mark??ren ???%s???"
 
 #: ../src/plugins/abrt-dump-journal-xorg.c:61
 msgid "Failed to parse Backtrace from journal"
-msgstr "Misslyckades att tolka anropskedjan från journalen"
+msgstr "Misslyckades att tolka anropskedjan fr??n journalen"
 
 #: ../src/plugins/abrt-dump-journal-xorg.c:143
 #, c-format
@@ -1583,40 +1583,40 @@ msgid ""
 "parameter\n"
 "-j or in %s conf file.\n"
 msgstr ""
-"& [-vsoxtf] [-e]/[-c MARKÖR] [-d KAT]/[-D]\n"
+"& [-vsoxtf] [-e]/[-c MARK??R] [-d KAT]/[-D]\n"
 "\n"
-"Extrahera Xorg-crash från systemd-journal\n"
+"Extrahera Xorg-crash fr??n systemd-journal\n"
 "\n"
-"Flaggorna -c och -e står i konflikt för att båda anger det först lästa\n"
+"Flaggorna -c och -e st??r i konflikt f??r att b??da anger det f??rst l??sta\n"
 "meddelandet.\n"
 "\n"
-"-e är användbart endast med -f för att följandet av journalen börjar med att\n"
-"läsa hela journalen om den sist sedda positionen inte är tillgänglig.\n"
+"-e ??r anv??ndbart endast med -f f??r att f??ljandet av journalen b??rjar med att\n"
+"l??sa hela journalen om den sist sedda positionen inte ??r tillg??nglig.\n"
 "\n"
 "Den senast sedda positionen sparas i %s\n"
 "\n"
-"Ett journalfilter är en nödvändig parameter och måste anges antingen som\n"
+"Ett journalfilter ??r en n??dv??ndig parameter och m??ste anges antingen som\n"
 "parametern\n"
 "-j eller i konfigurationsfilen %s.\n"
 
 #: ../src/plugins/abrt-dump-journal-xorg.c:189
 msgid "Print found crashes on standard output"
-msgstr "Skriv ut hittade krascher på standard ut"
+msgstr "Skriv ut hittade krascher p?? standard ut"
 
 #: ../src/plugins/abrt-dump-journal-xorg.c:190
 msgid "Create new problem directory in DIR for every crash found"
-msgstr "Skapa en ny problemkatalog i KAT för varje hittad krash"
+msgstr "Skapa en ny problemkatalog i KAT f??r varje hittad krash"
 
 #: ../src/plugins/abrt-dump-journal-xorg.c:199
 msgid "Journal filter e.g. '_COMM=gdm-x-session' (may be given many times)"
-msgstr "Journalfilter t.ex. '_COMM=gdm-x-session' (får anges flera gånger)"
+msgstr "Journalfilter t.ex. '_COMM=gdm-x-session' (f??r anges flera g??nger)"
 
 #: ../src/plugins/abrt-dump-journal-xorg.c:265
 msgid ""
 "Journal filter must be specified either by parameter -j or stored in /etc/"
 "abrt/plugins/xorg.conf file"
 msgstr ""
-"Ett journalfilter måste anges antingen med parametern -j eller lagras i "
+"Ett journalfilter m??ste anges antingen med parametern -j eller lagras i "
 "filen\n"
 "/etc/abrt/plugins/xorg.conf"
 
@@ -1632,46 +1632,46 @@ msgid ""
 msgstr ""
 "& [-vsoxm] [-d KAT]/[-D] [FIL]\n"
 "\n"
-"Extrahera en Xorg-krasch från FIL (eller standard in)"
+"Extrahera en Xorg-krasch fr??n FIL (eller standard in)"
 
 #: ../src/plugins/abrt-dump-xorg.c:53
 msgid "Print found crash data on standard output"
-msgstr "Skriv funna kraschdata på standard ut"
+msgstr "Skriv funna kraschdata p?? standard ut"
 
 #: ../src/plugins/abrt-dump-xorg.c:54
 msgid "Create problem directory in DIR for every crash found"
-msgstr "Skapa problemkatalog i KAT för varje krasch som hittas"
+msgstr "Skapa problemkatalog i KAT f??r varje krasch som hittas"
 
 #: ../src/plugins/abrt-dump-xorg.c:108
 msgid "Failed to parse Backtrace from log file"
-msgstr "Misslyckades att tolka anropskedjan från loggfilen"
+msgstr "Misslyckades att tolka anropskedjan fr??n loggfilen"
 
 #. abrt_journal_set_cursor() prints error message in verbose mode
 #: ../src/plugins/abrt-journal.c:274
 msgid "Cannot save journal watch's position"
-msgstr "Kan inte spara journalläsningens position"
+msgstr "Kan inte spara journall??sningens position"
 
 #: ../src/plugins/abrt-journal.c:284
 #, c-format
 msgid "Cannot save journal watch's position: open('%s')"
-msgstr "Kan inte spara journalläsningens position: open(”%s”)"
+msgstr "Kan inte spara journall??sningens position: open(???%s???)"
 
 #. Only notice because this is expected
 #: ../src/plugins/abrt-journal.c:302
 #, c-format
 msgid "Not restoring journal watch's position: file '%s' does not exist"
-msgstr "Återställer inte journalläsningens position: filen ”%s” finns inte"
+msgstr "??terst??ller inte journall??sningens position: filen ???%s??? finns inte"
 
 #: ../src/plugins/abrt-journal.c:304
 #, c-format
 msgid "Cannot restore journal watch's position form file '%s'"
-msgstr "Kan inte återställa journalläsningens position från filen ”%s”"
+msgstr "Kan inte ??terst??lla journall??sningens position fr??n filen ???%s???"
 
 #: ../src/plugins/abrt-journal.c:311
 #, c-format
 msgid "Cannot restore journal watch's position: path '%s' is not regular file"
 msgstr ""
-"Kan inte återställa journalläsningens position: sökvägen ”%s” är inte en "
+"Kan inte ??terst??lla journall??sningens position: s??kv??gen ???%s??? ??r inte en "
 "normal fil"
 
 #: ../src/plugins/abrt-journal.c:317
@@ -1679,34 +1679,34 @@ msgstr ""
 msgid ""
 "Cannot restore journal watch's position: file '%s' exceeds %dB size limit"
 msgstr ""
-"Kan inte återställa journalläsningens position: filen ”%s” överskrider "
-"storleksgränsen %d B"
+"Kan inte ??terst??lla journall??sningens position: filen ???%s??? ??verskrider "
+"storleksgr??nsen %d B"
 
 #: ../src/plugins/abrt-journal.c:325
 #, c-format
 msgid "Cannot restore journal watch's position: open('%s')"
-msgstr "Kan inte återställa journalläsningens position: open(”%s”)"
+msgstr "Kan inte ??terst??lla journall??sningens position: open(???%s???)"
 
 #: ../src/plugins/abrt-journal.c:334
 #, c-format
 msgid "Cannot restore journal watch's position: cannot read entire file '%s'"
 msgstr ""
-"Kan inte återställa journalläsningens position: kan inte läsa hela filen "
-"”%s”"
+"Kan inte ??terst??lla journall??sningens position: kan inte l??sa hela filen "
+"???%s???"
 
 #. abrt_journal_set_cursor() prints error message in verbose mode
 #: ../src/plugins/abrt-journal.c:346
 #, c-format
 msgid "Failed to move the journal to a cursor from file '%s'"
-msgstr "Misslyckades att flytta journalen till en markör från filen ”%s”"
+msgstr "Misslyckades att flytta journalen till en mark??r fr??n filen ???%s???"
 
 #: ../src/plugins/abrt-retrace-client.c:70
 msgid ""
 "Retrace server can not be used, because the crash is too large. Try local "
 "retracing."
 msgstr ""
-"Spårservern kan inte användas för att kraschen är för stor.  Försök göra "
-"spår lokalt."
+"Sp??rservern kan inte anv??ndas f??r att kraschen ??r f??r stor.  F??rs??k g??ra "
+"sp??r lokalt."
 
 #. Hopefully, by this time child emitted more meaningful
 #. * error message. But just in case it didn't:
@@ -1715,13 +1715,13 @@ msgstr ""
 #: ../src/plugins/abrt-retrace-client.c:182
 #: ../src/plugins/abrt-retrace-client.c:186
 msgid "Can't create temporary file in "
-msgstr "Det går inte skapa en temporärfil i "
+msgstr "Det g??r inte skapa en tempor??rfil i "
 
 #: ../src/plugins/abrt-retrace-client.c:131
 #: ../src/plugins/abrt-retrace-client.c:168
 #, c-format
 msgid "Can't execute '%s'"
-msgstr "Det går inte att köra ”%s”"
+msgstr "Det g??r inte att k??ra ???%s???"
 
 #: ../src/plugins/abrt-retrace-client.c:211
 #: ../src/plugins/abrt-retrace-client.c:398
@@ -1729,7 +1729,7 @@ msgstr "Det går inte att köra ”%s”"
 #: ../src/plugins/abrt-retrace-client.c:842
 #, c-format
 msgid "Failed to send HTTP header of length %d: NSS error %d"
-msgstr "Misslyckades att skicka HTTP-huvud med längden %d: NSS-fel %d"
+msgstr "Misslyckades att skicka HTTP-huvud med l??ngden %d: NSS-fel %d"
 
 #: ../src/plugins/abrt-retrace-client.c:223
 #: ../src/plugins/abrt-retrace-client.c:412
@@ -1741,7 +1741,7 @@ msgstr "Misslyckades att skicka HTTP-huvud med längden %d: NSS-fel %d"
 #, c-format
 msgid "Unexpected HTTP response from server: %d\n"
 "%s"
-msgstr "Oväntat HTTP-svar från servern: %d\n"
+msgstr "Ov??ntat HTTP-svar fr??n servern: %d\n"
 "%s"
 
 #: ../src/plugins/abrt-retrace-client.c:232
@@ -1751,7 +1751,7 @@ msgstr "Oväntat HTTP-svar från servern: %d\n"
 #: ../src/plugins/abrt-retrace-client.c:992
 #: ../src/plugins/abrt-retrace-client.c:1062
 msgid "Invalid response from server: missing HTTP message body."
-msgstr "Ogiltigt svar från servern: HTTP-meddelandekroppen saknas."
+msgstr "Ogiltigt svar fr??n servern: HTTP-meddelandekroppen saknas."
 
 #: ../src/plugins/abrt-retrace-client.c:424
 #, c-format
@@ -1759,26 +1759,26 @@ msgid ""
 "Retrace server is unable to process package '%s.%s'.\n"
 "Is it a part of official '%s' repositories?"
 msgstr ""
-"Spårservern kan inte bearbeta paketet ”%s.%s”.\n"
-"Är det en del av de officiella förråden för ”%s”?"
+"Sp??rservern kan inte bearbeta paketet ???%s.%s???.\n"
+"??r det en del av de officiella f??rr??den f??r ???%s????"
 
 #: ../src/plugins/abrt-retrace-client.c:444
 msgid "Querying server settings"
-msgstr "Frågar om serverinställningar"
+msgstr "Fr??gar om serverinst??llningar"
 
 #: ../src/plugins/abrt-retrace-client.c:452
 msgid "The server is fully occupied. Try again later."
-msgstr "Spårservern är fullt upptagen.  Försök senare."
+msgstr "Sp??rservern ??r fullt upptagen.  F??rs??k senare."
 
 #: ../src/plugins/abrt-retrace-client.c:453
 msgid "The server denied your request."
-msgstr "Servern nekade din begäran."
+msgstr "Servern nekade din beg??ran."
 
 #: ../src/plugins/abrt-retrace-client.c:484
 #: ../src/plugins/abrt-retrace-client.c:500
 #, c-format
 msgid "'%s' must be a regular file in order to use Retrace server."
-msgstr "'%s' måste vara en vanlig fil för att kunna använda fjärrspårservern."
+msgstr "'%s' m??ste vara en vanlig fil f??r att kunna anv??nda fj??rrsp??rservern."
 
 #: ../src/plugins/abrt-retrace-client.c:520
 #, c-format
@@ -1786,29 +1786,29 @@ msgid ""
 "The size of your crash is %s, but the retrace server only accepts crashes "
 "smaller or equal to %s."
 msgstr ""
-"Storleken på din krasch är %s, men spårservern tar bara emot krascher som är "
+"Storleken p?? din krasch ??r %s, men sp??rservern tar bara emot krascher som ??r "
 "mindre eller lika med %s."
 
 #: ../src/plugins/abrt-retrace-client.c:540
 msgid "The server does not support xz-compressed tarballs."
-msgstr "Server stödjer inte xz-komprimerade tar-arkiv."
+msgstr "Server st??djer inte xz-komprimerade tar-arkiv."
 
 #: ../src/plugins/abrt-retrace-client.c:577
 #, c-format
 msgid "The release '%s' is not supported by the Retrace server."
-msgstr "Utgåvan ”%s” stödjs inte av spårservern."
+msgstr "Utg??van ???%s??? st??djs inte av sp??rservern."
 
 #: ../src/plugins/abrt-retrace-client.c:581
 msgid "The server is not able to handle your request."
-msgstr "Servern klarar inte att hantera din begäran."
+msgstr "Servern klarar inte att hantera din beg??ran."
 
 #: ../src/plugins/abrt-retrace-client.c:600
 msgid "Unknown package sent to Retrace server."
-msgstr "Okänt paket skickat till spårservern."
+msgstr "Ok??nt paket skickat till sp??rservern."
 
 #: ../src/plugins/abrt-retrace-client.c:609
 msgid "Preparing an archive to upload"
-msgstr "Förbereder ett arkiv att skicka"
+msgstr "F??rbereder ett arkiv att skicka"
 
 #: ../src/plugins/abrt-retrace-client.c:628
 #, c-format
@@ -1816,17 +1816,17 @@ msgid ""
 "The size of your archive is %s, but the retrace server only accepts archives "
 "smaller or equal to %s."
 msgstr ""
-"Storleken på ditt arkiv är %s, men spårservern tar bara emot arkiv mindre "
+"Storleken p?? ditt arkiv ??r %s, men sp??rservern tar bara emot arkiv mindre "
 "eller lika med %s."
 
 #: ../src/plugins/abrt-retrace-client.c:640
 #, c-format
 msgid "You are going to upload %s. Continue?"
-msgstr "Du kommer skicka %s.  Fortsätt?"
+msgstr "Du kommer skicka %s.  Forts??tt?"
 
 #: ../src/plugins/abrt-retrace-client.c:649
 msgid "Cancelled by user"
-msgstr "Avbrutet av användaren"
+msgstr "Avbrutet av anv??ndaren"
 
 #: ../src/plugins/abrt-retrace-client.c:683
 #, c-format
@@ -1840,7 +1840,7 @@ msgstr "Skickar %d %%\n"
 
 #: ../src/plugins/abrt-retrace-client.c:721
 msgid "Failed to read from a pipe"
-msgstr "Misslyckades att läsa från ett rör"
+msgstr "Misslyckades att l??sa fr??n ett r??r"
 
 #: ../src/plugins/abrt-retrace-client.c:734
 #, c-format
@@ -1855,38 +1855,38 @@ msgstr "Gick bra att skicka"
 msgid ""
 "Your problem directory is corrupted and can not be processed by the Retrace "
 "server."
-msgstr "Din problemkatalog är trasig och kan inte bearbetas av spårservern."
+msgstr "Din problemkatalog ??r trasig och kan inte bearbetas av sp??rservern."
 
 #: ../src/plugins/abrt-retrace-client.c:769
 msgid ""
 "The archive contains malicious files (such as symlinks) and thus can not be "
 "processed."
 msgstr ""
-"Arkivet innehåller elaka filer (såsom symboliska länkar) och kan därför inte "
+"Arkivet inneh??ller elaka filer (s??som symboliska l??nkar) och kan d??rf??r inte "
 "bearbetas."
 
 #: ../src/plugins/abrt-retrace-client.c:782
 msgid "Invalid response from server: missing X-Task-Id."
-msgstr "Ogiltigt svar från servern: X-Task-Id saknas."
+msgstr "Ogiltigt svar fr??n servern: X-Task-Id saknas."
 
 #: ../src/plugins/abrt-retrace-client.c:788
 msgid "Invalid response from server: missing X-Task-Password."
-msgstr "Ogiltigt svar från servern: X-Task-Password saknas."
+msgstr "Ogiltigt svar fr??n servern: X-Task-Password saknas."
 
 #: ../src/plugins/abrt-retrace-client.c:795
 msgid "Retrace job started"
-msgstr "Spårningsjobb startat"
+msgstr "Sp??rningsjobb startat"
 
 #: ../src/plugins/abrt-retrace-client.c:808
 #, c-format
 msgid "Task Id: %s\n"
 "Task Password: %s\n"
 msgstr "Uppgifts-id: %s\n"
-"Uppgiftslösenord: %s\n"
+"Uppgiftsl??senord: %s\n"
 
 #: ../src/plugins/abrt-retrace-client.c:866
 msgid "Invalid response from server: missing X-Task-Status."
-msgstr "Ogiltigt svar från servern: X-Task-Status saknas."
+msgstr "Ogiltigt svar fr??n servern: X-Task-Status saknas."
 
 #: ../src/plugins/abrt-retrace-client.c:878
 #, c-format
@@ -1900,15 +1900,15 @@ msgstr "Uppgiftsstatus: %s\n"
 #: ../src/plugins/abrt-retrace-client.c:1053
 #, c-format
 msgid "Failed to send HTTP header of length %d: NSS error %d."
-msgstr "Misslyckades att skicka HTTP-huvud av längden %d: NSS-fel %d."
+msgstr "Misslyckades att skicka HTTP-huvud av l??ngden %d: NSS-fel %d."
 
 #: ../src/plugins/abrt-retrace-client.c:1170
 msgid ""
 "Retrace failed. Try again later and if the problem persists report this "
 "issue please."
 msgstr ""
-"Spårningen misslyckades.  Försök igen senare och om problemet kvarstår "
-"rapportera gärna detta fel."
+"Sp??rningen misslyckades.  F??rs??k igen senare och om problemet kvarst??r "
+"rapportera g??rna detta fel."
 
 #: ../src/plugins/abrt-retrace-client.c:1217
 msgid "log to syslog"
@@ -1916,101 +1916,101 @@ msgstr "logga till syslog"
 
 #: ../src/plugins/abrt-retrace-client.c:1219
 msgid "allow insecure connection to retrace server"
-msgstr "tillåt osäker förbindelse till spårservern"
+msgstr "till??t os??ker f??rbindelse till sp??rservern"
 
 #: ../src/plugins/abrt-retrace-client.c:1221
 msgid ""
 "do not check whether retrace server is able to process given package before "
 "uploading the archive"
 msgstr ""
-"kontrollera inte om spårservern kan bearbeta det givna paketet före arkivet "
+"kontrollera inte om sp??rservern kan bearbeta det givna paketet f??re arkivet "
 "skickas"
 
 #: ../src/plugins/abrt-retrace-client.c:1224
 msgid "retrace server URL"
-msgstr "spårserver-URL"
+msgstr "sp??rserver-URL"
 
 #: ../src/plugins/abrt-retrace-client.c:1226
 msgid "retrace server port"
-msgstr "spårserverport"
+msgstr "sp??rserverport"
 
 #: ../src/plugins/abrt-retrace-client.c:1228
 msgid "(debug) show received HTTP headers"
-msgstr "(felsökning) visa mottagna HTTP-huvuden"
+msgstr "(fels??kning) visa mottagna HTTP-huvuden"
 
 #: ../src/plugins/abrt-retrace-client.c:1229
 msgid "For create and batch operations"
-msgstr "För operationerna create och batch"
+msgstr "F??r operationerna create och batch"
 
 #: ../src/plugins/abrt-retrace-client.c:1231
 msgid "read data from ABRT problem directory"
-msgstr "läs data från ABRT-problemkatalogen"
+msgstr "l??s data fr??n ABRT-problemkatalogen"
 
 #: ../src/plugins/abrt-retrace-client.c:1233
 msgid "read data from coredump"
-msgstr "läs data från minnesdump"
+msgstr "l??s data fr??n minnesdump"
 
 #: ../src/plugins/abrt-retrace-client.c:1235
 msgid "Delay for polling operations"
-msgstr "Fördröjning för pollningsoperationer"
+msgstr "F??rdr??jning f??r pollningsoperationer"
 
 #: ../src/plugins/abrt-retrace-client.c:1237
 msgid "(debug) do not delete temporary archive created from dump dir in "
 msgstr ""
-"(felsökning) radera inte det temporära arkivet skapat från dumpkatalogen i "
+"(fels??kning) radera inte det tempor??ra arkivet skapat fr??n dumpkatalogen i "
 
 #: ../src/plugins/abrt-retrace-client.c:1239
 msgid "For status, backtrace, and log operations"
-msgstr "För operationerna status, backtrace och log"
+msgstr "F??r operationerna status, backtrace och log"
 
 #: ../src/plugins/abrt-retrace-client.c:1241
 msgid "id of your task on server"
-msgstr "Id på din uppgift på servern"
+msgstr "Id p?? din uppgift p?? servern"
 
 #: ../src/plugins/abrt-retrace-client.c:1243
 msgid "password of your task on server"
-msgstr "lösenord på din uppgift på servern"
+msgstr "l??senord p?? din uppgift p?? servern"
 
 #: ../src/plugins/abrt-retrace-client.c:1247
 msgid ""
 "abrt-retrace-client <operation> [options]\n"
 "Operations: create/status/backtrace/log/batch/exploitable"
 msgstr ""
-"abrt-retrace-client <åtgärd> [flaggor]\n"
-"Åtgärder: create/status/backtrace/log/batch/exploitable"
+"abrt-retrace-client <??tg??rd> [flaggor]\n"
+"??tg??rder: create/status/backtrace/log/batch/exploitable"
 
 #: ../src/plugins/abrt-retrace-client.c:1292
 #: ../src/plugins/abrt-retrace-client.c:1298
 msgid "Either problem directory or coredump is needed."
-msgstr "Antingen en problemkatalog eller en minnesdump behövs."
+msgstr "Antingen en problemkatalog eller en minnesdump beh??vs."
 
 #: ../src/plugins/abrt-retrace-client.c:1304
 #: ../src/plugins/abrt-retrace-client.c:1312
 #: ../src/plugins/abrt-retrace-client.c:1320
 #: ../src/plugins/abrt-retrace-client.c:1328
 msgid "Task id is needed."
-msgstr "Uppgifts-id behövs."
+msgstr "Uppgifts-id beh??vs."
 
 #: ../src/plugins/abrt-retrace-client.c:1306
 #: ../src/plugins/abrt-retrace-client.c:1314
 #: ../src/plugins/abrt-retrace-client.c:1322
 #: ../src/plugins/abrt-retrace-client.c:1330
 msgid "Task password is needed."
-msgstr "Uppgiftslösenord behövs."
+msgstr "Uppgiftsl??senord beh??vs."
 
 #: ../src/plugins/abrt-retrace-client.c:1334
 #, c-format
 msgid "Unknown operation: %s."
-msgstr "Okänd operation: %s."
+msgstr "Ok??nd operation: %s."
 
 #: ../src/plugins/analyze_LocalGDB.xml.in.h:1
 msgid "Local GNU Debugger"
-msgstr "Lokal GNU-felsökare"
+msgstr "Lokal GNU-fels??kare"
 
 #: ../src/plugins/analyze_LocalGDB.xml.in.h:2
 msgid "Download debuginfo packages and generate backtrace locally using GDB"
 msgstr ""
-"Hämta paket med felsökningsinformation och generera stackspår lokalt med GDB"
+"H??mta paket med fels??kningsinformation och generera stacksp??r lokalt med GDB"
 
 #: ../src/plugins/analyze_LocalGDB.xml.in.h:3
 msgid ""
@@ -2018,13 +2018,13 @@ msgid ""
 "and take up disk space. However, unlike RetraceServer, doesn't send coredump "
 "to remote machines."
 msgstr ""
-"Behöver hämta paket med felsökningsinformation, vilket kan ta en hel del "
-"tid, och använda diskutrymme.  Men, till skillnad mot RetraceServer, skickar "
-"inte en minnesdump till fjärrmaskiner."
+"Beh??ver h??mta paket med fels??kningsinformation, vilket kan ta en hel del "
+"tid, och anv??nda diskutrymme.  Men, till skillnad mot RetraceServer, skickar "
+"inte en minnesdump till fj??rrmaskiner."
 
 #: ../src/plugins/analyze_RetraceServer.xml.in.h:1
 msgid "Send core dump to remote retrace server for analysis"
-msgstr "Skickar minnesdump till fjärrspårningsserver för analys"
+msgstr "Skickar minnesdump till fj??rrsp??rningsserver f??r analys"
 
 #: ../src/plugins/analyze_RetraceServer.xml.in.h:2
 msgid ""
@@ -2034,28 +2034,28 @@ msgid ""
 "you upload contains all the data from the crashed program, including your "
 "private data, if any."
 msgstr ""
-"Skickar minnesdump till en server, vilken genererar ett stackspår och "
-"returnerar det.  Fördelar: inget behov av att hämta felsökningsinformation.  "
-"Spårningsserverns databas över felsökningsinformation är mer komplett.  "
-"Spårningsservern kan generera bättre stackspår.  Nackdelar: minnesdumpen du "
-"skickar innehåller all data från det kraschade programmet, inklusive "
+"Skickar minnesdump till en server, vilken genererar ett stacksp??r och "
+"returnerar det.  F??rdelar: inget behov av att h??mta fels??kningsinformation.  "
+"Sp??rningsserverns databas ??ver fels??kningsinformation ??r mer komplett.  "
+"Sp??rningsservern kan generera b??ttre stacksp??r.  Nackdelar: minnesdumpen du "
+"skickar inneh??ller all data fr??n det kraschade programmet, inklusive "
 "eventuell personlig information."
 
 #: ../src/plugins/analyze_RetraceServer.xml.in.h:3
 msgid "Retrace server URL"
-msgstr "Spårningsserver-URL"
+msgstr "Sp??rningsserver-URL"
 
 #: ../src/plugins/analyze_RetraceServer.xml.in.h:4
 msgid "Address of the retrace server"
-msgstr "Adress till spårningsservern"
+msgstr "Adress till sp??rningsservern"
 
 #: ../src/plugins/analyze_RetraceServer.xml.in.h:5
 msgid "Insecure"
-msgstr "Osäker"
+msgstr "Os??ker"
 
 #: ../src/plugins/analyze_RetraceServer.xml.in.h:6
 msgid "Whether or not to use insecure connection"
-msgstr "Huruvida en osäker förbindelse skall användas eller ej"
+msgstr "Huruvida en os??ker f??rbindelse skall anv??ndas eller ej"
 
 #: ../src/plugins/analyze_RetraceServer.xml.in.h:7
 msgid ""
@@ -2063,34 +2063,34 @@ msgid ""
 "fedorahosted.org/abrt/wiki/AbrtRetraceServerInsecureConnection\" "
 "&gt;(warning)&lt;/a&gt;"
 msgstr ""
-"Skriv ”insecure” för att tillåta en osäker förbindelse &lt;a href=\"https://"
+"Skriv ???insecure??? f??r att till??ta en os??ker f??rbindelse &lt;a href=\"https://"
 "fedorahosted.org/abrt/wiki/AbrtRetraceServerInsecureConnection\" "
 "&gt;(warning)&lt;/a&gt;"
 
 #: ../src/plugins/collect_xsession_errors.xml.in.h:1
 msgid "Collect .xsession-errors"
-msgstr "Hämta .xsession-errors"
+msgstr "H??mta .xsession-errors"
 
 #: ../src/plugins/collect_xsession_errors.xml.in.h:2
 msgid "Save relevant lines from ~/.xsession-errors file"
-msgstr "Spara relevanta rader från filen ~/.xsession-errors"
+msgstr "Spara relevanta rader fr??n filen ~/.xsession-errors"
 
 #: ../src/plugins/collect_xsession_errors.xml.in.h:3
 msgid ""
 "Scans through ~/.xsession-errors file and saves those lines which contain "
 "executable's name. The result is saved as 'xsession_errors' element."
 msgstr ""
-"Söker igenom filen ~/.xsession-errors och sparar de rader som innehåller "
-"programnamn.  Resultatet sparas som elementet ”xsession_errors”."
+"S??ker igenom filen ~/.xsession-errors och sparar de rader som inneh??ller "
+"programnamn.  Resultatet sparas som elementet ???xsession_errors???."
 
 #: ../src/plugins/https-utils.c:62
 msgid "An error occurred on the server side."
-msgstr "Ett fel uppstod på serversidan."
+msgstr "Ett fel uppstod p?? serversidan."
 
 #: ../src/plugins/https-utils.c:65
 #, c-format
 msgid "A server-side error occurred on '%s'"
-msgstr "Ett fel på serversidan uppstod på '%s'"
+msgstr "Ett fel p?? serversidan uppstod p?? '%s'"
 
 #: ../src/plugins/https-utils.c:74
 msgid "An error occurred while connecting to the server"
@@ -2104,73 +2104,73 @@ msgstr "Ett fel uppstod under anslutning till '%s'"
 #: ../src/plugins/https-utils.c:97
 #, c-format
 msgid "Issuer certificate is invalid: '%s'."
-msgstr "Utgivarcertifikatet är ogiltigt: ”%s”."
+msgstr "Utgivarcertifikatet ??r ogiltigt: ???%s???."
 
 #: ../src/plugins/https-utils.c:100
 #, c-format
 msgid "Certificate is signed by an untrusted issuer: '%s'."
-msgstr "Certifikatet är signerat av en ej betrodd utgivare: ”%s”."
+msgstr "Certifikatet ??r signerat av en ej betrodd utgivare: ???%s???."
 
 #: ../src/plugins/https-utils.c:103
 #, c-format
 msgid "Certificate subject name '%s' does not match target host name '%s'."
-msgstr "Certifikatet subjektnamn ”%s” stämmer inte med målets värdnamn ”%s”."
+msgstr "Certifikatet subjektnamn ???%s??? st??mmer inte med m??lets v??rdnamn ???%s???."
 
 #: ../src/plugins/https-utils.c:107
 msgid "Remote certificate has expired."
-msgstr "Fjärrcertifikatet har gått ut."
+msgstr "Fj??rrcertifikatet har g??tt ut."
 
 #: ../src/plugins/https-utils.c:110
 #, c-format
 msgid "Certificate issuer is not recognized: '%s'."
-msgstr "Certifikatutgivaren är inte känd: ”%s”."
+msgstr "Certifikatutgivaren ??r inte k??nd: ???%s???."
 
 #: ../src/plugins/https-utils.c:113
 #, c-format
 msgid "Bad certificate received. Subject '%s', issuer '%s'."
-msgstr "Felaktigt certifikat mottaget.  Ämne ”%s”, utgivare ”%s”."
+msgstr "Felaktigt certifikat mottaget.  ??mne ???%s???, utgivare ???%s???."
 
 #: ../src/plugins/https-utils.c:149
 #, c-format
 msgid "Failed to get slot 'PEM Token #0': %d."
-msgstr "Misslyckades att få fack ”PEM Token nr. 0”: %d."
+msgstr "Misslyckades att f?? fack ???PEM Token nr. 0???: %d."
 
 #: ../src/plugins/https-utils.c:182
 #, c-format
 msgid "Can't resolve host name '%s'. NSS error %d."
-msgstr "Kan inte slå upp värdnamn '%s'. NSS-fel %d."
+msgstr "Kan inte sl?? upp v??rdnamn '%s'. NSS-fel %d."
 
 #. Host exists, but has neither IPv4 nor IPv6??
 #: ../src/plugins/https-utils.c:203
 #, c-format
 msgid "Can't resolve host name '%s'."
-msgstr "Det går inte att slå upp värdnamnet '%s'."
+msgstr "Det g??r inte att sl?? upp v??rdnamnet '%s'."
 
 #: ../src/plugins/https-utils.c:210
 msgid "Failed to set socket blocking mode."
-msgstr "Misslyckades att sätta uttag i blockerande läge."
+msgstr "Misslyckades att s??tta uttag i blockerande l??ge."
 
 #: ../src/plugins/https-utils.c:213
 msgid "Failed to wrap TCP socket by SSL."
-msgstr "Misslyckades att slå in TCP-uttag med SSL."
+msgstr "Misslyckades att sl?? in TCP-uttag med SSL."
 
 #: ../src/plugins/https-utils.c:215
 msgid "Failed to enable client handshake to SSL socket."
 msgstr "Misslyckades att aktivera klienthandskakning till SSL-uttag."
 
-# translation auto-copied from project abrt, version rhel7, document abrt, author Göran Uddeborg
+# translation auto-copied from project abrt, version rhel7, document abrt, author G??ran Uddeborg
 #: ../src/plugins/https-utils.c:220
 msgid "Failed to enable SSL3."
 msgstr "Misslyckades att aktivera SSL3."
 
-# translation auto-copied from project abrt, version rhel7, document abrt, author Göran Uddeborg
+# translation auto-copied from project abrt, version rhel7, document abrt, author G??ran Uddeborg
 #: ../src/plugins/https-utils.c:222
 msgid "Failed to enable TLS."
 msgstr "Misslyckades att aktivera TLS."
 
 #: ../src/plugins/https-utils.c:224
 msgid "Failed to set URL to SSL socket."
-msgstr "Misslyckades att ställa in URL till SSL-uttag."
+msgstr "Misslyckades att st??lla in URL till SSL-uttag."
 
 #: ../src/plugins/https-utils.c:233
 #, c-format
@@ -2179,24 +2179,24 @@ msgstr "Kan inte ansluta till '%s'"
 
 #: ../src/plugins/https-utils.c:241
 msgid "Failed to set certificate hook."
-msgstr "Misslyckades att sätta en certifikatshake."
+msgstr "Misslyckades att s??tta en certifikatshake."
 
 #: ../src/plugins/https-utils.c:247
 msgid "Failed to set handshake callback."
-msgstr "Misslyckades att sätta återanrop för handskakning."
+msgstr "Misslyckades att s??tta ??teranrop f??r handskakning."
 
 #: ../src/plugins/https-utils.c:251
 msgid "Failed to reset handshake."
-msgstr "Misslyckades att återställa handskakningen."
+msgstr "Misslyckades att ??terst??lla handskakningen."
 
 #: ../src/plugins/https-utils.c:258
 #, c-format
 msgid "Failed to complete SSL handshake: NSS error %d."
-msgstr "Det gick inte att slutföra SSL-handskakning: NSS-fel %d."
+msgstr "Det gick inte att slutf??ra SSL-handskakning: NSS-fel %d."
 
 #: ../src/plugins/https-utils.c:267
 msgid "Failed to close SSL socket."
-msgstr "Misslyckades att stänga ett SSL-uttag."
+msgstr "Misslyckades att st??nga ett SSL-uttag."
 
 #: ../src/plugins/https-utils.c:332
 #, c-format
@@ -2218,11 +2218,11 @@ msgstr "Misslyckades att initiera NSS."
 
 #: ../src/plugins/https-utils.c:429
 msgid "Failed to initialize security module."
-msgstr "Misslyckades att initiera säkerhetsmodulen."
+msgstr "Misslyckades att initiera s??kerhetsmodulen."
 
 #: ../src/plugins/https-utils.c:444
 msgid "Failed to shutdown NSS."
-msgstr "Misslyckades att stänga ner NSS."
+msgstr "Misslyckades att st??nga ner NSS."
 
 #: ../src/plugins/oops-utils.c:73
 #, c-format
@@ -2234,16 +2234,16 @@ msgid ""
 "A kernel problem occurred because of broken BIOS. Unfortunately, such "
 "problems are not fixable by kernel maintainers."
 msgstr ""
-"Ett kärnproblem inträffade på grund av trasigt BIOS.  Tyvärr går sådana "
-"problem inte att rätta utav kärnutvecklare."
+"Ett k??rnproblem intr??ffade p?? grund av trasigt BIOS.  Tyv??rr g??r s??dana "
+"problem inte att r??tta utav k??rnutvecklare."
 
 #: ../src/plugins/oops-utils.c:205
 msgid ""
 "A kernel problem occurred, but your hardware is unsupported, therefore "
 "kernel maintainers are unable to fix this problem."
 msgstr ""
-"Ett kärnproblem har inträffat, men din hårdvara stödjs inte, därför kan inte "
-"kärnutvecklare fixa detta problem."
+"Ett k??rnproblem har intr??ffat, men din h??rdvara st??djs inte, d??rf??r kan inte "
+"k??rnutvecklare fixa detta problem."
 
 #: ../src/plugins/oops-utils.c:220
 #, c-format
@@ -2251,17 +2251,17 @@ msgid ""
 "A kernel problem occurred, but your kernel has been tainted (flags:%s). "
 "Kernel maintainers are unable to diagnose tainted reports."
 msgstr ""
-"Ett problem i kärnan inträffade, men din kärna har fläckats (flaggor:%s).  "
-"De som underhåller kärnan kan inte diagnostisera fläckade rapporter."
+"Ett problem i k??rnan intr??ffade, men din k??rna har fl??ckats (flaggor:%s).  "
+"De som underh??ller k??rnan kan inte diagnostisera fl??ckade rapporter."
 
 #: ../src/plugins/oops-utils.c:228
 #, c-format
 msgid " Tainted modules: %s."
-msgstr " Fläckande moduler: %s"
+msgstr " Fl??ckande moduler: %s"
 
 #: ../src/plugins/bodhi.c:468
 msgid "List of bug ids"
-msgstr "Lista över fel-id:n"
+msgstr "Lista ??ver fel-id:n"
 
 #: ../src/plugins/bodhi.c:469
 msgid "Specify a bodhi server url"
@@ -2269,7 +2269,7 @@ msgstr "Ange en bodhi-server-url"
 
 #: ../src/plugins/bodhi.c:470
 msgid "Specify a release"
-msgstr "Ange en utgåva"
+msgstr "Ange en utg??va"
 
 #: ../src/plugins/bodhi.c:475
 msgid ""
@@ -2277,13 +2277,13 @@ msgid ""
 "\n"
 "Search for updates on bodhi server"
 msgstr ""
-"& [-v] [-r[UTGÅVA]] (-b ID1[,ID2,…] | PKT-NAMN) [PKT-NAMN]…\n"
+"& [-v] [-r[UTG??VA]] (-b ID1[,ID2,???] | PKT-NAMN) [PKT-NAMN]???\n"
 "\n"
-"Sök efter uppdateringar på bodhi-servern"
+"S??k efter uppdateringar p?? bodhi-servern"
 
 #: ../src/plugins/bodhi.c:542
 msgid "Searching for updates"
-msgstr "Söker efter uppdateringar"
+msgstr "S??ker efter uppdateringar"
 
 #: ../src/plugins/bodhi.c:548
 msgid "No updates for this package found"
@@ -2293,7 +2293,7 @@ msgstr "Inga uppdateringar av detta paket hittades"
 #: ../src/plugins/bodhi.c:577
 msgid "Local version of the package is newer than available updates"
 msgstr ""
-"Den lokala versionen av paketet är nyare än de tillgängliga uppdateringarna"
+"Den lokala versionen av paketet ??r nyare ??n de tillg??ngliga uppdateringarna"
 
 #: ../src/plugins/bodhi.c:594
 #, c-format
@@ -2302,7 +2302,7 @@ msgid ""
 " %s. Do you want to continue with reporting the bug?"
 msgstr ""
 "Det finns en uppdatering som kanske fixar ditt problem.  Du kan installera "
-"den genom att köra: %s.  Vill du fortsätta att rapportera felet?"
+"den genom att k??ra: %s.  Vill du forts??tta att rapportera felet?"
 
 #: ../src/hooks/abrt-merge-pstoreoops.c:85
 msgid ""
@@ -2312,7 +2312,7 @@ msgid ""
 msgstr ""
 "& [-v] [-od] FIL...\n"
 "\n"
-"Granskar filer för splittrade oopsmeddelanden. Kan visa och/eller radera dem."
+"Granskar filer f??r splittrade oopsmeddelanden. Kan visa och/eller radera dem."
 ""
 
 #: ../src/hooks/abrt-merge-pstoreoops.c:97
@@ -2326,11 +2326,11 @@ msgstr "Radera filer med hittade oopsmeddelanden"
 #: ../src/cli/abrt-cli-core.c:100
 #, c-format
 msgid "'%s' identifies more than one problem directory"
-msgstr "”%s” identifierar mer än en problemkatalog"
+msgstr "???%s??? identifierar mer ??n en problemkatalog"
 
 #: ../src/cli/abrt-cli.c:130
 msgid "Usage: abrt-cli [--authenticate] [--version] COMMAND [DIR]..."
-msgstr "Användning: abrt-cli [--authenticate] [--version] KOMMANDO [KAT]…"
+msgstr "Anv??ndning: abrt-cli [--authenticate] [--version] KOMMANDO [KAT]???"
 
 #: ../src/cli/abrt-cli.c:134
 msgid "List problems [in DIRs]"
@@ -2358,7 +2358,7 @@ msgstr "Bearbeta flera problem"
 
 #: ../src/cli/abrt-cli.c:162
 msgid "See 'abrt-cli COMMAND --help' for more information"
-msgstr "Se ”abrt-cli KOMMANDO --help” för mer information"
+msgstr "Se ???abrt-cli KOMMANDO --help??? f??r mer information"
 
 #: ../src/cli/list.c:127
 msgid "& list [options]"
@@ -2376,11 +2376,11 @@ msgstr "Visa detaljerad rapport"
 
 #: ../src/cli/list.c:139 ../src/cli-ng/abrtcli/cli.py:113
 msgid "List only the problems more recent than specified timestamp"
-msgstr "Visa bara problem nyare än angiven tidsstämpel"
+msgstr "Visa bara problem nyare ??n angiven tidsst??mpel"
 
 #: ../src/cli/list.c:140 ../src/cli-ng/abrtcli/cli.py:115
 msgid "List only the problems older than specified timestamp"
-msgstr "Visa bara problem äldre än angiven tidsstämpel"
+msgstr "Visa bara problem ??ldre ??n angiven tidsst??mpel"
 
 #: ../src/cli/list.c:166
 #, c-format
@@ -2389,23 +2389,23 @@ msgid ""
 "issuing\n"
 "'abrt-auto-reporting enabled' as a user with root privileges\n"
 msgstr ""
-"Funktionen automatrapportering är avaktiverad.  Överväg att aktivera den "
+"Funktionen automatrapportering ??r avaktiverad.  ??verv??g att aktivera den "
 "genom\n"
-"att köra ”abrt-auto-reporting enabled” som en användare med root-"
-"rättigheter\n"
+"att k??ra ???abrt-auto-reporting enabled??? som en anv??ndare med root-"
+"r??ttigheter\n"
 
 #: ../src/cli/list.c:183
 msgid "& info [options] DIR..."
-msgstr "& info [flaggor] KAT…"
+msgstr "& info [flaggor] KAT???"
 
 #: ../src/cli/list.c:192
 msgid "Text larger than this will be shown abridged"
-msgstr "Text längre än detta kommer visas förkortad"
+msgstr "Text l??ngre ??n detta kommer visas f??rkortad"
 
 #: ../src/cli/list.c:212
 #, c-format
 msgid "No such problem directory '%s'"
-msgstr "Problemkatalogen finns inte ”%s”"
+msgstr "Problemkatalogen finns inte ???%s???"
 
 #: ../src/cli/status.c:66
 msgid "& status"
@@ -2413,36 +2413,36 @@ msgstr "& status"
 
 #: ../src/cli/status.c:74 ../src/cli-ng/abrtcli/cli.py:260
 msgid "Print only the problem count without any message"
-msgstr "Visa bara antalet problem utan några meddelanden"
+msgstr "Visa bara antalet problem utan n??gra meddelanden"
 
 #: ../src/cli/status.c:75 ../src/cli-ng/abrtcli/cli.py:262
 msgid "Print only the problems more recent than specified timestamp"
-msgstr "Visa bara problem nyare än angiven tidsstämpel"
+msgstr "Visa bara problem nyare ??n angiven tidsst??mpel"
 
 #: ../src/cli/status.c:91
 #, c-format
 msgid "ABRT has detected %u problem(s). For more info run: abrt-cli list%s\n"
 msgstr ""
-"ABRT har upptäckt '%u' problem. För mer information, kör: abrt-cli list%s\n"
+"ABRT har uppt??ckt '%u' problem. F??r mer information, k??r: abrt-cli list%s\n"
 
 #: ../src/cli/report.c:34
 #, c-format
 msgid "Can't find problem '%s'"
-msgstr "Kan inte hitta problemet ”%s”"
+msgstr "Kan inte hitta problemet ???%s???"
 
 #: ../src/cli/report.c:42
 #, c-format
 msgid "Problem '%s' cannot be reported"
-msgstr "Problemet ”%s” kan inte rapporteras"
+msgstr "Problemet ???%s??? kan inte rapporteras"
 
 #: ../src/cli/report.c:63 ../src/cli/process.c:70
 #, c-format
 msgid "Deleting '%s'"
-msgstr "Tar bort ”%s”"
+msgstr "Tar bort ???%s???"
 
 #: ../src/cli/report.c:79
 msgid "& report [options] DIR..."
-msgstr "& rapport [flaggor] KAT…"
+msgstr "& rapport [flaggor] KAT???"
 
 #: ../src/cli/report.c:89
 msgid "Remove PROBLEM_DIR after reporting"
@@ -2450,29 +2450,29 @@ msgstr "Ta bort PROBLEMKAT efter att ha rapporterat"
 
 #: ../src/cli/process.c:64
 msgid "Actions: remove(rm), info(i), skip(s):"
-msgstr "Åtgärder: remove(rm), info(i), skip(s):"
+msgstr "??tg??rder: remove(rm), info(i), skip(s):"
 
 #: ../src/cli/process.c:66
 msgid "Actions: remove(rm), report(e), info(i), skip(s):"
-msgstr "Åtgärder: remove(rm), report(e), info(i), skip(s):"
+msgstr "??tg??rder: remove(rm), report(e), info(i), skip(s):"
 
 #: ../src/cli/process.c:78
 #, c-format
 msgid "Reporting '%s'"
-msgstr "Rapporterar ”%s”"
+msgstr "Rapporterar ???%s???"
 
 #. dummy must be free because the function ask allocate memory
 #: ../src/cli/process.c:127
 msgid "For next problem press ENTER:"
-msgstr "För nästa problem tryck RETUR:"
+msgstr "F??r n??sta problem tryck RETUR:"
 
 #: ../src/cli/process.c:138
 msgid "Without --since argument, iterates over all detected problems."
-msgstr "Utan argumentet --since, itererar över alla upptäckta problem."
+msgstr "Utan argumentet --since, itererar ??ver alla uppt??ckta problem."
 
 #: ../src/cli/process.c:144
 msgid "Selects only problems detected after timestamp"
-msgstr "Väljer endast problem upptäckta efter tidsstämpeln"
+msgstr "V??ljer endast problem uppt??ckta efter tidsst??mpeln"
 
 #: ../src/cli-ng/abrtcli/cli.py:33
 msgid "Problem has no backtrace"
@@ -2480,11 +2480,11 @@ msgstr "Problemet har ingen anropskedja"
 
 #: ../src/cli-ng/abrtcli/cli.py:35
 msgid "Start retracing process?"
-msgstr "Börja spåra om processen?"
+msgstr "B??rja sp??ra om processen?"
 
 #: ../src/cli-ng/abrtcli/cli.py:40
 msgid "Show backtrace of a problem"
-msgstr "Visa anropskedjan för ett problem"
+msgstr "Visa anropskedjan f??r ett problem"
 
 #: ../src/cli-ng/abrtcli/cli.py:50
 msgid "This"
@@ -2496,23 +2496,23 @@ msgstr "Senaste"
 
 #: ../src/cli-ng/abrtcli/cli.py:54
 msgid "{} problem is not of a C/C++ type. Can't install debuginfo"
-msgstr "{}-problemet är inte av C/C++-typ.  Kan inte installera debuginfo"
+msgstr "{}-problemet ??r inte av C/C++-typ.  Kan inte installera debuginfo"
 
 #: ../src/cli-ng/abrtcli/cli.py:64 ../src/cli-ng/abrtcli/cli.py:99
 msgid ""
 "Permission denied: '{}'\n"
 "If this is a system problem try running this command as root"
 msgstr ""
-"Åtkomst nekas: ”{}”\n"
-"Om detta är ett systemproblem försök att köra detta kommando som root"
+"??tkomst nekas: ???{}???\n"
+"Om detta ??r ett systemproblem f??rs??k att k??ra detta kommando som root"
 
 #: ../src/cli-ng/abrtcli/cli.py:71
 msgid "Install required debuginfo for given problem"
-msgstr "Installera nödvändig debuginfo för det angivna problemet"
+msgstr "Installera n??dv??ndig debuginfo f??r det angivna problemet"
 
 #: ../src/cli-ng/abrtcli/cli.py:106
 msgid "Run GDB against a problem"
-msgstr "Kör GDB mot ett problem"
+msgstr "K??r GDB mot ett problem"
 
 #: ../src/cli-ng/abrtcli/cli.py:117 ../src/cli-ng/abrtcli/cli.py:153
 msgid "Output format"
@@ -2536,16 +2536,16 @@ msgstr "Skriv information om problem"
 
 #: ../src/cli-ng/abrtcli/cli.py:173
 msgid "Prompt before removal"
-msgstr "Fråga före saker tas bort"
+msgstr "Fr??ga f??re saker tas bort"
 
 #: ../src/cli-ng/abrtcli/cli.py:174
 msgid "Do not prompt before removal"
-msgstr "Fråga inte före saker tas bort"
+msgstr "Fr??ga inte f??re saker tas bort"
 
 #. force prompt for last problem to avoid accidents
 #: ../src/cli-ng/abrtcli/cli.py:182
 msgid "Are you sure you want to delete this problem?"
-msgstr "Är du säker på att du vill ta bort detta problem?"
+msgstr "??r du s??ker p?? att du vill ta bort detta problem?"
 
 #: ../src/cli-ng/abrtcli/cli.py:186
 msgid "Removed"
@@ -2561,31 +2561,31 @@ msgstr "Rapportera problem"
 
 #: ../src/cli-ng/abrtcli/cli.py:204
 msgid "Perform local retracing"
-msgstr "Utför en lokal omspårning"
+msgstr "Utf??r en lokal omsp??rning"
 
 #: ../src/cli-ng/abrtcli/cli.py:206
 msgid "Perform remote retracing using retrace server"
-msgstr "Utför fjärromspårning med spårservern"
+msgstr "Utf??r fj??rromsp??rning med sp??rservern"
 
 #: ../src/cli-ng/abrtcli/cli.py:208
 msgid "Force retracing even if backtrace already exists"
-msgstr "Framtvinga omspårning även om ett stackspår redan finns"
+msgstr "Framtvinga omsp??rning ??ven om ett stacksp??r redan finns"
 
 #: ../src/cli-ng/abrtcli/cli.py:223
 msgid "Problem already has a backtrace"
-msgstr "Problemet har redan ett stackspår"
+msgstr "Problemet har redan ett stacksp??r"
 
 #: ../src/cli-ng/abrtcli/cli.py:224
 msgid "Run abrt retrace with -f/--force to retrace again"
-msgstr "Kör abrt retrace med -f/--force för att spåra om igen"
+msgstr "K??r abrt retrace med -f/--force f??r att sp??ra om igen"
 
 #: ../src/cli-ng/abrtcli/cli.py:225
 msgid "Show backtrace?"
-msgstr "Visa stackspår?"
+msgstr "Visa stacksp??r?"
 
 #: ../src/cli-ng/abrtcli/cli.py:229
 msgid "No retracing possible for this problem type"
-msgstr "Ingen omspårning är möjlig för denna problemtyp"
+msgstr "Ingen omsp??rning ??r m??jlig f??r denna problemtyp"
 
 #: ../src/cli-ng/abrtcli/cli.py:233
 msgid ""
@@ -2594,25 +2594,25 @@ msgid ""
 "Local retracing requires downloading potentially large amount of debuginfo "
 "data"
 msgstr ""
-"Skicka minnesdump och utför fjärromspårning?  (Den kan innehålla känsliga "
-"data.)  Om du svarar ”Nej” kommer ett stackspår genereras lokalt.  Lokal "
-"omspårning kräver att man hämtar eventuellt stora mängder debuginfo-data"
+"Skicka minnesdump och utf??r fj??rromsp??rning?  (Den kan inneh??lla k??nsliga "
+"data.)  Om du svarar ???Nej??? kommer ett stacksp??r genereras lokalt.  Lokal "
+"omsp??rning kr??ver att man h??mtar eventuellt stora m??ngder debuginfo-data"
 
 #: ../src/cli-ng/abrtcli/cli.py:248
 msgid "Remote retracing"
-msgstr "Fjärromspårning"
+msgstr "Fj??rromsp??rning"
 
 #: ../src/cli-ng/abrtcli/cli.py:251
 msgid "Local retracing"
-msgstr "Lokal omspårning"
+msgstr "Lokal omsp??rning"
 
 #: ../src/cli-ng/abrtcli/cli.py:255
 msgid "Generate backtrace from coredump"
-msgstr "Generera stackspår från minnesdump"
+msgstr "Generera stacksp??r fr??n minnesdump"
 
 #: ../src/cli-ng/abrtcli/cli.py:280
 msgid "ABRT has detected {} problem(s). For more info run: abrt list{}"
-msgstr "ABRT har hittat {} problem.  För mer information kör: abrt list{}"
+msgstr "ABRT har hittat {} problem.  F??r mer information k??r: abrt list{}"
 
 #: ../src/cli-ng/abrtcli/cli.py:283
 msgid "Print count of the recent crashes"
@@ -2620,7 +2620,7 @@ msgstr "Skriv ut antalet kraschar nyligen"
 
 #: ../src/cli-ng/abrtcli/cli.py:292
 msgid "Authenticate and show all problems on this machine"
-msgstr "Autenticera och visa alla problem på denna maskin"
+msgstr "Autenticera och visa alla problem p?? denna maskin"
 
 #: ../src/cli-ng/abrtcli/match.py:96
 msgid "No problem(s) matched"
@@ -2639,8 +2639,8 @@ msgid ""
 "Send core dump to remote retrace server for analysis or perform local "
 "analysis if the remote analysis fails"
 msgstr ""
-"Skicka en minnesdump till fjärrspårservern för analys eller analysera lokalt "
-"om fjärranalysen inte fungerar."
+"Skicka en minnesdump till fj??rrsp??rservern f??r analys eller analysera lokalt "
+"om fj??rranalysen inte fungerar."
 
 #: ../src/plugins/analyze_CCpp.xml.in.h:2
 msgid ""
@@ -2652,33 +2652,33 @@ msgid ""
 "you upload contains all the data from the crashed program, including your "
 "private data, if any."
 msgstr ""
-"Skickar en minnesutskrift till en server, som genererar ett stackspår och "
-"returnerar det.  Om användaren inte vill skicka sin minnesutskrift "
-"någonstans utförs lokal analys av händelsen.  Lokal analys görs av händelsen "
-"om fjärranalysen misslyckas.  Fördelar: inget behov att hämta "
-"felsökningsinformation.  Spårningsserverns databas över "
-"felsökningsinformation är mer komplett.  Spårningsservern kan generera "
-"bättre stackspår.  Nackdelar: minnesutskrifter du skickar innehåller all "
-"data från det kraschade programmet, inklusive dina privata data om det finns "
-"några."
+"Skickar en minnesutskrift till en server, som genererar ett stacksp??r och "
+"returnerar det.  Om anv??ndaren inte vill skicka sin minnesutskrift "
+"n??gonstans utf??rs lokal analys av h??ndelsen.  Lokal analys g??rs av h??ndelsen "
+"om fj??rranalysen misslyckas.  F??rdelar: inget behov att h??mta "
+"fels??kningsinformation.  Sp??rningsserverns databas ??ver "
+"fels??kningsinformation ??r mer komplett.  Sp??rningsservern kan generera "
+"b??ttre stacksp??r.  Nackdelar: minnesutskrifter du skickar inneh??ller all "
+"data fr??n det kraschade programmet, inklusive dina privata data om det finns "
+"n??gra."
 
 #: ../src/plugins/analyze_VMcore.xml.in.h:1
 msgid "Analyze VM core"
-msgstr "Analysera VM-kärna"
+msgstr "Analysera VM-k??rna"
 
 #: ../src/plugins/analyze_VMcore.xml.in.h:2
 msgid ""
 "Install kernel debuginfo packages, generate kernel log and oops message"
 msgstr ""
-"Installera kärnans felsökningspaket, generera kärnlogg och oops-meddelanden"
+"Installera k??rnans fels??kningspaket, generera k??rnlogg och oops-meddelanden"
 
 #: ../src/plugins/analyze_VMcore.xml.in.h:3
 msgid ""
 "Needs to install kernel debuginfo packages, which might take significant "
 "time, and take up disk space."
 msgstr ""
-"Behöver installera paket med felsökningsinformation för kärnan, vilket kan "
-"ta en hel del tid, och använda diskutrymme."
+"Beh??ver installera paket med fels??kningsinformation f??r k??rnan, vilket kan "
+"ta en hel del tid, och anv??nda diskutrymme."
 
 #: ../src/plugins/collect_GConf.xml.in.h:1
 msgid "Collect GConf configuration"
@@ -2686,15 +2686,15 @@ msgstr "Samla in GConf-konfiguration"
 
 #: ../src/plugins/collect_GConf.xml.in.h:2
 msgid "Save configuration from application's GConf directory"
-msgstr "Spara konfigurationen från programmets GConf-katalog"
+msgstr "Spara konfigurationen fr??n programmets GConf-katalog"
 
 #: ../src/plugins/collect_GConf.xml.in.h:3
 msgid ""
 "Runs gconftool-2 --recursive-list /apps/executable and saves it as "
 "'gconf_subtree' element."
 msgstr ""
-"Kör gconftool-2 --recursive-list /apps/executable och sparar det som "
-"”gconf_subtree”-element."
+"K??r gconftool-2 --recursive-list /apps/executable och sparar det som "
+"???gconf_subtree???-element."
 
 #: ../src/plugins/collect_vimrc_system.xml.in.h:1
 msgid "Collect system-wide vim configuration files"
@@ -2718,7 +2718,7 @@ msgstr "Samla in dina vim-konfigurationsfiler"
 
 #: ../src/plugins/collect_vimrc_user.xml.in.h:2
 msgid "Save .vimrc and .gvimrc from your home directory"
-msgstr "Spara .vimrc och .gvimrc från din hemkatalog"
+msgstr "Spara .vimrc och .gvimrc fr??n din hemkatalog"
 
 #: ../src/plugins/collect_vimrc_user.xml.in.h:3
 msgid ""
@@ -2734,8 +2734,8 @@ msgstr "Skicka rapport"
 
 #: ../src/plugins/post_report.xml.in.h:2
 msgid "Executed after the reporting is finished"
-msgstr "Körs efter att rapporteringen avslutats"
+msgstr "K??rs efter att rapporteringen avslutats"
 
 #: ../src/plugins/post_report.xml.in.h:3
 msgid "Used for updating of the databases"
-msgstr "Används för uppdatering av databaser"
+msgstr "Anv??nds f??r uppdatering av databaser"

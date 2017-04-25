@@ -34,17 +34,17 @@ msgstr ""
 #: ../src/applet/applet.c:260 ../src/cli/report.c:51
 #, c-format
 msgid "Can't take ownership of '%s'"
-msgstr "Nepavyko tapti „%s“ savininku"
+msgstr "Nepavyko tapti ???%s??? savininku"
 
 #: ../src/applet/applet.c:268
 #, c-format
 msgid "Can't open directory for writing '%s'"
-msgstr "Nepavyksta atverti katalogo rašymui „%s“"
+msgstr "Nepavyksta atverti katalogo ra??ymui ???%s???"
 
 #: ../src/applet/applet.c:546 ../src/applet/applet.c:564
 #, c-format
 msgid "Can't close notification: %s"
-msgstr "Nepavyksta užverti pranešimo: %s"
+msgstr "Nepavyksta u??verti prane??imo: %s"
 
 #: ../src/applet/applet.c:598
 msgid "Oops!"
@@ -52,7 +52,7 @@ msgstr ""
 
 #: ../src/applet/applet.c:616
 msgid "Report"
-msgstr "Pranešti"
+msgstr "Prane??ti"
 
 #: ../src/applet/applet.c:625
 msgid "Restart"
@@ -68,7 +68,7 @@ msgstr ""
 #: ../src/applet/applet.c:699
 #, c-format
 msgid ""
-"We’re sorry, it looks like %s crashed. The problem will be reported when the "
+"We???re sorry, it looks like %s crashed. The problem will be reported when the "
 "internet is available."
 msgstr ""
 
@@ -108,23 +108,23 @@ msgstr ""
 #: ../src/applet/applet.c:786
 #, c-format
 msgid "Can't show notification: %s"
-msgstr "Nepavyksta parodyti pranešimo: %s"
+msgstr "Nepavyksta parodyti prane??imo: %s"
 
 #. TODO: Terminate child's process?
 #: ../src/applet/applet.c:818 ../src/daemon/abrt-upload-watch.c:168
 #, c-format
 msgid "Can't read from gio channel: '%s'"
-msgstr "Nepavyksta skaityti iš gio kanalo: „%s“"
+msgstr "Nepavyksta skaityti i?? gio kanalo: ???%s???"
 
 #: ../src/applet/applet.c:896
 #, c-format
 msgid "Can't set encoding on gio channel: %s"
-msgstr "Nepavyksta nustatyti gio kanalo koduotės: %s"
+msgstr "Nepavyksta nustatyti gio kanalo koduot??s: %s"
 
 #: ../src/applet/applet.c:900
 #, c-format
 msgid "Can't turn on nonblocking mode for gio channel: %s"
-msgstr "Nepavyksta įjungti neblokuojančios veiksenos gio kanalui: %s"
+msgstr "Nepavyksta ??jungti neblokuojan??ios veiksenos gio kanalui: %s"
 
 #: ../src/applet/applet.c:1186
 msgid ""
@@ -134,7 +134,7 @@ msgid ""
 msgstr ""
 "& [-v] [DIR]...\n"
 "\n"
-"Įtaisas, kuris praneša naudotojui, kai ABRT aptinka naują problemą\n"
+"??taisas, kuris prane??a naudotojui, kai ABRT aptinka nauj?? problem??\n"
 
 #: ../src/configuration-gui/abrt-config-widget.c:483
 msgid ""
@@ -250,7 +250,7 @@ msgstr "_Numatytieji"
 #: ../src/configuration-gui/system-config-abrt.c:116
 #: ../src/configuration-gui/main.c:36
 msgid "Problem Reporting Configuration"
-msgstr "Pranešimo apie problemas konfigūracija"
+msgstr "Prane??imo apie problemas konfig??racija"
 
 #: ../src/configuration-gui/main.c:75
 msgid "About System Config ABRT"
@@ -262,7 +262,7 @@ msgstr "Apie"
 
 #: ../src/configuration-gui/main.c:106
 msgid "Quit"
-msgstr "Išeiti"
+msgstr "I??eiti"
 
 #: ../src/daemon/abrt-action-save-package-data.c:440
 msgid ""
@@ -281,11 +281,11 @@ msgstr ""
 #: ../src/plugins/abrt-action-generate-backtrace.c:55
 #: ../src/plugins/abrt-action-generate-core-backtrace.c:52
 msgid "Problem directory"
-msgstr "Problemų katalogas"
+msgstr "Problem?? katalogas"
 
 #: ../src/daemon/abrt-action-save-package-data.c:454
 msgid "Configuration file"
-msgstr "Konfigūracijos failas"
+msgstr "Konfig??racijos failas"
 
 #: ../src/daemon/abrt-action-save-package-data.c:455
 msgid "Use this directory as RPM root"
@@ -317,25 +317,25 @@ msgstr "Naudoti NUM kaip kliento uid"
 #: ../src/plugins/abrt-dump-journal-xorg.c:188
 #: ../src/plugins/abrt-dump-xorg.c:52
 msgid "Log to syslog"
-msgstr "Įrašyti į syslog"
+msgstr "??ra??yti ?? syslog"
 
 #: ../src/daemon/abrt-server.c:860 ../src/daemon/abrtd.c:460
 msgid "Add program names to log"
-msgstr "Pridėti programų pavadinimus žurnalizavimui"
+msgstr "Prid??ti program?? pavadinimus ??urnalizavimui"
 
 #: ../src/dbus/abrt-dbus.c:132
 msgid "Unknown error"
-msgstr "Nežinoma klaida"
+msgstr "Ne??inoma klaida"
 
 #: ../src/dbus/abrt-dbus.c:167
 #, c-format
 msgid "'%s' is not a valid element name"
-msgstr "„%s“ nėra tinkamas elemento pavadinimas"
+msgstr "???%s??? n??ra tinkamas elemento pavadinimas"
 
 #: ../src/dbus/abrt-dbus.c:219
 #, c-format
 msgid "'%s' is not a valid problem directory"
-msgstr "„%s“ nėra tinkamas problemų katalogas"
+msgstr "???%s??? n??ra tinkamas problem?? katalogas"
 
 #: ../src/dbus/abrt-dbus.c:272 ../src/dbus/abrt-dbus.c:520
 #: ../src/dbus/abrt-configuration.c:618 ../src/dbus/abrt-configuration.c:683
@@ -350,27 +350,27 @@ msgstr ""
 #: ../src/dbus/abrt-dbus.c:317
 #, c-format
 msgid "'%s' element can't be modified"
-msgstr "„%s“ elementas negali būti pakeistas"
+msgstr "???%s??? elementas negali b??ti pakeistas"
 
 #: ../src/dbus/abrt-dbus.c:536
 msgid "Chowning directory failed. Check system logs for more details."
 msgstr ""
 "Nepavyko pakeisti aplanko savininko. Daugiau informacijos rasite sistemos "
-"žurnaluose."
+"??urnaluose."
 
 #: ../src/dbus/abrt-dbus.c:665
 #, c-format
 msgid "Can't get size of '%s'"
-msgstr "Nepavyko gauti „%s“ dydžio"
+msgstr "Nepavyko gauti ???%s??? dyd??io"
 
 #: ../src/dbus/abrt-dbus.c:680
 msgid "No problem space left"
-msgstr "Nėra likusios problemų vietos"
+msgstr "N??ra likusios problem?? vietos"
 
 #: ../src/dbus/abrt-dbus.c:715
 #, c-format
 msgid "Can't delete the element '%s' from the problem directory '%s'"
-msgstr "Nepavyksta ištrinti elemento „%s“ iš problemų katalogo „%s“"
+msgstr "Nepavyksta i??trinti elemento ???%s??? i?? problem?? katalogo ???%s???"
 
 #: ../src/dbus/abrt-dbus.c:876 ../src/dbus/abrt-configuration.c:983
 #: ../src/daemon/abrtd.c:426
@@ -379,17 +379,17 @@ msgid ""
 "The name '%s' has been lost, please check if other service owning the name "
 "is not running.\n"
 msgstr ""
-"Vardas „%s“ buvo prarastas, patikrinkite, ar neveikia kita tarnyba su šiuo "
+"Vardas ???%s??? buvo prarastas, patikrinkite, ar neveikia kita tarnyba su ??iuo "
 "vardu.\n"
 
 #: ../src/dbus/abrt-dbus.c:903 ../src/dbus/abrt-configuration.c:1011
 #: ../src/daemon/abrtd.c:459
 msgid "Exit after NUM seconds of inactivity"
-msgstr "Išeiti po NUM sekundžių neaktyvumo"
+msgstr "I??eiti po NUM sekund??i?? neaktyvumo"
 
 #: ../src/dbus/abrt-dbus.c:921 ../src/dbus/abrt-configuration.c:1021
 msgid "This program must be run as root."
-msgstr "Šią programą reikia paleisti root naudotojo teisėmis."
+msgstr "??i?? program?? reikia paleisti root naudotojo teis??mis."
 
 #: ../src/daemon/abrtd.c:389
 msgid ""
@@ -399,11 +399,11 @@ msgid ""
 "problem. If you have time and want to help the developers in their effort to "
 "sort out this problem, please contact them directly."
 msgstr ""
-"Problemos duomenys nepilni. Taip dažniausiai atsitinka, kai problema yra "
-"aptikta išjungiant kompiuterį arba naudotojui atsijungiant. Siekiant "
-"pateikti vertingus pranešimus apie klaidas, ABRT jums neleis pranešti apie "
-"šią klaidą. Jei turite laiko ir norite padėti kūrėjams išspręsti šią "
-"problemą, susisiekite su jais tiesiogiai."
+"Problemos duomenys nepilni. Taip da??niausiai atsitinka, kai problema yra "
+"aptikta i??jungiant kompiuter?? arba naudotojui atsijungiant. Siekiant "
+"pateikti vertingus prane??imus apie klaidas, ABRT jums neleis prane??ti apie "
+"??i?? klaid??. Jei turite laiko ir norite pad??ti k??r??jams i??spr??sti ??i?? "
+"problem??, susisiekite su jais tiesiogiai."
 
 #: ../src/daemon/abrtd.c:457
 msgid "Do not daemonize"
@@ -411,7 +411,7 @@ msgstr "Nedemonizuoti"
 
 #: ../src/daemon/abrtd.c:458
 msgid "Log to syslog even with -d"
-msgstr "Įrašyti į syslog net su -d"
+msgstr "??ra??yti ?? syslog net su -d"
 
 #: ../src/daemon/abrt-handle-event.c:394
 msgid "& [-v -i -n INCREMENT] -e|--event EVENT DIR..."
@@ -419,7 +419,7 @@ msgstr ""
 
 #: ../src/daemon/abrt-handle-event.c:403
 msgid "Run EVENT on DIR"
-msgstr "Vykdyti ĮVYKĮ KAT"
+msgstr "Vykdyti ??VYK?? KAT"
 
 #: ../src/daemon/abrt-handle-event.c:404
 msgid "Communicate directly to the user"
@@ -432,7 +432,7 @@ msgstr ""
 #: ../src/daemon/abrt-upload-watch.c:118
 #, c-format
 msgid "No free workers and full buffer. Omitting archive '%s'"
-msgstr "Nėra laisvų darbininkų ir pilnas buferis. Praleidžiamas archyvas „%s“"
+msgstr "N??ra laisv?? darbinink?? ir pilnas buferis. Praleid??iamas archyvas ???%s???"
 
 #: ../src/daemon/abrt-upload-watch.c:258
 msgid ""
@@ -448,8 +448,8 @@ msgstr ""
 "& [-vs] [-w NUM] [-c MiB] [NUSIUNTIMO_KATALOGAS]\n"
 "\n"
 "\n"
-"Stebi NUSIUNTIMO_KATALOGĄ ir išpakuoja atsiunčiamus archyvus į abrt.conf\n"
-"nurodytą DumpLocation\n"
+"Stebi NUSIUNTIMO_KATALOG?? ir i??pakuoja atsiun??iamus archyvus ?? abrt.conf\n"
+"nurodyt?? DumpLocation\n"
 "\n"
 "Jei NUSIUNTIMO_KATALOGAS nenurodytas, naudojamas abrt.conf parametras\n"
 "WatchCrashdumpArchiveDir"
@@ -460,11 +460,11 @@ msgstr "Demonizuotis"
 
 #: ../src/daemon/abrt-upload-watch.c:282
 msgid "Number of concurrent workers. Default is "
-msgstr "Darbininkų skaičius. Numatyta "
+msgstr "Darbinink?? skai??ius. Numatyta "
 
 #: ../src/daemon/abrt-upload-watch.c:283
 msgid "Maximal cache size in MiB. Default is "
-msgstr "Didžiausias podėlio dydis MiB. Numatyta "
+msgstr "Did??iausias pod??lio dydis MiB. Numatyta "
 
 #: ../src/daemon/abrt-auto-reporting.c:198
 #: ../src/daemon/abrt-auto-reporting.c:206
@@ -505,12 +505,12 @@ msgstr ""
 
 #: ../src/daemon/abrt-auto-reporting.c:277
 msgid "Invalid number of arguments"
-msgstr "Neteisingas argumentų skaičius"
+msgstr "Neteisingas argument?? skai??ius"
 
 #: ../src/daemon/abrt-auto-reporting.c:296
 #, c-format
 msgid "Unknown option value: '%s'\n"
-msgstr "Nežinoma parametro vertė: „%s“\n"
+msgstr "Ne??inoma parametro vert??: ???%s???\n"
 
 #: ../src/daemon/abrt-auto-reporting.c:336
 msgid "Password:"
@@ -613,7 +613,7 @@ msgstr ""
 #. Let user know what's going on
 #: ../src/lib/hooklib.c:253
 msgid "Generating backtrace"
-msgstr "Generuoti pėdsaką"
+msgstr "Generuoti p??dsak??"
 
 #: ../src/lib/problem_api_dbus.c:42
 #, c-format
@@ -623,12 +623,12 @@ msgstr "Nepavyko prisijungti prie sistemos DBus: %s"
 #: ../src/lib/problem_api_dbus.c:68
 #, c-format
 msgid "Can't chown '%s': %s"
-msgstr "Nepavyko chown „%s“: %s"
+msgstr "Nepavyko chown ???%s???: %s"
 
 #: ../src/lib/problem_api_dbus.c:97
 #, c-format
 msgid "Deleting problem directory failed: %s"
-msgstr "Nepavyko ištrinti problemos katalogo: %s"
+msgstr "Nepavyko i??trinti problemos katalogo: %s"
 
 #: ../src/lib/problem_api_dbus.c:131
 #, c-format
@@ -642,12 +642,12 @@ msgstr ""
 #: ../src/lib/problem_api_dbus.c:193
 #, c-format
 msgid "Can't get problem list from abrt-dbus: %s"
-msgstr "Nepavyko gauti problemų sąrašo iš abrt-dbus: %s"
+msgstr "Nepavyko gauti problem?? s??ra??o i?? abrt-dbus: %s"
 
 #: ../src/lib/problem_api_dbus.c:230 ../src/lib/problem_api_dbus.c:315
 #, c-format
 msgid "Can't get problem data from abrt-dbus: %s"
-msgstr "Nepavyko gauti problemos duomenų iš abrt-dbus: %s"
+msgstr "Nepavyko gauti problemos duomen?? i?? abrt-dbus: %s"
 
 #: ../src/lib/problem_api_dbus.c:274
 #, c-format
@@ -657,7 +657,7 @@ msgstr ""
 #: ../src/lib/ignored_problems.c:233
 #, c-format
 msgid "Can't create temporary file '%s'"
-msgstr "Nepavyko sukurti laikinojo failo „%s“"
+msgstr "Nepavyko sukurti laikinojo failo ???%s???"
 
 #: ../src/lib/ignored_problems.c:250
 #, c-format
@@ -665,14 +665,14 @@ msgid ""
 "Can't write to '%s'. Problem '%s' will not be removed from the ignored "
 "problems '%s'"
 msgstr ""
-"Nepavyko įrašyti į „%s“. Problema „%s“ nebus pašalinta iš nepaisomų problemų "
-"„%s“"
+"Nepavyko ??ra??yti ?? ???%s???. Problema ???%s??? nebus pa??alinta i?? nepaisom?? problem?? "
+"???%s???"
 
 #. Something nefarious happened
 #: ../src/lib/ignored_problems.c:264
 #, c-format
 msgid "Can't rename '%s' to '%s'. Failed to remove problem '%s'"
-msgstr "Nepavyko pervadinti „%s“ į „%s“. Nepavyko pašalinti problemos „%s“"
+msgstr "Nepavyko pervadinti ???%s??? ?? ???%s???. Nepavyko pa??alinti problemos ???%s???"
 
 #: ../src/plugins/abrt-action-analyze-backtrace.c:41
 msgid ""
@@ -683,8 +683,8 @@ msgid ""
 msgstr ""
 "& [parinktys] -d KAT\n"
 "\n"
-"Analizuoja C/C++ pėdsaką, generuoja dublikato maišos reikšmę, pėdsako\n"
-"reitingą ir identifikuoja lūžusią funkciją problemos kataloge KAT"
+"Analizuoja C/C++ p??dsak??, generuoja dublikato mai??os reik??m??, p??dsako\n"
+"reiting?? ir identifikuoja l????usi?? funkcij?? problemos kataloge KAT"
 
 #. 
 #. * The parser failed. Compute the duphash from the executable
@@ -694,11 +694,11 @@ msgstr ""
 #: ../src/plugins/abrt-action-analyze-backtrace.c:90
 #, c-format
 msgid "Backtrace parsing failed for %s"
-msgstr "Nepavyko perskaityti %s pėdsako"
+msgstr "Nepavyko perskaityti %s p??dsako"
 
 #: ../src/plugins/abrt-action-analyze-backtrace.c:150
 msgid "Crash thread not found"
-msgstr "Lūžimo gija nerasta"
+msgstr "L????imo gija nerasta"
 
 #: ../src/plugins/abrt-action-analyze-c.c:130
 msgid ""
@@ -708,7 +708,7 @@ msgid ""
 msgstr ""
 "& [-v] -d KAT\n"
 "\n"
-"Suskaičiuoja ir įrašo pagrindo išklotinės UUID į problemos katalogą KAT"
+"Suskai??iuoja ir ??ra??o pagrindo i??klotin??s UUID ?? problemos katalog?? KAT"
 
 #: ../src/plugins/abrt-action-analyze-core.in:72
 #, c-format
@@ -737,7 +737,7 @@ msgid ""
 msgstr ""
 "& [-v] -d KAT\n"
 "\n"
-"Suskaičiuoja ir įrašo oops problemos katalogo KAT UUID ir DUPHASH"
+"Suskai??iuoja ir ??ra??o oops problemos katalogo KAT UUID ir DUPHASH"
 
 #: ../src/plugins/abrt-action-analyze-oops.c:79
 msgid ""
@@ -755,12 +755,12 @@ msgid ""
 msgstr ""
 "& [-v] -d KAT\n"
 "\n"
-"Suskaičiuoja ir įrašo xorg problemos katalogo KAT UUID ir DUPHASH"
+"Suskai??iuoja ir ??ra??o xorg problemos katalogo KAT UUID ir DUPHASH"
 
 #: ../src/plugins/abrt-action-analyze-xorg.c:113
 #, c-format
 msgid "Module '%s' was loaded - won't report this crash"
-msgstr "Modulis „%s“ buvo įkeltas - nepranešime apie šį lūžimą"
+msgstr "Modulis ???%s??? buvo ??keltas - neprane??ime apie ???? l????im??"
 
 #: ../src/plugins/abrt-action-analyze-python.c:36
 msgid ""
@@ -770,7 +770,7 @@ msgid ""
 msgstr ""
 "& [-v] -d KAT\n"
 "\n"
-"Suskaičiuoja ir įrašo python lūžimų išklotinių UUID ir DUPHASH"
+"Suskai??iuoja ir ??ra??o python l????im?? i??klotini?? UUID ir DUPHASH"
 
 #: ../src/plugins/abrt-action-analyze-vmcore.in:52
 msgid "Usage: {0} [-v[v]] [--core=VMCORE]"
@@ -778,11 +778,11 @@ msgstr "Naudojimas: {0} [-v[v]] [--core=VMCORE]"
 
 #: ../src/plugins/abrt-action-analyze-vmcore.in:79
 msgid "File {0} doesn't exist"
-msgstr "Failo {0} nėra"
+msgstr "Failo {0} n??ra"
 
 #: ../src/plugins/abrt-action-analyze-vmcore.in:82
 msgid "Extracting the oops text from core"
-msgstr "Išgaunamas oops tekstas iš išklotinės"
+msgstr "I??gaunamas oops tekstas i?? i??klotin??s"
 
 #: ../src/plugins/abrt-action-analyze-vmcore.in:87
 msgid "Can't process {0}:\n"
@@ -792,11 +792,11 @@ msgstr "Nepavyksta apdoroti {0}:\n"
 
 #: ../src/plugins/abrt-action-analyze-vmcore.in:95
 msgid "Can't extract the oops message: '{0}'"
-msgstr "Nepavyksta išgauti oops pranešimo: „{0}“"
+msgstr "Nepavyksta i??gauti oops prane??imo: ???{0}???"
 
 #: ../src/plugins/abrt-action-analyze-vmcore.in:98
 msgid "Oops text extracted successfully"
-msgstr "Oops tekstas sėkmingai išgautas"
+msgstr "Oops tekstas s??kmingai i??gautas"
 
 #: ../src/plugins/abrt-action-check-oops-for-hw-error.in:89
 msgid ""
@@ -844,8 +844,8 @@ msgid ""
 msgstr ""
 "& [parinktys] -d KAT\n"
 "\n"
-"Analizuoja pagrindo išklotinę problemos kataloge KAT, generuoja ir įrašo "
-"pėdsaką"
+"Analizuoja pagrindo i??klotin?? problemos kataloge KAT, generuoja ir ??ra??o "
+"p??dsak??"
 
 #: ../src/plugins/abrt-action-generate-backtrace.c:56
 msgid "Additional debuginfo directories"
@@ -853,7 +853,7 @@ msgstr "Papildomos derinimo informacijos katalogai"
 
 #: ../src/plugins/abrt-action-generate-backtrace.c:57
 msgid "Kill gdb if it runs for more than NUM seconds"
-msgstr "Išjungti gdb, jei ji veikia daugiau nei NUM sekundžių"
+msgstr "I??jungti gdb, jei ji veikia daugiau nei NUM sekund??i??"
 
 #. Don't be completely silent. gdb run takes a few seconds,
 #. * it is useful to let user know it (maybe) worked.
@@ -861,7 +861,7 @@ msgstr "Išjungti gdb, jei ji veikia daugiau nei NUM sekundžių"
 #: ../src/plugins/abrt-action-generate-backtrace.c:103
 #, c-format
 msgid "Backtrace is generated and saved, %u bytes"
-msgstr "Pėdsakas sugeneruotas ir įrašytas, %u baitų"
+msgstr "P??dsakas sugeneruotas ir ??ra??ytas, %u bait??"
 
 #: ../src/plugins/abrt-action-generate-core-backtrace.c:40
 msgid ""
@@ -871,20 +871,20 @@ msgid ""
 msgstr ""
 "& [-v] [-r] -d KAT\n"
 "\n"
-"Sukuria išklotinės lygio pėdsaką iš išklotinės ar atitinkamos programos"
+"Sukuria i??klotin??s lygio p??dsak?? i?? i??klotin??s ar atitinkamos programos"
 
 #: ../src/plugins/abrt-action-generate-core-backtrace.c:53
 msgid "Do not hash fingerprints"
-msgstr "Nekurti maišos verčių pirštų atspaudams"
+msgstr "Nekurti mai??os ver??i?? pir??t?? atspaudams"
 
 #. Let user know what's going on
 #: ../src/plugins/abrt-action-generate-core-backtrace.c:64
 msgid "Generating core_backtrace"
-msgstr "Generuojamas pagrindo pėdsakas"
+msgstr "Generuojamas pagrindo p??dsakas"
 
 #: ../src/plugins/abrt-action-generate-core-backtrace.c:81
 msgid "Error: GDB did not return any data"
-msgstr "Klaida: GDB negrąžino jokių duomenų"
+msgstr "Klaida: GDB negr????ino joki?? duomen??"
 
 #: ../src/plugins/abrt-action-generate-core-backtrace.c:95
 #, c-format
@@ -893,7 +893,7 @@ msgstr "Klaida: %s"
 
 #: ../src/plugins/abrt-action-install-debuginfo.in:52
 msgid "Exiting on user command"
-msgstr "Išeinamas dėl naudotojo komandos"
+msgstr "I??einamas d??l naudotojo komandos"
 
 #: ../src/plugins/abrt-action-install-debuginfo.in:89
 #, c-format
@@ -932,12 +932,12 @@ msgstr "Nepavyko atverti {0}: {1}"
 #: ../src/plugins/abrt-action-install-debuginfo.in:213
 msgid "Coredump references {0} debuginfo files, {1} of them are not installed"
 msgstr ""
-"Pagrindo išklotinės nurodo {0} derinimo informacijos failus, {1} iš jų "
-"neįdiegti"
+"Pagrindo i??klotin??s nurodo {0} derinimo informacijos failus, {1} i?? j?? "
+"ne??diegti"
 
 #: ../src/plugins/abrt-action-install-debuginfo.in:216
 msgid "{0} of debuginfo files are not installed"
-msgstr "{0} neįdiegtų derinimo informacijos failų"
+msgstr "{0} ne??diegt?? derinimo informacijos fail??"
 
 #: ../src/plugins/abrt-action-install-debuginfo.in:235
 #, c-format
@@ -946,11 +946,11 @@ msgstr ""
 
 #: ../src/plugins/abrt-action-install-debuginfo.in:253
 msgid "Missing requested file: {0}"
-msgstr "Trūksta prašomo failo: {0}"
+msgstr "Tr??ksta pra??omo failo: {0}"
 
 #: ../src/plugins/abrt-action-install-debuginfo.in:258
 msgid "Missing debuginfo file: {0}"
-msgstr "Trūksta derinimo informacijos failo: {0}"
+msgstr "Tr??ksta derinimo informacijos failo: {0}"
 
 #: ../src/plugins/abrt-action-install-debuginfo.in:261
 msgid "All debuginfo files are available"
@@ -991,17 +991,17 @@ msgid ""
 "'No', a stack trace will be generated locally. (It may download a huge "
 "amount of data)."
 msgstr ""
-"Nusiųsti pagrindo išklotinę? (Ji gali turėti asmeninių duomenų). Jei "
-"atsakysite „Ne“, steko pėdsakas bus generuojamas vietoje. (Tai gali "
-"parsiųsti daug duomenų)."
+"Nusi??sti pagrindo i??klotin??? (Ji gali tur??ti asmenini?? duomen??). Jei "
+"atsakysite ???Ne???, steko p??dsakas bus generuojamas vietoje. (Tai gali "
+"parsi??sti daug duomen??)."
 
 #: ../src/plugins/abrt-action-perform-ccpp-analysis.in:72
 msgid ""
 "Do you want to generate a stack trace locally? (It may download a huge "
 "amount of data but reporting can't continue without stack trace)."
 msgstr ""
-"Ar norite generuoti steko pėdsaką vietoje? (Tai gali parsiųsti daug duomenų, "
-"bet pranešimo negalima tęsti be steko pėdsako)."
+"Ar norite generuoti steko p??dsak?? vietoje? (Tai gali parsi??sti daug duomen??, "
+"bet prane??imo negalima t??sti be steko p??dsako)."
 
 #: ../src/plugins/abrt-action-trim-files.c:222
 msgid ""
@@ -1013,21 +1013,21 @@ msgid ""
 msgstr ""
 "& [-v] [-d DYDIS:KAT]... [-f DYDIS:KAT]... [-p KAT] [FAILAS]...\n"
 "\n"
-"Ištrina problemų katalogus (-d) arba failus (-f) kataloguose iki jie tampa "
-"mažesni nei DYDIS.\n"
-"FAILAS(-ai) yra išsaugomas (niekada netrinamas)."
+"I??trina problem?? katalogus (-d) arba failus (-f) kataloguose iki jie tampa "
+"ma??esni nei DYDIS.\n"
+"FAILAS(-ai) yra i??saugomas (niekada netrinamas)."
 
 #: ../src/plugins/abrt-action-trim-files.c:236
 msgid "Delete whole problem directories"
-msgstr "Ištrinti visų problemų katalogus"
+msgstr "I??trinti vis?? problem?? katalogus"
 
 #: ../src/plugins/abrt-action-trim-files.c:237
 msgid "Delete files inside this directory"
-msgstr "Ištrinti failus šiame kataloge"
+msgstr "I??trinti failus ??iame kataloge"
 
 #: ../src/plugins/abrt-action-trim-files.c:238
 msgid "Preserve this directory"
-msgstr "Palikti šį katalogą"
+msgstr "Palikti ???? katalog??"
 
 #: ../src/plugins/abrt-action-ureport:59
 #, c-format
@@ -1067,11 +1067,11 @@ msgstr ""
 
 #: ../src/plugins/abrt-gdb-exploitable:529
 msgid "Signal sent by userspace code"
-msgstr "Signalą atsiunti naudotojo srities kodas"
+msgstr "Signal?? atsiunti naudotojo srities kodas"
 
 #: ../src/plugins/abrt-gdb-exploitable:533
 msgid "Signal sent by timer/IO/async event"
-msgstr "Signalą atsiuntė laikmačio/IO/asinchroninis įvykis"
+msgstr "Signal?? atsiunt?? laikma??io/IO/asinchroninis ??vykis"
 
 #: ../src/plugins/abrt-gdb-exploitable:541
 msgid "Signal has siginfo.si_code = SI_USER"
@@ -1079,67 +1079,67 @@ msgstr "Signalas turi siginfo.si_code = SI_USER"
 
 #: ../src/plugins/abrt-gdb-exploitable:544
 msgid "Signal due to write to closed pipe"
-msgstr "Signalas dėl rašymo į užvertą kanalą"
+msgstr "Signalas d??l ra??ymo ?? u??vert?? kanal??"
 
 #: ../src/plugins/abrt-gdb-exploitable:550
 #: ../src/plugins/abrt-gdb-exploitable:575
 msgid "Signal sent by keyboard"
-msgstr "Signalą atsiuntė klaviatūra"
+msgstr "Signal?? atsiunt?? klaviat??ra"
 
 #: ../src/plugins/abrt-gdb-exploitable:554
 #: ../src/plugins/abrt-gdb-exploitable:579
 msgid "Job control signal sent by kernel"
-msgstr "Darbų valdymo signalą atsiuntė branduolys"
+msgstr "Darb?? valdymo signal?? atsiunt?? branduolys"
 
 #: ../src/plugins/abrt-gdb-exploitable:558
 #: ../src/plugins/abrt-gdb-exploitable:587
 msgid "Signal sent by window resize"
-msgstr "Signalą atsiuntė lango dydžio pakeitimas"
+msgstr "Signal?? atsiunt?? lango dyd??io pakeitimas"
 
 #: ../src/plugins/abrt-gdb-exploitable:562
 #: ../src/plugins/abrt-gdb-exploitable:591
 msgid "Signal sent by alarm(N) expiration"
-msgstr "Signalą atsiuntė alarm(N) laiko pabaiga"
+msgstr "Signal?? atsiunt?? alarm(N) laiko pabaiga"
 
 #: ../src/plugins/abrt-gdb-exploitable:583
 msgid "Signal due to write to broken pipe"
-msgstr "Signalas dėl rašymo į blogą kanalą"
+msgstr "Signalas d??l ra??ymo ?? blog?? kanal??"
 
 #: ../src/plugins/abrt-gdb-exploitable:607
 msgid "ABRT signal (abort() was called?)"
-msgstr "ABRT signalas (buvo iškviesta abort()?)"
+msgstr "ABRT signalas (buvo i??kviesta abort()?)"
 
 #: ../src/plugins/abrt-gdb-exploitable:616
 msgid "XCPU signal (over CPU time limit)"
-msgstr "XCPU signalas (viršyta CPU laiko riba)"
+msgstr "XCPU signalas (vir??yta CPU laiko riba)"
 
 #: ../src/plugins/abrt-gdb-exploitable:620
 msgid "XFSZ signal (over file size limit)"
-msgstr "XFSZ signalas (viršyta failo dydžio riba)"
+msgstr "XFSZ signalas (vir??yta failo dyd??io riba)"
 
 #: ../src/plugins/abrt-gdb-exploitable:624
 msgid "TRAP signal (can be a bug in a debugger/tracer)"
-msgstr "TRAP signalas (gali būti klaida derintuvėje/seklyje)"
+msgstr "TRAP signalas (gali b??ti klaida derintuv??je/seklyje)"
 
 #: ../src/plugins/abrt-gdb-exploitable:628
 msgid "SYS signal (unknown syscall was called?)"
-msgstr "SYS signalas (buvo iškviestas nežinomas sisteminis iškvietimas?)"
+msgstr "SYS signalas (buvo i??kviestas ne??inomas sisteminis i??kvietimas?)"
 
 #: ../src/plugins/abrt-gdb-exploitable:633
 msgid "Arithmetic exception"
-msgstr "Aritmetinė išskirtinė situacija"
+msgstr "Aritmetin?? i??skirtin?? situacija"
 
 #: ../src/plugins/abrt-gdb-exploitable:637
 msgid "Division by zero"
-msgstr "Dalyba iš nulio"
+msgstr "Dalyba i?? nulio"
 
 #: ../src/plugins/abrt-gdb-exploitable:641
 msgid "Illegal instruction (jump to a random address?)"
-msgstr "Neteisinga instrukcija (šuolis į atsitiktinį adresą?)"
+msgstr "Neteisinga instrukcija (??uolis ?? atsitiktin?? adres???)"
 
 #: ../src/plugins/abrt-gdb-exploitable:647
 msgid "Non-crash related signal"
-msgstr "Ne su lūžimu susijęs signalas"
+msgstr "Ne su l????imu susij??s signalas"
 
 #: ../src/plugins/abrt-gdb-exploitable:652
 msgid "Stack overflow"
@@ -1147,43 +1147,43 @@ msgstr "Steko perpildymas"
 
 #: ../src/plugins/abrt-gdb-exploitable:656
 msgid "Write to an invalid address"
-msgstr "Rašymas į neteisingą adresą"
+msgstr "Ra??ymas ?? neteising?? adres??"
 
 #: ../src/plugins/abrt-gdb-exploitable:660
 msgid "Subroutine return to an invalid address (corrupted stack?)"
-msgstr "Paprogramė grąžino neteisingą adresą (sugadintas stekas?)"
+msgstr "Paprogram?? gr????ino neteising?? adres?? (sugadintas stekas?)"
 
 #: ../src/plugins/abrt-gdb-exploitable:666
 #: ../src/plugins/abrt-gdb-exploitable:670
 msgid "Jump to an invalid address"
-msgstr "Šuolis į neteisingą adresą"
+msgstr "??uolis ?? neteising?? adres??"
 
 #: ../src/plugins/abrt-gdb-exploitable:674
 msgid ""
 "Access past the end of mapped file, invalid address, unaligned access, etc"
 msgstr ""
-"Priėjimas už failo atmintyje pabaigos, netinkamu adresu, nelygiuota prieiga "
+"Pri??jimas u?? failo atmintyje pabaigos, netinkamu adresu, nelygiuota prieiga "
 "ir t.t."
 
 #: ../src/plugins/abrt-gdb-exploitable:693
 msgid "Can't get signal no and do exploitability analysis\n"
-msgstr "Nepavyko gauti signalo numerio ir atlikti analizės\n"
+msgstr "Nepavyko gauti signalo numerio ir atlikti analiz??s\n"
 
 #: ../src/plugins/abrt-gdb-exploitable:706
 msgid "Likely crash reason: "
-msgstr "Tikėtina lūžimo priežastis: "
+msgstr "Tik??tina l????imo prie??astis: "
 
 #: ../src/plugins/abrt-gdb-exploitable:707
 msgid "Exploitable rating (0-9 scale): "
-msgstr "Nagrinėjimo reitingas (0-9 skalėje): "
+msgstr "Nagrin??jimo reitingas (0-9 skal??je): "
 
 #: ../src/plugins/abrt-gdb-exploitable:709
 msgid "Current instruction: "
-msgstr "Dabartinė instrukcija: "
+msgstr "Dabartin?? instrukcija: "
 
 #: ../src/plugins/abrt-gdb-exploitable:711
 msgid "Exploitability analysis came up empty\n"
-msgstr "Nagrinėjimo analizė baigėsi niekuo\n"
+msgstr "Nagrin??jimo analiz?? baig??si niekuo\n"
 
 #: ../src/plugins/abrt-watch-log.c:142
 msgid ""
@@ -1193,8 +1193,8 @@ msgid ""
 msgstr ""
 "& [-vs] [-F STR]... FAILAS PROG [ARG]\n"
 "\n"
-"Stebėti žurnalo failą FAILAS, paleisti PROG, kei jis paauga arba yra "
-"pakeičiamas"
+"Steb??ti ??urnalo fail?? FAILAS, paleisti PROG, kei jis paauga arba yra "
+"pakei??iamas"
 
 #: ../src/plugins/abrt-watch-log.c:154
 msgid "Don't run PROG if STRs aren't found"
@@ -1208,12 +1208,12 @@ msgid ""
 msgstr ""
 "& [-vusoxm] [-d DIR]/[-D] [FILE]\n"
 "\n"
-"Išgauti oops iš FILE (arba standartinės įvesties)"
+"I??gauti oops i?? FILE (arba standartin??s ??vesties)"
 
 #: ../src/plugins/abrt-dump-oops.c:98
 #: ../src/plugins/abrt-dump-journal-oops.c:220
 msgid "Print found oopses on standard output"
-msgstr "Atspausdinti rastus oops į standartinėje išvestyje"
+msgstr "Atspausdinti rastus oops ?? standartin??je i??vestyje"
 
 #. oopses don't contain any sensitive info, and even
 #. * the old koops app was showing the oopses to all users
@@ -1221,7 +1221,7 @@ msgstr "Atspausdinti rastus oops į standartinėje išvestyje"
 #: ../src/plugins/abrt-dump-oops.c:102
 #: ../src/plugins/abrt-dump-journal-oops.c:224
 msgid "Create new problem directory in DIR for every oops found"
-msgstr "Sukurti naują problemos katalogą KAT kataloge kiekvienai rastai oops"
+msgstr "Sukurti nauj?? problemos katalog?? KAT kataloge kiekvienai rastai oops"
 
 #: ../src/plugins/abrt-dump-oops.c:103
 #: ../src/plugins/abrt-dump-journal-core.c:499
@@ -1233,24 +1233,24 @@ msgstr "Tas pats kaip -d DumpLocation, DumpLocation yra nurodyta abrt.conf"
 
 #: ../src/plugins/abrt-dump-oops.c:104
 msgid "Save the extracted information in PROBLEM"
-msgstr "Įrašyti išgautą informaciją į PROBLEM"
+msgstr "??ra??yti i??gaut?? informacij?? ?? PROBLEM"
 
 #: ../src/plugins/abrt-dump-oops.c:105
 #: ../src/plugins/abrt-dump-journal-oops.c:226
 #: ../src/plugins/abrt-dump-journal-xorg.c:192
 #: ../src/plugins/abrt-dump-xorg.c:56
 msgid "Make the problem directory world readable"
-msgstr "Padaryti problemų katalogą skaitomą pasauliui"
+msgstr "Padaryti problem?? katalog?? skaitom?? pasauliui"
 
 #: ../src/plugins/abrt-dump-oops.c:106
 #: ../src/plugins/abrt-dump-journal-oops.c:227
 #: ../src/plugins/abrt-dump-journal-xorg.c:193
 msgid "Throttle problem directory creation to 1 per second"
-msgstr "Nustatyti problemų aplankų kūrimą į 1 per sekundę"
+msgstr "Nustatyti problem?? aplank?? k??rim?? ?? 1 per sekund??"
 
 #: ../src/plugins/abrt-dump-oops.c:107 ../src/plugins/abrt-dump-xorg.c:57
 msgid "Print search string(s) to stdout and exit"
-msgstr "Atspausdinti paieškos eilutę(-es) standartinėje išvestyje ir išeiti"
+msgstr "Atspausdinti paie??kos eilut??(-es) standartin??je i??vestyje ir i??eiti"
 
 #: ../src/plugins/abrt-dump-oops.c:127
 #: ../src/plugins/abrt-dump-journal-oops.c:128
@@ -1457,16 +1457,16 @@ msgid ""
 msgstr ""
 "& [-vsoxm] [-d KAT]/[-D] [FAILAS]\n"
 "\n"
-"Išgauti Xorg lūžimą iš FAILO (arba standartinės įvesties)"
+"I??gauti Xorg l????im?? i?? FAILO (arba standartin??s ??vesties)"
 
 #: ../src/plugins/abrt-dump-xorg.c:53
 msgid "Print found crash data on standard output"
-msgstr "Atspausdinti rastus lūžimo duomenis standartinėje išvestyje"
+msgstr "Atspausdinti rastus l????imo duomenis standartin??je i??vestyje"
 
 #: ../src/plugins/abrt-dump-xorg.c:54
 msgid "Create problem directory in DIR for every crash found"
 msgstr ""
-"Sukurti naują problemos katalogą KAT kataloge kiekvienam rastam lūžimui"
+"Sukurti nauj?? problemos katalog?? KAT kataloge kiekvienam rastam l????imui"
 
 #: ../src/plugins/abrt-dump-xorg.c:108
 msgid "Failed to parse Backtrace from log file"
@@ -1525,8 +1525,8 @@ msgid ""
 "Retrace server can not be used, because the crash is too large. Try local "
 "retracing."
 msgstr ""
-"Pertrasavimo serveris negali būti naudojamas, nes nes lūžimas yra per "
-"didelis. Mėginkite vietinį pertrasavimą."
+"Pertrasavimo serveris negali b??ti naudojamas, nes nes l????imas yra per "
+"didelis. M??ginkite vietin?? pertrasavim??."
 
 #. Hopefully, by this time child emitted more meaningful
 #. * error message. But just in case it didn't:
@@ -1541,7 +1541,7 @@ msgstr "Nepavyko sukurti laikinojo failo"
 #: ../src/plugins/abrt-retrace-client.c:168
 #, c-format
 msgid "Can't execute '%s'"
-msgstr "Nepavyko paleisti „%s“"
+msgstr "Nepavyko paleisti ???%s???"
 
 #: ../src/plugins/abrt-retrace-client.c:211
 #: ../src/plugins/abrt-retrace-client.c:398
@@ -1549,7 +1549,7 @@ msgstr "Nepavyko paleisti „%s“"
 #: ../src/plugins/abrt-retrace-client.c:842
 #, c-format
 msgid "Failed to send HTTP header of length %d: NSS error %d"
-msgstr "Nepavyko išsiųsti %d ilgio HTTP antraštės: NSS klaida %d"
+msgstr "Nepavyko i??si??sti %d ilgio HTTP antra??t??s: NSS klaida %d"
 
 #: ../src/plugins/abrt-retrace-client.c:223
 #: ../src/plugins/abrt-retrace-client.c:412
@@ -1561,7 +1561,7 @@ msgstr "Nepavyko išsiųsti %d ilgio HTTP antraštės: NSS klaida %d"
 #, c-format
 msgid "Unexpected HTTP response from server: %d\n"
 "%s"
-msgstr "Nelauktas HTTP atsakas iš serverio: %d\n"
+msgstr "Nelauktas HTTP atsakas i?? serverio: %d\n"
 "%s"
 
 #: ../src/plugins/abrt-retrace-client.c:232
@@ -1572,7 +1572,7 @@ msgstr "Nelauktas HTTP atsakas iš serverio: %d\n"
 #: ../src/plugins/abrt-retrace-client.c:1062
 msgid "Invalid response from server: missing HTTP message body."
 msgstr ""
-"Netinkamas atsakas iš serverio: trūksta HTTP pranešimo pagrindinės dalies."
+"Netinkamas atsakas i?? serverio: tr??ksta HTTP prane??imo pagrindin??s dalies."
 
 #: ../src/plugins/abrt-retrace-client.c:424
 #, c-format
@@ -1580,26 +1580,26 @@ msgid ""
 "Retrace server is unable to process package '%s.%s'.\n"
 "Is it a part of official '%s' repositories?"
 msgstr ""
-"Trasavimo serveris negali apdoroti paketo „%s.%s“.\n"
-"Ar jis yra oficialių „%s“ saugyklų dalis?"
+"Trasavimo serveris negali apdoroti paketo ???%s.%s???.\n"
+"Ar jis yra oficiali?? ???%s??? saugykl?? dalis?"
 
 #: ../src/plugins/abrt-retrace-client.c:444
 msgid "Querying server settings"
-msgstr "Užklausiama serverio nustatymų"
+msgstr "U??klausiama serverio nustatym??"
 
 #: ../src/plugins/abrt-retrace-client.c:452
 msgid "The server is fully occupied. Try again later."
-msgstr "Serveris visiškai užimta. Bandykite vėliau."
+msgstr "Serveris visi??kai u??imta. Bandykite v??liau."
 
 #: ../src/plugins/abrt-retrace-client.c:453
 msgid "The server denied your request."
-msgstr "Serveris atmetė jūsų užklausą."
+msgstr "Serveris atmet?? j??s?? u??klaus??."
 
 #: ../src/plugins/abrt-retrace-client.c:484
 #: ../src/plugins/abrt-retrace-client.c:500
 #, c-format
 msgid "'%s' must be a regular file in order to use Retrace server."
-msgstr "„%s“ turi būti įprastinis failas pertrasavimo serveriui naudoti."
+msgstr "???%s??? turi b??ti ??prastinis failas pertrasavimo serveriui naudoti."
 
 #: ../src/plugins/abrt-retrace-client.c:520
 #, c-format
@@ -1610,24 +1610,24 @@ msgstr ""
 
 #: ../src/plugins/abrt-retrace-client.c:540
 msgid "The server does not support xz-compressed tarballs."
-msgstr "Serveris nepalaiko xz suspaustų TAR pakų."
+msgstr "Serveris nepalaiko xz suspaust?? TAR pak??."
 
 #: ../src/plugins/abrt-retrace-client.c:577
 #, c-format
 msgid "The release '%s' is not supported by the Retrace server."
-msgstr "Pertrasavimo serveris nepalaiko „%s“ leidimo."
+msgstr "Pertrasavimo serveris nepalaiko ???%s??? leidimo."
 
 #: ../src/plugins/abrt-retrace-client.c:581
 msgid "The server is not able to handle your request."
-msgstr "Serveris negali apdoroti jūsų užklausos."
+msgstr "Serveris negali apdoroti j??s?? u??klausos."
 
 #: ../src/plugins/abrt-retrace-client.c:600
 msgid "Unknown package sent to Retrace server."
-msgstr "Nežinomas paketas išsiųstas į pertrasavimo serverį."
+msgstr "Ne??inomas paketas i??si??stas ?? pertrasavimo server??."
 
 #: ../src/plugins/abrt-retrace-client.c:609
 msgid "Preparing an archive to upload"
-msgstr "Ruošiamasi archyvo nusiuntimui"
+msgstr "Ruo??iamasi archyvo nusiuntimui"
 
 #: ../src/plugins/abrt-retrace-client.c:628
 #, c-format
@@ -1643,7 +1643,7 @@ msgstr ""
 
 #: ../src/plugins/abrt-retrace-client.c:649
 msgid "Cancelled by user"
-msgstr "Atšaukta naudotojo"
+msgstr "At??aukta naudotojo"
 
 #: ../src/plugins/abrt-retrace-client.c:683
 #, c-format
@@ -1653,27 +1653,27 @@ msgstr ""
 #: ../src/plugins/abrt-retrace-client.c:709
 #, c-format
 msgid "Uploading %d%%\n"
-msgstr "Siunčiama %d%%\n"
+msgstr "Siun??iama %d%%\n"
 
 #: ../src/plugins/abrt-retrace-client.c:721
 msgid "Failed to read from a pipe"
-msgstr "Nepavyko skaityti iš kanalo"
+msgstr "Nepavyko skaityti i?? kanalo"
 
 #: ../src/plugins/abrt-retrace-client.c:734
 #, c-format
 msgid "Failed to send data: NSS error %d (%s): %s"
-msgstr "Nepavyko siųsti duomenų: NSS klaida %d (%s): %s"
+msgstr "Nepavyko si??sti duomen??: NSS klaida %d (%s): %s"
 
 #: ../src/plugins/abrt-retrace-client.c:745
 msgid "Upload successful"
-msgstr "Sėkmingai nusiųsta"
+msgstr "S??kmingai nusi??sta"
 
 #: ../src/plugins/abrt-retrace-client.c:767
 msgid ""
 "Your problem directory is corrupted and can not be processed by the Retrace "
 "server."
 msgstr ""
-"Jūsų problemų katalogas yra sugadintas ir pertrasavimo serveris negali jo "
+"J??s?? problem?? katalogas yra sugadintas ir pertrasavimo serveris negali jo "
 "apdoroti."
 
 #: ../src/plugins/abrt-retrace-client.c:769
@@ -1681,37 +1681,37 @@ msgid ""
 "The archive contains malicious files (such as symlinks) and thus can not be "
 "processed."
 msgstr ""
-"Archyvas turi blogų failų (tokių, kaip simbolinės nuorodos) ir todėl negali "
-"būti apdorotas."
+"Archyvas turi blog?? fail?? (toki??, kaip simbolin??s nuorodos) ir tod??l negali "
+"b??ti apdorotas."
 
 #: ../src/plugins/abrt-retrace-client.c:782
 msgid "Invalid response from server: missing X-Task-Id."
-msgstr "Netinkamas atsakas iš serverio: trūksta X-Task-Id."
+msgstr "Netinkamas atsakas i?? serverio: tr??ksta X-Task-Id."
 
 #: ../src/plugins/abrt-retrace-client.c:788
 msgid "Invalid response from server: missing X-Task-Password."
-msgstr "Netinkamas atsakas iš serverio: trūksta X-Task-Password."
+msgstr "Netinkamas atsakas i?? serverio: tr??ksta X-Task-Password."
 
 #: ../src/plugins/abrt-retrace-client.c:795
 msgid "Retrace job started"
-msgstr "Pradėtas pertrasavimo darbas"
+msgstr "Prad??tas pertrasavimo darbas"
 
 #: ../src/plugins/abrt-retrace-client.c:808
 #, c-format
 msgid "Task Id: %s\n"
 "Task Password: %s\n"
-msgstr "Užduoties Id: %s\n"
-"Užduoties slaptažodis: %s\n"
+msgstr "U??duoties Id: %s\n"
+"U??duoties slapta??odis: %s\n"
 
 #: ../src/plugins/abrt-retrace-client.c:866
 msgid "Invalid response from server: missing X-Task-Status."
-msgstr "Netinkamas atsakas iš serverio: trūksta X-Task-Status."
+msgstr "Netinkamas atsakas i?? serverio: tr??ksta X-Task-Status."
 
 #: ../src/plugins/abrt-retrace-client.c:878
 #, c-format
 msgid "Task Status: %s\n"
 "%s\n"
-msgstr "Užduoties būsena: %s\n"
+msgstr "U??duoties b??sena: %s\n"
 "%s\n"
 
 #: ../src/plugins/abrt-retrace-client.c:909
@@ -1719,19 +1719,19 @@ msgstr "Užduoties būsena: %s\n"
 #: ../src/plugins/abrt-retrace-client.c:1053
 #, c-format
 msgid "Failed to send HTTP header of length %d: NSS error %d."
-msgstr "Nepavyko išsiųsti %d ilgio HTTP antraštės: NSS klaida %d."
+msgstr "Nepavyko i??si??sti %d ilgio HTTP antra??t??s: NSS klaida %d."
 
 #: ../src/plugins/abrt-retrace-client.c:1170
 msgid ""
 "Retrace failed. Try again later and if the problem persists report this "
 "issue please."
 msgstr ""
-"Pertrasavimas nepavyko. Bandykite vėliau ir praneškite apie problemą, jei "
-"jis neišnyks."
+"Pertrasavimas nepavyko. Bandykite v??liau ir prane??kite apie problem??, jei "
+"jis nei??nyks."
 
 #: ../src/plugins/abrt-retrace-client.c:1217
 msgid "log to syslog"
-msgstr "įrašyti į syslog"
+msgstr "??ra??yti ?? syslog"
 
 #: ../src/plugins/abrt-retrace-client.c:1219
 msgid "allow insecure connection to retrace server"
@@ -1742,8 +1742,8 @@ msgid ""
 "do not check whether retrace server is able to process given package before "
 "uploading the archive"
 msgstr ""
-"netikrinti, ar pertrasavimo serveris gali apdoroti pateiktą paketą prieš jį "
-"nusiunčiant"
+"netikrinti, ar pertrasavimo serveris gali apdoroti pateikt?? paket?? prie?? j?? "
+"nusiun??iant"
 
 #: ../src/plugins/abrt-retrace-client.c:1224
 msgid "retrace server URL"
@@ -1755,40 +1755,40 @@ msgstr "pertrasavimo serverio prievadas"
 
 #: ../src/plugins/abrt-retrace-client.c:1228
 msgid "(debug) show received HTTP headers"
-msgstr "(derinimas) rodyti gautas HTTP antraštes"
+msgstr "(derinimas) rodyti gautas HTTP antra??tes"
 
 #: ../src/plugins/abrt-retrace-client.c:1229
 msgid "For create and batch operations"
-msgstr "Kūrimo ir masinio apdorojimo veiksmams"
+msgstr "K??rimo ir masinio apdorojimo veiksmams"
 
 #: ../src/plugins/abrt-retrace-client.c:1231
 msgid "read data from ABRT problem directory"
-msgstr "skaityti duomenis iš ABRT problemų katalogo"
+msgstr "skaityti duomenis i?? ABRT problem?? katalogo"
 
 #: ../src/plugins/abrt-retrace-client.c:1233
 msgid "read data from coredump"
-msgstr "skaityti duomenis iš pagrindo išklotinės"
+msgstr "skaityti duomenis i?? pagrindo i??klotin??s"
 
 #: ../src/plugins/abrt-retrace-client.c:1235
 msgid "Delay for polling operations"
-msgstr "Delsa užklausimo veiksmams"
+msgstr "Delsa u??klausimo veiksmams"
 
 #: ../src/plugins/abrt-retrace-client.c:1237
 msgid "(debug) do not delete temporary archive created from dump dir in "
 msgstr ""
-"(derinimas) netrinti laikinojo archyvo, sukurto iš išklotinės katalogo "
+"(derinimas) netrinti laikinojo archyvo, sukurto i?? i??klotin??s katalogo "
 
 #: ../src/plugins/abrt-retrace-client.c:1239
 msgid "For status, backtrace, and log operations"
-msgstr "Būsenos, pėdsako ir žurnalo veiksmams"
+msgstr "B??senos, p??dsako ir ??urnalo veiksmams"
 
 #: ../src/plugins/abrt-retrace-client.c:1241
 msgid "id of your task on server"
-msgstr "Jūsų užduoties id serveryje"
+msgstr "J??s?? u??duoties id serveryje"
 
 #: ../src/plugins/abrt-retrace-client.c:1243
 msgid "password of your task on server"
-msgstr "jūsų užduoties slaptažodis serveryje"
+msgstr "j??s?? u??duoties slapta??odis serveryje"
 
 #: ../src/plugins/abrt-retrace-client.c:1247
 msgid ""
@@ -1801,35 +1801,35 @@ msgstr ""
 #: ../src/plugins/abrt-retrace-client.c:1292
 #: ../src/plugins/abrt-retrace-client.c:1298
 msgid "Either problem directory or coredump is needed."
-msgstr "Reikalingas problemos katalogas arba pagrindo išklotinė."
+msgstr "Reikalingas problemos katalogas arba pagrindo i??klotin??."
 
 #: ../src/plugins/abrt-retrace-client.c:1304
 #: ../src/plugins/abrt-retrace-client.c:1312
 #: ../src/plugins/abrt-retrace-client.c:1320
 #: ../src/plugins/abrt-retrace-client.c:1328
 msgid "Task id is needed."
-msgstr "Reikalingas užduoties id."
+msgstr "Reikalingas u??duoties id."
 
 #: ../src/plugins/abrt-retrace-client.c:1306
 #: ../src/plugins/abrt-retrace-client.c:1314
 #: ../src/plugins/abrt-retrace-client.c:1322
 #: ../src/plugins/abrt-retrace-client.c:1330
 msgid "Task password is needed."
-msgstr "Reikalingas užduoties slaptažodis."
+msgstr "Reikalingas u??duoties slapta??odis."
 
 #: ../src/plugins/abrt-retrace-client.c:1334
 #, c-format
 msgid "Unknown operation: %s."
-msgstr "Nežinomas veiksmas: %s."
+msgstr "Ne??inomas veiksmas: %s."
 
 #: ../src/plugins/analyze_LocalGDB.xml.in.h:1
 msgid "Local GNU Debugger"
-msgstr "Vietinė GNU derintuvė"
+msgstr "Vietin?? GNU derintuv??"
 
 #: ../src/plugins/analyze_LocalGDB.xml.in.h:2
 msgid "Download debuginfo packages and generate backtrace locally using GDB"
 msgstr ""
-"Parsiųsti derinimo informacijos paketus ir sukurti pėdsaką vietoje naudojant "
+"Parsi??sti derinimo informacijos paketus ir sukurti p??dsak?? vietoje naudojant "
 "GDB"
 
 #: ../src/plugins/analyze_LocalGDB.xml.in.h:3
@@ -1838,13 +1838,13 @@ msgid ""
 "and take up disk space. However, unlike RetraceServer, doesn't send coredump "
 "to remote machines."
 msgstr ""
-"Reikia parsiųsti derinimo informacijos paketus, o tai gali ilgai užtrukti ir "
-"užimti vietos diske. Tačiau, skirtingai nuo RetraceServer, nesiunčia "
-"pagrindo išklotinės į nutolusį kompiuterį."
+"Reikia parsi??sti derinimo informacijos paketus, o tai gali ilgai u??trukti ir "
+"u??imti vietos diske. Ta??iau, skirtingai nuo RetraceServer, nesiun??ia "
+"pagrindo i??klotin??s ?? nutolus?? kompiuter??."
 
 #: ../src/plugins/analyze_RetraceServer.xml.in.h:1
 msgid "Send core dump to remote retrace server for analysis"
-msgstr "Siųsti pagrindo išklotinę į nutolusį serverį analizei"
+msgstr "Si??sti pagrindo i??klotin?? ?? nutolus?? server?? analizei"
 
 #: ../src/plugins/analyze_RetraceServer.xml.in.h:2
 msgid ""
@@ -1854,11 +1854,11 @@ msgid ""
 "you upload contains all the data from the crashed program, including your "
 "private data, if any."
 msgstr ""
-"Nusiunčia pagrindo išklotinę į serverį, kuris sukuria pėdsaką ir jį įvykdo. "
-"Privalumai: nereikia parsiųsti derinimo informacijos. Pertrasavimo serverio "
-"derinimo informacijos duomenų bazė yra pilnesnė. Pertrasavimo serveris gali "
-"sugeneruoti geresnius pėdsakus. Trūkumai: pagrindo išklotinės turi visus "
-"lūžusios programos duomenis, įskaitant privačius."
+"Nusiun??ia pagrindo i??klotin?? ?? server??, kuris sukuria p??dsak?? ir j?? ??vykdo. "
+"Privalumai: nereikia parsi??sti derinimo informacijos. Pertrasavimo serverio "
+"derinimo informacijos duomen?? baz?? yra pilnesn??. Pertrasavimo serveris gali "
+"sugeneruoti geresnius p??dsakus. Tr??kumai: pagrindo i??klotin??s turi visus "
+"l????usios programos duomenis, ??skaitant priva??ius."
 
 #: ../src/plugins/analyze_RetraceServer.xml.in.h:3
 msgid "Retrace server URL"
@@ -1874,7 +1874,7 @@ msgstr "Nesaugus"
 
 #: ../src/plugins/analyze_RetraceServer.xml.in.h:6
 msgid "Whether or not to use insecure connection"
-msgstr "Ar naudoti nesaugų ryšį"
+msgstr "Ar naudoti nesaug?? ry????"
 
 #: ../src/plugins/analyze_RetraceServer.xml.in.h:7
 msgid ""
@@ -1882,9 +1882,9 @@ msgid ""
 "fedorahosted.org/abrt/wiki/AbrtRetraceServerInsecureConnection\" "
 "&gt;(warning)&lt;/a&gt;"
 msgstr ""
-"Parašykite „insecure“ nesaugiems prisijungimams leisti &lt;a href=\"https://"
+"Para??ykite ???insecure??? nesaugiems prisijungimams leisti &lt;a href=\"https://"
 "fedorahosted.org/abrt/wiki/AbrtRetraceServerInsecureConnection\" "
-"&gt;(įspėjimas)&lt;/a&gt;"
+"&gt;(??sp??jimas)&lt;/a&gt;"
 
 #: ../src/plugins/collect_xsession_errors.xml.in.h:1
 msgid "Collect .xsession-errors"
@@ -1892,24 +1892,24 @@ msgstr "Surinkti .xsession-errors"
 
 #: ../src/plugins/collect_xsession_errors.xml.in.h:2
 msgid "Save relevant lines from ~/.xsession-errors file"
-msgstr "Įrašyti atitinkamas eilutes iš ~/.xsession-errors failo"
+msgstr "??ra??yti atitinkamas eilutes i?? ~/.xsession-errors failo"
 
 #: ../src/plugins/collect_xsession_errors.xml.in.h:3
 msgid ""
 "Scans through ~/.xsession-errors file and saves those lines which contain "
 "executable's name. The result is saved as 'xsession_errors' element."
 msgstr ""
-"Perskaito ~/.xsession-errors failą ir įrašo eilutes, kurios turi programos "
-"pavadinimą. Rezultatas įrašomas kaip „xsession_errors“ elementas."
+"Perskaito ~/.xsession-errors fail?? ir ??ra??o eilutes, kurios turi programos "
+"pavadinim??. Rezultatas ??ra??omas kaip ???xsession_errors??? elementas."
 
 #: ../src/plugins/https-utils.c:62
 msgid "An error occurred on the server side."
-msgstr "Kilo klaida serverio pusėje."
+msgstr "Kilo klaida serverio pus??je."
 
 #: ../src/plugins/https-utils.c:65
 #, c-format
 msgid "A server-side error occurred on '%s'"
-msgstr "„%s“ kilo klaida serverio pusėje"
+msgstr "???%s??? kilo klaida serverio pus??je"
 
 #: ../src/plugins/https-utils.c:74
 msgid "An error occurred while connecting to the server"
@@ -1918,54 +1918,54 @@ msgstr "Kilo klaida jungiantis prie serverio"
 #: ../src/plugins/https-utils.c:77
 #, c-format
 msgid "An error occurred while connecting to '%s'"
-msgstr "Kilo klaida jungiantis prie „%s“"
+msgstr "Kilo klaida jungiantis prie ???%s???"
 
 #: ../src/plugins/https-utils.c:97
 #, c-format
 msgid "Issuer certificate is invalid: '%s'."
-msgstr "Išdavėjo liudijimas yra netinkamas: „%s“."
+msgstr "I??dav??jo liudijimas yra netinkamas: ???%s???."
 
 #: ../src/plugins/https-utils.c:100
 #, c-format
 msgid "Certificate is signed by an untrusted issuer: '%s'."
-msgstr "Liudijimas yra pasirašytas nepatikimo išdavėjo: „%s“."
+msgstr "Liudijimas yra pasira??ytas nepatikimo i??dav??jo: ???%s???."
 
 #: ../src/plugins/https-utils.c:103
 #, c-format
 msgid "Certificate subject name '%s' does not match target host name '%s'."
 msgstr ""
-"Liudijimo subjekto pavadinimas „%s“ neatitinka tikslo serverio pavadinimo "
-"„%s“."
+"Liudijimo subjekto pavadinimas ???%s??? neatitinka tikslo serverio pavadinimo "
+"???%s???."
 
 #: ../src/plugins/https-utils.c:107
 msgid "Remote certificate has expired."
-msgstr "Nutolęs liudijimas nebegalioja."
+msgstr "Nutol??s liudijimas nebegalioja."
 
 #: ../src/plugins/https-utils.c:110
 #, c-format
 msgid "Certificate issuer is not recognized: '%s'."
-msgstr "Neatpažintas liudijimo išdavėjas: „%s“."
+msgstr "Neatpa??intas liudijimo i??dav??jas: ???%s???."
 
 #: ../src/plugins/https-utils.c:113
 #, c-format
 msgid "Bad certificate received. Subject '%s', issuer '%s'."
-msgstr "Gautas blogas liudijimas. Subjektas „%s“, išdavėjas „%s“."
+msgstr "Gautas blogas liudijimas. Subjektas ???%s???, i??dav??jas ???%s???."
 
 #: ../src/plugins/https-utils.c:149
 #, c-format
 msgid "Failed to get slot 'PEM Token #0': %d."
-msgstr "Nepavyko gauto elemento „PEM Token #0“: %d"
+msgstr "Nepavyko gauto elemento ???PEM Token #0???: %d"
 
 #: ../src/plugins/https-utils.c:182
 #, c-format
 msgid "Can't resolve host name '%s'. NSS error %d."
-msgstr "Nepavyko išspręsti kompiuterio pavadinimo „%s“. NSS klaida %d."
+msgstr "Nepavyko i??spr??sti kompiuterio pavadinimo ???%s???. NSS klaida %d."
 
 #. Host exists, but has neither IPv4 nor IPv6??
 #: ../src/plugins/https-utils.c:203
 #, c-format
 msgid "Can't resolve host name '%s'."
-msgstr "Nepavyko išspręsti kompiuterio pavadinimo „%s“."
+msgstr "Nepavyko i??spr??sti kompiuterio pavadinimo ???%s???."
 
 #: ../src/plugins/https-utils.c:210
 msgid "Failed to set socket blocking mode."
@@ -1977,7 +1977,7 @@ msgstr "Nepavyko apvilkti TCP jungties su SSL."
 
 #: ../src/plugins/https-utils.c:215
 msgid "Failed to enable client handshake to SSL socket."
-msgstr "Nepavyko įjungti kliento rankos paspaudimo SSL jungtyje."
+msgstr "Nepavyko ??jungti kliento rankos paspaudimo SSL jungtyje."
 
 #: ../src/plugins/https-utils.c:220
 msgid "Failed to enable SSL3."
@@ -1994,7 +1994,7 @@ msgstr "Nepavyko nustatyti SSL jungties URL."
 #: ../src/plugins/https-utils.c:233
 #, c-format
 msgid "Can't connect to '%s'"
-msgstr "Nepavyko prisijungti prie „%s“"
+msgstr "Nepavyko prisijungti prie ???%s???"
 
 #: ../src/plugins/https-utils.c:241
 msgid "Failed to set certificate hook."
@@ -2002,7 +2002,7 @@ msgstr "Nepavyko nustatyti liudijimo prikabinimo."
 
 #: ../src/plugins/https-utils.c:247
 msgid "Failed to set handshake callback."
-msgstr "Nepavyko nustatyti rankos paspaudimo atgalinio iškvietimo."
+msgstr "Nepavyko nustatyti rankos paspaudimo atgalinio i??kvietimo."
 
 #: ../src/plugins/https-utils.c:251
 msgid "Failed to reset handshake."
@@ -2011,21 +2011,21 @@ msgstr "Nepavyko atstatyti rankos paspaudimo."
 #: ../src/plugins/https-utils.c:258
 #, c-format
 msgid "Failed to complete SSL handshake: NSS error %d."
-msgstr "Nepavyko užbaigti SSL rankos paspaudimo: NSS klaida %d."
+msgstr "Nepavyko u??baigti SSL rankos paspaudimo: NSS klaida %d."
 
 #: ../src/plugins/https-utils.c:267
 msgid "Failed to close SSL socket."
-msgstr "Nepavyko užverti SSL jungties."
+msgstr "Nepavyko u??verti SSL jungties."
 
 #: ../src/plugins/https-utils.c:332
 #, c-format
 msgid "Malformed HTTP response header: '%s'"
-msgstr "Blogai suformuota HTTP atsako antraštė: „%s“"
+msgstr "Blogai suformuota HTTP atsako antra??t??: ???%s???"
 
 #: ../src/plugins/https-utils.c:369
 #, c-format
 msgid "Receiving of data failed: NSS error %d."
-msgstr "Nepavyko gauti duomenų: NSS klaida %d."
+msgstr "Nepavyko gauti duomen??: NSS klaida %d."
 
 #: ../src/plugins/https-utils.c:398
 msgid "Malformed chunked response."
@@ -2041,28 +2041,28 @@ msgstr "Nepavyko inicijuoti saugumo modulio."
 
 #: ../src/plugins/https-utils.c:444
 msgid "Failed to shutdown NSS."
-msgstr "Nepavyko išjungti NSS."
+msgstr "Nepavyko i??jungti NSS."
 
 #: ../src/plugins/oops-utils.c:73
 #, c-format
 msgid "Sleeping for %d seconds"
-msgstr "Miegama %d sekundžių"
+msgstr "Miegama %d sekund??i??"
 
 #: ../src/plugins/oops-utils.c:200
 msgid ""
 "A kernel problem occurred because of broken BIOS. Unfortunately, such "
 "problems are not fixable by kernel maintainers."
 msgstr ""
-"Dėl blogo BIOS kilo branduolio problema. Deja, tokių problemų branduolio "
-"prižiūrėtojai negali pataisyti."
+"D??l blogo BIOS kilo branduolio problema. Deja, toki?? problem?? branduolio "
+"pri??i??r??tojai negali pataisyti."
 
 #: ../src/plugins/oops-utils.c:205
 msgid ""
 "A kernel problem occurred, but your hardware is unsupported, therefore "
 "kernel maintainers are unable to fix this problem."
 msgstr ""
-"Kilo branduolio problema, bet jūsų aparatinė įranga yra nepalaikoma, tad "
-"branduolio prižiūrėtojai negali pataisyti šios problemos."
+"Kilo branduolio problema, bet j??s?? aparatin?? ??ranga yra nepalaikoma, tad "
+"branduolio pri??i??r??tojai negali pataisyti ??ios problemos."
 
 #: ../src/plugins/oops-utils.c:220
 #, c-format
@@ -2070,8 +2070,8 @@ msgid ""
 "A kernel problem occurred, but your kernel has been tainted (flags:%s). "
 "Kernel maintainers are unable to diagnose tainted reports."
 msgstr ""
-"Kilo branduolio problema, bet jūsų branduolys buvo pakeistas (požymiai:%s). "
-"Branduolio prižiūrėtojai negali diagnozuoti pakeistų pranešimų."
+"Kilo branduolio problema, bet j??s?? branduolys buvo pakeistas (po??ymiai:%s). "
+"Branduolio pri??i??r??tojai negali diagnozuoti pakeist?? prane??im??."
 
 #: ../src/plugins/oops-utils.c:228
 #, c-format
@@ -2080,7 +2080,7 @@ msgstr " Sugadinti moduliai: %s."
 
 #: ../src/plugins/bodhi.c:468
 msgid "List of bug ids"
-msgstr "Klaidų id sąrašas"
+msgstr "Klaid?? id s??ra??as"
 
 #: ../src/plugins/bodhi.c:469
 msgid "Specify a bodhi server url"
@@ -2088,7 +2088,7 @@ msgstr "Nurodykite bohdi serverio url"
 
 #: ../src/plugins/bodhi.c:470
 msgid "Specify a release"
-msgstr "Nurodykite leidimą"
+msgstr "Nurodykite leidim??"
 
 #: ../src/plugins/bodhi.c:475
 msgid ""
@@ -2099,20 +2099,20 @@ msgstr ""
 "& [-v] [-r[LEIDIMAS]] (-b ID1[,ID2,...] | PAK-PAVADINIMAS) [PAK-PAVADINIMAS]."
 ".. \n"
 "\n"
-"Ieškoti atnaujinimų bodhi serveryje"
+"Ie??koti atnaujinim?? bodhi serveryje"
 
 #: ../src/plugins/bodhi.c:542
 msgid "Searching for updates"
-msgstr "Ieškoma atnaujinimų"
+msgstr "Ie??koma atnaujinim??"
 
 #: ../src/plugins/bodhi.c:548
 msgid "No updates for this package found"
-msgstr "Nerasta šio paketo atnaujinimų"
+msgstr "Nerasta ??io paketo atnaujinim??"
 
 #. strbuf_free(q);
 #: ../src/plugins/bodhi.c:577
 msgid "Local version of the package is newer than available updates"
-msgstr "Vietinė paketo versija yra naujesnė nei prieinama atnaujinimuose"
+msgstr "Vietin?? paketo versija yra naujesn?? nei prieinama atnaujinimuose"
 
 #: ../src/plugins/bodhi.c:594
 #, c-format
@@ -2120,8 +2120,8 @@ msgid ""
 "An update exists which might fix your problem. You can install it by running:"
 " %s. Do you want to continue with reporting the bug?"
 msgstr ""
-"Yra atnaujinimas, kuris gali pataisyti jūsų problemą. Galite jį įdiegti "
-"paleidę: %s. Ar tikrai norite tęsti ir pranešti apie klaidą?"
+"Yra atnaujinimas, kuris gali pataisyti j??s?? problem??. Galite j?? ??diegti "
+"paleid??: %s. Ar tikrai norite t??sti ir prane??ti apie klaid???"
 
 #: ../src/hooks/abrt-merge-pstoreoops.c:85
 msgid ""
@@ -2131,7 +2131,7 @@ msgid ""
 msgstr ""
 "& [-v] [-od] FILE...\n"
 "\n"
-"Ieško failų padalintų oops pranešimams. Gali atspausdinti arba ištrinti juos."
+"Ie??ko fail?? padalint?? oops prane??imams. Gali atspausdinti arba i??trinti juos."
 ""
 
 #: ../src/hooks/abrt-merge-pstoreoops.c:97
@@ -2140,12 +2140,12 @@ msgstr "Atspausdinti rastus oops"
 
 #: ../src/hooks/abrt-merge-pstoreoops.c:98
 msgid "Delete files with found oopses"
-msgstr "Ištrinti failus su rastais oops"
+msgstr "I??trinti failus su rastais oops"
 
 #: ../src/cli/abrt-cli-core.c:100
 #, c-format
 msgid "'%s' identifies more than one problem directory"
-msgstr "„%s“ nurodo daugiau nei vieną problemos aplanką"
+msgstr "???%s??? nurodo daugiau nei vien?? problemos aplank??"
 
 #: ../src/cli/abrt-cli.c:130
 msgid "Usage: abrt-cli [--authenticate] [--version] COMMAND [DIR]..."
@@ -2157,19 +2157,19 @@ msgstr ""
 
 #: ../src/cli/abrt-cli.c:135
 msgid "Remove problem directory DIR"
-msgstr "Pašalinti problemos katalogą KAT"
+msgstr "Pa??alinti problemos katalog?? KAT"
 
 #: ../src/cli/abrt-cli.c:136
 msgid "Analyze and report problem data in DIR"
-msgstr "Analizuoti ir pranešti KAT problemos duomenis"
+msgstr "Analizuoti ir prane??ti KAT problemos duomenis"
 
 #: ../src/cli/abrt-cli.c:137
 msgid "Print information about DIR"
-msgstr "Atspausdinti informaciją apie KAT"
+msgstr "Atspausdinti informacij?? apie KAT"
 
 #: ../src/cli/abrt-cli.c:138
 msgid "Print the count of the recent crashes"
-msgstr "Atspausdinti nesenų lūžimų skaičių"
+msgstr "Atspausdinti nesen?? l????im?? skai??i??"
 
 #: ../src/cli/abrt-cli.c:139
 msgid "Process multiple problems"
@@ -2177,7 +2177,7 @@ msgstr ""
 
 #: ../src/cli/abrt-cli.c:162
 msgid "See 'abrt-cli COMMAND --help' for more information"
-msgstr "Daugiau informacijos gausite įvykdę „abrt-cli KOMANDAS --help“"
+msgstr "Daugiau informacijos gausite ??vykd?? ???abrt-cli KOMANDAS --help???"
 
 #: ../src/cli/list.c:127
 msgid "& list [options]"
@@ -2186,20 +2186,20 @@ msgstr ""
 #: ../src/cli/list.c:136 ../src/cli-ng/abrtcli/cli.py:121
 #: ../src/cli-ng/abrtcli/cli.py:264
 msgid "List only not-reported problems"
-msgstr "Išvardinti tik nepraneštas problemas"
+msgstr "I??vardinti tik neprane??tas problemas"
 
 #. deprecate -d option with --pretty=full
 #: ../src/cli/list.c:138 ../src/cli/list.c:191
 msgid "Show detailed report"
-msgstr "Rodyti detalią ataskaitą"
+msgstr "Rodyti detali?? ataskait??"
 
 #: ../src/cli/list.c:139 ../src/cli-ng/abrtcli/cli.py:113
 msgid "List only the problems more recent than specified timestamp"
-msgstr "Išvardinti tik problemas, kurios naujesnės nei nurodyta laiko žyma"
+msgstr "I??vardinti tik problemas, kurios naujesn??s nei nurodyta laiko ??yma"
 
 #: ../src/cli/list.c:140 ../src/cli-ng/abrtcli/cli.py:115
 msgid "List only the problems older than specified timestamp"
-msgstr "Išvardinti tik problemas, kurios senesnės nei nurodyta laiko žymo"
+msgstr "I??vardinti tik problemas, kurios senesn??s nei nurodyta laiko ??ymo"
 
 #: ../src/cli/list.c:166
 #, c-format
@@ -2208,9 +2208,9 @@ msgid ""
 "issuing\n"
 "'abrt-auto-reporting enabled' as a user with root privileges\n"
 msgstr ""
-"Automatinio pranešimo savybė išjungta. Galite ją įjungti įvykdę root "
-"teisėmis\n"
-"„abrt-auto-reporting enabled“\n"
+"Automatinio prane??imo savyb?? i??jungta. Galite j?? ??jungti ??vykd?? root "
+"teis??mis\n"
+"???abrt-auto-reporting enabled???\n"
 
 #: ../src/cli/list.c:183
 msgid "& info [options] DIR..."
@@ -2223,7 +2223,7 @@ msgstr "Ilgesnis nei toks tekstas bus rodomas sutrumpintas"
 #: ../src/cli/list.c:212
 #, c-format
 msgid "No such problem directory '%s'"
-msgstr "Nėra tokio problemos aplanko „%s“"
+msgstr "N??ra tokio problemos aplanko ???%s???"
 
 #: ../src/cli/status.c:66
 msgid "& status"
@@ -2231,17 +2231,17 @@ msgstr ""
 
 #: ../src/cli/status.c:74 ../src/cli-ng/abrtcli/cli.py:260
 msgid "Print only the problem count without any message"
-msgstr "Atspausdinti tik problemų skaičių be jokių pranešimų"
+msgstr "Atspausdinti tik problem?? skai??i?? be joki?? prane??im??"
 
 #: ../src/cli/status.c:75 ../src/cli-ng/abrtcli/cli.py:262
 msgid "Print only the problems more recent than specified timestamp"
-msgstr "Atspausdinti tik problemas, naujesnes nei nurodyta laiko žyma"
+msgstr "Atspausdinti tik problemas, naujesnes nei nurodyta laiko ??yma"
 
 #: ../src/cli/status.c:91
 #, c-format
 msgid "ABRT has detected %u problem(s). For more info run: abrt-cli list%s\n"
 msgstr ""
-"ABRT aptiko %u problemą(as). Daugiau informacijos gausite įvykdę: abrt-cli "
+"ABRT aptiko %u problem??(as). Daugiau informacijos gausite ??vykd??: abrt-cli "
 "list%s\n"
 
 #: ../src/cli/report.c:34
@@ -2453,8 +2453,8 @@ msgid ""
 "Send core dump to remote retrace server for analysis or perform local "
 "analysis if the remote analysis fails"
 msgstr ""
-"Siųsti pagrindo išklotinę į nutolusį pertrasavimo serverį analizei arba "
-"atlikti vietinę analizę, jei nuotolinė analizė nepavyksta"
+"Si??sti pagrindo i??klotin?? ?? nutolus?? pertrasavimo server?? analizei arba "
+"atlikti vietin?? analiz??, jei nuotolin?? analiz?? nepavyksta"
 
 #: ../src/plugins/analyze_CCpp.xml.in.h:2
 msgid ""
@@ -2469,79 +2469,79 @@ msgstr ""
 
 #: ../src/plugins/analyze_VMcore.xml.in.h:1
 msgid "Analyze VM core"
-msgstr "Analizuoti VM pagrindą"
+msgstr "Analizuoti VM pagrind??"
 
 #: ../src/plugins/analyze_VMcore.xml.in.h:2
 msgid ""
 "Install kernel debuginfo packages, generate kernel log and oops message"
 msgstr ""
-"Įdiegti branduolio derinimo informacijos paketus, generuoti branduolio "
-"žurnalą ir oops pranešimą"
+"??diegti branduolio derinimo informacijos paketus, generuoti branduolio "
+"??urnal?? ir oops prane??im??"
 
 #: ../src/plugins/analyze_VMcore.xml.in.h:3
 msgid ""
 "Needs to install kernel debuginfo packages, which might take significant "
 "time, and take up disk space."
 msgstr ""
-"Reikia įdiegti branduolio derinimo informacijos paketus, tai gali ilgai "
-"užtrukti ir užimti daug disko vietos."
+"Reikia ??diegti branduolio derinimo informacijos paketus, tai gali ilgai "
+"u??trukti ir u??imti daug disko vietos."
 
 #: ../src/plugins/collect_GConf.xml.in.h:1
 msgid "Collect GConf configuration"
-msgstr "Surinkti GConf konfigūraciją"
+msgstr "Surinkti GConf konfig??racij??"
 
 #: ../src/plugins/collect_GConf.xml.in.h:2
 msgid "Save configuration from application's GConf directory"
-msgstr "Įrašyti konfigūraciją iš programos GConf katalogo"
+msgstr "??ra??yti konfig??racij?? i?? programos GConf katalogo"
 
 #: ../src/plugins/collect_GConf.xml.in.h:3
 msgid ""
 "Runs gconftool-2 --recursive-list /apps/executable and saves it as "
 "'gconf_subtree' element."
 msgstr ""
-"Įvykdo gconftool-2 --recursive-list /apps/programa ir įrašo kaip "
-"'gconf_subtree' elementą."
+"??vykdo gconftool-2 --recursive-list /apps/programa ir ??ra??o kaip "
+"'gconf_subtree' element??."
 
 #: ../src/plugins/collect_vimrc_system.xml.in.h:1
 msgid "Collect system-wide vim configuration files"
-msgstr "Surinkti sisteminius vim konfigūracijos failus"
+msgstr "Surinkti sisteminius vim konfig??racijos failus"
 
 #: ../src/plugins/collect_vimrc_system.xml.in.h:2
 msgid "Save /etc/vimrc and /etc/gvimrc"
-msgstr "Įrašyti /etc/vimrc ir /etc/gvimrc"
+msgstr "??ra??yti /etc/vimrc ir /etc/gvimrc"
 
 #: ../src/plugins/collect_vimrc_system.xml.in.h:3
 msgid ""
 "Checks if there are vimrc and gvimrc files in /etc and saves them as "
 "system_vimrc and system_gvimrc, respectively."
 msgstr ""
-"Patikrina, ar /etc yra vimrc ir gvimrc failai ir juos įrašo atitinkamai kaip "
+"Patikrina, ar /etc yra vimrc ir gvimrc failai ir juos ??ra??o atitinkamai kaip "
 "system_vimrc ir system_gvimrc."
 
 #: ../src/plugins/collect_vimrc_user.xml.in.h:1
 msgid "Collect yours vim configuration files"
-msgstr "Surinkti jūsų vim konfigūracijos failus"
+msgstr "Surinkti j??s?? vim konfig??racijos failus"
 
 #: ../src/plugins/collect_vimrc_user.xml.in.h:2
 msgid "Save .vimrc and .gvimrc from your home directory"
-msgstr "Įrašyti .vimrc ir gvimrc iš jūsų namų katalogo"
+msgstr "??ra??yti .vimrc ir gvimrc i?? j??s?? nam?? katalogo"
 
 #: ../src/plugins/collect_vimrc_user.xml.in.h:3
 msgid ""
 "Checks if there are .vimrc and .gvimrc in your home directory and saves them "
 "as user_vimrc and user_gvimrc, respectively."
 msgstr ""
-"Patikrina, ar jūsų namų kataloge yra .vimrc ir .gvimrc bei juos įrašo "
+"Patikrina, ar j??s?? nam?? kataloge yra .vimrc ir .gvimrc bei juos ??ra??o "
 "atitinkamai kaip user_vimrc ir user_gvimrc."
 
 #: ../src/plugins/post_report.xml.in.h:1
 msgid "Post report"
-msgstr "Siųsti pranešimą"
+msgstr "Si??sti prane??im??"
 
 #: ../src/plugins/post_report.xml.in.h:2
 msgid "Executed after the reporting is finished"
-msgstr "Išmestas pasibagus pranešimui"
+msgstr "I??mestas pasibagus prane??imui"
 
 #: ../src/plugins/post_report.xml.in.h:3
 msgid "Used for updating of the databases"
-msgstr "Naudotas duomenų bazių atnaujinimui"
+msgstr "Naudotas duomen?? bazi?? atnaujinimui"

@@ -66,7 +66,7 @@ msgstr ""
 #: ../src/applet/applet.c:699
 #, c-format
 msgid ""
-"We’re sorry, it looks like %s crashed. The problem will be reported when the "
+"We???re sorry, it looks like %s crashed. The problem will be reported when the "
 "internet is available."
 msgstr ""
 
@@ -379,11 +379,11 @@ msgstr ""
 #: ../src/dbus/abrt-dbus.c:903 ../src/dbus/abrt-configuration.c:1011
 #: ../src/daemon/abrtd.c:459
 msgid "Exit after NUM seconds of inactivity"
-msgstr "Välju peale NUM sekundit tegevusetust"
+msgstr "V??lju peale NUM sekundit tegevusetust"
 
 #: ../src/dbus/abrt-dbus.c:921 ../src/dbus/abrt-configuration.c:1021
 msgid "This program must be run as root."
-msgstr "Seda rakendust peab käivitama administraatori õigustes."
+msgstr "Seda rakendust peab k??ivitama administraatori ??igustes."
 
 #: ../src/daemon/abrtd.c:389
 msgid ""
@@ -408,7 +408,7 @@ msgstr ""
 
 #: ../src/daemon/abrt-handle-event.c:403
 msgid "Run EVENT on DIR"
-msgstr "Käivita SÜNDMUS KATALOOGIS"
+msgstr "K??ivita S??NDMUS KATALOOGIS"
 
 #: ../src/daemon/abrt-handle-event.c:404
 msgid "Communicate directly to the user"
@@ -594,12 +594,12 @@ msgstr ""
 #. Let user know what's going on
 #: ../src/lib/hooklib.c:253
 msgid "Generating backtrace"
-msgstr "Tagasijälituse genereerimine"
+msgstr "Tagasij??lituse genereerimine"
 
 #: ../src/lib/problem_api_dbus.c:42
 #, c-format
 msgid "Can't connect to system DBus: %s"
-msgstr "Süsteemi DBus-ga ühendumine nurjus: %s"
+msgstr "S??steemi DBus-ga ??hendumine nurjus: %s"
 
 #: ../src/lib/problem_api_dbus.c:68
 #, c-format
@@ -623,12 +623,12 @@ msgstr ""
 #: ../src/lib/problem_api_dbus.c:193
 #, c-format
 msgid "Can't get problem list from abrt-dbus: %s"
-msgstr "Probleemi nimekirja pärimine üle abrt-dbus'i nurjus: %s"
+msgstr "Probleemi nimekirja p??rimine ??le abrt-dbus'i nurjus: %s"
 
 #: ../src/lib/problem_api_dbus.c:230 ../src/lib/problem_api_dbus.c:315
 #, c-format
 msgid "Can't get problem data from abrt-dbus: %s"
-msgstr "Probleemi andmete pärimine üle abrt-dbus'i nurjus: %s"
+msgstr "Probleemi andmete p??rimine ??le abrt-dbus'i nurjus: %s"
 
 #: ../src/lib/problem_api_dbus.c:274
 #, c-format
@@ -662,7 +662,7 @@ msgid ""
 msgstr ""
 "& [valikud] -d KATALOOG\n"
 "\n"
-"Analüüsib C/C++ tagasijälitust, genereerib dubleeritud räsi, tagasijälituse "
+"Anal????sib C/C++ tagasij??litust, genereerib dubleeritud r??si, tagasij??lituse "
 "reitingu ja identifitseerib krahhi funktsiooni probleemide kataloogis "
 "KATALOOG"
 
@@ -674,7 +674,7 @@ msgstr ""
 #: ../src/plugins/abrt-action-analyze-backtrace.c:90
 #, c-format
 msgid "Backtrace parsing failed for %s"
-msgstr "%s-i tagasijälituse parsimine nurjus"
+msgstr "%s-i tagasij??lituse parsimine nurjus"
 
 #: ../src/plugins/abrt-action-analyze-backtrace.c:150
 msgid "Crash thread not found"
@@ -688,7 +688,7 @@ msgid ""
 msgstr ""
 "& [-v] -d KATALOOG\n"
 "\n"
-"Arvutab ja salvestab tuumatõmmise UUID probleemide kataloogi KATALOOG"
+"Arvutab ja salvestab tuumat??mmise UUID probleemide kataloogi KATALOOG"
 
 #: ../src/plugins/abrt-action-analyze-core.in:72
 #, c-format
@@ -744,7 +744,7 @@ msgid ""
 msgstr ""
 "& [-v] -d KATALOOG\n"
 "\n"
-"Arvutab ja salvestab pythoni krahhide tõmmiste UUID ja DUPHASH-d"
+"Arvutab ja salvestab pythoni krahhide t??mmiste UUID ja DUPHASH-d"
 
 #: ../src/plugins/abrt-action-analyze-vmcore.in:52
 msgid "Usage: {0} [-v[v]] [--core=VMCORE]"
@@ -817,16 +817,16 @@ msgid ""
 msgstr ""
 "& [valikud] -d KATALOOG\n"
 "\n"
-"Analüüsib tuumatõmmist probleemide kataloogis KATALOOG, genereerib ja "
-"salvestab tagasijälituse"
+"Anal????sib tuumat??mmist probleemide kataloogis KATALOOG, genereerib ja "
+"salvestab tagasij??lituse"
 
 #: ../src/plugins/abrt-action-generate-backtrace.c:56
 msgid "Additional debuginfo directories"
-msgstr "Täiendavad silumisinfo kataloogid"
+msgstr "T??iendavad silumisinfo kataloogid"
 
 #: ../src/plugins/abrt-action-generate-backtrace.c:57
 msgid "Kill gdb if it runs for more than NUM seconds"
-msgstr "Tapa gdb, kui ta töötab kauem kui NUM sekundit"
+msgstr "Tapa gdb, kui ta t????tab kauem kui NUM sekundit"
 
 #. Don't be completely silent. gdb run takes a few seconds,
 #. * it is useful to let user know it (maybe) worked.
@@ -834,7 +834,7 @@ msgstr "Tapa gdb, kui ta töötab kauem kui NUM sekundit"
 #: ../src/plugins/abrt-action-generate-backtrace.c:103
 #, c-format
 msgid "Backtrace is generated and saved, %u bytes"
-msgstr "Tagasijälitus on loodud ja salvestatud, %u baiti"
+msgstr "Tagasij??litus on loodud ja salvestatud, %u baiti"
 
 #: ../src/plugins/abrt-action-generate-core-backtrace.c:40
 msgid ""
@@ -863,7 +863,7 @@ msgstr ""
 
 #: ../src/plugins/abrt-action-install-debuginfo.in:52
 msgid "Exiting on user command"
-msgstr "Väljumine kasutaja käsul"
+msgstr "V??ljumine kasutaja k??sul"
 
 #: ../src/plugins/abrt-action-install-debuginfo.in:89
 #, c-format
@@ -902,7 +902,7 @@ msgstr "{0} avamine nurjus: {1}"
 #: ../src/plugins/abrt-action-install-debuginfo.in:213
 msgid "Coredump references {0} debuginfo files, {1} of them are not installed"
 msgstr ""
-"Tuumatõmmis viitab {0} silumisinfo failidele, {1} neist ei ole paigaldatud"
+"Tuumat??mmis viitab {0} silumisinfo failidele, {1} neist ei ole paigaldatud"
 
 #: ../src/plugins/abrt-action-install-debuginfo.in:216
 msgid "{0} of debuginfo files are not installed"
@@ -923,7 +923,7 @@ msgstr "Puuduv silumisinfo fail: {0}"
 
 #: ../src/plugins/abrt-action-install-debuginfo.in:261
 msgid "All debuginfo files are available"
-msgstr "Kõik silumisinfo failid on saadaval"
+msgstr "K??ik silumisinfo failid on saadaval"
 
 #: ../src/plugins/abrt-action-install-debuginfo-to-abrt-cache.c:43
 msgid ""
@@ -978,9 +978,9 @@ msgstr ""
 "& [-v] [-d SUURUS:KATALOOG]... [-f SUURUS:KATALOOG]... [-p KATALOOG] [FAIL].."
 ".\n"
 "\n"
-"Kustuab probleemide kataloogid (-d) või failid (-f) KATALOOGIS, kuni nad on "
-"väiksemad kui SUURUS.\n"
-"FAILid säilitatakse (ei kustutata kunagi)."
+"Kustuab probleemide kataloogid (-d) v??i failid (-f) KATALOOGIS, kuni nad on "
+"v??iksemad kui SUURUS.\n"
+"FAILid s??ilitatakse (ei kustutata kunagi)."
 
 #: ../src/plugins/abrt-action-trim-files.c:236
 msgid "Delete whole problem directories"
@@ -992,7 +992,7 @@ msgstr "Kustuta failid selle kataloogi seest"
 
 #: ../src/plugins/abrt-action-trim-files.c:238
 msgid "Preserve this directory"
-msgstr "Säilita see kataloog"
+msgstr "S??ilita see kataloog"
 
 #: ../src/plugins/abrt-action-ureport:59
 #, c-format
@@ -1169,7 +1169,7 @@ msgstr ""
 #: ../src/plugins/abrt-dump-oops.c:98
 #: ../src/plugins/abrt-dump-journal-oops.c:220
 msgid "Print found oopses on standard output"
-msgstr "Kirjuta leitud uupsid standardväljundisse"
+msgstr "Kirjuta leitud uupsid standardv??ljundisse"
 
 #. oopses don't contain any sensitive info, and even
 #. * the old koops app was showing the oopses to all users
@@ -1185,7 +1185,7 @@ msgstr ""
 #: ../src/plugins/abrt-dump-journal-xorg.c:191
 #: ../src/plugins/abrt-dump-xorg.c:55
 msgid "Same as -d DumpLocation, DumpLocation is specified in abrt.conf"
-msgstr "Sama kui -d DumpLocation, DumpLocation määratakse abrt.conf failis"
+msgstr "Sama kui -d DumpLocation, DumpLocation m????ratakse abrt.conf failis"
 
 #: ../src/plugins/abrt-dump-oops.c:104
 msgid "Save the extracted information in PROBLEM"
@@ -1196,7 +1196,7 @@ msgstr ""
 #: ../src/plugins/abrt-dump-journal-xorg.c:192
 #: ../src/plugins/abrt-dump-xorg.c:56
 msgid "Make the problem directory world readable"
-msgstr "Tee probleemide kataloog kõikidele loetavaks"
+msgstr "Tee probleemide kataloog k??ikidele loetavaks"
 
 #: ../src/plugins/abrt-dump-oops.c:106
 #: ../src/plugins/abrt-dump-journal-oops.c:227
@@ -1206,7 +1206,7 @@ msgstr ""
 
 #: ../src/plugins/abrt-dump-oops.c:107 ../src/plugins/abrt-dump-xorg.c:57
 msgid "Print search string(s) to stdout and exit"
-msgstr "Trüki otsingustringid stdout-i ja välju"
+msgstr "Tr??ki otsingustringid stdout-i ja v??lju"
 
 #: ../src/plugins/abrt-dump-oops.c:127
 #: ../src/plugins/abrt-dump-journal-oops.c:128
@@ -1414,7 +1414,7 @@ msgstr ""
 
 #: ../src/plugins/abrt-dump-xorg.c:53
 msgid "Print found crash data on standard output"
-msgstr "Trüki leitud krahhi andmed standardsesse väljundisse"
+msgstr "Tr??ki leitud krahhi andmed standardsesse v??ljundisse"
 
 #: ../src/plugins/abrt-dump-xorg.c:54
 msgid "Create problem directory in DIR for every crash found"
@@ -1477,8 +1477,8 @@ msgid ""
 "Retrace server can not be used, because the crash is too large. Try local "
 "retracing."
 msgstr ""
-"Taasjälituse serverit ei saa kasutada, kuna krahh on liiga suur. Proovi "
-"kohalikku taasjälitust."
+"Taasj??lituse serverit ei saa kasutada, kuna krahh on liiga suur. Proovi "
+"kohalikku taasj??litust."
 
 #. Hopefully, by this time child emitted more meaningful
 #. * error message. But just in case it didn't:
@@ -1493,7 +1493,7 @@ msgstr ""
 #: ../src/plugins/abrt-retrace-client.c:168
 #, c-format
 msgid "Can't execute '%s'"
-msgstr "'%s'-i käivitamine nurjus"
+msgstr "'%s'-i k??ivitamine nurjus"
 
 #: ../src/plugins/abrt-retrace-client.c:211
 #: ../src/plugins/abrt-retrace-client.c:398
@@ -1501,7 +1501,7 @@ msgstr "'%s'-i käivitamine nurjus"
 #: ../src/plugins/abrt-retrace-client.c:842
 #, c-format
 msgid "Failed to send HTTP header of length %d: NSS error %d"
-msgstr "Pikkusega %d HTTP päise saatmine nurjus: NSS viga %d"
+msgstr "Pikkusega %d HTTP p??ise saatmine nurjus: NSS viga %d"
 
 #: ../src/plugins/abrt-retrace-client.c:223
 #: ../src/plugins/abrt-retrace-client.c:412
@@ -1523,7 +1523,7 @@ msgstr "Ootamatu HTTP vastus serverist: %d\n"
 #: ../src/plugins/abrt-retrace-client.c:992
 #: ../src/plugins/abrt-retrace-client.c:1062
 msgid "Invalid response from server: missing HTTP message body."
-msgstr "Vigane vastus serverist: puudub HTTP sõnumi keha."
+msgstr "Vigane vastus serverist: puudub HTTP s??numi keha."
 
 #: ../src/plugins/abrt-retrace-client.c:424
 #, c-format
@@ -1534,15 +1534,15 @@ msgstr ""
 
 #: ../src/plugins/abrt-retrace-client.c:444
 msgid "Querying server settings"
-msgstr "Serveri seadete pärimine"
+msgstr "Serveri seadete p??rimine"
 
 #: ../src/plugins/abrt-retrace-client.c:452
 msgid "The server is fully occupied. Try again later."
-msgstr "Server on hõivatud. Proovi hiljem uuesti."
+msgstr "Server on h??ivatud. Proovi hiljem uuesti."
 
 #: ../src/plugins/abrt-retrace-client.c:453
 msgid "The server denied your request."
-msgstr "Serveri keeldus sinu päringust."
+msgstr "Serveri keeldus sinu p??ringust."
 
 #: ../src/plugins/abrt-retrace-client.c:484
 #: ../src/plugins/abrt-retrace-client.c:500
@@ -1564,19 +1564,19 @@ msgstr "Server ei toeta xz-tihendatud arhiive."
 #: ../src/plugins/abrt-retrace-client.c:577
 #, c-format
 msgid "The release '%s' is not supported by the Retrace server."
-msgstr "'%s' väljalase ei ole taasjälituse serveri poolt toetatud."
+msgstr "'%s' v??ljalase ei ole taasj??lituse serveri poolt toetatud."
 
 #: ../src/plugins/abrt-retrace-client.c:581
 msgid "The server is not able to handle your request."
-msgstr "Server ei ole võimeline sinu päringut käsitlema."
+msgstr "Server ei ole v??imeline sinu p??ringut k??sitlema."
 
 #: ../src/plugins/abrt-retrace-client.c:600
 msgid "Unknown package sent to Retrace server."
-msgstr "Tagasijälituse serverisse saadeti tundmatu pakk."
+msgstr "Tagasij??lituse serverisse saadeti tundmatu pakk."
 
 #: ../src/plugins/abrt-retrace-client.c:609
 msgid "Preparing an archive to upload"
-msgstr "Üleslaadimiseks arhiivi ettevalmistamine"
+msgstr "??leslaadimiseks arhiivi ettevalmistamine"
 
 #: ../src/plugins/abrt-retrace-client.c:628
 #, c-format
@@ -1602,7 +1602,7 @@ msgstr ""
 #: ../src/plugins/abrt-retrace-client.c:709
 #, c-format
 msgid "Uploading %d%%\n"
-msgstr "Üleslaadimine %d%%\n"
+msgstr "??leslaadimine %d%%\n"
 
 #: ../src/plugins/abrt-retrace-client.c:721
 msgid "Failed to read from a pipe"
@@ -1615,23 +1615,23 @@ msgstr "Andmete saatmine nurjus: NSS viga %d (%s): %s"
 
 #: ../src/plugins/abrt-retrace-client.c:745
 msgid "Upload successful"
-msgstr "Üleslaadimine edukas"
+msgstr "??leslaadimine edukas"
 
 #: ../src/plugins/abrt-retrace-client.c:767
 msgid ""
 "Your problem directory is corrupted and can not be processed by the Retrace "
 "server."
 msgstr ""
-"Sinu probleemide kataloog on vigane ja taasjälituse server ei suuda seda "
-"töödelda."
+"Sinu probleemide kataloog on vigane ja taasj??lituse server ei suuda seda "
+"t????delda."
 
 #: ../src/plugins/abrt-retrace-client.c:769
 msgid ""
 "The archive contains malicious files (such as symlinks) and thus can not be "
 "processed."
 msgstr ""
-"Arhiiv sisaldab kahjustatud failne (nagu sümboolsed lingid) ja seega ei saa "
-"teda töödelda."
+"Arhiiv sisaldab kahjustatud failne (nagu s??mboolsed lingid) ja seega ei saa "
+"teda t????delda."
 
 #: ../src/plugins/abrt-retrace-client.c:782
 msgid "Invalid response from server: missing X-Task-Id."
@@ -1643,14 +1643,14 @@ msgstr "Vigane vastus serverist: puudub X-Task-Password."
 
 #: ../src/plugins/abrt-retrace-client.c:795
 msgid "Retrace job started"
-msgstr "Taasjälituse töö alustatud"
+msgstr "Taasj??lituse t???? alustatud"
 
 #: ../src/plugins/abrt-retrace-client.c:808
 #, c-format
 msgid "Task Id: %s\n"
 "Task Password: %s\n"
-msgstr "Ülesande Id: %s\n"
-"Ülesande parool: %s\n"
+msgstr "??lesande Id: %s\n"
+"??lesande parool: %s\n"
 
 #: ../src/plugins/abrt-retrace-client.c:866
 msgid "Invalid response from server: missing X-Task-Status."
@@ -1660,7 +1660,7 @@ msgstr "Vigane vastus serverist: puudub X-Task-Status."
 #, c-format
 msgid "Task Status: %s\n"
 "%s\n"
-msgstr "Ülesande olek: %s\n"
+msgstr "??lesande olek: %s\n"
 "%s\n"
 
 #: ../src/plugins/abrt-retrace-client.c:909
@@ -1668,14 +1668,14 @@ msgstr "Ülesande olek: %s\n"
 #: ../src/plugins/abrt-retrace-client.c:1053
 #, c-format
 msgid "Failed to send HTTP header of length %d: NSS error %d."
-msgstr "Pikkusega %d HTTP päise saatmine nurjus: NSS viga %d."
+msgstr "Pikkusega %d HTTP p??ise saatmine nurjus: NSS viga %d."
 
 #: ../src/plugins/abrt-retrace-client.c:1170
 msgid ""
 "Retrace failed. Try again later and if the problem persists report this "
 "issue please."
 msgstr ""
-"Taasjälitus nurjus. Proovi hiljem uuesti ja kui probleem jääb, siis palun "
+"Taasj??litus nurjus. Proovi hiljem uuesti ja kui probleem j????b, siis palun "
 "teata sellest."
 
 #: ../src/plugins/abrt-retrace-client.c:1217
@@ -1684,7 +1684,7 @@ msgstr "logi syslog-i"
 
 #: ../src/plugins/abrt-retrace-client.c:1219
 msgid "allow insecure connection to retrace server"
-msgstr "luba taasjälituse serverisse ebaturvalisi ühendusi"
+msgstr "luba taasj??lituse serverisse ebaturvalisi ??hendusi"
 
 #: ../src/plugins/abrt-retrace-client.c:1221
 msgid ""
@@ -1694,15 +1694,15 @@ msgstr ""
 
 #: ../src/plugins/abrt-retrace-client.c:1224
 msgid "retrace server URL"
-msgstr "taasjälituse serveri URL"
+msgstr "taasj??lituse serveri URL"
 
 #: ../src/plugins/abrt-retrace-client.c:1226
 msgid "retrace server port"
-msgstr "taasjälituse serveri port"
+msgstr "taasj??lituse serveri port"
 
 #: ../src/plugins/abrt-retrace-client.c:1228
 msgid "(debug) show received HTTP headers"
-msgstr "(silumine) kuva vastuvõetud HTTP päiseid"
+msgstr "(silumine) kuva vastuv??etud HTTP p??iseid"
 
 #: ../src/plugins/abrt-retrace-client.c:1229
 msgid "For create and batch operations"
@@ -1714,7 +1714,7 @@ msgstr "loe andmed ABRT probleemide kataloogist"
 
 #: ../src/plugins/abrt-retrace-client.c:1233
 msgid "read data from coredump"
-msgstr "loe andmed tuumatõmmisest"
+msgstr "loe andmed tuumat??mmisest"
 
 #: ../src/plugins/abrt-retrace-client.c:1235
 msgid "Delay for polling operations"
@@ -1726,15 +1726,15 @@ msgstr ""
 
 #: ../src/plugins/abrt-retrace-client.c:1239
 msgid "For status, backtrace, and log operations"
-msgstr "Oleku, tagasijälituse ja logi operatsioonide jaoks"
+msgstr "Oleku, tagasij??lituse ja logi operatsioonide jaoks"
 
 #: ../src/plugins/abrt-retrace-client.c:1241
 msgid "id of your task on server"
-msgstr "sinu ülesande id serveris"
+msgstr "sinu ??lesande id serveris"
 
 #: ../src/plugins/abrt-retrace-client.c:1243
 msgid "password of your task on server"
-msgstr "sinu ülesande parool serveris"
+msgstr "sinu ??lesande parool serveris"
 
 #: ../src/plugins/abrt-retrace-client.c:1247
 msgid ""
@@ -1745,21 +1745,21 @@ msgstr ""
 #: ../src/plugins/abrt-retrace-client.c:1292
 #: ../src/plugins/abrt-retrace-client.c:1298
 msgid "Either problem directory or coredump is needed."
-msgstr "Vajalik on kas probleemide kataloog või tuumatõmmis."
+msgstr "Vajalik on kas probleemide kataloog v??i tuumat??mmis."
 
 #: ../src/plugins/abrt-retrace-client.c:1304
 #: ../src/plugins/abrt-retrace-client.c:1312
 #: ../src/plugins/abrt-retrace-client.c:1320
 #: ../src/plugins/abrt-retrace-client.c:1328
 msgid "Task id is needed."
-msgstr "Vajalik on ülesande id."
+msgstr "Vajalik on ??lesande id."
 
 #: ../src/plugins/abrt-retrace-client.c:1306
 #: ../src/plugins/abrt-retrace-client.c:1314
 #: ../src/plugins/abrt-retrace-client.c:1322
 #: ../src/plugins/abrt-retrace-client.c:1330
 msgid "Task password is needed."
-msgstr "Vajalik on ülesande parool."
+msgstr "Vajalik on ??lesande parool."
 
 #: ../src/plugins/abrt-retrace-client.c:1334
 #, c-format
@@ -1773,7 +1773,7 @@ msgstr "Kohalik GNU siluja"
 #: ../src/plugins/analyze_LocalGDB.xml.in.h:2
 msgid "Download debuginfo packages and generate backtrace locally using GDB"
 msgstr ""
-"Laadi alla silumisinfo pakid ja genereeri tagasijälitus kasutades GDB-d"
+"Laadi alla silumisinfo pakid ja genereeri tagasij??litus kasutades GDB-d"
 
 #: ../src/plugins/analyze_LocalGDB.xml.in.h:3
 msgid ""
@@ -1781,12 +1781,12 @@ msgid ""
 "and take up disk space. However, unlike RetraceServer, doesn't send coredump "
 "to remote machines."
 msgstr ""
-"Peab allalaadima silumisinfo pakke, mis võtab aega ja kettaruumi. Kuid, "
-"erinevaltTaasjälituseServerist, ei saada tuumatõmmist teistesse masinatesse."
+"Peab allalaadima silumisinfo pakke, mis v??tab aega ja kettaruumi. Kuid, "
+"erinevaltTaasj??lituseServerist, ei saada tuumat??mmist teistesse masinatesse."
 
 #: ../src/plugins/analyze_RetraceServer.xml.in.h:1
 msgid "Send core dump to remote retrace server for analysis"
-msgstr "Saada tuuma tõmmis teise taasjälituse serverisse analüüsimiseks"
+msgstr "Saada tuuma t??mmis teise taasj??lituse serverisse anal????simiseks"
 
 #: ../src/plugins/analyze_RetraceServer.xml.in.h:2
 msgid ""
@@ -1796,20 +1796,20 @@ msgid ""
 "you upload contains all the data from the crashed program, including your "
 "private data, if any."
 msgstr ""
-"Laadib tuumatõmmise serverisse, mis genereerib tagasijälituse ning tagastab "
-"selle. Eelised: ei pea silumisinfo pakke alla laadima. Taasjälituse serveri "
-"silumisinfo andemebaas on täielikum. Taasjälituse server võib genereerida "
-"parema tagasijälituse. Puudused: üleslaaditav tuumatõmmis sisaldab erinevat "
-"infot, mis programmi krahhima pani, sealhulgas ka võimalikku isiklikku infot."
+"Laadib tuumat??mmise serverisse, mis genereerib tagasij??lituse ning tagastab "
+"selle. Eelised: ei pea silumisinfo pakke alla laadima. Taasj??lituse serveri "
+"silumisinfo andemebaas on t??ielikum. Taasj??lituse server v??ib genereerida "
+"parema tagasij??lituse. Puudused: ??leslaaditav tuumat??mmis sisaldab erinevat "
+"infot, mis programmi krahhima pani, sealhulgas ka v??imalikku isiklikku infot."
 ""
 
 #: ../src/plugins/analyze_RetraceServer.xml.in.h:3
 msgid "Retrace server URL"
-msgstr "Taasjälituse serveri URL"
+msgstr "Taasj??lituse serveri URL"
 
 #: ../src/plugins/analyze_RetraceServer.xml.in.h:4
 msgid "Address of the retrace server"
-msgstr "Taasjälituse serveri aadress"
+msgstr "Taasj??lituse serveri aadress"
 
 #: ../src/plugins/analyze_RetraceServer.xml.in.h:5
 msgid "Insecure"
@@ -1817,7 +1817,7 @@ msgstr "Ebaturvaline"
 
 #: ../src/plugins/analyze_RetraceServer.xml.in.h:6
 msgid "Whether or not to use insecure connection"
-msgstr "Kas kasutada või mitte ebaturvalist ühendust"
+msgstr "Kas kasutada v??i mitte ebaturvalist ??hendust"
 
 #: ../src/plugins/analyze_RetraceServer.xml.in.h:7
 msgid ""
@@ -1825,7 +1825,7 @@ msgid ""
 "fedorahosted.org/abrt/wiki/AbrtRetraceServerInsecureConnection\" "
 "&gt;(warning)&lt;/a&gt;"
 msgstr ""
-"Kirjuta \"insecure\" lubamaks ebaturvalist ühendust &lt;a href=\"https://"
+"Kirjuta \"insecure\" lubamaks ebaturvalist ??hendust &lt;a href=\"https://"
 "fedorahosted.org/abrt/wiki/AbrtRetraceServerInsecureConnection\" "
 "&gt;(warning)&lt;/a&gt;"
 
@@ -1842,7 +1842,7 @@ msgid ""
 "Scans through ~/.xsession-errors file and saves those lines which contain "
 "executable's name. The result is saved as 'xsession_errors' element."
 msgstr ""
-"Vaatab läbi ~/.xsession-errors faili ja salvestab read, mis sisaldavad "
+"Vaatab l??bi ~/.xsession-errors faili ja salvestab read, mis sisaldavad "
 "programmi nime. Tulem salvestatakse kui 'xsession_errors' element."
 
 #: ../src/plugins/https-utils.c:62
@@ -1866,13 +1866,13 @@ msgstr ""
 #: ../src/plugins/https-utils.c:97
 #, c-format
 msgid "Issuer certificate is invalid: '%s'."
-msgstr "Väljaandja sertifikaat on vigane: '%s'."
+msgstr "V??ljaandja sertifikaat on vigane: '%s'."
 
 #: ../src/plugins/https-utils.c:100
 #, c-format
 msgid "Certificate is signed by an untrusted issuer: '%s'."
 msgstr ""
-"Sertifikaat on allkirjastatud ebausaldusväärse väljaandja poolt: '%s'."
+"Sertifikaat on allkirjastatud ebausaldusv????rse v??ljaandja poolt: '%s'."
 
 #: ../src/plugins/https-utils.c:103
 #, c-format
@@ -1881,17 +1881,17 @@ msgstr "Sertifikaadi omaniku nimi '%s' ei vasta sihtkoha hosti nimele '%s'."
 
 #: ../src/plugins/https-utils.c:107
 msgid "Remote certificate has expired."
-msgstr "Võrgu sertifikaat on aegunud."
+msgstr "V??rgu sertifikaat on aegunud."
 
 #: ../src/plugins/https-utils.c:110
 #, c-format
 msgid "Certificate issuer is not recognized: '%s'."
-msgstr "Sertifikaadi väljaandja ei ole tunnustatud: '%s'."
+msgstr "Sertifikaadi v??ljaandja ei ole tunnustatud: '%s'."
 
 #: ../src/plugins/https-utils.c:113
 #, c-format
 msgid "Bad certificate received. Subject '%s', issuer '%s'."
-msgstr "Võeti vastu halb sertifikaat. Omanik '%s', väljaandja '%s'."
+msgstr "V??eti vastu halb sertifikaat. Omanik '%s', v??ljaandja '%s'."
 
 #: ../src/plugins/https-utils.c:149
 #, c-format
@@ -1911,15 +1911,15 @@ msgstr ""
 
 #: ../src/plugins/https-utils.c:210
 msgid "Failed to set socket blocking mode."
-msgstr "Sokli blokeerimise režiimi määramine nurjus."
+msgstr "Sokli blokeerimise re??iimi m????ramine nurjus."
 
 #: ../src/plugins/https-utils.c:213
 msgid "Failed to wrap TCP socket by SSL."
-msgstr "TCP sokli mähkimine SSL-i poolt nurjus."
+msgstr "TCP sokli m??hkimine SSL-i poolt nurjus."
 
 #: ../src/plugins/https-utils.c:215
 msgid "Failed to enable client handshake to SSL socket."
-msgstr "SSL sokkli kliendi käepigistuse võimaldamine nurjus."
+msgstr "SSL sokkli kliendi k??epigistuse v??imaldamine nurjus."
 
 #: ../src/plugins/https-utils.c:220
 msgid "Failed to enable SSL3."
@@ -1931,7 +1931,7 @@ msgstr ""
 
 #: ../src/plugins/https-utils.c:224
 msgid "Failed to set URL to SSL socket."
-msgstr "URL-i määramine SSL sokklile nurjus"
+msgstr "URL-i m????ramine SSL sokklile nurjus"
 
 #: ../src/plugins/https-utils.c:233
 #, c-format
@@ -1940,15 +1940,15 @@ msgstr ""
 
 #: ../src/plugins/https-utils.c:241
 msgid "Failed to set certificate hook."
-msgstr "Sertifikaadi haagi määramine nurjus."
+msgstr "Sertifikaadi haagi m????ramine nurjus."
 
 #: ../src/plugins/https-utils.c:247
 msgid "Failed to set handshake callback."
-msgstr "Käepigistuse tagasihelistamise määramine nurjus."
+msgstr "K??epigistuse tagasihelistamise m????ramine nurjus."
 
 #: ../src/plugins/https-utils.c:251
 msgid "Failed to reset handshake."
-msgstr "Käepigistuse lähtestamine nurjus."
+msgstr "K??epigistuse l??htestamine nurjus."
 
 #: ../src/plugins/https-utils.c:258
 #, c-format
@@ -1967,7 +1967,7 @@ msgstr ""
 #: ../src/plugins/https-utils.c:369
 #, c-format
 msgid "Receiving of data failed: NSS error %d."
-msgstr "Andmete vastuvõtmine nurjus: NSS viga %d."
+msgstr "Andmete vastuv??tmine nurjus: NSS viga %d."
 
 #: ../src/plugins/https-utils.c:398
 msgid "Malformed chunked response."
@@ -2022,11 +2022,11 @@ msgstr "Vigade id-e nimekiri"
 
 #: ../src/plugins/bodhi.c:469
 msgid "Specify a bodhi server url"
-msgstr "Määra bodhi serveri url"
+msgstr "M????ra bodhi serveri url"
 
 #: ../src/plugins/bodhi.c:470
 msgid "Specify a release"
-msgstr "Määra väljalase"
+msgstr "M????ra v??ljalase"
 
 #: ../src/plugins/bodhi.c:475
 msgid ""
@@ -2046,7 +2046,7 @@ msgstr "Sellele pakile uuendusi ei leitud"
 #. strbuf_free(q);
 #: ../src/plugins/bodhi.c:577
 msgid "Local version of the package is newer than available updates"
-msgstr "Selle paki kohalik versioon on uuem kui saadavaloleval värskendusel"
+msgstr "Selle paki kohalik versioon on uuem kui saadavaloleval v??rskendusel"
 
 #: ../src/plugins/bodhi.c:594
 #, c-format
@@ -2089,7 +2089,7 @@ msgstr "Eemalda probleemide kataloog KATALOOG"
 
 #: ../src/cli/abrt-cli.c:136
 msgid "Analyze and report problem data in DIR"
-msgstr "Analüüsi ja teavita probleemide andmed KATALOOGis"
+msgstr "Anal????si ja teavita probleemide andmed KATALOOGis"
 
 #: ../src/cli/abrt-cli.c:137
 msgid "Print information about DIR"
@@ -2105,7 +2105,7 @@ msgstr ""
 
 #: ../src/cli/abrt-cli.c:162
 msgid "See 'abrt-cli COMMAND --help' for more information"
-msgstr "Vaata 'abrt-cli KÄSK --help' info saamiseks"
+msgstr "Vaata 'abrt-cli K??SK --help' info saamiseks"
 
 #: ../src/cli/list.c:127
 msgid "& list [options]"
@@ -2390,7 +2390,7 @@ msgstr ""
 
 #: ../src/plugins/analyze_VMcore.xml.in.h:1
 msgid "Analyze VM core"
-msgstr "Analüüsi VM tuuma"
+msgstr "Anal????si VM tuuma"
 
 #: ../src/plugins/analyze_VMcore.xml.in.h:2
 msgid ""
@@ -2402,7 +2402,7 @@ msgid ""
 "Needs to install kernel debuginfo packages, which might take significant "
 "time, and take up disk space."
 msgstr ""
-"Peab paigaldama tuuma silumisinfo pakid, mis võib võtta märkmisväärselt aega "
+"Peab paigaldama tuuma silumisinfo pakid, mis v??ib v??tta m??rkmisv????rselt aega "
 "ja kettaruumi."
 
 #: ../src/plugins/collect_GConf.xml.in.h:1
@@ -2418,12 +2418,12 @@ msgid ""
 "Runs gconftool-2 --recursive-list /apps/executable and saves it as "
 "'gconf_subtree' element."
 msgstr ""
-"Käivitab gconftool-2 --recursive-list /apps/executable ja salvestab ta kui "
+"K??ivitab gconftool-2 --recursive-list /apps/executable ja salvestab ta kui "
 "'gconf_subtree' elemendi.."
 
 #: ../src/plugins/collect_vimrc_system.xml.in.h:1
 msgid "Collect system-wide vim configuration files"
-msgstr "Kogu vim-i süsteemsed seadete failid"
+msgstr "Kogu vim-i s??steemsed seadete failid"
 
 #: ../src/plugins/collect_vimrc_system.xml.in.h:2
 msgid "Save /etc/vimrc and /etc/gvimrc"

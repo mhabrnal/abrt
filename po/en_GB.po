@@ -5,7 +5,7 @@
 # Translators:
 # Bruce Cowan <bruce@bcowan.me.uk>, 2011-2012,2014
 # Bruce Cowan <l10n@bcowan.fastmail.co.uk>, 2011
-# Jiří Moskovčák <jmoskovc@redhat.com>, 2011
+# Ji???? Moskov????k <jmoskovc@redhat.com>, 2011
 # Robert Readman <robert_readman@hotmail.com>, 2013
 # Roy Jamison <xteejyx@googlemail.com>, 2013
 msgid ""
@@ -69,7 +69,7 @@ msgstr ""
 #: ../src/applet/applet.c:699
 #, c-format
 msgid ""
-"We’re sorry, it looks like %s crashed. The problem will be reported when the "
+"We???re sorry, it looks like %s crashed. The problem will be reported when the "
 "internet is available."
 msgstr ""
 

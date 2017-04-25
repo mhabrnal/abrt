@@ -4,7 +4,7 @@
 # 
 # Translators:
 # Arnes  <arnes99@gmail.com>, 2011
-# Jiří Moskovčák <jmoskovc@redhat.com>, 2011
+# Ji???? Moskov????k <jmoskovc@redhat.com>, 2011
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -51,7 +51,7 @@ msgstr ""
 
 #: ../src/applet/applet.c:616
 msgid "Report"
-msgstr "Izvještaj"
+msgstr "Izvje??taj"
 
 #: ../src/applet/applet.c:625
 msgid "Restart"
@@ -67,7 +67,7 @@ msgstr ""
 #: ../src/applet/applet.c:699
 #, c-format
 msgid ""
-"We’re sorry, it looks like %s crashed. The problem will be reported when the "
+"We???re sorry, it looks like %s crashed. The problem will be reported when the "
 "internet is available."
 msgstr ""
 
@@ -313,7 +313,7 @@ msgstr ""
 #: ../src/plugins/abrt-dump-journal-xorg.c:188
 #: ../src/plugins/abrt-dump-xorg.c:52
 msgid "Log to syslog"
-msgstr "Zapiši u syslog"
+msgstr "Zapi??i u syslog"
 
 #: ../src/daemon/abrt-server.c:860 ../src/daemon/abrtd.c:460
 msgid "Add program names to log"
@@ -398,7 +398,7 @@ msgstr "Nemoj deamonizirati"
 
 #: ../src/daemon/abrtd.c:458
 msgid "Log to syslog even with -d"
-msgstr "Zapiši u syslog čak i sa -d"
+msgstr "Zapi??i u syslog ??ak i sa -d"
 
 #: ../src/daemon/abrt-handle-event.c:394
 msgid "& [-v -i -n INCREMENT] -e|--event EVENT DIR..."
@@ -846,7 +846,7 @@ msgstr ""
 
 #: ../src/plugins/abrt-action-install-debuginfo.in:52
 msgid "Exiting on user command"
-msgstr "Izlazim na korisničku naredbu"
+msgstr "Izlazim na korisni??ku naredbu"
 
 #: ../src/plugins/abrt-action-install-debuginfo.in:89
 #, c-format
@@ -1145,7 +1145,7 @@ msgstr ""
 #: ../src/plugins/abrt-dump-oops.c:98
 #: ../src/plugins/abrt-dump-journal-oops.c:220
 msgid "Print found oopses on standard output"
-msgstr "Ispiši pronađene oopse na standardnom izlazu"
+msgstr "Ispi??i prona??ene oopse na standardnom izlazu"
 
 #. oopses don't contain any sensitive info, and even
 #. * the old koops app was showing the oopses to all users
@@ -1645,7 +1645,7 @@ msgstr ""
 
 #: ../src/plugins/abrt-retrace-client.c:1217
 msgid "log to syslog"
-msgstr "zapiši u syslog"
+msgstr "zapi??i u syslog"
 
 #: ../src/plugins/abrt-retrace-client.c:1219
 msgid "allow insecure connection to retrace server"
@@ -1733,12 +1733,12 @@ msgstr ""
 
 #: ../src/plugins/analyze_LocalGDB.xml.in.h:1
 msgid "Local GNU Debugger"
-msgstr "Lokalni GNU ispravljač greški"
+msgstr "Lokalni GNU ispravlja?? gre??ki"
 
 #: ../src/plugins/analyze_LocalGDB.xml.in.h:2
 msgid "Download debuginfo packages and generate backtrace locally using GDB"
 msgstr ""
-"Preuzmi debuginfo pakete i stvori funkcijski trag lokalno koristeći GDB"
+"Preuzmi debuginfo pakete i stvori funkcijski trag lokalno koriste??i GDB"
 
 #: ../src/plugins/analyze_LocalGDB.xml.in.h:3
 msgid ""
@@ -1747,12 +1747,12 @@ msgid ""
 "to remote machines."
 msgstr ""
 "Treba da preuzme debuginfo pakete koji mogu zahtjevati dosta vremena i "
-"zauzeti prostor na tvrdom disku. Međutim, za razliku od RetraceServer, "
-"nešalje ispis jezgre na udaljene mašine."
+"zauzeti prostor na tvrdom disku. Me??utim, za razliku od RetraceServer, "
+"ne??alje ispis jezgre na udaljene ma??ine."
 
 #: ../src/plugins/analyze_RetraceServer.xml.in.h:1
 msgid "Send core dump to remote retrace server for analysis"
-msgstr "Pošalji ispis jezgre na udaljeni retrace server za analizu"
+msgstr "Po??alji ispis jezgre na udaljeni retrace server za analizu"
 
 #: ../src/plugins/analyze_RetraceServer.xml.in.h:2
 msgid ""
@@ -1762,11 +1762,11 @@ msgid ""
 "you upload contains all the data from the crashed program, including your "
 "private data, if any."
 msgstr ""
-"Prebacuje ispis jezgre na server koji stvara funkcijski trag i vraća ga. Za: "
+"Prebacuje ispis jezgre na server koji stvara funkcijski trag i vra??a ga. Za: "
 "nema potrebe za debuginfo preuzimanjima. Retrace serverova baza podataka  "
-"debuginfo-a je potpunija. Retrace server može stvarati bolje funkcijske "
-"tragove. Protiv: ispis jezgre koji prebacite sadrži sve podatke iz srušenog "
-"programa uključujući Vaše privatne podatke (ako postoje)."
+"debuginfo-a je potpunija. Retrace server mo??e stvarati bolje funkcijske "
+"tragove. Protiv: ispis jezgre koji prebacite sadr??i sve podatke iz sru??enog "
+"programa uklju??uju??i Va??e privatne podatke (ako postoje)."
 
 #: ../src/plugins/analyze_RetraceServer.xml.in.h:3
 msgid "Retrace server URL"

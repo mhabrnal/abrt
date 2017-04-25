@@ -48,7 +48,7 @@ msgstr ""
 
 #: ../src/applet/applet.c:616
 msgid "Report"
-msgstr "Гузориш"
+msgstr "??????????????"
 
 #: ../src/applet/applet.c:625
 msgid "Restart"
@@ -64,7 +64,7 @@ msgstr ""
 #: ../src/applet/applet.c:699
 #, c-format
 msgid ""
-"We’re sorry, it looks like %s crashed. The problem will be reported when the "
+"We???re sorry, it looks like %s crashed. The problem will be reported when the "
 "internet is available."
 msgstr ""
 
@@ -278,7 +278,7 @@ msgstr ""
 
 #: ../src/daemon/abrt-action-save-package-data.c:454
 msgid "Configuration file"
-msgstr "Файли танзимотӣ"
+msgstr "?????????? ??????????????????"
 
 #: ../src/daemon/abrt-action-save-package-data.c:455
 msgid "Use this directory as RPM root"
@@ -297,7 +297,7 @@ msgstr ""
 #: ../src/daemon/abrt-server.c:847 ../src/dbus/abrt-dbus.c:894
 #: ../src/dbus/abrt-configuration.c:1002 ../src/daemon/abrtd.c:444
 msgid "& [options]"
-msgstr "& [имконот]"
+msgstr "& [??????????????]"
 
 #: ../src/daemon/abrt-server.c:858
 msgid "Use NUM as client uid"
@@ -314,7 +314,7 @@ msgstr ""
 
 #: ../src/daemon/abrt-server.c:860 ../src/daemon/abrtd.c:460
 msgid "Add program names to log"
-msgstr "Номҳои барномаҳоро ба журнал илова кунед"
+msgstr "???????????? ?????????????????????? ???? ???????????? ?????????? ??????????"
 
 #: ../src/dbus/abrt-dbus.c:132
 msgid "Unknown error"

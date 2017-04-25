@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Jiří Moskovčák <jmoskovc@redhat.com>, 2011
+# Ji???? Moskov????k <jmoskovc@redhat.com>, 2011
 # Kris Thomsen <lakristho@gmail.com>, 2011-2012
 msgid ""
 msgstr ""
@@ -50,7 +50,7 @@ msgstr ""
 
 #: ../src/applet/applet.c:616
 msgid "Report"
-msgstr "Rapportér"
+msgstr "Rapport??r"
 
 #: ../src/applet/applet.c:625
 msgid "Restart"
@@ -66,7 +66,7 @@ msgstr ""
 #: ../src/applet/applet.c:699
 #, c-format
 msgid ""
-"We’re sorry, it looks like %s crashed. The problem will be reported when the "
+"We???re sorry, it looks like %s crashed. The problem will be reported when the "
 "internet is available."
 msgstr ""
 
@@ -132,7 +132,7 @@ msgid ""
 msgstr ""
 "& [-v] [MAPPE]...\n"
 "\n"
-"Panelprogram som giver brugeren besked, når nye problemet er fundet af "
+"Panelprogram som giver brugeren besked, n??r nye problemet er fundet af "
 "ABRT\n"
 
 #: ../src/configuration-gui/abrt-config-widget.c:483
@@ -320,7 +320,7 @@ msgstr "Skriv til syslog"
 
 #: ../src/daemon/abrt-server.c:860 ../src/daemon/abrtd.c:460
 msgid "Add program names to log"
-msgstr "Føj programnavne til log"
+msgstr "F??j programnavne til log"
 
 #: ../src/dbus/abrt-dbus.c:132
 msgid "Unknown error"
@@ -397,7 +397,7 @@ msgstr ""
 
 #: ../src/daemon/abrtd.c:457
 msgid "Do not daemonize"
-msgstr "Dæmonisér ikke"
+msgstr "D??monis??r ikke"
 
 #: ../src/daemon/abrtd.c:458
 msgid "Log to syslog even with -d"
@@ -811,11 +811,11 @@ msgstr ""
 
 #: ../src/plugins/abrt-action-generate-backtrace.c:56
 msgid "Additional debuginfo directories"
-msgstr "Yderligere mapper til fejlsøgningsinfo"
+msgstr "Yderligere mapper til fejls??gningsinfo"
 
 #: ../src/plugins/abrt-action-generate-backtrace.c:57
 msgid "Kill gdb if it runs for more than NUM seconds"
-msgstr "Dræb gdb hvis det kører mere end NUM sekunder"
+msgstr "Dr??b gdb hvis det k??rer mere end NUM sekunder"
 
 #. Don't be completely silent. gdb run takes a few seconds,
 #. * it is useful to let user know it (maybe) worked.
@@ -852,7 +852,7 @@ msgstr ""
 
 #: ../src/plugins/abrt-action-install-debuginfo.in:52
 msgid "Exiting on user command"
-msgstr "Afslutter på brugerkommando"
+msgstr "Afslutter p?? brugerkommando"
 
 #: ../src/plugins/abrt-action-install-debuginfo.in:89
 #, c-format
@@ -886,7 +886,7 @@ msgstr ""
 
 #: ../src/plugins/abrt-action-install-debuginfo.in:176
 msgid "Can't open {0}: {1}"
-msgstr "Kan ikke åbne {0}: {1}"
+msgstr "Kan ikke ??bne {0}: {1}"
 
 #: ../src/plugins/abrt-action-install-debuginfo.in:213
 msgid "Coredump references {0} debuginfo files, {1} of them are not installed"
@@ -1459,7 +1459,7 @@ msgid ""
 "Retrace server can not be used, because the crash is too large. Try local "
 "retracing."
 msgstr ""
-"Sporingsserveren kan ikke bruges fordi nedbruddet er for stort. Prøv lokal "
+"Sporingsserveren kan ikke bruges fordi nedbruddet er for stort. Pr??v lokal "
 "sporing."
 
 #. Hopefully, by this time child emitted more meaningful
@@ -1475,7 +1475,7 @@ msgstr ""
 #: ../src/plugins/abrt-retrace-client.c:168
 #, c-format
 msgid "Can't execute '%s'"
-msgstr "Kan ikke udføre \"%s\""
+msgstr "Kan ikke udf??re \"%s\""
 
 #: ../src/plugins/abrt-retrace-client.c:211
 #: ../src/plugins/abrt-retrace-client.c:398
@@ -1483,7 +1483,7 @@ msgstr "Kan ikke udføre \"%s\""
 #: ../src/plugins/abrt-retrace-client.c:842
 #, c-format
 msgid "Failed to send HTTP header of length %d: NSS error %d"
-msgstr "Kunne ikke sende HTTP-header af længde %d: NSS-fejl %d"
+msgstr "Kunne ikke sende HTTP-header af l??ngde %d: NSS-fejl %d"
 
 #: ../src/plugins/abrt-retrace-client.c:223
 #: ../src/plugins/abrt-retrace-client.c:412
@@ -1516,15 +1516,15 @@ msgstr ""
 
 #: ../src/plugins/abrt-retrace-client.c:444
 msgid "Querying server settings"
-msgstr "Forespørger serverindstillinger"
+msgstr "Foresp??rger serverindstillinger"
 
 #: ../src/plugins/abrt-retrace-client.c:452
 msgid "The server is fully occupied. Try again later."
-msgstr "Serveren er travlt optaget. Prøv igen senere."
+msgstr "Serveren er travlt optaget. Pr??v igen senere."
 
 #: ../src/plugins/abrt-retrace-client.c:453
 msgid "The server denied your request."
-msgstr "Serveren afviste din forespørgsel."
+msgstr "Serveren afviste din foresp??rgsel."
 
 #: ../src/plugins/abrt-retrace-client.c:484
 #: ../src/plugins/abrt-retrace-client.c:500
@@ -1541,16 +1541,16 @@ msgstr ""
 
 #: ../src/plugins/abrt-retrace-client.c:540
 msgid "The server does not support xz-compressed tarballs."
-msgstr "Serveren understøtter ikke xz-komprimerede-tarballs."
+msgstr "Serveren underst??tter ikke xz-komprimerede-tarballs."
 
 #: ../src/plugins/abrt-retrace-client.c:577
 #, c-format
 msgid "The release '%s' is not supported by the Retrace server."
-msgstr "Udgivelsen \"%s\" er ikke understøttet af sporingsserveren."
+msgstr "Udgivelsen \"%s\" er ikke underst??ttet af sporingsserveren."
 
 #: ../src/plugins/abrt-retrace-client.c:581
 msgid "The server is not able to handle your request."
-msgstr "Serveren er ikke i stand til at håndtere din forespørgsel."
+msgstr "Serveren er ikke i stand til at h??ndtere din foresp??rgsel."
 
 #: ../src/plugins/abrt-retrace-client.c:600
 msgid "Unknown package sent to Retrace server."
@@ -1588,7 +1588,7 @@ msgstr "Oploader %d%%\n"
 
 #: ../src/plugins/abrt-retrace-client.c:721
 msgid "Failed to read from a pipe"
-msgstr "Kunne ikke læse fra rør"
+msgstr "Kunne ikke l??se fra r??r"
 
 #: ../src/plugins/abrt-retrace-client.c:734
 #, c-format
@@ -1649,14 +1649,14 @@ msgstr "Opgavestatus: %s\n"
 #: ../src/plugins/abrt-retrace-client.c:1053
 #, c-format
 msgid "Failed to send HTTP header of length %d: NSS error %d."
-msgstr "Kunne ikke sende HTTP-header med længden %d: NSS-fejl %d."
+msgstr "Kunne ikke sende HTTP-header med l??ngden %d: NSS-fejl %d."
 
 #: ../src/plugins/abrt-retrace-client.c:1170
 msgid ""
 "Retrace failed. Try again later and if the problem persists report this "
 "issue please."
 msgstr ""
-"Sporing mislykkedes. Prøv igen senere og hvis problemet fortsætter, må du "
+"Sporing mislykkedes. Pr??v igen senere og hvis problemet forts??tter, m?? du "
 "meget gerne rapportere dette problem."
 
 #: ../src/plugins/abrt-retrace-client.c:1217
@@ -1683,7 +1683,7 @@ msgstr "sporingsserver-port"
 
 #: ../src/plugins/abrt-retrace-client.c:1228
 msgid "(debug) show received HTTP headers"
-msgstr "(fejlsøg) vis modtagne HTTP-headers"
+msgstr "(fejls??g) vis modtagne HTTP-headers"
 
 #: ../src/plugins/abrt-retrace-client.c:1229
 msgid "For create and batch operations"
@@ -1695,11 +1695,11 @@ msgstr ""
 
 #: ../src/plugins/abrt-retrace-client.c:1233
 msgid "read data from coredump"
-msgstr "læs data fra kernedump"
+msgstr "l??s data fra kernedump"
 
 #: ../src/plugins/abrt-retrace-client.c:1235
 msgid "Delay for polling operations"
-msgstr "Forsinkelse på målingsoperationer"
+msgstr "Forsinkelse p?? m??lingsoperationer"
 
 #: ../src/plugins/abrt-retrace-client.c:1237
 msgid "(debug) do not delete temporary archive created from dump dir in "
@@ -1711,11 +1711,11 @@ msgstr "Til status-, backtrace- og log-operationer"
 
 #: ../src/plugins/abrt-retrace-client.c:1241
 msgid "id of your task on server"
-msgstr "id til din opgave på server"
+msgstr "id til din opgave p?? server"
 
 #: ../src/plugins/abrt-retrace-client.c:1243
 msgid "password of your task on server"
-msgstr "adgangskode til din opgave på server"
+msgstr "adgangskode til din opgave p?? server"
 
 #: ../src/plugins/abrt-retrace-client.c:1247
 msgid ""
@@ -1733,14 +1733,14 @@ msgstr ""
 #: ../src/plugins/abrt-retrace-client.c:1320
 #: ../src/plugins/abrt-retrace-client.c:1328
 msgid "Task id is needed."
-msgstr "Opgave-id er påkrævet."
+msgstr "Opgave-id er p??kr??vet."
 
 #: ../src/plugins/abrt-retrace-client.c:1306
 #: ../src/plugins/abrt-retrace-client.c:1314
 #: ../src/plugins/abrt-retrace-client.c:1322
 #: ../src/plugins/abrt-retrace-client.c:1330
 msgid "Task password is needed."
-msgstr "Opgaveadgangskode er påkrævet."
+msgstr "Opgaveadgangskode er p??kr??vet."
 
 #: ../src/plugins/abrt-retrace-client.c:1334
 #, c-format
@@ -1749,11 +1749,11 @@ msgstr "Ukendt operation: %s."
 
 #: ../src/plugins/analyze_LocalGDB.xml.in.h:1
 msgid "Local GNU Debugger"
-msgstr "Lokal GNU-fejlsøger"
+msgstr "Lokal GNU-fejls??ger"
 
 #: ../src/plugins/analyze_LocalGDB.xml.in.h:2
 msgid "Download debuginfo packages and generate backtrace locally using GDB"
-msgstr "Hent debuginfo-pakker og generér backtrace lokalt med GDB"
+msgstr "Hent debuginfo-pakker og gener??r backtrace lokalt med GDB"
 
 #: ../src/plugins/analyze_LocalGDB.xml.in.h:3
 msgid ""
@@ -1777,8 +1777,8 @@ msgid ""
 "private data, if any."
 msgstr ""
 "Oploader kernedump til en server, som genererer backtracen og returnerer den."
-" Fordele: ingen grund til at hente fejlsøgningsinfo. Retraceserverens "
-"database over fejlsøgningsinformationer er mere komplet. Retraceserveren "
+" Fordele: ingen grund til at hente fejls??gningsinfo. Retraceserverens "
+"database over fejls??gningsinformationer er mere komplet. Retraceserveren "
 "genererer muligvis bedre backtraces. Ulemper: kernedumpninger du oploader "
 "indeholder alle data fra det nedbrudte program, inklusiv eventuelle private "
 "data."
@@ -1789,7 +1789,7 @@ msgstr "Retrace-server-URL"
 
 #: ../src/plugins/analyze_RetraceServer.xml.in.h:4
 msgid "Address of the retrace server"
-msgstr "Adresse på retrace-serveren"
+msgstr "Adresse p?? retrace-serveren"
 
 #: ../src/plugins/analyze_RetraceServer.xml.in.h:5
 msgid "Insecure"
@@ -1823,7 +1823,7 @@ msgid ""
 "executable's name. The result is saved as 'xsession_errors' element."
 msgstr ""
 "Skanner gennem filen ~/.xsession-errors og gemmer de linjer som indeholder "
-"kørbares navne. Resultatet bliver gemt som \"xsession_errors\"-element."
+"k??rbares navne. Resultatet bliver gemt som \"xsession_errors\"-element."
 
 #: ../src/plugins/https-utils.c:62
 msgid "An error occurred on the server side."
@@ -1851,16 +1851,16 @@ msgstr "Udstedercertifikat er ugyldig: \"%s\"."
 #: ../src/plugins/https-utils.c:100
 #, c-format
 msgid "Certificate is signed by an untrusted issuer: '%s'."
-msgstr "Certifikat er signeret af en utroværdig udsteder: \"%s\"."
+msgstr "Certifikat er signeret af en utrov??rdig udsteder: \"%s\"."
 
 #: ../src/plugins/https-utils.c:103
 #, c-format
 msgid "Certificate subject name '%s' does not match target host name '%s'."
-msgstr "Certifikatemnenavn \"%s\" stemmer ikke overens med målværtsnavn \"%s\"."
+msgstr "Certifikatemnenavn \"%s\" stemmer ikke overens med m??lv??rtsnavn \"%s\"."
 
 #: ../src/plugins/https-utils.c:107
 msgid "Remote certificate has expired."
-msgstr "Fjerncertifikat er udløbet."
+msgstr "Fjerncertifikat er udl??bet."
 
 #: ../src/plugins/https-utils.c:110
 #, c-format
@@ -1870,7 +1870,7 @@ msgstr "Certifikatudsteder er ikke genkendt: \"%s\"."
 #: ../src/plugins/https-utils.c:113
 #, c-format
 msgid "Bad certificate received. Subject '%s', issuer '%s'."
-msgstr "Dårligt certifikat modtaget. Emne \"%s\", udsteder \"%s\"."
+msgstr "D??rligt certifikat modtaget. Emne \"%s\", udsteder \"%s\"."
 
 #: ../src/plugins/https-utils.c:149
 #, c-format
@@ -2014,7 +2014,7 @@ msgstr ""
 
 #: ../src/plugins/bodhi.c:542
 msgid "Searching for updates"
-msgstr "Søger efter opdateringer"
+msgstr "S??ger efter opdateringer"
 
 #: ../src/plugins/bodhi.c:548
 msgid "No updates for this package found"
@@ -2023,7 +2023,7 @@ msgstr "Ingen opdateringer fundet for denne pakke"
 #. strbuf_free(q);
 #: ../src/plugins/bodhi.c:577
 msgid "Local version of the package is newer than available updates"
-msgstr "Lokal version af pakken er nyere end tilgængelige opdateringer"
+msgstr "Lokal version af pakken er nyere end tilg??ngelige opdateringer"
 
 #: ../src/plugins/bodhi.c:594
 #, c-format
@@ -2367,12 +2367,12 @@ msgstr ""
 
 #: ../src/plugins/analyze_VMcore.xml.in.h:1
 msgid "Analyze VM core"
-msgstr "Analysér VM-kerne"
+msgstr "Analys??r VM-kerne"
 
 #: ../src/plugins/analyze_VMcore.xml.in.h:2
 msgid ""
 "Install kernel debuginfo packages, generate kernel log and oops message"
-msgstr "Installér kerne-debuginfo pakkerne, generér kernelog og oops-besked"
+msgstr "Install??r kerne-debuginfo pakkerne, gener??r kernelog og oops-besked"
 
 #: ../src/plugins/analyze_VMcore.xml.in.h:3
 msgid ""
@@ -2395,7 +2395,7 @@ msgid ""
 "Runs gconftool-2 --recursive-list /apps/executable and saves it as "
 "'gconf_subtree' element."
 msgstr ""
-"Kører gconftool-2 --recursive-list /apps/executable og gemmer det som "
+"K??rer gconftool-2 --recursive-list /apps/executable og gemmer det som "
 "\"gconf_subtree\"-element."
 
 #: ../src/plugins/collect_vimrc_system.xml.in.h:1
@@ -2411,7 +2411,7 @@ msgid ""
 "Checks if there are vimrc and gvimrc files in /etc and saves them as "
 "system_vimrc and system_gvimrc, respectively."
 msgstr ""
-"Kontrollér om der er en vimrc og gvimrc i /etc og gem dem som system_vimrc "
+"Kontroll??r om der er en vimrc og gvimrc i /etc og gem dem som system_vimrc "
 "system_gvimrc."
 
 #: ../src/plugins/collect_vimrc_user.xml.in.h:1
@@ -2427,7 +2427,7 @@ msgid ""
 "Checks if there are .vimrc and .gvimrc in your home directory and saves them "
 "as user_vimrc and user_gvimrc, respectively."
 msgstr ""
-"Kontrollér om der er en .vimrc og .gvimrc i din hjemmemappe og gem dem som "
+"Kontroll??r om der er en .vimrc og .gvimrc i din hjemmemappe og gem dem som "
 "user_vimrc og user_gvimrc."
 
 #: ../src/plugins/post_report.xml.in.h:1

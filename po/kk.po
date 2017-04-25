@@ -16,7 +16,7 @@ msgstr ""
 
 #: ../src/applet/abrt-applet.desktop.in.h:1
 msgid "Problem Reporting"
-msgstr "Мәселелерді хабарлау"
+msgstr "?????????????????????? ????????????????"
 
 #: ../src/applet/abrt-applet.desktop.in.h:2
 msgid "View and report application crashes"
@@ -39,15 +39,15 @@ msgstr ""
 
 #: ../src/applet/applet.c:598
 msgid "Oops!"
-msgstr "Әттеген-ай!"
+msgstr "??????????????-????!"
 
 #: ../src/applet/applet.c:616
 msgid "Report"
-msgstr "Шағым жіберу"
+msgstr "?????????? ????????????"
 
 #: ../src/applet/applet.c:625
 msgid "Restart"
-msgstr "Қайта қосу"
+msgstr "?????????? ????????"
 
 #: ../src/applet/applet.c:694
 #, c-format
@@ -59,7 +59,7 @@ msgstr ""
 #: ../src/applet/applet.c:699
 #, c-format
 msgid ""
-"We’re sorry, it looks like %s crashed. The problem will be reported when the "
+"We???re sorry, it looks like %s crashed. The problem will be reported when the "
 "internet is available."
 msgstr ""
 
@@ -213,11 +213,11 @@ msgstr ""
 
 #: ../src/configuration-gui/abrt-config-widget.glade.h:14
 msgid "Always"
-msgstr "Әрқашан"
+msgstr "??????????????"
 
 #: ../src/configuration-gui/abrt-config-widget.glade.h:15
 msgid "Never"
-msgstr "Ешқашан"
+msgstr "??????????????"
 
 #: ../src/configuration-gui/abrt-config-widget.glade.h:16
 msgid "Ask"
@@ -229,7 +229,7 @@ msgstr ""
 
 #: ../src/configuration-gui/system-config-abrt.c:79
 msgid "_Close"
-msgstr "_Жабу"
+msgstr "_????????"
 
 #: ../src/configuration-gui/system-config-abrt.c:88
 msgid "_Defaults"
@@ -246,11 +246,11 @@ msgstr ""
 
 #: ../src/configuration-gui/main.c:105
 msgid "About"
-msgstr "Осы туралы"
+msgstr "?????? ????????????"
 
 #: ../src/configuration-gui/main.c:106
 msgid "Quit"
-msgstr "Шығу"
+msgstr "????????"
 
 #: ../src/daemon/abrt-action-save-package-data.c:440
 msgid ""
@@ -834,7 +834,7 @@ msgstr ""
 #: ../src/plugins/abrt-action-generate-core-backtrace.c:95
 #, c-format
 msgid "Error: %s"
-msgstr "Қате: %s"
+msgstr "????????: %s"
 
 #: ../src/plugins/abrt-action-install-debuginfo.in:52
 msgid "Exiting on user command"
@@ -2229,7 +2229,7 @@ msgstr ""
 
 #: ../src/cli-ng/abrtcli/cli.py:186
 msgid "Removed"
-msgstr "Өшірілген"
+msgstr "??????????????????"
 
 #: ../src/cli-ng/abrtcli/cli.py:188
 msgid "Remove problem"

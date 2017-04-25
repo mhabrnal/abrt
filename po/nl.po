@@ -4,7 +4,7 @@
 # 
 # Translators:
 # Geert Warrink <geert.warrink@onsnet.nu>, 2011-2014
-# Jiří Moskovčák <jmoskovc@redhat.com>, 2011
+# Ji???? Moskov????k <jmoskovc@redhat.com>, 2011
 # Richard E. van der Luit <nippur@fedoraproject.org>, 2012
 # Geert Warrink <geert.warrink@onsnet.nu>, 2014. #zanata
 # Geert Warrink <geert.warrink@onsnet.nu>, 2015. #zanata
@@ -73,7 +73,7 @@ msgstr ""
 #: ../src/applet/applet.c:699
 #, c-format
 msgid ""
-"We’re sorry, it looks like %s crashed. The problem will be reported when the "
+"We???re sorry, it looks like %s crashed. The problem will be reported when the "
 "internet is available."
 msgstr ""
 "Sorry, het ziet er naar uit dat %s gecrasht is. Het probleem zal "
@@ -256,7 +256,7 @@ msgstr ""
 
 #: ../src/configuration-gui/abrt-config-widget.glade.h:11
 msgid "Request private ticket for sensitive information"
-msgstr "Vraag privé ticket aan voor gevoelige informatie"
+msgstr "Vraag priv?? ticket aan voor gevoelige informatie"
 
 #: ../src/configuration-gui/abrt-config-widget.glade.h:12
 msgid "Notify incomplete problems"
@@ -362,7 +362,7 @@ msgstr "& [opties]"
 
 #: ../src/daemon/abrt-server.c:858
 msgid "Use NUM as client uid"
-msgstr "Gebruik NUM as cliënt uid"
+msgstr "Gebruik NUM as cli??nt uid"
 
 #: ../src/daemon/abrt-server.c:859 ../src/daemon/abrt-upload-watch.c:280
 #: ../src/plugins/abrt-watch-log.c:153 ../src/plugins/abrt-dump-oops.c:97
@@ -584,7 +584,7 @@ msgstr "Automatisch rapporteren met HTTP authenticatie"
 
 #: ../src/daemon/abrt-auto-reporting.c:382
 msgid "SSL Client Authenticated auto reporting"
-msgstr "Automatisch rapporteren met SSL Cliënt authenticatie"
+msgstr "Automatisch rapporteren met SSL Cli??nt authenticatie"
 
 #: ../src/daemon/abrt-auto-reporting.c:384
 msgid "anonymous auto reporting"
@@ -604,10 +604,10 @@ msgstr ""
 "Gebruik: %s [-vd] ABRT_SPOOL_MAP UPLOAD_MAP BESTANDSNAAM\n"
 "\n"
 "   -v             - Breedsprakig\n"
-"   -d             - Verwijder het geüploade archief\n"
-"   ABRT_SPOOL_MAP - Map waarin geldige geüploade archieven uitgepakt worden\n"
-"   UPLOAD_MAP     - Map waarin geüploade archieven opgeslagen worden\n"
-"   BESTANDSNAAM   - Naam van geüploade archief\n"
+"   -d             - Verwijder het ge??ploade archief\n"
+"   ABRT_SPOOL_MAP - Map waarin geldige ge??ploade archieven uitgepakt worden\n"
+"   UPLOAD_MAP     - Map waarin ge??ploade archieven opgeslagen worden\n"
+"   BESTANDSNAAM   - Naam van ge??ploade archief\n"
 
 #: ../src/daemon/abrt-handle-upload.in:171
 #: ../src/daemon/abrt-handle-upload.in:174
@@ -652,7 +652,7 @@ msgstr "Kan '{0}' niet verplaatsen naar '{1}'"
 
 #: ../src/daemon/abrt-handle-upload.in:226
 msgid "Can't copy '{0}' to '{1}'"
-msgstr "Kan '{0}' niet kopiëren naar '{1}'"
+msgstr "Kan '{0}' niet kopi??ren naar '{1}'"
 
 #: ../src/daemon/abrt-handle-upload.in:230
 msgid "Verification error on '{0}'"
@@ -852,7 +852,7 @@ msgstr "Bestand {0} bestaat niet"
 
 #: ../src/plugins/abrt-action-analyze-vmcore.in:82
 msgid "Extracting the oops text from core"
-msgstr "De oops tekst wordt geëxtraheerd uit de core "
+msgstr "De oops tekst wordt ge??xtraheerd uit de core "
 
 #: ../src/plugins/abrt-action-analyze-vmcore.in:87
 msgid "Can't process {0}:\n"
@@ -1014,7 +1014,7 @@ msgstr ""
 "    --tmpdir    Standaard: @LARGE_DATA_TMP_DIR@/abrt-tmp-debuginfo-"
 "RANDOM_SUFFIX\n"
 "    --cache     Dubbele punt gescheiden lijst met mappen. De eerste\n"
-"                wordt gebruikt voor opslaan van geïnstalleerde debuginfos.\n"
+"                wordt gebruikt voor opslaan van ge??nstalleerde debuginfos.\n"
 "                Standaard: /var/cache/abrt-di\n"
 "    --size_mb   Standaard: 4096\n"
 "    --pkgmgr   Standaard: PackageManager uit CCpp.conf of 'dnf'\n"
@@ -1030,11 +1030,11 @@ msgstr "Kan niet openen {0}: {1}"
 msgid "Coredump references {0} debuginfo files, {1} of them are not installed"
 msgstr ""
 "Coredump refereert naar {0} debuginfo-bestanden, {1} ervan zijn niet "
-"geïnstalleerd"
+"ge??nstalleerd"
 
 #: ../src/plugins/abrt-action-install-debuginfo.in:216
 msgid "{0} of debuginfo files are not installed"
-msgstr "{0} debuginfo-bestanden zijn niet geïnstalleerd"
+msgstr "{0} debuginfo-bestanden zijn niet ge??nstalleerd"
 
 #: ../src/plugins/abrt-action-install-debuginfo.in:235
 #, c-format
@@ -1745,7 +1745,7 @@ msgid ""
 "Is it a part of official '%s' repositories?"
 msgstr ""
 "Retrace server kan pakket '%s.%s' niet verwerken.\n"
-"Is het een onderdeel van officiële '%s' repositories?"
+"Is het een onderdeel van offici??le '%s' repositories?"
 
 #: ../src/plugins/abrt-retrace-client.c:444
 msgid "Querying server settings"
@@ -1816,7 +1816,7 @@ msgstr "Afgebroken door gebruiker"
 #: ../src/plugins/abrt-retrace-client.c:683
 #, c-format
 msgid "Uploading %s\n"
-msgstr "%s wordt geüpload\n"
+msgstr "%s wordt ge??pload\n"
 
 #: ../src/plugins/abrt-retrace-client.c:709
 #, c-format
@@ -2147,7 +2147,7 @@ msgstr "TCP-socket wrappen met SSL mislukte."
 
 #: ../src/plugins/https-utils.c:215
 msgid "Failed to enable client handshake to SSL socket."
-msgstr "Cliënthandshake naar SSL socket aanzetten mislukte."
+msgstr "Cli??nthandshake naar SSL socket aanzetten mislukte."
 
 # translation auto-copied from project abrt, version rhel7, document abrt
 #: ../src/plugins/https-utils.c:220
@@ -2465,7 +2465,7 @@ msgstr "Duw voor het volgende probleem op ENTER:"
 msgid "Without --since argument, iterates over all detected problems."
 msgstr ""
 "Zonder het --since argument, wordt over alle gedetecteerde problemen "
-"geïtereerd."
+"ge??tereerd."
 
 #: ../src/cli/process.c:144
 msgid "Selects only problems detected after timestamp"
@@ -2677,7 +2677,7 @@ msgid ""
 "Needs to install kernel debuginfo packages, which might take significant "
 "time, and take up disk space."
 msgstr ""
-"Kerneldebuginfo-pakketten moeten geïnstalleerd worden, dat kan behoorlijk "
+"Kerneldebuginfo-pakketten moeten ge??nstalleerd worden, dat kan behoorlijk "
 "wat tijd kosten en veel schijfruimte vergen."
 
 #: ../src/plugins/collect_GConf.xml.in.h:1
@@ -2734,7 +2734,7 @@ msgstr "Verstuur rapport"
 
 #: ../src/plugins/post_report.xml.in.h:2
 msgid "Executed after the reporting is finished"
-msgstr "Uitgevoerd nadat het rapporteren is beëindigd"
+msgstr "Uitgevoerd nadat het rapporteren is be??indigd"
 
 #: ../src/plugins/post_report.xml.in.h:3
 msgid "Used for updating of the databases"

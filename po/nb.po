@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Jiří Moskovčák <jmoskovc@redhat.com>, 2011
+# Ji???? Moskov????k <jmoskovc@redhat.com>, 2011
 # Kjartan Maraas <kmaraas@gnome.org>, 2012
 # Kjartan Maraas <kmaraas@gnome.org>, 2011
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2014-12-21 11:52-0500\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Norwegian Bokmål (http://www.transifex.com/projects/p/fedora-"
+"Language-Team: Norwegian Bokm??l (http://www.transifex.com/projects/p/fedora-"
 "abrt/language/nb/)\n"
 "Language: nb\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -33,7 +33,7 @@ msgstr ""
 #: ../src/applet/applet.c:260 ../src/cli/report.c:51
 #, c-format
 msgid "Can't take ownership of '%s'"
-msgstr "Kan ikke ta eierskap av «%s»"
+msgstr "Kan ikke ta eierskap av ??%s??"
 
 #: ../src/applet/applet.c:268
 #, c-format
@@ -67,7 +67,7 @@ msgstr ""
 #: ../src/applet/applet.c:699
 #, c-format
 msgid ""
-"We’re sorry, it looks like %s crashed. The problem will be reported when the "
+"We???re sorry, it looks like %s crashed. The problem will be reported when the "
 "internet is available."
 msgstr ""
 
@@ -131,9 +131,9 @@ msgid ""
 "\n"
 "Applet which notifies user when new problems are detected by ABRT\n"
 msgstr ""
-"& [-v] [KATALOG] …\n"
+"& [-v] [KATALOG] ???\n"
 "\n"
-"Panelprogram som varsler bruker når nye problemer oppdages av ABRT\n"
+"Panelprogram som varsler bruker n??r nye problemer oppdages av ABRT\n"
 
 #: ../src/configuration-gui/abrt-config-widget.c:483
 msgid ""
@@ -384,7 +384,7 @@ msgstr "Avslutt etter NUM sekunder uten aktivitet"
 
 #: ../src/dbus/abrt-dbus.c:921 ../src/dbus/abrt-configuration.c:1021
 msgid "This program must be run as root."
-msgstr "Programmet må kjøres som root"
+msgstr "Programmet m?? kj??res som root"
 
 #: ../src/daemon/abrtd.c:389
 msgid ""
@@ -397,7 +397,7 @@ msgstr ""
 
 #: ../src/daemon/abrtd.c:457
 msgid "Do not daemonize"
-msgstr "Ikke kjør som tjeneste"
+msgstr "Ikke kj??r som tjeneste"
 
 #: ../src/daemon/abrtd.c:458
 msgid "Log to syslog even with -d"
@@ -1470,7 +1470,7 @@ msgstr ""
 #: ../src/plugins/abrt-retrace-client.c:168
 #, c-format
 msgid "Can't execute '%s'"
-msgstr "Kan ikke kjøre «%s»"
+msgstr "Kan ikke kj??re ??%s??"
 
 #: ../src/plugins/abrt-retrace-client.c:211
 #: ../src/plugins/abrt-retrace-client.c:398
@@ -1510,7 +1510,7 @@ msgstr ""
 
 #: ../src/plugins/abrt-retrace-client.c:444
 msgid "Querying server settings"
-msgstr "Spør etter tjenerinnstillinger"
+msgstr "Sp??r etter tjenerinnstillinger"
 
 #: ../src/plugins/abrt-retrace-client.c:452
 msgid "The server is fully occupied. Try again later."
@@ -1518,7 +1518,7 @@ msgstr ""
 
 #: ../src/plugins/abrt-retrace-client.c:453
 msgid "The server denied your request."
-msgstr "Tjener nektet din forespørsel."
+msgstr "Tjener nektet din foresp??rsel."
 
 #: ../src/plugins/abrt-retrace-client.c:484
 #: ../src/plugins/abrt-retrace-client.c:500
@@ -1552,7 +1552,7 @@ msgstr ""
 
 #: ../src/plugins/abrt-retrace-client.c:609
 msgid "Preparing an archive to upload"
-msgstr "Forbereder et arkiv på opplasting"
+msgstr "Forbereder et arkiv p?? opplasting"
 
 #: ../src/plugins/abrt-retrace-client.c:628
 #, c-format
@@ -1582,16 +1582,16 @@ msgstr "Laster opp %d%%\n"
 
 #: ../src/plugins/abrt-retrace-client.c:721
 msgid "Failed to read from a pipe"
-msgstr "Klarte ikke å lese fra et rør"
+msgstr "Klarte ikke ?? lese fra et r??r"
 
 #: ../src/plugins/abrt-retrace-client.c:734
 #, c-format
 msgid "Failed to send data: NSS error %d (%s): %s"
-msgstr "Klarte ikke å sende data: NSS-feil %d (%s): %s"
+msgstr "Klarte ikke ?? sende data: NSS-feil %d (%s): %s"
 
 #: ../src/plugins/abrt-retrace-client.c:745
 msgid "Upload successful"
-msgstr "Opplasting fullført"
+msgstr "Opplasting fullf??rt"
 
 #: ../src/plugins/abrt-retrace-client.c:767
 msgid ""
@@ -1738,7 +1738,7 @@ msgstr "Ukjent operasjon: %s."
 
 #: ../src/plugins/analyze_LocalGDB.xml.in.h:1
 msgid "Local GNU Debugger"
-msgstr "Lokalt GNU feilsøkingsprogram"
+msgstr "Lokalt GNU feils??kingsprogram"
 
 #: ../src/plugins/analyze_LocalGDB.xml.in.h:2
 msgid "Download debuginfo packages and generate backtrace locally using GDB"
@@ -1823,12 +1823,12 @@ msgstr ""
 #: ../src/plugins/https-utils.c:97
 #, c-format
 msgid "Issuer certificate is invalid: '%s'."
-msgstr "Utstedersertifikat er ugyldig: «%s»"
+msgstr "Utstedersertifikat er ugyldig: ??%s??"
 
 #: ../src/plugins/https-utils.c:100
 #, c-format
 msgid "Certificate is signed by an untrusted issuer: '%s'."
-msgstr "Sertifikatet er signert av en bruker uten tillit: «%s»."
+msgstr "Sertifikatet er signert av en bruker uten tillit: ??%s??."
 
 #: ../src/plugins/https-utils.c:103
 #, c-format
@@ -1837,12 +1837,12 @@ msgstr ""
 
 #: ../src/plugins/https-utils.c:107
 msgid "Remote certificate has expired."
-msgstr "Eksternt sertifikat har utløpt."
+msgstr "Eksternt sertifikat har utl??pt."
 
 #: ../src/plugins/https-utils.c:110
 #, c-format
 msgid "Certificate issuer is not recognized: '%s'."
-msgstr "Sertifikatutsteder er ikke kjent: «%s»."
+msgstr "Sertifikatutsteder er ikke kjent: ??%s??."
 
 #: ../src/plugins/https-utils.c:113
 #, c-format
@@ -1913,7 +1913,7 @@ msgstr ""
 
 #: ../src/plugins/https-utils.c:267
 msgid "Failed to close SSL socket."
-msgstr "Klarte ikke å lukke SSL-plugg."
+msgstr "Klarte ikke ?? lukke SSL-plugg."
 
 #: ../src/plugins/https-utils.c:332
 #, c-format
@@ -1939,7 +1939,7 @@ msgstr ""
 
 #: ../src/plugins/https-utils.c:444
 msgid "Failed to shutdown NSS."
-msgstr "Klarte ikke å stenge ned NSS."
+msgstr "Klarte ikke ?? stenge ned NSS."
 
 #: ../src/plugins/oops-utils.c:73
 #, c-format
@@ -1991,7 +1991,7 @@ msgstr ""
 
 #: ../src/plugins/bodhi.c:542
 msgid "Searching for updates"
-msgstr "Søker etter oppdateringer"
+msgstr "S??ker etter oppdateringer"
 
 #: ../src/plugins/bodhi.c:548
 msgid "No updates for this package found"

@@ -5,7 +5,7 @@
 # Translators:
 # Arif Tri Waluyo <arifiauo@fedoraproject.org>, 2012
 # eko ikhyar <ikhyar.com@gmail.com>, 2013
-# Jiří Moskovčák <jmoskovc@redhat.com>, 2011
+# Ji???? Moskov????k <jmoskovc@redhat.com>, 2011
 # Muhammad Panji <sumodirjo@gmail.com>, 2012
 # Prima Yogi Loviniltra <jurankc0d3@gmail.com>, 2012
 # Ferdi Saptanera <ferdisn@fedoraproject.org>, 2016. #zanata
@@ -72,7 +72,7 @@ msgstr ""
 #: ../src/applet/applet.c:699
 #, c-format
 msgid ""
-"We’re sorry, it looks like %s crashed. The problem will be reported when the "
+"We???re sorry, it looks like %s crashed. The problem will be reported when the "
 "internet is available."
 msgstr ""
 "Kami mohon maaf, sepertinya %s rusak. Permasalahan tersebut akan dilaporkan "

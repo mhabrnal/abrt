@@ -49,7 +49,7 @@ msgstr ""
 
 #: ../src/applet/applet.c:616
 msgid "Report"
-msgstr "Báo cáo"
+msgstr "B??o c??o"
 
 #: ../src/applet/applet.c:625
 msgid "Restart"
@@ -65,7 +65,7 @@ msgstr ""
 #: ../src/applet/applet.c:699
 #, c-format
 msgid ""
-"We’re sorry, it looks like %s crashed. The problem will be reported when the "
+"We???re sorry, it looks like %s crashed. The problem will be reported when the "
 "internet is available."
 msgstr ""
 
@@ -349,13 +349,13 @@ msgstr ""
 #: ../src/dbus/abrt-dbus.c:536
 msgid "Chowning directory failed. Check system logs for more details."
 msgstr ""
-"Đổi quyền chủ nhân thư mục không thành. Kiểm tra bản ghi hệ thống để biết "
-"thêm chi tiết."
+"?????i quy???n ch??? nh??n th?? m???c kh??ng th??nh. Ki???m tra b???n ghi h??? th???ng ????? bi???t "
+"th??m chi ti???t."
 
 #: ../src/dbus/abrt-dbus.c:665
 #, c-format
 msgid "Can't get size of '%s'"
-msgstr "Không thể có được kích thước của  '%s'"
+msgstr "Kh??ng th??? c?? ???????c k??ch th?????c c???a  '%s'"
 
 #: ../src/dbus/abrt-dbus.c:680
 msgid "No problem space left"
@@ -1467,7 +1467,7 @@ msgstr ""
 #: ../src/plugins/abrt-retrace-client.c:168
 #, c-format
 msgid "Can't execute '%s'"
-msgstr "Không thể thực thi '%s'"
+msgstr "Kh??ng th??? th???c thi '%s'"
 
 #: ../src/plugins/abrt-retrace-client.c:211
 #: ../src/plugins/abrt-retrace-client.c:398
@@ -2067,7 +2067,7 @@ msgstr ""
 #. deprecate -d option with --pretty=full
 #: ../src/cli/list.c:138 ../src/cli/list.c:191
 msgid "Show detailed report"
-msgstr "Hiển thị báo cáo chi tiết"
+msgstr "Hi???n th??? b??o c??o chi ti???t"
 
 #: ../src/cli/list.c:139 ../src/cli-ng/abrtcli/cli.py:113
 msgid "List only the problems more recent than specified timestamp"
@@ -2395,7 +2395,7 @@ msgstr ""
 
 #: ../src/plugins/post_report.xml.in.h:1
 msgid "Post report"
-msgstr "Công bố báo cáo"
+msgstr "C??ng b??? b??o c??o"
 
 #: ../src/plugins/post_report.xml.in.h:2
 msgid "Executed after the reporting is finished"
