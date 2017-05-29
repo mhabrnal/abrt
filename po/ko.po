@@ -8,22 +8,22 @@
 # eukim <eukim@redhat.com>, 2014
 # Jiří Moskovčák <jmoskovc@redhat.com>, 2011
 #   <raypoatssium@gmail.com>, 2011-2012, 2013
-# Eun-Ju Kim <eukim@redhat.com>, 2015. #zanata
+# mhabrnal <mhabrnal@redhat.com>, 2017. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jmoskovc@redhat.com\n"
-"POT-Creation-Date: 2016-06-29 15:31+0200\n"
+"POT-Creation-Date: 2017-05-15 16:10+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-07-19 09:20-0400\n"
-"Last-Translator: Eun-Ju Kim <eukim@redhat.com>\n"
+"PO-Revision-Date: 2017-05-16 07:08+0000\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Korean (http://www.transifex.com/projects/p/fedora-abrt/"
 "language/ko/)\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Zanata 3.9.5\n"
+"X-Generator: Zanata 4.1.1\n"
 
 #: ../src/applet/abrt-applet.desktop.in.h:1
 msgid "Automatic Bug Reporting Tool"
@@ -60,7 +60,7 @@ msgstr "DBus를 통해 NetworkManager에 연결할 수 없음: %s"
 msgid "Can't determine network status via NetworkManager: %s"
 msgstr "NetworkManager를 통해 네트워크 상태를 지정할 수 없음: %s"
 
-#: ../src/applet/applet.c:342 ../src/cli/report.c:42
+#: ../src/applet/applet.c:342 ../src/cli/report.c:63
 #, c-format
 msgid "Can't take ownership of '%s'"
 msgstr "'%s'의 소유 권한을 갖을 수 없음 "
@@ -181,7 +181,8 @@ msgid "Can't show notification: %s"
 msgstr "통지를 표시할 수 없음: %s"
 
 #. TODO: Terminate child's process?
-#: ../src/applet/applet.c:1098 ../src/daemon/abrt-upload-watch.c:168
+#: ../src/applet/applet.c:1098 ../src/daemon/abrt-server.c:114
+#: ../src/daemon/abrt-upload-watch.c:168
 #, c-format
 msgid "Can't read from gio channel: '%s'"
 msgstr "gio 채널에서 읽을 수 없음: '%s'"
@@ -350,22 +351,22 @@ msgstr "문제가 있는 디렉토리 "
 msgid "Configuration file"
 msgstr "설정 파일 "
 
-#: ../src/daemon/abrt-server.c:792 ../src/dbus/abrt-dbus.c:1004
-#: ../src/dbus/abrt-configuration.c:1002 ../src/daemon/abrtd.c:465
+#: ../src/daemon/abrt-server.c:924 ../src/dbus/abrt-dbus.c:1004
+#: ../src/dbus/abrt-configuration.c:1002 ../src/daemon/abrtd.c:744
 msgid "& [options]"
 msgstr "& [options]"
 
-#: ../src/daemon/abrt-server.c:803
+#: ../src/daemon/abrt-server.c:935
 msgid "Use NUM as client uid"
 msgstr "NUM을 클라이언트 uid로 사용 "
 
-#: ../src/daemon/abrt-server.c:804 ../src/daemon/abrt-upload-watch.c:280
+#: ../src/daemon/abrt-server.c:936 ../src/daemon/abrt-upload-watch.c:280
 #: ../src/plugins/abrt-watch-log.c:153 ../src/plugins/abrt-dump-oops.c:281
-#: ../src/plugins/abrt-dump-xorg.c:252
+#: ../src/plugins/abrt-dump-xorg.c:260
 msgid "Log to syslog"
 msgstr "syslog에 로그   "
 
-#: ../src/daemon/abrt-server.c:805 ../src/daemon/abrtd.c:481
+#: ../src/daemon/abrt-server.c:937 ../src/daemon/abrtd.c:760
 msgid "Add program names to log"
 msgstr "로그에 프로그램 이름 추가 "
 
@@ -435,7 +436,7 @@ msgid ""
 msgstr "'%s'의 이름이 분실되었습니다. 이 이름을 갖는 다른 서비스가 실행되고 있지 않은지 확인하십시오.\n"
 
 #: ../src/dbus/abrt-dbus.c:1013 ../src/dbus/abrt-configuration.c:1011
-#: ../src/daemon/abrtd.c:480
+#: ../src/daemon/abrtd.c:759
 msgid "Exit after NUM seconds of inactivity"
 msgstr "NUM 초 동안 동작하지 않을 경우 종료합니다 "
 
@@ -443,7 +444,7 @@ msgstr "NUM 초 동안 동작하지 않을 경우 종료합니다 "
 msgid "This program must be run as root."
 msgstr "이 프로그램은 root로 실행해야 합니다."
 
-#: ../src/daemon/abrtd.c:432
+#: ../src/daemon/abrtd.c:711
 msgid ""
 "The problem data are incomplete. This usually happens when a problem is "
 "detected while computer is shutting down or user is logging out. In order to "
@@ -455,23 +456,23 @@ msgstr ""
 "정확하게 문제를 보고하기 위해 ABRT는 이 문제를 전송하는 것을 허용하지 않습니다. 시간이 허락하여 이 문제를 해결하기 위해 개발자에게 "
 "도움을 주려면 개발자에게 직접 연락을 취하십시오."
 
-#: ../src/daemon/abrtd.c:478
+#: ../src/daemon/abrtd.c:757
 msgid "Do not daemonize"
 msgstr "데몬화하지 않습니다 "
 
-#: ../src/daemon/abrtd.c:479
+#: ../src/daemon/abrtd.c:758
 msgid "Log to syslog even with -d"
 msgstr "-d를 사용하여 syslog에 로그 "
 
-#: ../src/daemon/abrt-handle-event.c:388
+#: ../src/daemon/abrt-handle-event.c:343
 msgid "& [-v -i] -e|--event EVENT DIR..."
 msgstr "& [-v -i] -e|--event EVENT DIR..."
 
-#: ../src/daemon/abrt-handle-event.c:396
+#: ../src/daemon/abrt-handle-event.c:351
 msgid "Run EVENT on DIR"
 msgstr "DIR에서 EVENT 실행 "
 
-#: ../src/daemon/abrt-handle-event.c:397
+#: ../src/daemon/abrt-handle-event.c:352
 msgid "Communicate directly to the user"
 msgstr "사용자에게 직접 통신 "
 
@@ -1240,7 +1241,7 @@ msgstr "찾아낸 oops를 표준 출력으로 인쇄합니다 "
 msgid "Create new problem directory in DIR for every oops found"
 msgstr "발견된 모든 oops에 대해 DIR에 새로운 문제 디렉토리를 생성 "
 
-#: ../src/plugins/abrt-dump-oops.c:287 ../src/plugins/abrt-dump-xorg.c:255
+#: ../src/plugins/abrt-dump-oops.c:287 ../src/plugins/abrt-dump-xorg.c:263
 msgid "Same as -d DumpLocation, DumpLocation is specified in abrt.conf"
 msgstr "-d DumpLocation과 동일, DumpLocation은 abrt.conf에 지정됩니다 "
 
@@ -1248,7 +1249,7 @@ msgstr "-d DumpLocation과 동일, DumpLocation은 abrt.conf에 지정됩니다 
 msgid "Save the extracted information in PROBLEM"
 msgstr "추출한 정보를 PROBLEM에 저장합니다 "
 
-#: ../src/plugins/abrt-dump-oops.c:289 ../src/plugins/abrt-dump-xorg.c:256
+#: ../src/plugins/abrt-dump-oops.c:289 ../src/plugins/abrt-dump-xorg.c:264
 msgid "Make the problem directory world readable"
 msgstr "문제 디렉토리를 전역에서 읽기 가능하게 합니다 "
 
@@ -1256,7 +1257,7 @@ msgstr "문제 디렉토리를 전역에서 읽기 가능하게 합니다 "
 msgid "Throttle problem directory creation to 1 per second"
 msgstr "1 초당 한 개로 문제 디렉토리 생성 제한 "
 
-#: ../src/plugins/abrt-dump-oops.c:291 ../src/plugins/abrt-dump-xorg.c:257
+#: ../src/plugins/abrt-dump-oops.c:291 ../src/plugins/abrt-dump-xorg.c:265
 msgid "Print search string(s) to stdout and exit"
 msgstr "검색 문자열을 표준 출력에 인쇄하고 종료 "
 
@@ -1273,7 +1274,7 @@ msgstr "문제를 업데이트할 수 없습니다: 하나 이상의 oops 발견
 msgid "Sleeping for %d seconds"
 msgstr "%d 초 동안 절전 "
 
-#: ../src/plugins/abrt-dump-xorg.c:245
+#: ../src/plugins/abrt-dump-xorg.c:253
 msgid ""
 "& [-vsoxm] [-d DIR]/[-D] [FILE]\n"
 "\n"
@@ -1282,11 +1283,11 @@ msgstr "& [-vsoxm] [-d DIR]/[-D] [FILE]\n"
 "\n"
 "FILE (또는 표준 입력)에서 Xorg 크래시를 추출합니다"
 
-#: ../src/plugins/abrt-dump-xorg.c:253
+#: ../src/plugins/abrt-dump-xorg.c:261
 msgid "Print found crash data on standard output"
 msgstr "검색된 크래시 데이터를 표준 출력에 인쇄 "
 
-#: ../src/plugins/abrt-dump-xorg.c:254
+#: ../src/plugins/abrt-dump-xorg.c:262
 msgid "Create problem directory in DIR for every crash found"
 msgstr "발견된 모든 크래시에 대해 DIR에 문제 디렉토리를 생성"
 
@@ -1973,42 +1974,59 @@ msgstr ""
 msgid "Can't find problem '%s'"
 msgstr "문제 '%s'을/를 찾을 수 없음"
 
-#: ../src/cli/report.c:54 ../src/cli/process.c:70
+#: ../src/cli/report.c:52
+#, c-format
+msgid "Problem '%s' cannot be reported"
+msgstr ""
+
+#: ../src/cli/report.c:57
+#, c-format
+msgid "Problem '%s' is labeled as 'not-reportable'?"
+msgstr ""
+
+#: ../src/cli/report.c:78 ../src/cli/process.c:70
 #, c-format
 msgid "Deleting '%s'"
 msgstr "'%s' 삭제 중 "
 
-#: ../src/cli/report.c:70
+#: ../src/cli/report.c:94
 msgid "& report [options] DIR..."
 msgstr "& report [options] DIR..."
 
-#: ../src/cli/report.c:80
+#: ../src/cli/report.c:105
 msgid "Remove PROBLEM_DIR after reporting"
 msgstr "보고 후 PROBLEM_DIR 삭제 "
 
-#: ../src/cli/process.c:64
-msgid "Actions: remove(rm), info(i), skip(s):"
-msgstr "동작: 삭제(rm), 정보(i), 생략(s):"
+#: ../src/cli/report.c:106 ../src/cli/process.c:154
+msgid "Ignore security checks to be able to report all problems"
+msgstr ""
 
-#: ../src/cli/process.c:66
+#: ../src/cli/process.c:64
 msgid "Actions: remove(rm), report(e), info(i), skip(s):"
 msgstr "동작: 삭제(rm), 보고 (e), 정보(i), 생략(s):"
 
-#: ../src/cli/process.c:78
+#: ../src/cli/process.c:66
+msgid "Actions: remove(rm), info(i), skip(s):"
+msgstr "동작: 삭제(rm), 정보(i), 생략(s):"
+
+#: ../src/cli/process.c:79
 #, c-format
 msgid "Reporting '%s'"
 msgstr "'%s' 보고 중 "
 
 #. dummy must be free because the function ask allocate memory
-#: ../src/cli/process.c:127
+#: ../src/cli/process.c:128
 msgid "For next problem press ENTER:"
 msgstr "다음 문제로 이동하려면 ENTER를 누릅니다: "
 
-#: ../src/cli/process.c:138
-msgid "Without --since argument, iterates over all detected problems."
-msgstr "--since 인수가 없으면 감지된 모든 문제를 반복합니다 "
+#: ../src/cli/process.c:139
+msgid ""
+"& process [options]\n"
+"\n"
+"Without --since argument, iterates over all detected problems."
+msgstr ""
 
-#: ../src/cli/process.c:144
+#: ../src/cli/process.c:153
 msgid "Selects only problems detected after timestamp"
 msgstr "타임 스탬프 후 감지된 문제만 선택합니다 "
 

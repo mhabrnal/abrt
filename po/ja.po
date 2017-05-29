@@ -12,22 +12,23 @@
 # noriko <noriko@fedoraproject.org>, 2014
 # noriko <noriko@fedoraproject.org>, 2010,2012-2013
 # carrotsoft <www.carrotsoft@gmail.com>, 2011-2012
-# Noriko Mizumoto <noriko@redhat.com>, 2015. #zanata
+# kmoriguc <kmoriguc@redhat.com>, 2017. #zanata
+# mhabrnal <mhabrnal@redhat.com>, 2017. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jmoskovc@redhat.com\n"
-"POT-Creation-Date: 2016-06-29 15:31+0200\n"
+"POT-Creation-Date: 2017-05-15 16:10+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-07-16 10:25-0400\n"
-"Last-Translator: Noriko Mizumoto <noriko@redhat.com>\n"
+"PO-Revision-Date: 2017-05-21 11:21+0000\n"
+"Last-Translator: kmoriguc <kmoriguc@redhat.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/fedora-abrt/"
 "language/ja/)\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Zanata 3.9.5\n"
+"X-Generator: Zanata 4.1.1\n"
 
 #: ../src/applet/abrt-applet.desktop.in.h:1
 msgid "Automatic Bug Reporting Tool"
@@ -63,7 +64,7 @@ msgstr "DBus で NetworkManager に接続できません: %s"
 msgid "Can't determine network status via NetworkManager: %s"
 msgstr "NetworkManager でネットワークの状態を判断できません: %s"
 
-#: ../src/applet/applet.c:342 ../src/cli/report.c:42
+#: ../src/applet/applet.c:342 ../src/cli/report.c:63
 #, c-format
 msgid "Can't take ownership of '%s'"
 msgstr "'%s' の所有権を取得できません"
@@ -186,7 +187,8 @@ msgid "Can't show notification: %s"
 msgstr "通知を表示できません: %s"
 
 #. TODO: Terminate child's process?
-#: ../src/applet/applet.c:1098 ../src/daemon/abrt-upload-watch.c:168
+#: ../src/applet/applet.c:1098 ../src/daemon/abrt-server.c:114
+#: ../src/daemon/abrt-upload-watch.c:168
 #, c-format
 msgid "Can't read from gio channel: '%s'"
 msgstr "gio チャネルからの読み込みができません: '%s'"
@@ -358,22 +360,22 @@ msgstr "問題ディレクトリ"
 msgid "Configuration file"
 msgstr "設定ファイル"
 
-#: ../src/daemon/abrt-server.c:792 ../src/dbus/abrt-dbus.c:1004
-#: ../src/dbus/abrt-configuration.c:1002 ../src/daemon/abrtd.c:465
+#: ../src/daemon/abrt-server.c:924 ../src/dbus/abrt-dbus.c:1004
+#: ../src/dbus/abrt-configuration.c:1002 ../src/daemon/abrtd.c:744
 msgid "& [options]"
 msgstr "& [オプション]"
 
-#: ../src/daemon/abrt-server.c:803
+#: ../src/daemon/abrt-server.c:935
 msgid "Use NUM as client uid"
 msgstr "NUM をクライアントの uid  として使用する"
 
-#: ../src/daemon/abrt-server.c:804 ../src/daemon/abrt-upload-watch.c:280
+#: ../src/daemon/abrt-server.c:936 ../src/daemon/abrt-upload-watch.c:280
 #: ../src/plugins/abrt-watch-log.c:153 ../src/plugins/abrt-dump-oops.c:281
-#: ../src/plugins/abrt-dump-xorg.c:252
+#: ../src/plugins/abrt-dump-xorg.c:260
 msgid "Log to syslog"
 msgstr "syslog にログする"
 
-#: ../src/daemon/abrt-server.c:805 ../src/daemon/abrtd.c:481
+#: ../src/daemon/abrt-server.c:937 ../src/daemon/abrtd.c:760
 msgid "Add program names to log"
 msgstr "ログにプログラム名を追加する"
 
@@ -443,7 +445,7 @@ msgid ""
 msgstr "'%s' の名前を紛失しました。その名前を持つ他のサービスが実行していないかチェックして下さい。\n"
 
 #: ../src/dbus/abrt-dbus.c:1013 ../src/dbus/abrt-configuration.c:1011
-#: ../src/daemon/abrtd.c:480
+#: ../src/daemon/abrtd.c:759
 msgid "Exit after NUM seconds of inactivity"
 msgstr "休止状態が NUM 秒以上続いた場合は終了します"
 
@@ -451,7 +453,7 @@ msgstr "休止状態が NUM 秒以上続いた場合は終了します"
 msgid "This program must be run as root."
 msgstr "このプログラムは root で実行しなければなりません"
 
-#: ../src/daemon/abrtd.c:432
+#: ../src/daemon/abrtd.c:711
 msgid ""
 "The problem data are incomplete. This usually happens when a problem is "
 "detected while computer is shutting down or user is logging out. In order to "
@@ -462,23 +464,23 @@ msgstr ""
 "問題データは不完全なデータです。コンピューターのシャットダウン中やユーザーのログアウト中に問題が検出されると、こうしたことが発生します。役に立たない問題レポートは提出されないよう、ABRT "
 "によりこの問題の送信は許可されません。この問題を解決するため時間をとって開発者にご協力頂ける場合は、開発者に直接ご連絡ください。"
 
-#: ../src/daemon/abrtd.c:478
+#: ../src/daemon/abrtd.c:757
 msgid "Do not daemonize"
 msgstr "デーモン化しない"
 
-#: ../src/daemon/abrtd.c:479
+#: ../src/daemon/abrtd.c:758
 msgid "Log to syslog even with -d"
 msgstr "-d オプションを使用するとログを syslog へ書き込みます"
 
-#: ../src/daemon/abrt-handle-event.c:388
+#: ../src/daemon/abrt-handle-event.c:343
 msgid "& [-v -i] -e|--event EVENT DIR..."
 msgstr "& [-v -i] -e|--event EVENT DIR..."
 
-#: ../src/daemon/abrt-handle-event.c:396
+#: ../src/daemon/abrt-handle-event.c:351
 msgid "Run EVENT on DIR"
 msgstr "EVENT を DIR で実行する"
 
-#: ../src/daemon/abrt-handle-event.c:397
+#: ../src/daemon/abrt-handle-event.c:352
 msgid "Communicate directly to the user"
 msgstr "ユーザーと直接通信する"
 
@@ -1255,7 +1257,7 @@ msgstr "見つけた oops を標準出力に表示します"
 msgid "Create new problem directory in DIR for every oops found"
 msgstr "検出される oops ごと DIR 内に新規の問題ディレクトリを作成します"
 
-#: ../src/plugins/abrt-dump-oops.c:287 ../src/plugins/abrt-dump-xorg.c:255
+#: ../src/plugins/abrt-dump-oops.c:287 ../src/plugins/abrt-dump-xorg.c:263
 msgid "Same as -d DumpLocation, DumpLocation is specified in abrt.conf"
 msgstr "-d DumpLocation と同じです、 DumpLocation は abrt.conf で指定します"
 
@@ -1263,7 +1265,7 @@ msgstr "-d DumpLocation と同じです、 DumpLocation は abrt.conf で指定�
 msgid "Save the extracted information in PROBLEM"
 msgstr "抽出した情報を PROBLEM に保存します"
 
-#: ../src/plugins/abrt-dump-oops.c:289 ../src/plugins/abrt-dump-xorg.c:256
+#: ../src/plugins/abrt-dump-oops.c:289 ../src/plugins/abrt-dump-xorg.c:264
 msgid "Make the problem directory world readable"
 msgstr "問題ディレクトリを誰でも見れるようにします"
 
@@ -1271,7 +1273,7 @@ msgstr "問題ディレクトリを誰でも見れるようにします"
 msgid "Throttle problem directory creation to 1 per second"
 msgstr "問題のディレクトリの作成を毎秒 1 個に制限"
 
-#: ../src/plugins/abrt-dump-oops.c:291 ../src/plugins/abrt-dump-xorg.c:257
+#: ../src/plugins/abrt-dump-oops.c:291 ../src/plugins/abrt-dump-xorg.c:265
 msgid "Print search string(s) to stdout and exit"
 msgstr "検索文字列を標準出力に表示して終了"
 
@@ -1288,7 +1290,7 @@ msgstr "問題を更新できません: 複数のウップスが見つかりま�
 msgid "Sleeping for %d seconds"
 msgstr "%d 秒スリープします"
 
-#: ../src/plugins/abrt-dump-xorg.c:245
+#: ../src/plugins/abrt-dump-xorg.c:253
 msgid ""
 "& [-vsoxm] [-d DIR]/[-D] [FILE]\n"
 "\n"
@@ -1297,11 +1299,11 @@ msgstr "& [-vsoxm] [-d DIR]/[-D] [FILE]\n"
 "\n"
 "FILE (または標準入力) から Xorg クラッシュを抽出します"
 
-#: ../src/plugins/abrt-dump-xorg.c:253
+#: ../src/plugins/abrt-dump-xorg.c:261
 msgid "Print found crash data on standard output"
 msgstr "発見したクラッシュデータを標準出力に表示する"
 
-#: ../src/plugins/abrt-dump-xorg.c:254
+#: ../src/plugins/abrt-dump-xorg.c:262
 msgid "Create problem directory in DIR for every crash found"
 msgstr "検出されるクラッシュごと DIR 内に問題ディレクトリを作成します"
 
@@ -1988,42 +1990,62 @@ msgstr "ABRT により %u 件の問題が検出されました。次を実行し
 msgid "Can't find problem '%s'"
 msgstr "問題 '%s' が見つかりません"
 
-#: ../src/cli/report.c:54 ../src/cli/process.c:70
+#: ../src/cli/report.c:52
+#, c-format
+msgid "Problem '%s' cannot be reported"
+msgstr "問題 '%s' は報告できません"
+
+#: ../src/cli/report.c:57
+#, c-format
+msgid "Problem '%s' is labeled as 'not-reportable'?"
+msgstr "問題 '%s' に 'not-reportable' のラベル付けをしますか?"
+
+#: ../src/cli/report.c:78 ../src/cli/process.c:70
 #, c-format
 msgid "Deleting '%s'"
 msgstr "'%s' を削除中"
 
-#: ../src/cli/report.c:70
+#: ../src/cli/report.c:94
 msgid "& report [options] DIR..."
 msgstr "& report [options] DIR..."
 
-#: ../src/cli/report.c:80
+#: ../src/cli/report.c:105
 msgid "Remove PROBLEM_DIR after reporting"
 msgstr "レポート後に PROBLEM_DIR を削除します"
 
-#: ../src/cli/process.c:64
-msgid "Actions: remove(rm), info(i), skip(s):"
-msgstr "アクション: 削除(rm), 情報(i), スキップ(s):"
+#: ../src/cli/report.c:106 ../src/cli/process.c:154
+msgid "Ignore security checks to be able to report all problems"
+msgstr "すべての問題を報告できるようにするためセキュリティーチェックを無視する"
 
-#: ../src/cli/process.c:66
+#: ../src/cli/process.c:64
 msgid "Actions: remove(rm), report(e), info(i), skip(s):"
 msgstr "アクション: 削除(rm), レポート(e), 情報(i), スキップ(s):"
 
-#: ../src/cli/process.c:78
+#: ../src/cli/process.c:66
+msgid "Actions: remove(rm), info(i), skip(s):"
+msgstr "アクション: 削除(rm), 情報(i), スキップ(s):"
+
+#: ../src/cli/process.c:79
 #, c-format
 msgid "Reporting '%s'"
 msgstr "'%s' をレポート中"
 
 #. dummy must be free because the function ask allocate memory
-#: ../src/cli/process.c:127
+#: ../src/cli/process.c:128
 msgid "For next problem press ENTER:"
 msgstr "次の問題に移るには、ENTER を押します:"
 
-#: ../src/cli/process.c:138
-msgid "Without --since argument, iterates over all detected problems."
-msgstr "--since 引数がないと、すべての検出済み問題を繰り返します。"
+#: ../src/cli/process.c:139
+msgid ""
+"& process [options]\n"
+"\n"
+"Without --since argument, iterates over all detected problems."
+msgstr ""
+"& process [options]\n"
+"\n"
+"Without --since argument, iterates over all detected problems."
 
-#: ../src/cli/process.c:144
+#: ../src/cli/process.c:153
 msgid "Selects only problems detected after timestamp"
 msgstr "タイムスタンプ後に検出された問題のみを選択します"
 

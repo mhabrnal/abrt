@@ -12,24 +12,23 @@
 # Stanislav Hanzhin <hanzhin.stas@gmail.com>, 2011
 # Yulia <yulia.poyarkova@redhat.com>, 2012,2014
 # Yuri Khabarov <madb00blik@gmail.com>, 2011
-# Igor Gorbounov <igor.gorbounov@gmail.com>, 2015. #zanata
-# yuliya <ypoyarko@redhat.com>, 2015. #zanata
+# mhabrnal <mhabrnal@redhat.com>, 2017. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jmoskovc@redhat.com\n"
-"POT-Creation-Date: 2016-06-29 15:31+0200\n"
+"POT-Creation-Date: 2017-05-15 16:10+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-07-20 08:46-0400\n"
-"Last-Translator: yuliya <ypoyarko@redhat.com>\n"
+"PO-Revision-Date: 2017-05-16 07:08+0000\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/fedora-abrt/"
 "language/ru/)\n"
 "Language: ru\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Zanata 3.9.5\n"
+"X-Generator: Zanata 4.1.1\n"
 
 #: ../src/applet/abrt-applet.desktop.in.h:1
 msgid "Automatic Bug Reporting Tool"
@@ -67,7 +66,7 @@ msgstr "Не удалось подключиться к NetworkManager чере�
 msgid "Can't determine network status via NetworkManager: %s"
 msgstr "NetworkManager не смог определить статус сети: %s"
 
-#: ../src/applet/applet.c:342 ../src/cli/report.c:42
+#: ../src/applet/applet.c:342 ../src/cli/report.c:63
 #, c-format
 msgid "Can't take ownership of '%s'"
 msgstr "Не удается стать владельцем «%s»"
@@ -191,7 +190,8 @@ msgid "Can't show notification: %s"
 msgstr "Не удалось показать уведомление: %s"
 
 #. TODO: Terminate child's process?
-#: ../src/applet/applet.c:1098 ../src/daemon/abrt-upload-watch.c:168
+#: ../src/applet/applet.c:1098 ../src/daemon/abrt-server.c:114
+#: ../src/daemon/abrt-upload-watch.c:168
 #, c-format
 msgid "Can't read from gio channel: '%s'"
 msgstr "Не удалось выполнить чтение из канала gio: «%s»"
@@ -375,22 +375,22 @@ msgstr "Каталог с данными сбоя"
 msgid "Configuration file"
 msgstr "Файл конфигурации"
 
-#: ../src/daemon/abrt-server.c:792 ../src/dbus/abrt-dbus.c:1004
-#: ../src/dbus/abrt-configuration.c:1002 ../src/daemon/abrtd.c:465
+#: ../src/daemon/abrt-server.c:924 ../src/dbus/abrt-dbus.c:1004
+#: ../src/dbus/abrt-configuration.c:1002 ../src/daemon/abrtd.c:744
 msgid "& [options]"
 msgstr "& [параметры]"
 
-#: ../src/daemon/abrt-server.c:803
+#: ../src/daemon/abrt-server.c:935
 msgid "Use NUM as client uid"
 msgstr "Использовать NUM как uid клиента"
 
-#: ../src/daemon/abrt-server.c:804 ../src/daemon/abrt-upload-watch.c:280
+#: ../src/daemon/abrt-server.c:936 ../src/daemon/abrt-upload-watch.c:280
 #: ../src/plugins/abrt-watch-log.c:153 ../src/plugins/abrt-dump-oops.c:281
-#: ../src/plugins/abrt-dump-xorg.c:252
+#: ../src/plugins/abrt-dump-xorg.c:260
 msgid "Log to syslog"
 msgstr "Запись в журнал"
 
-#: ../src/daemon/abrt-server.c:805 ../src/daemon/abrtd.c:481
+#: ../src/daemon/abrt-server.c:937 ../src/daemon/abrtd.c:760
 msgid "Add program names to log"
 msgstr "Добавить названия программ в журнал"
 
@@ -464,7 +464,7 @@ msgstr ""
 "использующая это имя.\n"
 
 #: ../src/dbus/abrt-dbus.c:1013 ../src/dbus/abrt-configuration.c:1011
-#: ../src/daemon/abrtd.c:480
+#: ../src/daemon/abrtd.c:759
 msgid "Exit after NUM seconds of inactivity"
 msgstr "Выйти после NUM секунд бездействия"
 
@@ -473,7 +473,7 @@ msgid "This program must be run as root."
 msgstr ""
 "Эта программа должна запускаться от имени привелигированного пользователя."
 
-#: ../src/daemon/abrtd.c:432
+#: ../src/daemon/abrtd.c:711
 msgid ""
 "The problem data are incomplete. This usually happens when a problem is "
 "detected while computer is shutting down or user is logging out. In order to "
@@ -487,23 +487,23 @@ msgstr ""
 "об этой ошибке. Если у вас есть время, и вы хотите помочь разработчикам в их "
 "усилиях разобраться с этим сбоем, связывайтесь с ними напрямую."
 
-#: ../src/daemon/abrtd.c:478
+#: ../src/daemon/abrtd.c:757
 msgid "Do not daemonize"
 msgstr "Не выполнять как службу"
 
-#: ../src/daemon/abrtd.c:479
+#: ../src/daemon/abrtd.c:758
 msgid "Log to syslog even with -d"
 msgstr "Запись в журнал даже с -d"
 
-#: ../src/daemon/abrt-handle-event.c:388
+#: ../src/daemon/abrt-handle-event.c:343
 msgid "& [-v -i] -e|--event EVENT DIR..."
 msgstr "& [-v -i] -e|--event EVENT DIR..."
 
-#: ../src/daemon/abrt-handle-event.c:396
+#: ../src/daemon/abrt-handle-event.c:351
 msgid "Run EVENT on DIR"
 msgstr "Запуск EVENT в DIR"
 
-#: ../src/daemon/abrt-handle-event.c:397
+#: ../src/daemon/abrt-handle-event.c:352
 msgid "Communicate directly to the user"
 msgstr "Взаимодействие с пользователем напрямую"
 
@@ -1308,7 +1308,7 @@ msgstr "Вывести найденные ошибки в stdout"
 msgid "Create new problem directory in DIR for every oops found"
 msgstr "Создавать каталог в DIR для каждого сбоя oops"
 
-#: ../src/plugins/abrt-dump-oops.c:287 ../src/plugins/abrt-dump-xorg.c:255
+#: ../src/plugins/abrt-dump-oops.c:287 ../src/plugins/abrt-dump-xorg.c:263
 msgid "Same as -d DumpLocation, DumpLocation is specified in abrt.conf"
 msgstr "То же, что и \"-d DumpLocation\", \"DumpLocation\" задается в abrt.conf"
 
@@ -1316,7 +1316,7 @@ msgstr "То же, что и \"-d DumpLocation\", \"DumpLocation\" задает�
 msgid "Save the extracted information in PROBLEM"
 msgstr "Сохранить извлеченную информацию в PROBLEM"
 
-#: ../src/plugins/abrt-dump-oops.c:289 ../src/plugins/abrt-dump-xorg.c:256
+#: ../src/plugins/abrt-dump-oops.c:289 ../src/plugins/abrt-dump-xorg.c:264
 msgid "Make the problem directory world readable"
 msgstr "Открыть доступ чтения к каталогу сбоев"
 
@@ -1324,7 +1324,7 @@ msgstr "Открыть доступ чтения к каталогу сбоев"
 msgid "Throttle problem directory creation to 1 per second"
 msgstr "Повторить создание каталога через 1 секунду"
 
-#: ../src/plugins/abrt-dump-oops.c:291 ../src/plugins/abrt-dump-xorg.c:257
+#: ../src/plugins/abrt-dump-oops.c:291 ../src/plugins/abrt-dump-xorg.c:265
 msgid "Print search string(s) to stdout and exit"
 msgstr "Вывести строку (строки) поиска в stdout и выйти"
 
@@ -1341,7 +1341,7 @@ msgstr "Не удалось обновить проблему: найдено н
 msgid "Sleeping for %d seconds"
 msgstr "Переход в режим ожидания на %d сек."
 
-#: ../src/plugins/abrt-dump-xorg.c:245
+#: ../src/plugins/abrt-dump-xorg.c:253
 msgid ""
 "& [-vsoxm] [-d DIR]/[-D] [FILE]\n"
 "\n"
@@ -1351,11 +1351,11 @@ msgstr ""
 "\n"
 "Извлекать данные о сбое Xorg из FILE (или стандартного ввода)"
 
-#: ../src/plugins/abrt-dump-xorg.c:253
+#: ../src/plugins/abrt-dump-xorg.c:261
 msgid "Print found crash data on standard output"
 msgstr "Вывести найденные данные о сбое в стандартный вывод"
 
-#: ../src/plugins/abrt-dump-xorg.c:254
+#: ../src/plugins/abrt-dump-xorg.c:262
 msgid "Create problem directory in DIR for every crash found"
 msgstr "Создавать каталог в DIR для каждого сбоя"
 
@@ -2073,44 +2073,59 @@ msgstr ""
 msgid "Can't find problem '%s'"
 msgstr "Не удалось найти информацию об ошибке «%s"
 
-#: ../src/cli/report.c:54 ../src/cli/process.c:70
+#: ../src/cli/report.c:52
+#, c-format
+msgid "Problem '%s' cannot be reported"
+msgstr ""
+
+#: ../src/cli/report.c:57
+#, c-format
+msgid "Problem '%s' is labeled as 'not-reportable'?"
+msgstr ""
+
+#: ../src/cli/report.c:78 ../src/cli/process.c:70
 #, c-format
 msgid "Deleting '%s'"
 msgstr "Удаление «%s»"
 
-#: ../src/cli/report.c:70
+#: ../src/cli/report.c:94
 msgid "& report [options] DIR..."
 msgstr "& report [параметры] DIR..."
 
-#: ../src/cli/report.c:80
+#: ../src/cli/report.c:105
 msgid "Remove PROBLEM_DIR after reporting"
 msgstr "Удалить PROBLEM_DIR после отправки отчета"
 
-#: ../src/cli/process.c:64
-msgid "Actions: remove(rm), info(i), skip(s):"
-msgstr "Действия: удалить (rm), информация (i), пропустить (s):"
+#: ../src/cli/report.c:106 ../src/cli/process.c:154
+msgid "Ignore security checks to be able to report all problems"
+msgstr ""
 
-#: ../src/cli/process.c:66
+#: ../src/cli/process.c:64
 msgid "Actions: remove(rm), report(e), info(i), skip(s):"
 msgstr "Действия: удалить (rm), сообщить (e), информация (i), пропустить (s):"
 
-#: ../src/cli/process.c:78
+#: ../src/cli/process.c:66
+msgid "Actions: remove(rm), info(i), skip(s):"
+msgstr "Действия: удалить (rm), информация (i), пропустить (s):"
+
+#: ../src/cli/process.c:79
 #, c-format
 msgid "Reporting '%s'"
 msgstr "Отчет по «%s»..."
 
 #. dummy must be free because the function ask allocate memory
-#: ../src/cli/process.c:127
+#: ../src/cli/process.c:128
 msgid "For next problem press ENTER:"
 msgstr "Для перехода к следующей проблеме нажмите ENTER:"
 
-#: ../src/cli/process.c:138
-msgid "Without --since argument, iterates over all detected problems."
+#: ../src/cli/process.c:139
+msgid ""
+"& process [options]\n"
+"\n"
+"Without --since argument, iterates over all detected problems."
 msgstr ""
-"Если аргумент --since не указан, обнаруженные ошибки будут обрабатываться "
-"последовательно"
 
-#: ../src/cli/process.c:144
+#: ../src/cli/process.c:153
 msgid "Selects only problems detected after timestamp"
 msgstr "Выбор сбоев, обнаруженных после заданного момента времени"
 
