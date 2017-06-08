@@ -412,7 +412,7 @@ autoconf
 
 %define var_base_dir spool
 
-CFLAGS="%{optflags} -Werror" %configure \
+CFLAGS="%{optflags} -Werror -Wno-error=deprecated-declarations" %configure \
 %if 0%{?suse_version}
         --with-systemdsystemunitdir="%{_unitdir}" \
 %endif
