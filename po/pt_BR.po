@@ -22,7 +22,8 @@
 # Taylon Silmer <taylon@taylon.eti.br>, 2011
 # Teseu <tuliomac@gmail.com>, 2011
 # Vitor Lobo Ramos <lobocode@gmail.com>, 2014
-# mhabrnal <mhabrnal@redhat.com>, 2017. #zanata
+# Daniel Lara <danniel@fedoraproject.org>, 2016. #zanata
+# Mateus de Melo Santos <mateusms@tutanota.com>, 2017. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -31,13 +32,13 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-05-16 07:09+0000\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"PO-Revision-Date: 2017-06-09 04:19-0400\n"
+"Last-Translator: Mateus de Melo Santos <mateusms@tutanota.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/"
 "fedora-abrt/language/pt_BR/)\n"
 "Language: pt-BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Zanata 4.1.1\n"
+"X-Generator: Zanata 3.9.6\n"
 
 # translation auto-copied from project abrt, version master, document abrt
 #: ../src/applet/abrt-applet.desktop.in.h:1
@@ -2347,12 +2348,12 @@ msgstr "Não foi possível encontrar problema '%s'"
 #: ../src/cli/report.c:52
 #, c-format
 msgid "Problem '%s' cannot be reported"
-msgstr ""
+msgstr "Problema '%s' não pode ser relatado"
 
 #: ../src/cli/report.c:57
 #, c-format
 msgid "Problem '%s' is labeled as 'not-reportable'?"
-msgstr ""
+msgstr "O problema '%s' é rotulado como 'não-relatável'?"
 
 #: ../src/cli/report.c:78 ../src/cli/process.c:70
 #, c-format
@@ -2370,6 +2371,7 @@ msgstr "Remover PROBLEM_DIR após relatar"
 #: ../src/cli/report.c:106 ../src/cli/process.c:154
 msgid "Ignore security checks to be able to report all problems"
 msgstr ""
+"Ignorar verificações de segurança para poder relatar todos os problemas"
 
 #: ../src/cli/process.c:64
 msgid "Actions: remove(rm), report(e), info(i), skip(s):"
@@ -2395,6 +2397,9 @@ msgid ""
 "\n"
 "Without --since argument, iterates over all detected problems."
 msgstr ""
+"& process [options]\n"
+"\n"
+"Sem ---desde o argumento, itera sobre todos os problemas detectados."
 
 #: ../src/cli/process.c:153
 msgid "Selects only problems detected after timestamp"
