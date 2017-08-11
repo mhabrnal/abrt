@@ -60,6 +60,7 @@ BuildRequires: gtk3-devel
 BuildRequires: rpm-devel >= 4.6
 BuildRequires: desktop-file-utils
 BuildRequires: libnotify-devel
+BuildRequires: dbus-glib-devel
 #why? BuildRequires: file-devel
 BuildRequires: python-devel
 BuildRequires: gettext
