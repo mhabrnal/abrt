@@ -125,6 +125,8 @@ char *kernel_tainted_long(const char *tainted_short);
 int koops_hash_str(char hash_str[SHA1_RESULT_LEN*2 + 1], const char *oops_buf);
 #define koops_extract_oopses abrt_koops_extract_oopses
 void koops_extract_oopses(GList **oops_list, char *buffer, size_t buflen);
+#define koops_suspicious_strings_blacklist abrt_koops_suspicious_strings_blacklist
+GList *koops_suspicious_strings_blacklist(void);
 #define koops_print_suspicious_strings abrt_koops_print_suspicious_strings
 void koops_print_suspicious_strings(void);
 /**
