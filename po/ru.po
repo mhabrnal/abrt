@@ -12,7 +12,9 @@
 # Stanislav Hanzhin <hanzhin.stas@gmail.com>, 2011
 # Yulia <yulia.poyarkova@redhat.com>, 2012,2014
 # Yuri Khabarov <madb00blik@gmail.com>, 2011
-# mhabrnal <mhabrnal@redhat.com>, 2017. #zanata
+# Igor Gorbounov <igor.gorbounov@gmail.com>, 2015. #zanata
+# yuliya <ypoyarko@redhat.com>, 2015. #zanata
+# Matej Habrnal <mhabrnal@redhat.com>, 2017. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -21,14 +23,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-05-16 07:08+0000\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"PO-Revision-Date: 2017-08-10 04:58-0400\n"
+"Last-Translator: Matej Habrnal <mhabrnal@redhat.com>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/fedora-abrt/"
 "language/ru/)\n"
 "Language: ru\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Zanata 4.1.1\n"
+"X-Generator: Zanata 3.9.6\n"
 
 #: ../src/applet/abrt-applet.desktop.in.h:1
 msgid "Automatic Bug Reporting Tool"
@@ -2000,7 +2002,7 @@ msgstr ""
 msgid ""
 "%sRun 'abrt-cli report %s' for creating a case in Red Hat Customer Portal\n"
 msgstr ""
-"%Выполните «abrt-cli report %s», чтобы создать отчет на портале "
+"%sВыполните «abrt-cli report %s», чтобы создать отчет на портале "
 "пользователей Red Hat\n"
 
 # translation auto-copied from project abrt, version master, document abrt, author Igor Gorbounov

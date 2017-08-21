@@ -19,7 +19,12 @@
 # Luis Bazán <lbazan@fedoraproject.org>, 2011
 # Israel Torres <dnlsrl.kaiser@gmail.com>, 2013
 # vareli <ehespinosa@ya.com>, 2013
-# mhabrnal <mhabrnal@redhat.com>, 2017. #zanata
+# Alex Puchades <alex94puchades@gmail.com>, 2015. #zanata
+# Gerardo Rosales <grosale86@gmail.com>, 2015. #zanata
+# Gladys Guerrero Lozano <gguerrer@redhat.com>, 2015. #zanata
+# Jakub Filak <jfilak@redhat.com>, 2015. #zanata
+# Máximo Castañeda Riloba <mcrcctm@gmail.com>, 2016. #zanata
+# Máximo Castañeda Riloba <mcrcctm@gmail.com>, 2017. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -28,13 +33,13 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-05-16 07:08+0000\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"PO-Revision-Date: 2017-05-20 08:25-0400\n"
+"Last-Translator: Máximo Castañeda Riloba <mcrcctm@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/fedora-abrt/"
 "language/es/)\n"
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 4.1.1\n"
+"X-Generator: Zanata 3.9.6\n"
 
 #: ../src/applet/abrt-applet.desktop.in.h:1
 msgid "Automatic Bug Reporting Tool"
@@ -251,7 +256,7 @@ msgstr "Informe acortado"
 
 #: ../src/configuration-gui/abrt-config-widget.glade.h:4
 msgid "Silent shortened reporting"
-msgstr "Informe acortado en silencio"
+msgstr "Presentación silenciosa de informes acortados"
 
 #: ../src/configuration-gui/abrt-config-widget.glade.h:5
 msgid ""
@@ -2111,12 +2116,12 @@ msgstr "No se puede encontrar el problema '%s'"
 #: ../src/cli/report.c:52
 #, c-format
 msgid "Problem '%s' cannot be reported"
-msgstr ""
+msgstr "No se puede informar del problema '%s'"
 
 #: ../src/cli/report.c:57
 #, c-format
 msgid "Problem '%s' is labeled as 'not-reportable'?"
-msgstr ""
+msgstr "¿Está marcado el problema '%s' como 'no informar'?"
 
 #: ../src/cli/report.c:78 ../src/cli/process.c:70
 #, c-format
@@ -2134,6 +2139,8 @@ msgstr "Elimina PROBLEM_DIR después de reportarlos"
 #: ../src/cli/report.c:106 ../src/cli/process.c:154
 msgid "Ignore security checks to be able to report all problems"
 msgstr ""
+"Descartar las comprobaciones de seguridad para poder informar de todos los "
+"problemas"
 
 #: ../src/cli/process.c:64
 msgid "Actions: remove(rm), report(e), info(i), skip(s):"
@@ -2159,6 +2166,9 @@ msgid ""
 "\n"
 "Without --since argument, iterates over all detected problems."
 msgstr ""
+"& process [opciones]\n"
+"\n"
+"Sin el parámetro --since se procesan todos los problemas detectados"
 
 #: ../src/cli/process.c:153
 msgid "Selects only problems detected after timestamp"
