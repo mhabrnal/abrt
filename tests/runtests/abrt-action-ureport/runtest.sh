@@ -106,6 +106,24 @@ rlJournalStart
         rlRun "abrt-cli rm $crash_PATH" 0 "Remove crash dir"
     rlPhaseEnd
 
+    rlPhaseStartTest "uReport from unpackaged executable"
+        prepare
+        generate_crash
+        get_crash_path
+        wait_for_hooks
+
+        rlRun "echo 0 > $crash_PATH/ureports_counter" 0 "set ureports_counter to 0"
+        rlRun "rm -rf $crash_PATH/package $crash_PATH/pkg_*" 0 "remove package information"
+
+        pushd $crash_PATH
+        rlRun "/usr/libexec/abrt-action-ureport -vvv &> $TmpDir/ureport_unpackaged.log" 1
+        popd # crash_PATH
+
+        cat -n ureport_unpackaged.log
+        rlAssertGrep "Problem comes from unpackaged executable. Unable to create uReport." ureport_unpackaged.log
+
+        rlRun "abrt-cli rm $crash_PATH" 0 "Remove crash dir"
+    rlPhaseEnd
 
     rlPhaseStartCleanup
         rlBundleLogs abrt $(ls server* ureport*)
