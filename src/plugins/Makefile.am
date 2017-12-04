@@ -29,7 +29,8 @@ bin_PROGRAMS = \
     abrt-action-generate-backtrace \
     abrt-action-generate-core-backtrace \
     abrt-action-analyze-backtrace \
-    abrt-retrace-client
+    abrt-retrace-client \
+    abrt-container-logger
 
 if BUILD_BODHI
 bin_PROGRAMS += \
@@ -464,6 +465,10 @@ abrt_bodhi_SOURCES = \
     $(LIBREPORT_WEB_LIBS) \
     ../lib/libabrt.la
 endif
+
+abrt_container_logger_SOURCES = \
+    abrt-container-logger.c
+
 
 DEFS = -DLOCALEDIR=\"$(localedir)\" @DEFS@
 
