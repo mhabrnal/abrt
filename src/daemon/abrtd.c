@@ -114,7 +114,8 @@ static void stop_abrt_server(struct abrt_server_proc *proc)
 
 static void dispose_abrt_server(struct abrt_server_proc *proc)
 {
-    close(proc->fdout);
+    if( close(proc->fdout) < 0)
+        perror_msg_and_die("####### %s - %d - func: %s\n", __FILE__, __LINE__, __func__);
     free(proc->dirname);
 
     if (proc->watch_id > 0)
@@ -232,7 +233,8 @@ static gboolean abrt_server_output_cb(GIOChannel *channel, GIOCondition conditio
     if (item == NULL)
     {
         log_warning("Closing a pipe fd (%d) without a process assigned", fdout);
-        close(fdout);
+        if( close(fdout) < 0) 
+        perror_msg_and_die("####### %s - %d - func: %s\n", __FILE__, __LINE__, __func__);
         return FALSE;
     }
 
@@ -397,18 +399,23 @@ static gboolean server_socket_cb(GIOChannel *source, GIOCondition condition, gpo
     if (pid < 0)
     {
         perror_msg("fork");
-        close(socket);
-        close(pipefd[0]);
-        close(pipefd[1]);
+        if( close(socket) < 0) 
+        perror_msg_and_die("####### %s - %d - func: %s\n", __FILE__, __LINE__, __func__);
+        if( close(pipefd[0]) < 0) 
+        perror_msg_and_die("####### %s - %d - func: %s\n", __FILE__, __LINE__, __func__);
+        if( close(pipefd[1]) < 0) 
+        perror_msg_and_die("####### %s - %d - func: %s\n", __FILE__, __LINE__, __func__);
         goto server_socket_finitio;
     }
     if (pid == 0) /* child */
     {
         xdup2(socket, STDIN_FILENO);
         xdup2(socket, STDOUT_FILENO);
-        close(socket);
+        if( close(socket) < 0) 
+        perror_msg_and_die("####### %s - %d - func: %s\n", __FILE__, __LINE__, __func__);
 
-        close(pipefd[0]);
+        if( close(pipefd[0]) < 0) 
+        perror_msg_and_die("####### %s - %d - func: %s\n", __FILE__, __LINE__, __func__);
         xmove_fd(pipefd[1], STDERR_FILENO);
 
         char *argv[3];  /* abrt-server [-s] NULL */
@@ -423,8 +430,10 @@ static gboolean server_socket_cb(GIOChannel *source, GIOCondition condition, gpo
     }
 
     /* parent */
-    close(socket);
-    close(pipefd[1]);
+    if( close(socket) < 0) 
+        perror_msg_and_die("####### %s - %d - func: %s\n", __FILE__, __LINE__, __func__);
+    if( close(pipefd[1]) < 0) 
+        perror_msg_and_die("####### %s - %d - func: %s\n", __FILE__, __LINE__, __func__);
     add_abrt_server_proc(pid, pipefd[0]);
 
 server_socket_finitio:
@@ -555,7 +564,8 @@ static int create_pidfile(void)
             /* should help with problems like rhbz#859724 */
             char pid_str[sizeof(long)*3 + 4];
             int r = full_read(fd, pid_str, sizeof(pid_str));
-            close(fd);
+            if( close(fd) < 0) 
+        perror_msg_and_die("####### %s - %d - func: %s\n", __FILE__, __LINE__, __func__);
 
             /* File can contain garbage. Be careful interpreting it as PID */
             if (r > 0)
@@ -681,7 +691,8 @@ static void mark_unprocessed_dump_dirs_not_reportable(const char *path)
   next_dd:
         free(full_name);
     }
-    closedir(dp);
+    if( closedir(dp) < 0) 
+        perror_msg_and_die("####### %s - %d - func: %s\n", __FILE__, __LINE__, __func__);
 }
 
 static void on_bus_acquired(GDBusConnection *connection,
